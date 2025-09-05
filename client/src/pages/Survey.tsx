@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useMemo, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import confetti from "canvas-confetti";
 import {
   Beaker,
   FlaskConical,
@@ -300,28 +301,26 @@ const questions: Question[] = [
 export default function Survey() {
   const navigate = useNavigate();
   const [answers, setAnswers] = useState<Record<string, number>>({});
-  const [touched, setTouched] = useState<Record<string, boolean>>({});
+  const [step, setStep] = useState(0);
 
-  // Nice: persist progress in case they navigate away accidentally
-  useEffect(() => {
-    const saved = localStorage.getItem("surveyAnswers:v1");
-    if (saved) setAnswers(JSON.parse(saved));
-  }, []);
-  useEffect(() => {
-    localStorage.setItem("surveyAnswers:v1", JSON.stringify(answers));
-  }, [answers]);
-
+  // Progress calculation
+  const progress = Math.round(((step) / questions.length) * 100);
   const allAnswered = useMemo(
     () => questions.every((q) => answers[q.id] !== undefined),
     [answers]
   );
-  const progress = Math.round(
-    (Object.keys(answers).length / questions.length) * 100
-  );
 
   function pickOption(qid: string, idx: number) {
     setAnswers((p) => ({ ...p, [qid]: idx }));
-    setTouched((p) => ({ ...p, [qid]: true }));
+  }
+
+  function next() {
+    if (step < questions.length - 1) {
+      setStep(step + 1);
+    }
+  }
+  function back() {
+    if (step > 0) setStep(step - 1);
   }
 
   function finishSurvey() {
@@ -334,7 +333,6 @@ export default function Survey() {
         scores[disc] = (scores[disc] || 0) + pts;
       });
     }
-    // Top suggestion
     let suggestion: string | null = null;
     let max = -Infinity;
     Object.entries(scores).forEach(([disc, val]) => {
@@ -344,111 +342,134 @@ export default function Survey() {
       }
     });
 
-    navigate("/survey-results", { state: { suggestion, scores } });
+    // 🎉 Confetti
+    confetti({ particleCount: 120, spread: 70, origin: { y: 0.6 } });
 
+    navigate("/survey-results", { state: { suggestion, scores } });
   }
 
+  const q = questions[step];
+
   return (
-    <div className="relative min-h-screen overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50 flex">
-      {/* Animated blobs */}
-      <motion.div
-        animate={{ y: [0, 30, 0], opacity: [0.4, 0.7, 0.4] }}
-        transition={{ duration: 10, repeat: Infinity }}
-        className="absolute top-10 left-20 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30"
-      />
-      <motion.div
-        animate={{ y: [0, -30, 0], opacity: [0.4, 0.8, 0.4] }}
-        transition={{ duration: 12, repeat: Infinity }}
-        className="absolute bottom-20 right-20 w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30"
-      />
+    <div className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      {/* Circular progress */}
+      <div className="fixed top-1/4 right-8 z-50 flex flex-col items-center">
+        <svg className="w-16 h-16 transform -rotate-90">
+          <circle
+            cx="32"
+            cy="32"
+            r="28"
+            stroke="gray"
+            strokeWidth="6"
+            fill="transparent"
+            className="opacity-20"
+          />
+          <motion.circle
+            cx="32"
+            cy="32"
+            r="28"
+            stroke="url(#gradient)"
+            strokeWidth="6"
+            fill="transparent"
+            strokeLinecap="round"
+            initial={{ pathLength: 0 }}
+            animate={{ pathLength: progress / 100 }}
+            transition={{ duration: 0.6, ease: "easeInOut" }}
+          />
+          <defs>
+            <linearGradient id="gradient" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stopColor="#2563eb" />
+              <stop offset="100%" stopColor="#9333ea" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <p className="text-sm font-medium text-gray-700 mt-2">{progress}%</p>
+      </div>
 
-      <main className="relative z-10 max-w-3xl w-full mx-auto p-6 md:p-10">
-        {/* Header + progress */}
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="mb-6"
-        >
-          <h1 className="text-3xl font-bold text-center bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            Find your best-fit discipline
-          </h1>
-          <p className="text-center text-gray-600 mt-1">
-            Answer honestly — there are no right or wrong answers.
-          </p>
-
-          <div className="mt-6 w-full bg-gray-200 rounded-full h-2 overflow-hidden">
-            <motion.div
-              className="h-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full"
-              initial={{ width: 0 }}
-              animate={{ width: `${progress}%` }}
-              transition={{ type: "spring", stiffness: 120, damping: 20 }}
-            />
-          </div>
-          <p className="text-sm text-gray-600 mt-2 text-right">{progress}%</p>
-        </motion.div>
-
-        <div className="space-y-6">
-          {questions.map((q, qi) => (
-            <motion.div
-              key={q.id}
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: qi * 0.03 }}
-              className="p-5 rounded-2xl bg-white/70 backdrop-blur-xl shadow-lg border border-white/40"
-            >
-              <p className="font-semibold text-gray-900">{q.text}</p>
-              {q.helper && (
-                <p className="text-xs text-gray-500 mt-1">{q.helper}</p>
-              )}
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-4">
-                {q.options.map((opt, oi) => {
-                  const selected = answers[q.id] === oi;
-                  return (
-                    <button
-                      key={oi}
-                      onClick={() => pickOption(q.id, oi)}
-                      className={`px-4 py-2 rounded-lg border text-left transition
-                        ${
-                          selected
-                            ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white border-transparent shadow"
-                            : "bg-gray-100 hover:bg-gray-200 border-gray-200"
-                        }`}
-                    >
-                      {opt.label}
-                    </button>
-                  );
-                })}
-              </div>
-
-              {/* Inline nudge to improve completion clarity */}
-              {!touched[q.id] && (
-                <div className="mt-3 text-xs text-gray-500">
-                  Tip: Pick the option that feels most true for you.
-                </div>
-              )}
-            </motion.div>
-          ))}
-        </div>
-
-        <div className="flex flex-col items-center mt-8">
-          <button
-            disabled={!allAnswered}
-            onClick={finishSurvey}
-            className={`px-6 py-3 rounded-xl flex items-center gap-2 ${
-              allAnswered
-                ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg hover:opacity-90 transition"
-                : "bg-gray-300 text-gray-500 cursor-not-allowed"
-            }`}
+      {/* Question card */}
+      <div className="relative z-10 w-full max-w-2xl p-6">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={q.id}
+            initial={{ opacity: 0, x: 60 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -60 }}
+            transition={{ duration: 0.4 }}
+            className="p-8 rounded-3xl bg-white/80 backdrop-blur-xl shadow-xl border border-white/40"
           >
-            <CheckCircle2 className="w-5 h-5" />
-            See my recommendation
-          </button>
-          <p className="text-xs text-gray-500 mt-2">
-            We’ll show a recommendation and highlight it on the next screen. You still decide.
-          </p>
-        </div>
-      </main>
+            <p className="text-sm text-gray-500 mb-2 text-center">
+              Question {step + 1} of {questions.length}
+            </p>
+            <h2 className="text-xl font-semibold text-gray-900 text-center">
+              {q.text}
+            </h2>
+            {q.helper && (
+              <p className="text-sm text-gray-500 mt-2 text-center">
+                {q.helper}
+              </p>
+            )}
+
+            <div className="grid gap-3 mt-6">
+              {q.options.map((opt, oi) => {
+                const selected = answers[q.id] === oi;
+                return (
+                  <motion.button
+                    key={oi}
+                    whileHover={{ scale: 1.03 }}
+                    whileTap={{ scale: 0.97 }}
+                    onClick={() => pickOption(q.id, oi)}
+                    className={`px-5 py-3 rounded-xl font-medium transition-all shadow-sm
+                      ${
+                        selected
+                          ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg"
+                          : "bg-gray-100 hover:bg-gray-200 text-gray-700"
+                      }`}
+                  >
+                    {selected && <CheckCircle2 className="inline w-5 h-5 mr-2" />}
+                    {opt.label}
+                  </motion.button>
+                );
+              })}
+            </div>
+
+            {/* Navigation buttons */}
+            <div className="flex justify-between mt-6">
+              <button
+                onClick={back}
+                disabled={step === 0}
+                className="px-4 py-2 rounded-lg bg-gray-200 text-gray-600 disabled:opacity-40"
+              >
+                Back
+              </button>
+              {step === questions.length - 1 ? (
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  disabled={!allAnswered}
+                  onClick={finishSurvey}
+                  className={`px-6 py-3 rounded-xl font-bold flex items-center gap-2 shadow-lg transition
+                    ${
+                      allAnswered
+                        ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white"
+                        : "bg-gray-300 text-gray-500 cursor-not-allowed"
+                    }`}
+                >
+                  <CheckCircle2 className="w-6 h-6" />
+                  See my recommendation
+                </motion.button>
+              ) : (
+                <button
+                  onClick={next}
+                  disabled={answers[q.id] === undefined}
+                  className="px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white disabled:opacity-40"
+                >
+                  Next
+                </button>
+              )}
+            </div>
+          </motion.div>
+        </AnimatePresence>
+      </div>
     </div>
   );
 }

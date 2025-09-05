@@ -45,7 +45,7 @@ export default function Auth() {
           avatarSeed: u.user_metadata?.avatarSeed, // 👈 add this
         });
 
-          if (u.user_metadata?.role === "student") navigate("/disciplines");
+          if (u.user_metadata?.role === "student") navigate("/discipline-choice");
           else if (u.user_metadata?.role === "alumni") navigate("/alumni-dashboard");
         }
       }
