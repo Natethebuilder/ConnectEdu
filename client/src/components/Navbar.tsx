@@ -15,7 +15,8 @@ export default function Navbar() {
   }
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white/50 backdrop-blur-md border-b border-white/20 shadow-sm">
+    <header className="sticky top-0 z-50 w-full bg-gradient-to-r from-blue-50/70 to-purple-50/70 backdrop-blur-md border-b border-gray-200/40">
+
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
         {/* Logo */}
         <Link
