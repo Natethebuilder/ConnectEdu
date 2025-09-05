@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "install:all": "npm install && npm install --prefix client && npm install --prefix server",
+    "postinstall": "npm install --prefix client && npm install --prefix server",
     "seed": "npm run seed --prefix server",
     "server:dev": "npm run dev --prefix server",
     "client:dev": "npm run dev --prefix client",
