@@ -2,13 +2,13 @@
   {
     "name": "Massachusetts Institute of Technology (MIT)",
     "rank": 1,
-    "city": "Cambridge",
+    "city": "Cambridge, MA",
     "country": "United States",
-    "website": "https://physics.mit.edu",
+    "website": "https://math.mit.edu/",
     "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0c/MIT_Dome_night1.jpg",
     "location": { "type": "Point", "coordinates": [-71.092, 42.3601] },
     "programs": {
-      "physics": {
+      "mathematics": {
         "entryRequirements": {
           "SAT/ACT": "1500+ SAT or 34+ ACT",
           "Essays": "Required",
@@ -19,7 +19,7 @@
           "international": "$57,590/year"
         },
         "duration": "4 years",
-        "degreeType": "BSc"
+        "degreeType": "SB (Bachelor of Science)"
       }
     }
   },
@@ -28,11 +28,11 @@
     "rank": 2,
     "city": "Cambridge, MA",
     "country": "United States",
-    "website": "https://physics.harvard.edu",
+    "website": "https://math.harvard.edu/",
     "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Harvard_University_Widener_Library.jpg",
     "location": { "type": "Point", "coordinates": [-71.1167, 42.377] },
     "programs": {
-      "physics": {
+      "mathematics": {
         "entryRequirements": {
           "GPA": "4.0",
           "SAT/ACT": "1500+ SAT or 34+ ACT",
@@ -43,7 +43,7 @@
           "international": "$54,269/year"
         },
         "duration": "4 years",
-        "degreeType": "BSc"
+        "degreeType": "BA"
       }
     }
   },
@@ -52,14 +52,14 @@
     "rank": 3,
     "city": "Oxford",
     "country": "United Kingdom",
-    "website": "https://www.ox.ac.uk",
+    "website": "https://www.maths.ox.ac.uk/",
     "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Oxford_Sheldonian_Theatre.jpg",
     "location": { "type": "Point", "coordinates": [-1.254, 51.754] },
     "programs": {
-      "physics": {
+      "mathematics": {
         "entryRequirements": {
-          "A-levels": "A*A*A with A* in Physics & Maths",
-          "IB": "39 points with 766 at HL (Physics & Maths required)"
+          "A-levels": "A*A*A including Mathematics and Further Mathematics",
+          "IB": "39 points with 766 at HL (Math required)"
         },
         "fees": {
           "local": "£9,250/year",
@@ -71,15 +71,38 @@
     }
   },
   {
-    "name": "Stanford University",
+    "name": "University of Cambridge",
     "rank": 4,
+    "city": "Cambridge",
+    "country": "United Kingdom",
+    "website": "https://www.maths.cam.ac.uk/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/KingsCollegeChapelWest.jpg",
+    "location": { "type": "Point", "coordinates": [0.1167, 52.2053] },
+    "programs": {
+      "mathematics": {
+        "entryRequirements": {
+          "A-levels": "A*A*A including Mathematics",
+          "IB": "40–42 with 776 at HL"
+        },
+        "fees": {
+          "local": "£9,250/year",
+          "international": "£36,000/year"
+        },
+        "duration": "3 years",
+        "degreeType": "BA (Hons)"
+      }
+    }
+  },
+  {
+    "name": "Stanford University",
+    "rank": 5,
     "city": "Stanford, CA",
     "country": "United States",
-    "website": "https://physics.stanford.edu",
+    "website": "https://mathematics.stanford.edu/",
     "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Stanford_Oval_May_2011_panorama.jpg",
     "location": { "type": "Point", "coordinates": [-122.1697, 37.4275] },
     "programs": {
-      "physics": {
+      "mathematics": {
         "entryRequirements": {
           "GPA": "3.9+",
           "SAT/ACT": "1500+ SAT or 34+ ACT",
@@ -95,38 +118,15 @@
     }
   },
   {
-    "name": "University of Cambridge",
-    "rank": 5,
-    "city": "Cambridge",
-    "country": "United Kingdom",
-    "website": "https://www.phy.cam.ac.uk",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/KingsCollegeChapelWest.jpg",
-    "location": { "type": "Point", "coordinates": [0.1167, 52.2053] },
-    "programs": {
-      "physics": {
-        "entryRequirements": {
-          "A-levels": "A*A*A including Physics & Maths",
-          "IB": "40–42 points with 776 at HL"
-        },
-        "fees": {
-          "local": "£9,250/year",
-          "international": "£35,517/year"
-        },
-        "duration": "3 years",
-        "degreeType": "BA (Hons)"
-      }
-    }
-  },
-  {
     "name": "University of California, Berkeley",
     "rank": 6,
     "city": "Berkeley, CA",
     "country": "United States",
-    "website": "https://physics.berkeley.edu",
+    "website": "https://math.berkeley.edu/",
     "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/UC_Berkeley_Campus_Overview.jpg",
     "location": { "type": "Point", "coordinates": [-122.259, 37.8721] },
     "programs": {
-      "physics": {
+      "mathematics": {
         "entryRequirements": {
           "GPA": "3.8+",
           "SAT/ACT": "Optional",
@@ -137,31 +137,31 @@
           "international": "$47,768/year"
         },
         "duration": "4 years",
-        "degreeType": "BSc"
+        "degreeType": "BA"
       }
     }
   },
   {
-    "name": "California Institute of Technology (Caltech)",
+    "name": "Princeton University",
     "rank": 7,
-    "city": "Pasadena, CA",
+    "city": "Princeton, NJ",
     "country": "United States",
-    "website": "https://physics.caltech.edu",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/74/Caltech_Moore_Lab_of_Engineering.jpg",
-    "location": { "type": "Point", "coordinates": [-118.1253, 34.1377] },
+    "website": "https://math.princeton.edu/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Princeton_University_campus.jpg",
+    "location": { "type": "Point", "coordinates": [-74.6514, 40.3431] },
     "programs": {
-      "physics": {
+      "mathematics": {
         "entryRequirements": {
-          "GPA": "4.0",
-          "SAT/ACT": "Not required (test optional)",
-          "Recommendations": "2 teachers"
+          "GPA": "3.9+",
+          "SAT/ACT": "1500+ SAT or 34+ ACT",
+          "Essays": "Required"
         },
         "fees": {
-          "local": "$60,816/year",
-          "international": "$60,816/year"
+          "local": "$57,410/year",
+          "international": "$57,410/year"
         },
         "duration": "4 years",
-        "degreeType": "BSc"
+        "degreeType": "AB"
       }
     }
   },
@@ -170,13 +170,13 @@
     "rank": 8,
     "city": "Zurich",
     "country": "Switzerland",
-    "website": "https://ethz.ch",
+    "website": "https://math.ethz.ch/",
     "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0a/ETH_Zurich_Mainbuilding.jpg",
     "location": { "type": "Point", "coordinates": [8.5476, 47.3769] },
     "programs": {
-      "physics": {
+      "mathematics": {
         "entryRequirements": {
-          "High School": "Excellent grades in Math & Physics",
+          "High School": "Excellent grades in Mathematics",
           "Language": "German or English"
         },
         "fees": {
@@ -189,23 +189,22 @@
     }
   },
   {
-    "name": "University of Tokyo",
+    "name": "National University of Singapore (NUS)",
     "rank": 9,
-    "city": "Tokyo",
-    "country": "Japan",
-    "website": "https://www.s.u-tokyo.ac.jp/en/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6e/University_of_Tokyo_Yasuda_Auditorium.jpg",
-    "location": { "type": "Point", "coordinates": [139.761, 35.7126] },
+    "city": "Singapore",
+    "country": "Singapore",
+    "website": "https://www.math.nus.edu.sg/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/76/NUS_School_of_Science.jpg",
+    "location": { "type": "Point", "coordinates": [103.7764, 1.2966] },
     "programs": {
-      "physics": {
+      "mathematics": {
         "entryRequirements": {
-          "High School": "Excellent grades in Math & Physics",
-          "Exams": "University of Tokyo entrance exam",
-          "Language": "Japanese (some programs in English)"
+          "High School": "Excellent grades in Math",
+          "Language": "English required"
         },
         "fees": {
-          "local": "¥535,800/year",
-          "international": "¥535,800/year"
+          "local": "S$8,200/year",
+          "international": "S$31,200/year"
         },
         "duration": "4 years",
         "degreeType": "BSc"
@@ -213,25 +212,24 @@
     }
   },
   {
-    "name": "Princeton University",
+    "name": "Imperial College London",
     "rank": 10,
-    "city": "Princeton, NJ",
-    "country": "United States",
-    "website": "https://phy.princeton.edu",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Princeton_University_campus.jpg",
-    "location": { "type": "Point", "coordinates": [-74.6514, 40.3431] },
+    "city": "London",
+    "country": "United Kingdom",
+    "website": "https://www.imperial.ac.uk/mathematics/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Imperial_College_London_Mechanical_Engineering_Building.jpg",
+    "location": { "type": "Point", "coordinates": [-0.1749, 51.4988] },
     "programs": {
-      "physics": {
+      "mathematics": {
         "entryRequirements": {
-          "GPA": "3.9+",
-          "SAT/ACT": "1500+ SAT or 34+ ACT",
-          "Essays": "Required"
+          "A-levels": "AAA including Mathematics and Further Mathematics",
+          "IB": "38 points with HL Mathematics required"
         },
         "fees": {
-          "local": "$57,410/year",
-          "international": "$57,410/year"
+          "local": "£9,250/year",
+          "international": "£34,000/year"
         },
-        "duration": "4 years",
+        "duration": "3 years",
         "degreeType": "BSc"
       }
     }

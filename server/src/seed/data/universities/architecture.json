@@ -1,0 +1,235 @@
+[
+  {
+    "name": "University College London (UCL)",
+    "rank": 1,
+    "city": "London",
+    "country": "United Kingdom",
+    "website": "https://www.ucl.ac.uk/bartlett/architecture",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0d/UCL_Portico_Building.jpg",
+    "location": { "type": "Point", "coordinates": [-0.1339, 51.5246] },
+    "programs": {
+      "architecture": {
+        "entryRequirements": {
+          "A-levels": "AAA including Mathematics",
+          "IB": "36–38 with HL Maths",
+          "Portfolio": "Required"
+        },
+        "fees": {
+          "local": "£9,250/year",
+          "international": "£28,610/year"
+        },
+        "duration": "3 years",
+        "degreeType": "BSc/BA Architecture"
+      }
+    }
+  },
+  {
+    "name": "Massachusetts Institute of Technology (MIT)",
+    "rank": 2,
+    "city": "Cambridge, MA",
+    "country": "United States",
+    "website": "https://architecture.mit.edu/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0c/MIT_Dome_night1.jpg",
+    "location": { "type": "Point", "coordinates": [-71.092, 42.3601] },
+    "programs": {
+      "architecture": {
+        "entryRequirements": {
+          "SAT/ACT": "1500+ SAT or 34+ ACT",
+          "Portfolio": "Recommended"
+        },
+        "fees": {
+          "local": "$57,590/year",
+          "international": "$57,590/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BSc/BA"
+      }
+    }
+  },
+  {
+    "name": "Delft University of Technology (TU Delft)",
+    "rank": 3,
+    "city": "Delft",
+    "country": "Netherlands",
+    "website": "https://www.tudelft.nl/en/education/programmes/bachelors/architecture",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/d/df/TU_Delft_Aerospace_Faculty.jpg",
+    "location": { "type": "Point", "coordinates": [4.373, 52.002] },
+    "programs": {
+      "architecture": {
+        "entryRequirements": {
+          "High School": "Strong grades in Mathematics and Sciences",
+          "Language": "English required (IELTS/TOEFL)"
+        },
+        "fees": {
+          "local": "€2,530/year",
+          "international": "€13,500/year"
+        },
+        "duration": "3 years",
+        "degreeType": "BSc"
+      }
+    }
+  },
+  {
+    "name": "ETH Zurich",
+    "rank": 4,
+    "city": "Zurich",
+    "country": "Switzerland",
+    "website": "https://arch.ethz.ch/en/studies/bachelor.html",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0a/ETH_Zurich_Mainbuilding.jpg",
+    "location": { "type": "Point", "coordinates": [8.5476, 47.3769] },
+    "programs": {
+      "architecture": {
+        "entryRequirements": {
+          "High School": "Excellent grades in Mathematics & Sciences",
+          "Language": "German (some courses in English)"
+        },
+        "fees": {
+          "local": "CHF 730/semester",
+          "international": "CHF 730/semester"
+        },
+        "duration": "3 years",
+        "degreeType": "BSc"
+      }
+    }
+  },
+  {
+    "name": "University of Manchester",
+    "rank": 5,
+    "city": "Manchester",
+    "country": "United Kingdom",
+    "website": "https://www.manchester.ac.uk/study/undergraduate/courses/2025/architecture/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Whitworth_Hall%2C_University_of_Manchester.jpg",
+    "location": { "type": "Point", "coordinates": [-2.232, 53.466] },
+    "programs": {
+      "architecture": {
+        "entryRequirements": {
+          "A-levels": "AAA including Mathematics",
+          "IB": "36 points",
+          "Portfolio": "Required"
+        },
+        "fees": {
+          "local": "£9,250/year",
+          "international": "£25,000/year"
+        },
+        "duration": "3 years",
+        "degreeType": "BA Architecture"
+      }
+    }
+  },
+  {
+    "name": "Harvard University",
+    "rank": 6,
+    "city": "Cambridge, MA",
+    "country": "United States",
+    "website": "https://www.gsd.harvard.edu/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Harvard_University_Widener_Library.jpg",
+    "location": { "type": "Point", "coordinates": [-71.1167, 42.377] },
+    "programs": {
+      "architecture": {
+        "entryRequirements": {
+          "Undergraduate": "Bachelor’s degree required for GSD",
+          "Portfolio": "Required"
+        },
+        "fees": {
+          "local": "$54,269/year",
+          "international": "$54,269/year"
+        },
+        "duration": "4 years (BA), 2 years (MArch)",
+        "degreeType": "BA/MArch"
+      }
+    }
+  },
+  {
+    "name": "Politecnico di Milano",
+    "rank": 7,
+    "city": "Milan",
+    "country": "Italy",
+    "website": "https://www.polimi.it/en/programmes/bachelor-of-science/architecture",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Politecnico_di_Milano.jpg",
+    "location": { "type": "Point", "coordinates": [9.228, 45.478] },
+    "programs": {
+      "architecture": {
+        "entryRequirements": {
+          "High School": "Strong grades",
+          "Test": "Architecture aptitude test"
+        },
+        "fees": {
+          "local": "€3,500/year",
+          "international": "€3,800–€9,000/year"
+        },
+        "duration": "3 years",
+        "degreeType": "BSc"
+      }
+    }
+  },
+  {
+    "name": "Tsinghua University",
+    "rank": 8,
+    "city": "Beijing",
+    "country": "China",
+    "website": "https://www.arch.tsinghua.edu.cn/en/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/47/Tsinghua_University_Gate.jpg",
+    "location": { "type": "Point", "coordinates": [116.3269, 40.0025] },
+    "programs": {
+      "architecture": {
+        "entryRequirements": {
+          "High School": "Excellent grades",
+          "Language": "Chinese (some courses in English)"
+        },
+        "fees": {
+          "local": "¥26,000/year",
+          "international": "¥30,000/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BArch"
+      }
+    }
+  },
+  {
+    "name": "National University of Singapore (NUS)",
+    "rank": 9,
+    "city": "Singapore",
+    "country": "Singapore",
+    "website": "https://www.arch.nus.edu.sg/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/76/NUS_School_of_Science.jpg",
+    "location": { "type": "Point", "coordinates": [103.7764, 1.2966] },
+    "programs": {
+      "architecture": {
+        "entryRequirements": {
+          "High School": "Excellent grades in Math/Science",
+          "Portfolio": "Required",
+          "Language": "English required"
+        },
+        "fees": {
+          "local": "S$8,200/year",
+          "international": "S$31,200/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BA (Arch Studies)"
+      }
+    }
+  },
+  {
+    "name": "University of California, Berkeley",
+    "rank": 10,
+    "city": "Berkeley, CA",
+    "country": "United States",
+    "website": "https://ced.berkeley.edu/academics/architecture/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/UC_Berkeley_Campus_Overview.jpg",
+    "location": { "type": "Point", "coordinates": [-122.259, 37.8721] },
+    "programs": {
+      "architecture": {
+        "entryRequirements": {
+          "GPA": "3.8+",
+          "Portfolio": "Recommended"
+        },
+        "fees": {
+          "local": "$14,226/year",
+          "international": "$47,768/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BA Architecture"
+      }
+    }
+  }
+]

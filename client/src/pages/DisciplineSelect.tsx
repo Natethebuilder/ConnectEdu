@@ -22,19 +22,28 @@ import {
 import { useNavigate, useLocation } from "react-router-dom";
 import { useSupabaseAuth } from "../store/supabaseAuth";
 
+// Convert display name -> URL/DB slug
+const slugify = (name: string) =>
+  name
+    .toLowerCase()
+    .trim()
+    .replace(/\s*&\s*/g, "-") // replace & with hyphen
+    .replace(/[\s_]+/g, "-")  // spaces/underscores -> hyphen
+    .replace(/-+/g, "-");     // collapse multiple hyphens
+
 // Expanded disciplines
 const disciplines = [
   { name: "Physics", icon: Atom, color: "from-blue-500 to-purple-500" },
   { name: "Chemistry", icon: FlaskConical, color: "from-pink-500 to-red-500" },
-  { name: "Biology", icon: Leaf, color: "from-green-500 to-emerald-500" }, // 🌱 Leaf
+  { name: "Biology", icon: Leaf, color: "from-green-500 to-emerald-500" },
   { name: "Computer Science", icon: Cpu, color: "from-indigo-500 to-cyan-500" },
   { name: "Engineering", icon: Wrench, color: "from-amber-500 to-orange-600" },
   { name: "Mathematics", icon: Calculator, color: "from-slate-600 to-slate-800" },
   { name: "Data Science", icon: Database, color: "from-cyan-500 to-sky-600" },
-  { name: "Economics & Business", icon: Briefcase, color: "from-yellow-500 to-amber-600" }, // 💼
+  { name: "Economics & Business", icon: Briefcase, color: "from-yellow-500 to-amber-600" },
   { name: "Psychology", icon: Brain, color: "from-rose-500 to-pink-600" },
-  { name: "Education", icon: GraduationCap, color: "from-fuchsia-500 to-purple-600" }, // 🎓
-  { name: "Law & Political Science", icon: Scale, color: "from-gray-500 to-gray-700" }, // ⚖️
+  { name: "Education", icon: GraduationCap, color: "from-fuchsia-500 to-purple-600" },
+  { name: "Law & Political Science", icon: Scale, color: "from-gray-500 to-gray-700" },
   { name: "Art & Design", icon: PenTool, color: "from-violet-500 to-fuchsia-600" },
   { name: "Communications & Media", icon: Megaphone, color: "from-teal-500 to-emerald-600" },
   { name: "Environmental Science", icon: Globe2, color: "from-green-600 to-lime-600" },
@@ -65,8 +74,9 @@ export default function DisciplineSelect() {
   const suggestion = location.state?.suggestion as string | undefined;
   const scores = (location.state?.scores || {}) as Record<string, number>;
 
-  const selectDiscipline = (discipline: string) => {
-    navigate(`/globe/${discipline.toLowerCase().replace(/\s+/g, "-")}`);
+  const selectDiscipline = (disciplineName: string) => {
+    const slug = slugify(disciplineName);
+    navigate(`/globe/${slug}`);
   };
 
   return (
@@ -108,66 +118,62 @@ export default function DisciplineSelect() {
               <p className="text-xs text-gray-500 mt-2">
                 This is guidance only — you decide your path.
               </p>
-            <motion.button
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0px 8px 20px rgba(0,0,0,0.1)",
-              }}
-              whileTap={{ scale: 0.96 }}
-              transition={{ type: "spring", stiffness: 260, damping: 18 }}
-              onClick={() =>
-                navigate("/survey-results", { state: { suggestion, scores } })
-              }
-              className="mt-4 px-6 py-2.5 rounded-full bg-white/80 backdrop-blur-md border border-gray-200 text-base font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 shadow-sm hover:bg-white"
-            >
-              Why this recommendation?
-            </motion.button>
-
+              <motion.button
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0px 8px 20px rgba(0,0,0,0.1)",
+                }}
+                whileTap={{ scale: 0.96 }}
+                transition={{ type: "spring", stiffness: 260, damping: 18 }}
+                onClick={() =>
+                  navigate("/survey-results", { state: { suggestion, scores } })
+                }
+                className="mt-4 px-6 py-2.5 rounded-full bg-white/80 backdrop-blur-md border border-gray-200 text-base font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 shadow-sm hover:bg-white"
+              >
+                Why this recommendation?
+              </motion.button>
             </div>
           </motion.div>
         )}
 
-        {/* Wrapper flex centers the last row */}
-<motion.div
-  variants={containerVariants}
-  initial="hidden"
-  animate="show"
-  className="flex flex-wrap justify-center gap-8 w-full max-w-6xl"
->
-  {disciplines.map((d) => (
-    <motion.button
-      key={d.name}
-      variants={itemVariants}
-      whileHover={{
-        scale: 1.07,
-        rotate: -1,
-        boxShadow: "0 15px 40px rgba(0,0,0,0.15)",
-      }}
-      whileTap={{ scale: 0.97 }}
-      onClick={() => selectDiscipline(d.name)}
-      className={`w-72 flex flex-col items-center justify-center p-8 rounded-2xl shadow-md text-white font-semibold text-lg bg-gradient-to-br ${d.color} relative overflow-hidden`}
-    >
-      {suggestion === d.name && (
-        <motion.span
-          layoutId="highlight"
-          className="absolute inset-0 rounded-2xl ring-4 ring-blue-400 pointer-events-none"
-        />
-      )}
-      <d.icon className="w-12 h-12 mb-3" />
-      {d.name}
-    </motion.button>
-  ))}
-</motion.div>
-
-
-
+        {/* Grid */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="show"
+          className="flex flex-wrap justify-center gap-8 w-full max-w-6xl"
+        >
+          {disciplines.map((d) => (
+            <motion.button
+              key={d.name}
+              variants={itemVariants}
+              whileHover={{
+                scale: 1.07,
+                rotate: -1,
+                boxShadow: "0 15px 40px rgba(0,0,0,0.15)",
+              }}
+              whileTap={{ scale: 0.97 }}
+              onClick={() => selectDiscipline(d.name)}
+              className={`w-72 flex flex-col items-center justify-center p-8 rounded-2xl shadow-md text-white font-semibold text-lg bg-gradient-to-br ${d.color} relative overflow-hidden`}
+            >
+              {suggestion === d.name && (
+                <motion.span
+                  layoutId="highlight"
+                  className="absolute inset-0 rounded-2xl ring-4 ring-blue-400 pointer-events-none"
+                />
+              )}
+              <d.icon className="w-12 h-12 mb-3" />
+              {d.name}
+            </motion.button>
+          ))}
+        </motion.div>
 
         {/* Actions */}
         <div className="mt-10 flex items-center gap-4">
           <motion.button
             whileHover={{
               scale: 1.05,
-              boxShadow: "0px 8px 20px rgba(0,0,0,0.1)", // subtle glow
+              boxShadow: "0px 8px 20px rgba(0,0,0,0.1)",
             }}
             whileTap={{ scale: 0.96 }}
             transition={{ type: "spring", stiffness: 260, damping: 18 }}
@@ -176,9 +182,6 @@ export default function DisciplineSelect() {
           >
             I’m not sure yet
           </motion.button>
-
-
-
         </div>
       </main>
     </div>
