@@ -1,0 +1,133 @@
+{
+  "discipline": "physics",
+  "stages": [
+    {
+      "order": 1,
+      "title": "Discover & Set Your Vision",
+      "description": "Understand what Physics at top universities looks like and define your goals.",
+      "icon": "🔭",
+      "color": "#38bdf8",
+      "estimatedTime": "1–2h",
+      "resources": [
+        {
+          "type": "link",
+          "title": "QS Top Physics Universities",
+          "url": "https://www.topuniversities.com/university-rankings"
+        },
+        {
+          "type": "video",
+          "title": "A Day in the Life of a Physics Student",
+          "url": "https://www.youtube.com/watch?v=example"
+        },
+        {
+          "type": "document",
+          "title": "Goal-Setting Template",
+          "url": "/resources/goal_planner.pdf"
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "title": "Build Your Academic Edge",
+      "description": "Create a standout academic profile (SAT/ACT, A-levels/IB, Olympiads).",
+      "icon": "📚",
+      "color": "#60a5fa",
+      "resources": [
+        {
+          "type": "link",
+          "title": "Khan Academy SAT Practice",
+          "url": "https://www.khanacademy.org/sat"
+        },
+        {
+          "type": "document",
+          "title": "Physics Olympiad Prep Guide",
+          "url": "/resources/physics/olympiad_guide.pdf"
+        },
+        {
+          "type": "link",
+          "title": "UCAS Entry Requirements",
+          "url": "https://www.ucas.com/ucas/undergraduate/getting-started/entry-requirements"
+        }
+      ],
+      "tasks": [
+        {
+          "type": "checklist",
+          "title": "Track Your Grades & Test Scores",
+          "url": "/trackers/academic"
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "title": "Passion & Personal Projects",
+      "description": "Show your love for physics with real-world impact.",
+      "icon": "💡",
+      "color": "#facc15",
+      "resources": [
+        {
+          "type": "link",
+          "title": "International Physics Olympiad",
+          "url": "https://www.ipho-new.org/"
+        },
+        {
+          "type": "link",
+          "title": "How to Start a STEM Club",
+          "url": "https://www.stem.org.uk/clubs"
+        },
+        {
+          "type": "document",
+          "title": "Personal Project Blueprint",
+          "url": "/resources/physics/personal_project_guide.pdf"
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "title": "Craft Your Application",
+      "description": "Create outstanding essays, recommendations and motivation letters.",
+      "icon": "✍️",
+      "color": "#c084fc",
+      "resources": [
+        {
+          "type": "document",
+          "title": "Personal Statement Template",
+          "url": "/resources/applications/personal_statement_template.docx"
+        },
+        {
+          "type": "video",
+          "title": "How to Write a Motivation Letter",
+          "url": "https://www.youtube.com/watch?v=example"
+        },
+        {
+          "type": "link",
+          "title": "Recommendation Letter Request Guide",
+          "url": "/resources/applications/recommendation_request.pdf"
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "title": "Interview & Final Prep",
+      "description": "Prepare for interviews and finalize your university shortlist.",
+      "icon": "🎤",
+      "color": "#fb7185",
+      "resources": [
+        {
+          "type": "link",
+          "title": "Common Physics Interview Questions",
+          "url": "/resources/interviews/physics_questions.pdf"
+        },
+        {
+          "type": "link",
+          "title": "Book a Mock Interview",
+          "url": "/services/mock-interview"
+        },
+        {
+          "type": "document",
+          "title": "Final Application Checklist",
+          "url": "/resources/applications/final_checklist.pdf"
+        }
+      ]
+    }
+  ]
+}

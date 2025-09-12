@@ -1,28 +1,27 @@
+// server/src/controllers/universityController.ts
 import { Request, Response } from "express";
-import University from "../models/University.js";
+import * as universityService from "../services/universityService.js";
 
-export async function listUniversities(req: Request, res: Response) {
-  const subject = String(req.query.course || "").trim();
-  // Optional: level is not used now since dataset doesn't encode level-specific data
-  // const level = String(req.query.level || "").trim();
-
-  const match: any = {};
-  if (subject) {
-    // programs.<Subject>.offered == true
-    match[`programs.${subject}.offered`] = true;
+export async function getUniversities(req: Request, res: Response) {
+  try {
+    const { course } = req.query;
+    const universities = await universityService.findUniversities(course as string);
+    res.json(universities);
+  } catch (err) {
+    console.error("❌ Error fetching universities:", err);
+    res.status(500).json({ error: "Failed to fetch universities" });
   }
+}
 
-  // Only minimal fields needed by the map
- const unis = await University.find(match, {
-  name: 1,
-  rank: 1,
-  location: 1,
-  programs: 1,
-  scholarships: 1,
-  resources: 1, // ✅ now included
-})
-.sort({ rank: 1 })
-.lean();
-
-  res.json(unis);
+export async function getUniversityById(req: Request, res: Response) {
+  try {
+    const uni = await universityService.findUniversityById(req.params.id);
+    if (!uni) {
+      return res.status(404).json({ error: "University not found" });
+    }
+    res.json(uni);
+  } catch (err) {
+    console.error("❌ Error fetching university:", err);
+    res.status(500).json({ error: "Failed to fetch university" });
+  }
 }
