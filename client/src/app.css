@@ -1,12 +1,35 @@
-/* Import Inter font first */
+/* Import Inter font */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Global resets */
+/* Full height */
 html, body, #root {
   height: 100%;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* ✨ Global gradient background */
+body {
+  background: linear-gradient(135deg, #eef2ff, #fdf2f8, #faf5ff);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* Cesium canvas transparent */
+.cesium-viewer,
+.cesium-widget,
+.cesium-viewer-cesiumWidgetContainer,
+.cesium-widget canvas {
+  background: transparent !important;
+}
+/* Add to your global CSS or Navbar.module.css */
+@keyframes gradient-x {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradient-x 4s ease-in-out infinite;
 }

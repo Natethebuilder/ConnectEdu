@@ -11,6 +11,8 @@ import DisciplineSelect from "./pages/DisciplineSelect";
 import Survey from "./pages/Survey";
 import GlobeDiscipline from "./pages/GlobeDiscipline";
 import DisciplineChoice from "./pages/DisciplineChoice";
+import LearningHub from "./pages/learning/[discipline]";
+
 
 // ✅ new components
 import ScrollToTop from "./components/ScrollToTop";
@@ -39,6 +41,9 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
           <Route path="profile" element={<Profile />} />
           <Route path="survey-results" element={<SurveyResults />} />
           <Route path="discipline-choice" element={<DisciplineChoice />} />
+          <Route path="learning/:discipline" element={<LearningHub />} />
+         
+
         </Route>
       </Routes>
     </BrowserRouter>

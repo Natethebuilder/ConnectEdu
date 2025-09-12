@@ -1,0 +1,238 @@
+[
+  {
+    "name": "University of Oxford",
+    "rank": 1,
+    "city": "Oxford",
+    "country": "United Kingdom",
+    "website": "https://www.ox.ac.uk",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Oxford_Sheldonian_Theatre.jpg",
+    "location": { "type": "Point", "coordinates": [-1.254, 51.754] },
+    "programs": {
+      "physics": {
+        "entryRequirements": {
+          "A-levels": "A*A*A with A* in Physics & Maths",
+          "IB": "39 points with 766 at HL (Physics & Maths required)"
+        },
+        "fees": {
+          "local": "£9,250/year",
+          "international": "£36,800/year"
+        },
+        "duration": "3 years",
+        "degreeType": "BA (Hons)"
+      }
+    }
+  },
+  {
+    "name": "Massachusetts Institute of Technology (MIT)",
+    "rank": 2,
+    "city": "Cambridge",
+    "country": "United States",
+    "website": "https://physics.mit.edu",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0c/MIT_Dome_night1.jpg",
+    "location": { "type": "Point", "coordinates": [-71.092, 42.3601] },
+    "programs": {
+      "physics": {
+        "entryRequirements": {
+          "SAT/ACT": "1500+ SAT or 34+ ACT",
+          "Essays": "Required",
+          "Recommendations": "2 teachers"
+        },
+        "fees": {
+          "local": "$57,590/year",
+          "international": "$57,590/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BSc"
+      }
+    }
+  },
+  {
+    "name": "Stanford University",
+    "rank": 3,
+    "city": "Stanford, CA",
+    "country": "United States",
+    "website": "https://physics.stanford.edu",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Stanford_Oval_May_2011_panorama.jpg",
+    "location": { "type": "Point", "coordinates": [-122.1697, 37.4275] },
+    "programs": {
+      "physics": {
+        "entryRequirements": {
+          "GPA": "3.9+",
+          "SAT/ACT": "1500+ SAT or 34+ ACT",
+          "Essays": "Required"
+        },
+        "fees": {
+          "local": "$56,169/year",
+          "international": "$56,169/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BSc"
+      }
+    }
+  },
+  {
+    "name": "University of Cambridge",
+    "rank": 4,
+    "city": "Cambridge",
+    "country": "United Kingdom",
+    "website": "https://www.phy.cam.ac.uk",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/KingsCollegeChapelWest.jpg",
+    "location": { "type": "Point", "coordinates": [0.1167, 52.2053] },
+    "programs": {
+      "physics": {
+        "entryRequirements": {
+          "A-levels": "A*A*A including Physics & Maths",
+          "IB": "40–42 points with 776 at HL"
+        },
+        "fees": {
+          "local": "£9,250/year",
+          "international": "£35,517/year"
+        },
+        "duration": "3 years",
+        "degreeType": "BA (Hons)"
+      }
+    }
+  },
+  {
+    "name": "Harvard University",
+    "rank": 5,
+    "city": "Cambridge, MA",
+    "country": "United States",
+    "website": "https://physics.harvard.edu",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Harvard_University_Widener_Library.jpg",
+    "location": { "type": "Point", "coordinates": [-71.1167, 42.377] },
+    "programs": {
+      "physics": {
+        "entryRequirements": {
+          "GPA": "4.0",
+          "SAT/ACT": "1500+ SAT or 34+ ACT",
+          "Recommendations": "2 teachers + counselor"
+        },
+        "fees": {
+          "local": "$54,269/year",
+          "international": "$54,269/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BSc"
+      }
+    }
+  },
+  {
+    "name": "California Institute of Technology (Caltech)",
+    "rank": 6,
+    "city": "Pasadena, CA",
+    "country": "United States",
+    "website": "https://physics.caltech.edu",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/74/Caltech_Moore_Lab_of_Engineering.jpg",
+    "location": { "type": "Point", "coordinates": [-118.1253, 34.1377] },
+    "programs": {
+      "physics": {
+        "entryRequirements": {
+          "GPA": "4.0",
+          "SAT/ACT": "Not required (test optional)",
+          "Recommendations": "2 teachers"
+        },
+        "fees": {
+          "local": "$60,816/year",
+          "international": "$60,816/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BSc"
+      }
+    }
+  },
+  {
+    "name": "Princeton University",
+    "rank": 7,
+    "city": "Princeton, NJ",
+    "country": "United States",
+    "website": "https://phy.princeton.edu",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Princeton_University_campus.jpg",
+    "location": { "type": "Point", "coordinates": [-74.6514, 40.3431] },
+    "programs": {
+      "physics": {
+        "entryRequirements": {
+          "GPA": "3.9+",
+          "SAT/ACT": "1500+ SAT or 34+ ACT",
+          "Essays": "Required"
+        },
+        "fees": {
+          "local": "$57,410/year",
+          "international": "$57,410/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BSc"
+      }
+    }
+  },
+  {
+    "name": "University of California, Berkeley",
+    "rank": 8,
+    "city": "Berkeley, CA",
+    "country": "United States",
+    "website": "https://physics.berkeley.edu",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/UC_Berkeley_Campus_Overview.jpg",
+    "location": { "type": "Point", "coordinates": [-122.259, 37.8721] },
+    "programs": {
+      "physics": {
+        "entryRequirements": {
+          "GPA": "3.8+",
+          "SAT/ACT": "Optional",
+          "Essays": "Required"
+        },
+        "fees": {
+          "local": "$14,226/year",
+          "international": "$47,768/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BSc"
+      }
+    }
+  },
+  {
+    "name": "ETH Zurich",
+    "rank": 9,
+    "city": "Zurich",
+    "country": "Switzerland",
+    "website": "https://ethz.ch",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0a/ETH_Zurich_Mainbuilding.jpg",
+    "location": { "type": "Point", "coordinates": [8.5476, 47.3769] },
+    "programs": {
+      "physics": {
+        "entryRequirements": {
+          "High School": "Excellent grades in Math & Physics",
+          "Language": "German or English"
+        },
+        "fees": {
+          "local": "CHF 730/semester",
+          "international": "CHF 730/semester"
+        },
+        "duration": "3 years",
+        "degreeType": "BSc"
+      }
+    }
+  },
+  {
+    "name": "National University of Singapore (NUS)",
+    "rank": 10,
+    "city": "Singapore",
+    "country": "Singapore",
+    "website": "https://www.physics.nus.edu.sg",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/76/NUS_School_of_Science.jpg",
+    "location": { "type": "Point", "coordinates": [103.7764, 1.2966] },
+    "programs": {
+      "physics": {
+        "entryRequirements": {
+          "High School": "Excellent grades in Math & Physics",
+          "Language": "English required"
+        },
+        "fees": {
+          "local": "S$8,200/year",
+          "international": "S$31,200/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BSc"
+      }
+    }
+  }
+]

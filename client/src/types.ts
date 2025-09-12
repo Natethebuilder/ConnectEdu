@@ -1,30 +1,46 @@
-export type EntryRequirements = {
-  highSchool?: string;
-  standardizedTests?: string;
-  diploma?: string;
-  ib?: string;
-  aLevels?: string;
-  admissionsTest?: string;
-  SAT?: string;
-  ACT?: string;
-};
-
+// --- University Types ---
 export type ProgramInfo = {
-  offered?: boolean;
-  entryRequirements?: EntryRequirements;
-  applicationProcess?: string;
-  applicationFee?: string;
-  annualTuition?: string;
+  entryRequirements?: Record<string, string>;
+  fees?: {
+    local?: string | number;
+    international?: string | number;
+  };
 };
-
-export type Resource = { title: string; url: string };
 
 export type University = {
   _id: string;
   name: string;
   rank?: number;
-  location: { type: string; coordinates: [number, number] };
-  programs?: Record<string, ProgramInfo>; // discipline → info
-  scholarships?: string[];
-  resources?: Resource[];
+  location: {
+    type: "Point";
+    coordinates: [number, number]; // [lon, lat]
+  };
+  programs?: Record<string, ProgramInfo>;
+
+  // 👇 optional fields for UI
+  city?: string;
+  country?: string;
+  website?: string;
+  photoUrl?: string;
+};
+
+
+// --- Learning Hub Types ---
+export type LearningResource = {
+  title: string;
+  type: "link" | "pdf" | "video" | "article" | "task";
+  url: string;
+  description?: string;
+};
+
+export type LearningStage = {
+  title: string;
+  description: string;
+  resources: LearningResource[];
+};
+
+export type LearningHub = {
+  _id: string;
+  discipline: string;
+  stages: LearningStage[];
 };
