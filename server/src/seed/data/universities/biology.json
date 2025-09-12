@@ -1,0 +1,238 @@
+[
+  {
+    "name": "Harvard University",
+    "rank": 1,
+    "city": "Cambridge, MA",
+    "country": "United States",
+    "website": "https://mcb.harvard.edu/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Harvard_University_Widener_Library.jpg",
+    "location": { "type": "Point", "coordinates": [-71.1167, 42.377] },
+    "programs": {
+      "biology": {
+        "entryRequirements": {
+          "GPA": "4.0",
+          "SAT/ACT": "1500+ SAT or 34+ ACT",
+          "Recommendations": "2 teachers + counselor"
+        },
+        "fees": {
+          "local": "$54,269/year",
+          "international": "$54,269/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BA"
+      }
+    }
+  },
+  {
+    "name": "Massachusetts Institute of Technology (MIT)",
+    "rank": 2,
+    "city": "Cambridge, MA",
+    "country": "United States",
+    "website": "https://biology.mit.edu/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0c/MIT_Dome_night1.jpg",
+    "location": { "type": "Point", "coordinates": [-71.092, 42.3601] },
+    "programs": {
+      "biology": {
+        "entryRequirements": {
+          "SAT/ACT": "1500+ SAT or 34+ ACT",
+          "Essays": "Required",
+          "Recommendations": "2 teachers"
+        },
+        "fees": {
+          "local": "$57,590/year",
+          "international": "$57,590/year"
+        },
+        "duration": "4 years",
+        "degreeType": "SB (Bachelor of Science)"
+      }
+    }
+  },
+  {
+    "name": "Stanford University",
+    "rank": 3,
+    "city": "Stanford, CA",
+    "country": "United States",
+    "website": "https://biology.stanford.edu/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Stanford_Oval_May_2011_panorama.jpg",
+    "location": { "type": "Point", "coordinates": [-122.1697, 37.4275] },
+    "programs": {
+      "biology": {
+        "entryRequirements": {
+          "GPA": "3.9+",
+          "SAT/ACT": "1500+ SAT or 34+ ACT",
+          "Essays": "Required"
+        },
+        "fees": {
+          "local": "$56,169/year",
+          "international": "$56,169/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BSc"
+      }
+    }
+  },
+  {
+    "name": "University of Oxford",
+    "rank": 4,
+    "city": "Oxford",
+    "country": "United Kingdom",
+    "website": "https://www.biology.ox.ac.uk/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Oxford_Sheldonian_Theatre.jpg",
+    "location": { "type": "Point", "coordinates": [-1.254, 51.754] },
+    "programs": {
+      "biology": {
+        "entryRequirements": {
+          "A-levels": "A*AA including Biology and Chemistry",
+          "IB": "39 with 766 at HL (Biology & Chemistry required)"
+        },
+        "fees": {
+          "local": "£9,250/year",
+          "international": "£38,700/year"
+        },
+        "duration": "3 years",
+        "degreeType": "BA (Hons)"
+      }
+    }
+  },
+  {
+    "name": "University of Cambridge",
+    "rank": 5,
+    "city": "Cambridge",
+    "country": "United Kingdom",
+    "website": "https://www.natsci.tripos.cam.ac.uk/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/KingsCollegeChapelWest.jpg",
+    "location": { "type": "Point", "coordinates": [0.1167, 52.2053] },
+    "programs": {
+      "biology": {
+        "entryRequirements": {
+          "A-levels": "A*A*A including Biology & Chemistry",
+          "IB": "40–42 with 776 at HL"
+        },
+        "fees": {
+          "local": "£9,250/year",
+          "international": "£36,000/year"
+        },
+        "duration": "3 years",
+        "degreeType": "BA (Hons)"
+      }
+    }
+  },
+  {
+    "name": "Yale University",
+    "rank": 6,
+    "city": "New Haven, CT",
+    "country": "United States",
+    "website": "https://mbb.yale.edu/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Yale_University_Old_Campus_2014.jpg",
+    "location": { "type": "Point", "coordinates": [-72.9223, 41.3163] },
+    "programs": {
+      "biology": {
+        "entryRequirements": {
+          "GPA": "3.9+",
+          "SAT/ACT": "1500+ SAT or 34+ ACT",
+          "Recommendations": "2 teachers"
+        },
+        "fees": {
+          "local": "$62,250/year",
+          "international": "$62,250/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BA"
+      }
+    }
+  },
+  {
+    "name": "Johns Hopkins University",
+    "rank": 7,
+    "city": "Baltimore, MD",
+    "country": "United States",
+    "website": "https://bio.jhu.edu/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Johns_Hopkins_University_Academic_Buildings.jpg",
+    "location": { "type": "Point", "coordinates": [-76.6205, 39.3299] },
+    "programs": {
+      "biology": {
+        "entryRequirements": {
+          "GPA": "3.9+",
+          "SAT/ACT": "1500+ SAT or 34+ ACT",
+          "Essays": "Required"
+        },
+        "fees": {
+          "local": "$60,480/year",
+          "international": "$60,480/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BA"
+      }
+    }
+  },
+  {
+    "name": "University of California, Berkeley",
+    "rank": 8,
+    "city": "Berkeley, CA",
+    "country": "United States",
+    "website": "https://biology.berkeley.edu/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/UC_Berkeley_Campus_Overview.jpg",
+    "location": { "type": "Point", "coordinates": [-122.259, 37.8721] },
+    "programs": {
+      "biology": {
+        "entryRequirements": {
+          "GPA": "3.8+",
+          "SAT/ACT": "Optional",
+          "Essays": "Required"
+        },
+        "fees": {
+          "local": "$14,226/year",
+          "international": "$47,768/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BA"
+      }
+    }
+  },
+  {
+    "name": "University of California, San Francisco (UCSF)",
+    "rank": 9,
+    "city": "San Francisco, CA",
+    "country": "United States",
+    "website": "https://biology.ucsf.edu/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/04/UCSF_Parnassus_Campus.jpg",
+    "location": { "type": "Point", "coordinates": [-122.458, 37.763] },
+    "programs": {
+      "biology": {
+        "entryRequirements": {
+          "GPA": "3.8+",
+          "Graduate Focus": "Primarily graduate/medical programs"
+        },
+        "fees": {
+          "local": "$14,226/year (for UC residents)",
+          "international": "$47,768/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BSc/Graduate"
+      }
+    }
+  },
+  {
+    "name": "Imperial College London",
+    "rank": 10,
+    "city": "London",
+    "country": "United Kingdom",
+    "website": "https://www.imperial.ac.uk/biology/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Imperial_College_London_Mechanical_Engineering_Building.jpg",
+    "location": { "type": "Point", "coordinates": [-0.1749, 51.4988] },
+    "programs": {
+      "biology": {
+        "entryRequirements": {
+          "A-levels": "AAA including Biology & Chemistry",
+          "IB": "38 points with 6 in HL Biology & Chemistry"
+        },
+        "fees": {
+          "local": "£9,250/year",
+          "international": "£34,000/year"
+        },
+        "duration": "3 years",
+        "degreeType": "BSc"
+      }
+    }
+  }
+]

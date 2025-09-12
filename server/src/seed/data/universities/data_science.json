@@ -1,0 +1,237 @@
+[
+  {
+    "name": "Massachusetts Institute of Technology (MIT)",
+    "rank": 1,
+    "city": "Cambridge, MA",
+    "country": "United States",
+    "website": "https://idss.mit.edu/academics/undergraduate/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0c/MIT_Dome_night1.jpg",
+    "location": { "type": "Point", "coordinates": [-71.092, 42.3601] },
+    "programs": {
+      "data-science": {
+        "entryRequirements": {
+          "SAT/ACT": "1500+ SAT or 34+ ACT",
+          "Essays": "Required",
+          "Recommendations": "2 teachers"
+        },
+        "fees": {
+          "local": "$57,590/year",
+          "international": "$57,590/year"
+        },
+        "duration": "4 years",
+        "degreeType": "SB (Bachelor of Science)"
+      }
+    }
+  },
+  {
+    "name": "Carnegie Mellon University",
+    "rank": 2,
+    "city": "Pittsburgh, PA",
+    "country": "United States",
+    "website": "https://datascience.cmu.edu/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/72/Hammerschlag_Hall%2C_Carnegie_Mellon_University.jpg",
+    "location": { "type": "Point", "coordinates": [-79.9436, 40.4433] },
+    "programs": {
+      "data-science": {
+        "entryRequirements": {
+          "GPA": "3.9+",
+          "SAT/ACT": "1500+ SAT or 34+ ACT",
+          "Essays": "Required"
+        },
+        "fees": {
+          "local": "$61,344/year",
+          "international": "$61,344/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BSc"
+      }
+    }
+  },
+  {
+    "name": "University of Oxford",
+    "rank": 3,
+    "city": "Oxford",
+    "country": "United Kingdom",
+    "website": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-list/data-science",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Oxford_Sheldonian_Theatre.jpg",
+    "location": { "type": "Point", "coordinates": [-1.254, 51.754] },
+    "programs": {
+      "data-science": {
+        "entryRequirements": {
+          "A-levels": "A*AA including Mathematics",
+          "IB": "39 with 766 at HL (Math required)"
+        },
+        "fees": {
+          "local": "£9,250/year",
+          "international": "£36,800/year"
+        },
+        "duration": "3 years",
+        "degreeType": "BA (Hons)"
+      }
+    }
+  },
+  {
+    "name": "University of California, Berkeley",
+    "rank": 4,
+    "city": "Berkeley, CA",
+    "country": "United States",
+    "website": "https://data.berkeley.edu/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/UC_Berkeley_Campus_Overview.jpg",
+    "location": { "type": "Point", "coordinates": [-122.259, 37.8721] },
+    "programs": {
+      "data-science": {
+        "entryRequirements": {
+          "GPA": "3.8+",
+          "SAT/ACT": "Optional",
+          "Essays": "Required"
+        },
+        "fees": {
+          "local": "$14,226/year",
+          "international": "$47,768/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BSc"
+      }
+    }
+  },
+  {
+    "name": "Nanyang Technological University (NTU)",
+    "rank": 5,
+    "city": "Singapore",
+    "country": "Singapore",
+    "website": "https://www.ntu.edu.sg/scse/programmes/undergraduate-programmes/data-science-and-ai",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/00/Nanyang_Technological_University_Admin_Building.jpg",
+    "location": { "type": "Point", "coordinates": [103.6800, 1.3483] },
+    "programs": {
+      "data-science": {
+        "entryRequirements": {
+          "High School": "Excellent grades in Math & CS",
+          "Language": "English required"
+        },
+        "fees": {
+          "local": "S$8,200/year",
+          "international": "S$31,200/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BSc"
+      }
+    }
+  },
+  {
+    "name": "Harvard University",
+    "rank": 6,
+    "city": "Cambridge, MA",
+    "country": "United States",
+    "website": "https://datascience.harvard.edu/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Harvard_University_Widener_Library.jpg",
+    "location": { "type": "Point", "coordinates": [-71.1167, 42.377] },
+    "programs": {
+      "data-science": {
+        "entryRequirements": {
+          "GPA": "4.0",
+          "SAT/ACT": "1500+ SAT or 34+ ACT",
+          "Recommendations": "2 teachers + counselor"
+        },
+        "fees": {
+          "local": "$54,269/year",
+          "international": "$54,269/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BA"
+      }
+    }
+  },
+  {
+    "name": "National University of Singapore (NUS)",
+    "rank": 7,
+    "city": "Singapore",
+    "country": "Singapore",
+    "website": "https://www.stat.nus.edu.sg/data-science/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/76/NUS_School_of_Science.jpg",
+    "location": { "type": "Point", "coordinates": [103.7764, 1.2966] },
+    "programs": {
+      "data-science": {
+        "entryRequirements": {
+          "High School": "Excellent grades in Math",
+          "Language": "English required"
+        },
+        "fees": {
+          "local": "S$8,200/year",
+          "international": "S$31,200/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BSc"
+      }
+    }
+  },
+  {
+    "name": "ETH Zurich",
+    "rank": 8,
+    "city": "Zurich",
+    "country": "Switzerland",
+    "website": "https://ethz.ch/en/studies/degree-programmes/bachelor/data-science.html",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0a/ETH_Zurich_Mainbuilding.jpg",
+    "location": { "type": "Point", "coordinates": [8.5476, 47.3769] },
+    "programs": {
+      "data-science": {
+        "entryRequirements": {
+          "High School": "Excellent grades in Math & CS",
+          "Language": "German or English"
+        },
+        "fees": {
+          "local": "CHF 730/semester",
+          "international": "CHF 730/semester"
+        },
+        "duration": "3 years",
+        "degreeType": "BSc"
+      }
+    }
+  },
+  {
+    "name": "Yale University",
+    "rank": 9,
+    "city": "New Haven, CT",
+    "country": "United States",
+    "website": "https://datascience.yale.edu/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Yale_University_Old_Campus_2014.jpg",
+    "location": { "type": "Point", "coordinates": [-72.9223, 41.3163] },
+    "programs": {
+      "data-science": {
+        "entryRequirements": {
+          "GPA": "3.9+",
+          "SAT/ACT": "1500+ SAT or 34+ ACT",
+          "Recommendations": "2 teachers"
+        },
+        "fees": {
+          "local": "$62,250/year",
+          "international": "$62,250/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BA"
+      }
+    }
+  },
+  {
+    "name": "University of Toronto",
+    "rank": 10,
+    "city": "Toronto",
+    "country": "Canada",
+    "website": "https://artsci.utoronto.ca/future/academics/undergraduate-programs/data-science",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cf/University_College_UofT.JPG",
+    "location": { "type": "Point", "coordinates": [-79.3948, 43.6629] },
+    "programs": {
+      "data-science": {
+        "entryRequirements": {
+          "High School": "Excellent grades in Math",
+          "Language": "English required"
+        },
+        "fees": {
+          "local": "CA$6,100/year",
+          "international": "CA$58,160/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BSc"
+      }
+    }
+  }
+]

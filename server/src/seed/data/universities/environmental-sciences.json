@@ -1,0 +1,235 @@
+[
+  {
+    "name": "Harvard University",
+    "rank": 1,
+    "city": "Cambridge, MA",
+    "country": "United States",
+    "website": "https://environment.harvard.edu/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Harvard_University_Widener_Library.jpg",
+    "location": { "type": "Point", "coordinates": [-71.1167, 42.377] },
+    "programs": {
+      "environmental-science": {
+        "entryRequirements": {
+          "GPA": "4.0",
+          "SAT/ACT": "1500+ SAT or 34+ ACT",
+          "Essays": "Required"
+        },
+        "fees": {
+          "local": "$54,269/year",
+          "international": "$54,269/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BA/BSc"
+      }
+    }
+  },
+  {
+    "name": "Tsinghua University",
+    "rank": 2,
+    "city": "Beijing",
+    "country": "China",
+    "website": "https://www.tsinghua.edu.cn/en/env/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/47/Tsinghua_University_Gate.jpg",
+    "location": { "type": "Point", "coordinates": [116.3269, 40.0025] },
+    "programs": {
+      "environmental-science": {
+        "entryRequirements": {
+          "High School": "Excellent grades in sciences",
+          "Language": "Chinese (some programs in English)"
+        },
+        "fees": {
+          "local": "¥26,000/year",
+          "international": "¥30,000/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BSc"
+      }
+    }
+  },
+  {
+    "name": "Wageningen University & Research",
+    "rank": 3,
+    "city": "Wageningen",
+    "country": "Netherlands",
+    "website": "https://www.wur.nl/en/education-programmes/bachelor/environmental-sciences.htm",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/38/Wageningen_University_Campus.jpg",
+    "location": { "type": "Point", "coordinates": [5.663, 51.985] },
+    "programs": {
+      "environmental-science": {
+        "entryRequirements": {
+          "High School": "Strong grades in sciences",
+          "Language": "English (IELTS/TOEFL required)"
+        },
+        "fees": {
+          "local": "€2,530/year",
+          "international": "€16,600/year"
+        },
+        "duration": "3 years",
+        "degreeType": "BSc"
+      }
+    }
+  },
+  {
+    "name": "University of Oxford",
+    "rank": 4,
+    "city": "Oxford",
+    "country": "United Kingdom",
+    "website": "https://www.geog.ox.ac.uk/study/undergraduate/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Oxford_Sheldonian_Theatre.jpg",
+    "location": { "type": "Point", "coordinates": [-1.254, 51.754] },
+    "programs": {
+      "environmental-science": {
+        "entryRequirements": {
+          "A-levels": "AAA including a science",
+          "IB": "38 with 6 in HL subjects"
+        },
+        "fees": {
+          "local": "£9,250/year",
+          "international": "£38,000/year"
+        },
+        "duration": "3 years",
+        "degreeType": "BA"
+      }
+    }
+  },
+  {
+    "name": "Stanford University",
+    "rank": 5,
+    "city": "Stanford, CA",
+    "country": "United States",
+    "website": "https://earth.stanford.edu/programs/undergraduate",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Stanford_Oval_May_2011_panorama.jpg",
+    "location": { "type": "Point", "coordinates": [-122.1697, 37.4275] },
+    "programs": {
+      "environmental-science": {
+        "entryRequirements": {
+          "GPA": "3.9+",
+          "SAT/ACT": "1500+ SAT or 34+ ACT",
+          "Essays": "Required"
+        },
+        "fees": {
+          "local": "$56,169/year",
+          "international": "$56,169/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BSc"
+      }
+    }
+  },
+  {
+    "name": "Massachusetts Institute of Technology (MIT)",
+    "rank": 6,
+    "city": "Cambridge, MA",
+    "country": "United States",
+    "website": "https://eapsweb.mit.edu/education/undergraduate",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0c/MIT_Dome_night1.jpg",
+    "location": { "type": "Point", "coordinates": [-71.092, 42.3601] },
+    "programs": {
+      "environmental-science": {
+        "entryRequirements": {
+          "SAT/ACT": "1500+ SAT or 34+ ACT",
+          "Recommendations": "2 teachers",
+          "Essays": "Required"
+        },
+        "fees": {
+          "local": "$57,590/year",
+          "international": "$57,590/year"
+        },
+        "duration": "4 years",
+        "degreeType": "SB (Bachelor of Science)"
+      }
+    }
+  },
+  {
+    "name": "University of California, Berkeley",
+    "rank": 7,
+    "city": "Berkeley, CA",
+    "country": "United States",
+    "website": "https://nature.berkeley.edu/undergraduate/espm-majors",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/UC_Berkeley_Campus_Overview.jpg",
+    "location": { "type": "Point", "coordinates": [-122.259, 37.8721] },
+    "programs": {
+      "environmental-science": {
+        "entryRequirements": {
+          "GPA": "3.8+",
+          "Essays": "Required"
+        },
+        "fees": {
+          "local": "$14,226/year",
+          "international": "$47,768/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BSc"
+      }
+    }
+  },
+  {
+    "name": "ETH Zurich",
+    "rank": 8,
+    "city": "Zurich",
+    "country": "Switzerland",
+    "website": "https://usys.ethz.ch/en/studies/bachelor/environmental-sciences.html",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0a/ETH_Zurich_Mainbuilding.jpg",
+    "location": { "type": "Point", "coordinates": [8.5476, 47.3769] },
+    "programs": {
+      "environmental-science": {
+        "entryRequirements": {
+          "High School": "Excellent grades in sciences",
+          "Language": "German or English"
+        },
+        "fees": {
+          "local": "CHF 730/semester",
+          "international": "CHF 730/semester"
+        },
+        "duration": "3 years",
+        "degreeType": "BSc"
+      }
+    }
+  },
+  {
+    "name": "University of Cambridge",
+    "rank": 9,
+    "city": "Cambridge",
+    "country": "United Kingdom",
+    "website": "https://www.geog.cam.ac.uk/undergraduate/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/KingsCollegeChapelWest.jpg",
+    "location": { "type": "Point", "coordinates": [0.1167, 52.2053] },
+    "programs": {
+      "environmental-science": {
+        "entryRequirements": {
+          "A-levels": "A*A*A including sciences",
+          "IB": "40–42 with 776 at HL"
+        },
+        "fees": {
+          "local": "£9,250/year",
+          "international": "£36,000/year"
+        },
+        "duration": "3 years",
+        "degreeType": "BA"
+      }
+    }
+  },
+  {
+    "name": "National University of Singapore (NUS)",
+    "rank": 10,
+    "city": "Singapore",
+    "country": "Singapore",
+    "website": "https://www.science.nus.edu.sg/undergraduate-programmes/environmental-studies/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/76/NUS_School_of_Science.jpg",
+    "location": { "type": "Point", "coordinates": [103.7764, 1.2966] },
+    "programs": {
+      "environmental-science": {
+        "entryRequirements": {
+          "High School": "Excellent grades",
+          "Language": "English required"
+        },
+        "fees": {
+          "local": "S$8,200/year",
+          "international": "S$31,200/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BSc"
+      }
+    }
+  }
+]

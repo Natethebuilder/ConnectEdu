@@ -3,16 +3,9 @@ import { useEffect, useMemo, useState } from "react";
 import http from "../api/http";
 import type { University } from "../types";
 import Globe from "../components/Globe";
-import {
-  ExternalLink,
-  GraduationCap,
-  MessageCircle,
-  X,
-  List,
-} from "lucide-react";
+import { ExternalLink, GraduationCap, MessageCircle, X, List } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { titleCase } from "../utils/format";
-
 
 export default function GlobeDiscipline() {
   const { discipline = "" } = useParams();
@@ -25,7 +18,6 @@ export default function GlobeDiscipline() {
   const [showList, setShowList] = useState(false);
   const [hoveredId, setHoveredId] = useState<string | null>(null);
 
-
   const prettyDiscipline = titleCase(discipline);
 
   // Fetch universities for this discipline
@@ -33,18 +25,33 @@ export default function GlobeDiscipline() {
     setLoading(true);
     setSelected(undefined);
     http
-      .get("/universities", { params: { course: discipline } })
+      .get("/universities", { params: { discipline } }) // make sure backend uses this param
       .then((res) => setUniversities(res.data || []))
       .finally(() => setLoading(false));
   }, [discipline]);
 
-  // Top 10 universities by rank
+  // 🔧 NEW: filter by discipline first (handle both stored field and programs key)
+  const filtered = useMemo(
+    () =>
+      (universities || []).filter(
+        (u) =>
+          (u as any).discipline?.toLowerCase() === discipline ||
+          Boolean(u?.programs && (u.programs as any)[discipline])
+      ),
+    [universities, discipline]
+  );
+
+  // Top 10 within this discipline, sorted by numeric rank
   const top10 = useMemo(
     () =>
-      [...universities]
-        .sort((a, b) => (a.rank ?? 9999) - (b.rank ?? 9999))
+      [...filtered]
+        .sort(
+          (a, b) =>
+            (Number(a.rank) || Number.MAX_SAFE_INTEGER) -
+            (Number(b.rank) || Number.MAX_SAFE_INTEGER)
+        )
         .slice(0, 10),
-    [universities]
+    [filtered]
   );
 
   const photoFor = (u?: University) =>
@@ -155,43 +162,49 @@ export default function GlobeDiscipline() {
             </div>
 
             <ol className="space-y-2">
-              {top10.map((u, i) => (
-                <motion.li key={u._id} whileHover={{ x: 4 }}>
-                  <button
-                    onClick={() => setSelected(u)}
-                    className={`w-full flex items-center gap-3 rounded-xl px-3 py-2.5 
-                     transition backdrop-blur-md
-                     ${hoveredId === u._id ? "bg-white/10" : "hover:bg-white/5"} 
-                     focus:outline-none focus:ring-2 focus:ring-white/60`}
-                    onMouseEnter={() => setHoveredId(u._id)}
-                    onMouseLeave={() => setHoveredId(null)}
-                  >
-                    <span
-                      className={[
-                        "w-7 h-7 flex items-center justify-center rounded-full text-[11px] font-extrabold shrink-0 shadow-md",
-                        i === 0
-                          ? "bg-gradient-to-br from-yellow-400 to-amber-300 text-black"
-                          : i === 1
-                          ? "bg-gradient-to-br from-slate-200 to-slate-400 text-black"
-                          : i === 2
-                          ? "bg-gradient-to-br from-amber-500 to-orange-500 text-white"
-                          : "bg-gradient-to-br from-blue-500 to-purple-500 text-white",
-                      ].join(" ")}
-                    >
-                      {i + 1}
-                    </span>
+              {top10.map((u, i) => {
+                // ✅ rank badge uses real rank, falls back to list index
+                const r = Number(u.rank);
+                const displayRank = Number.isFinite(r) && r > 0 ? r : i + 1;
 
-                    <div className="min-w-0 flex-1 text-left">
-                      <p className="text-sm font-semibold leading-tight truncate text-white/90">
-                        {u.name}
-                      </p>
-                      <p className="text-[11px] text-white/60 leading-tight truncate">
-                        {u.city} · {u.country}
-                      </p>
-                    </div>
-                  </button>
-                </motion.li>
-              ))}
+                return (
+                  <motion.li key={u._id} whileHover={{ x: 4 }}>
+                    <button
+                      onClick={() => setSelected(u)}
+                      className={`w-full flex items-center gap-3 rounded-xl px-3 py-2.5 
+                       transition backdrop-blur-md
+                       ${hoveredId === u._id ? "bg-white/10" : "hover:bg-white/5"} 
+                       focus:outline-none focus:ring-2 focus:ring-white/60`}
+                      onMouseEnter={() => setHoveredId(u._id)}
+                      onMouseLeave={() => setHoveredId(null)}
+                    >
+                      <span
+                        className={[
+                          "w-7 h-7 flex items-center justify-center rounded-full text-[11px] font-extrabold shrink-0 shadow-md",
+                          displayRank === 1
+                            ? "bg-gradient-to-br from-yellow-400 to-amber-300 text-black"
+                            : displayRank === 2
+                            ? "bg-gradient-to-br from-slate-200 to-slate-400 text-black"
+                            : displayRank === 3
+                            ? "bg-gradient-to-br from-amber-500 to-orange-500 text-white"
+                            : "bg-gradient-to-br from-blue-500 to-purple-500 text-white",
+                        ].join(" ")}
+                      >
+                        {displayRank}
+                      </span>
+
+                      <div className="min-w-0 flex-1 text-left">
+                        <p className="text-sm font-semibold leading-tight truncate text-white/90">
+                          {u.name}
+                        </p>
+                        <p className="text-[11px] text-white/60 leading-tight truncate">
+                          {u.city} · {u.country}
+                        </p>
+                      </div>
+                    </button>
+                  </motion.li>
+                );
+              })}
             </ol>
           </motion.div>
         )}
@@ -258,15 +271,11 @@ export default function GlobeDiscipline() {
                 <section className="grid grid-cols-2 gap-3">
                   <div className="rounded-xl border border-gray-200/70 bg-white/70 p-3 text-center">
                     <div className="text-xs text-gray-500">Local Fees</div>
-                    <div className="text-base font-semibold">
-                      {fees?.local ?? "—"}
-                    </div>
+                    <div className="text-base font-semibold">{fees?.local ?? "—"}</div>
                   </div>
                   <div className="rounded-xl border border-gray-200/70 bg-white/70 p-3 text-center">
                     <div className="text-xs text-gray-500">International</div>
-                    <div className="text-base font-semibold">
-                      {fees?.international ?? "—"}
-                    </div>
+                    <div className="text-base font-semibold">{fees?.international ?? "—"}</div>
                   </div>
                 </section>
               )}
@@ -295,29 +304,17 @@ export default function GlobeDiscipline() {
                   Street View
                 </motion.a>
 
-         <motion.button
-  whileHover={{ scale: 1.02 }}
-  onClick={() => {
-    navigate(`/learning/${discipline}`, {
-      state: { university: selected },
-    });
-  }}
->
-  <GraduationCap className="h-4 w-4" />
-  Open Learning Hub
-</motion.button>
-
-
-
-
-
-
-
-
-
-
-
-
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  onClick={() => {
+                    navigate(`/learning/${discipline}`, {
+                      state: { university: selected },
+                    });
+                  }}
+                >
+                  <GraduationCap className="h-4 w-4" />
+                  Open Learning Hub
+                </motion.button>
 
                 <motion.button
                   whileHover={{ scale: 1.02 }}

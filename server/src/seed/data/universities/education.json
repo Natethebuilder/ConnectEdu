@@ -1,0 +1,234 @@
+[
+  {
+    "name": "University College London (UCL)",
+    "rank": 1,
+    "city": "London",
+    "country": "United Kingdom",
+    "website": "https://www.ucl.ac.uk/ioe",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0d/UCL_Portico_Building.jpg",
+    "location": { "type": "Point", "coordinates": [-0.1339, 51.5246] },
+    "programs": {
+      "education": {
+        "entryRequirements": {
+          "A-levels": "ABB–AAA depending on program",
+          "IB": "34–36 points"
+        },
+        "fees": {
+          "local": "£9,250/year",
+          "international": "£22,000/year"
+        },
+        "duration": "3–4 years",
+        "degreeType": "BA/BSc"
+      }
+    }
+  },
+  {
+    "name": "Harvard University",
+    "rank": 2,
+    "city": "Cambridge, MA",
+    "country": "United States",
+    "website": "https://www.gse.harvard.edu/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Harvard_University_Widener_Library.jpg",
+    "location": { "type": "Point", "coordinates": [-71.1167, 42.377] },
+    "programs": {
+      "education": {
+        "entryRequirements": {
+          "GPA": "4.0",
+          "Recommendations": "2 teachers + counselor",
+          "Essays": "Required"
+        },
+        "fees": {
+          "local": "$54,269/year",
+          "international": "$54,269/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BA"
+      }
+    }
+  },
+  {
+    "name": "University of Hong Kong (HKU)",
+    "rank": 3,
+    "city": "Hong Kong",
+    "country": "China (Hong Kong SAR)",
+    "website": "https://web.edu.hku.hk/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/8/87/University_of_Hong_Kong_Main_Building.JPG",
+    "location": { "type": "Point", "coordinates": [114.137, 22.283] },
+    "programs": {
+      "education": {
+        "entryRequirements": {
+          "High School": "Strong grades in relevant subjects",
+          "Language": "English or Cantonese proficiency"
+        },
+        "fees": {
+          "local": "HK$42,100/year",
+          "international": "HK$145,000/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BEd"
+      }
+    }
+  },
+  {
+    "name": "Stanford University",
+    "rank": 4,
+    "city": "Stanford, CA",
+    "country": "United States",
+    "website": "https://ed.stanford.edu/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Stanford_Oval_May_2011_panorama.jpg",
+    "location": { "type": "Point", "coordinates": [-122.1697, 37.4275] },
+    "programs": {
+      "education": {
+        "entryRequirements": {
+          "GPA": "3.9+",
+          "Essays": "Required",
+          "Recommendations": "2 teachers"
+        },
+        "fees": {
+          "local": "$56,169/year",
+          "international": "$56,169/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BA/BSc"
+      }
+    }
+  },
+  {
+    "name": "University of Cambridge",
+    "rank": 5,
+    "city": "Cambridge",
+    "country": "United Kingdom",
+    "website": "https://www.educ.cam.ac.uk/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/KingsCollegeChapelWest.jpg",
+    "location": { "type": "Point", "coordinates": [0.1167, 52.2053] },
+    "programs": {
+      "education": {
+        "entryRequirements": {
+          "A-levels": "A*AA",
+          "IB": "40–42 points with 776 at HL"
+        },
+        "fees": {
+          "local": "£9,250/year",
+          "international": "£24,507/year"
+        },
+        "duration": "3 years",
+        "degreeType": "BA (Hons)"
+      }
+    }
+  },
+  {
+    "name": "University of Oxford",
+    "rank": 6,
+    "city": "Oxford",
+    "country": "United Kingdom",
+    "website": "https://www.education.ox.ac.uk/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Oxford_Sheldonian_Theatre.jpg",
+    "location": { "type": "Point", "coordinates": [-1.254, 51.754] },
+    "programs": {
+      "education": {
+        "entryRequirements": {
+          "A-levels": "AAA",
+          "IB": "38 points"
+        },
+        "fees": {
+          "local": "£9,250/year",
+          "international": "£27,840/year"
+        },
+        "duration": "3 years",
+        "degreeType": "BA (Hons)"
+      }
+    }
+  },
+  {
+    "name": "Beijing Normal University",
+    "rank": 7,
+    "city": "Beijing",
+    "country": "China",
+    "website": "https://english.bnu.edu.cn/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/66/Beijing_Normal_University.jpg",
+    "location": { "type": "Point", "coordinates": [116.366, 39.961] },
+    "programs": {
+      "education": {
+        "entryRequirements": {
+          "High School": "Strong grades in relevant subjects",
+          "Language": "Chinese (some programs English)"
+        },
+        "fees": {
+          "local": "¥26,000/year",
+          "international": "¥32,000/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BEd"
+      }
+    }
+  },
+  {
+    "name": "Nanyang Technological University (NTU)",
+    "rank": 8,
+    "city": "Singapore",
+    "country": "Singapore",
+    "website": "https://www.ntu.edu.sg/nie",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/00/Nanyang_Technological_University_Admin_Building.jpg",
+    "location": { "type": "Point", "coordinates": [103.6800, 1.3483] },
+    "programs": {
+      "education": {
+        "entryRequirements": {
+          "High School": "Excellent grades",
+          "Language": "English required"
+        },
+        "fees": {
+          "local": "S$8,200/year",
+          "international": "S$31,200/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BEd"
+      }
+    }
+  },
+  {
+    "name": "University of California, Berkeley",
+    "rank": 9,
+    "city": "Berkeley, CA",
+    "country": "United States",
+    "website": "https://gse.berkeley.edu/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/UC_Berkeley_Campus_Overview.jpg",
+    "location": { "type": "Point", "coordinates": [-122.259, 37.8721] },
+    "programs": {
+      "education": {
+        "entryRequirements": {
+          "GPA": "3.8+",
+          "Essays": "Required"
+        },
+        "fees": {
+          "local": "$14,226/year",
+          "international": "$47,768/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BA"
+      }
+    }
+  },
+  {
+    "name": "University of Toronto",
+    "rank": 10,
+    "city": "Toronto",
+    "country": "Canada",
+    "website": "https://www.oise.utoronto.ca/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cf/University_College_UofT.JPG",
+    "location": { "type": "Point", "coordinates": [-79.3948, 43.6629] },
+    "programs": {
+      "education": {
+        "entryRequirements": {
+          "High School": "Excellent grades",
+          "Language": "English required"
+        },
+        "fees": {
+          "local": "CA$6,100/year",
+          "international": "CA$58,160/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BA/BEd"
+      }
+    }
+  }
+]

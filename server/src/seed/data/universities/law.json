@@ -1,0 +1,242 @@
+[
+  {
+    "name": "Harvard University",
+    "rank": 1,
+    "city": "Cambridge, MA",
+    "country": "United States",
+    "website": "https://hls.harvard.edu/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Harvard_University_Widener_Library.jpg",
+    "location": { "type": "Point", "coordinates": [-71.1167, 42.377] },
+    "programs": {
+      "law": {
+        "entryRequirements": {
+          "Undergraduate": "Bachelor’s degree required",
+          "LSAT/GRE": "High scores required",
+          "Essays": "Personal statement + 2 recommendations"
+        },
+        "fees": {
+          "local": "$70,430/year",
+          "international": "$70,430/year"
+        },
+        "duration": "3 years (JD)",
+        "degreeType": "JD"
+      }
+    }
+  },
+  {
+    "name": "University of Oxford",
+    "rank": 2,
+    "city": "Oxford",
+    "country": "United Kingdom",
+    "website": "https://www.law.ox.ac.uk/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Oxford_Sheldonian_Theatre.jpg",
+    "location": { "type": "Point", "coordinates": [-1.254, 51.754] },
+    "programs": {
+      "law": {
+        "entryRequirements": {
+          "A-levels": "AAA",
+          "IB": "38 with 6 in HL subjects",
+          "LNAT": "Required"
+        },
+        "fees": {
+          "local": "£9,250/year",
+          "international": "£29,500/year"
+        },
+        "duration": "3 years",
+        "degreeType": "BA (Jurisprudence)"
+      }
+    }
+  },
+  {
+    "name": "University of Cambridge",
+    "rank": 3,
+    "city": "Cambridge",
+    "country": "United Kingdom",
+    "website": "https://www.law.cam.ac.uk/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/KingsCollegeChapelWest.jpg",
+    "location": { "type": "Point", "coordinates": [0.1167, 52.2053] },
+    "programs": {
+      "law": {
+        "entryRequirements": {
+          "A-levels": "A*AA",
+          "IB": "40–42 with 776 at HL",
+          "LNAT": "Required"
+        },
+        "fees": {
+          "local": "£9,250/year",
+          "international": "£24,507/year"
+        },
+        "duration": "3 years",
+        "degreeType": "BA (Law)"
+      }
+    }
+  },
+  {
+    "name": "Yale University",
+    "rank": 4,
+    "city": "New Haven, CT",
+    "country": "United States",
+    "website": "https://law.yale.edu/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Yale_University_Old_Campus_2014.jpg",
+    "location": { "type": "Point", "coordinates": [-72.9223, 41.3163] },
+    "programs": {
+      "law": {
+        "entryRequirements": {
+          "Undergraduate": "Bachelor’s degree required",
+          "LSAT/GRE": "High scores required",
+          "Essays": "Personal statement + recommendations"
+        },
+        "fees": {
+          "local": "$69,433/year",
+          "international": "$69,433/year"
+        },
+        "duration": "3 years",
+        "degreeType": "JD"
+      }
+    }
+  },
+  {
+    "name": "Stanford University",
+    "rank": 5,
+    "city": "Stanford, CA",
+    "country": "United States",
+    "website": "https://law.stanford.edu/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Stanford_Oval_May_2011_panorama.jpg",
+    "location": { "type": "Point", "coordinates": [-122.1697, 37.4275] },
+    "programs": {
+      "law": {
+        "entryRequirements": {
+          "Undergraduate": "Bachelor’s degree required",
+          "LSAT/GRE": "High scores required",
+          "Recommendations": "2 professors"
+        },
+        "fees": {
+          "local": "$68,997/year",
+          "international": "$68,997/year"
+        },
+        "duration": "3 years",
+        "degreeType": "JD"
+      }
+    }
+  },
+  {
+    "name": "London School of Economics and Political Science (LSE)",
+    "rank": 6,
+    "city": "London",
+    "country": "United Kingdom",
+    "website": "https://www.lse.ac.uk/law",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/77/LSE_Entrance.jpg",
+    "location": { "type": "Point", "coordinates": [-0.116, 51.5145] },
+    "programs": {
+      "law": {
+        "entryRequirements": {
+          "A-levels": "A*AA",
+          "IB": "38 points",
+          "LNAT": "Required"
+        },
+        "fees": {
+          "local": "£9,250/year",
+          "international": "£23,330/year"
+        },
+        "duration": "3 years",
+        "degreeType": "LLB"
+      }
+    }
+  },
+  {
+    "name": "University of California, Berkeley",
+    "rank": 7,
+    "city": "Berkeley, CA",
+    "country": "United States",
+    "website": "https://www.law.berkeley.edu/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/UC_Berkeley_Campus_Overview.jpg",
+    "location": { "type": "Point", "coordinates": [-122.259, 37.8721] },
+    "programs": {
+      "law": {
+        "entryRequirements": {
+          "Undergraduate": "Bachelor’s degree required",
+          "LSAT": "High score required",
+          "Essays": "Required"
+        },
+        "fees": {
+          "local": "$52,395/year",
+          "international": "$52,395/year"
+        },
+        "duration": "3 years",
+        "degreeType": "JD"
+      }
+    }
+  },
+  {
+    "name": "Columbia University",
+    "rank": 8,
+    "city": "New York, NY",
+    "country": "United States",
+    "website": "https://www.law.columbia.edu/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Low_Memorial_Library_Columbia_University_College_Walk_jeh.jpg",
+    "location": { "type": "Point", "coordinates": [-73.9626, 40.8075] },
+    "programs": {
+      "law": {
+        "entryRequirements": {
+          "Undergraduate": "Bachelor’s degree required",
+          "LSAT/GRE": "High scores required",
+          "Recommendations": "2 professors"
+        },
+        "fees": {
+          "local": "$78,278/year",
+          "international": "$78,278/year"
+        },
+        "duration": "3 years",
+        "degreeType": "JD"
+      }
+    }
+  },
+  {
+    "name": "New York University (NYU)",
+    "rank": 9,
+    "city": "New York, NY",
+    "country": "United States",
+    "website": "https://www.law.nyu.edu/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/40/Nyu_law.jpg",
+    "location": { "type": "Point", "coordinates": [-73.9973, 40.7306] },
+    "programs": {
+      "law": {
+        "entryRequirements": {
+          "Undergraduate": "Bachelor’s degree required",
+          "LSAT/GRE": "High scores required",
+          "Essays": "Personal statement required"
+        },
+        "fees": {
+          "local": "$76,146/year",
+          "international": "$76,146/year"
+        },
+        "duration": "3 years",
+        "degreeType": "JD"
+      }
+    }
+  },
+  {
+    "name": "National University of Singapore (NUS)",
+    "rank": 10,
+    "city": "Singapore",
+    "country": "Singapore",
+    "website": "https://law.nus.edu.sg/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/76/NUS_School_of_Science.jpg",
+    "location": { "type": "Point", "coordinates": [103.7764, 1.2966] },
+    "programs": {
+      "law": {
+        "entryRequirements": {
+          "High School": "Excellent grades",
+          "Language": "English required",
+          "Test": "NUS Law Admission Test"
+        },
+        "fees": {
+          "local": "S$12,650/year",
+          "international": "S$29,000/year"
+        },
+        "duration": "4 years",
+        "degreeType": "LLB"
+      }
+    }
+  }
+]

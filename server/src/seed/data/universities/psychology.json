@@ -1,0 +1,238 @@
+[
+  {
+    "name": "Harvard University",
+    "rank": 1,
+    "city": "Cambridge, MA",
+    "country": "United States",
+    "website": "https://psychology.fas.harvard.edu/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Harvard_University_Widener_Library.jpg",
+    "location": { "type": "Point", "coordinates": [-71.1167, 42.377] },
+    "programs": {
+      "psychology": {
+        "entryRequirements": {
+          "GPA": "4.0",
+          "SAT/ACT": "1500+ SAT or 34+ ACT",
+          "Recommendations": "2 teachers + counselor"
+        },
+        "fees": {
+          "local": "$54,269/year",
+          "international": "$54,269/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BA"
+      }
+    }
+  },
+  {
+    "name": "University of Oxford",
+    "rank": 2,
+    "city": "Oxford",
+    "country": "United Kingdom",
+    "website": "https://www.psy.ox.ac.uk/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Oxford_Sheldonian_Theatre.jpg",
+    "location": { "type": "Point", "coordinates": [-1.254, 51.754] },
+    "programs": {
+      "psychology": {
+        "entryRequirements": {
+          "A-levels": "AAA including Biology or Mathematics",
+          "IB": "38–40 with 6 in HL subjects"
+        },
+        "fees": {
+          "local": "£9,250/year",
+          "international": "£36,800/year"
+        },
+        "duration": "3 years",
+        "degreeType": "BA (Hons)"
+      }
+    }
+  },
+  {
+    "name": "Stanford University",
+    "rank": 3,
+    "city": "Stanford, CA",
+    "country": "United States",
+    "website": "https://psychology.stanford.edu/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Stanford_Oval_May_2011_panorama.jpg",
+    "location": { "type": "Point", "coordinates": [-122.1697, 37.4275] },
+    "programs": {
+      "psychology": {
+        "entryRequirements": {
+          "GPA": "3.9+",
+          "SAT/ACT": "1500+ SAT or 34+ ACT",
+          "Essays": "Required"
+        },
+        "fees": {
+          "local": "$56,169/year",
+          "international": "$56,169/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BA"
+      }
+    }
+  },
+  {
+    "name": "University of Cambridge",
+    "rank": 4,
+    "city": "Cambridge",
+    "country": "United Kingdom",
+    "website": "https://www.psychol.cam.ac.uk/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/KingsCollegeChapelWest.jpg",
+    "location": { "type": "Point", "coordinates": [0.1167, 52.2053] },
+    "programs": {
+      "psychology": {
+        "entryRequirements": {
+          "A-levels": "A*AA including Biology or Maths",
+          "IB": "40–42 with 776 at HL"
+        },
+        "fees": {
+          "local": "£9,250/year",
+          "international": "£36,000/year"
+        },
+        "duration": "3 years",
+        "degreeType": "BA (Hons)"
+      }
+    }
+  },
+  {
+    "name": "Yale University",
+    "rank": 5,
+    "city": "New Haven, CT",
+    "country": "United States",
+    "website": "https://psychology.yale.edu/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Yale_University_Old_Campus_2014.jpg",
+    "location": { "type": "Point", "coordinates": [-72.9223, 41.3163] },
+    "programs": {
+      "psychology": {
+        "entryRequirements": {
+          "GPA": "3.9+",
+          "SAT/ACT": "1500+ SAT or 34+ ACT",
+          "Recommendations": "2 teachers"
+        },
+        "fees": {
+          "local": "$62,250/year",
+          "international": "$62,250/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BA"
+      }
+    }
+  },
+  {
+    "name": "University College London (UCL)",
+    "rank": 6,
+    "city": "London",
+    "country": "United Kingdom",
+    "website": "https://www.ucl.ac.uk/psychology-language-sciences/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0d/UCL_Portico_Building.jpg",
+    "location": { "type": "Point", "coordinates": [-0.1339, 51.5246] },
+    "programs": {
+      "psychology": {
+        "entryRequirements": {
+          "A-levels": "AAA including one science subject",
+          "IB": "38 points with 6 in HL Biology/Maths"
+        },
+        "fees": {
+          "local": "£9,250/year",
+          "international": "£28,500/year"
+        },
+        "duration": "3 years",
+        "degreeType": "BSc"
+      }
+    }
+  },
+  {
+    "name": "Columbia University",
+    "rank": 7,
+    "city": "New York, NY",
+    "country": "United States",
+    "website": "https://psychology.columbia.edu/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Low_Memorial_Library_Columbia_University_College_Walk_jeh.jpg",
+    "location": { "type": "Point", "coordinates": [-73.9626, 40.8075] },
+    "programs": {
+      "psychology": {
+        "entryRequirements": {
+          "GPA": "3.9+",
+          "SAT/ACT": "1500+ SAT or 34+ ACT",
+          "Essays": "Required"
+        },
+        "fees": {
+          "local": "$65,524/year",
+          "international": "$65,524/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BA"
+      }
+    }
+  },
+  {
+    "name": "University of Michigan–Ann Arbor",
+    "rank": 8,
+    "city": "Ann Arbor, MI",
+    "country": "United States",
+    "website": "https://lsa.umich.edu/psych/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f5/University_of_Michigan_campus.jpg",
+    "location": { "type": "Point", "coordinates": [-83.7382, 42.278] },
+    "programs": {
+      "psychology": {
+        "entryRequirements": {
+          "GPA": "3.8+",
+          "SAT/ACT": "Optional",
+          "Essays": "Required"
+        },
+        "fees": {
+          "local": "$17,786/year",
+          "international": "$57,273/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BA"
+      }
+    }
+  },
+  {
+    "name": "University of California, Los Angeles (UCLA)",
+    "rank": 9,
+    "city": "Los Angeles, CA",
+    "country": "United States",
+    "website": "https://www.psych.ucla.edu/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/09/Royce_Hall_at_UCLA.jpg",
+    "location": { "type": "Point", "coordinates": [-118.4452, 34.0689] },
+    "programs": {
+      "psychology": {
+        "entryRequirements": {
+          "GPA": "3.8+",
+          "SAT/ACT": "Optional",
+          "Essays": "Required"
+        },
+        "fees": {
+          "local": "$14,226/year",
+          "international": "$47,768/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BA"
+      }
+    }
+  },
+  {
+    "name": "University of Amsterdam",
+    "rank": 10,
+    "city": "Amsterdam",
+    "country": "Netherlands",
+    "website": "https://www.uva.nl/en/programmes/bachelors/psychology/psychology.html",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/University_of_Amsterdam%2C_main_building.jpg",
+    "location": { "type": "Point", "coordinates": [4.8936, 52.3667] },
+    "programs": {
+      "psychology": {
+        "entryRequirements": {
+          "High School": "Strong grades in Math & English",
+          "Language": "English required (IELTS/TOEFL)"
+        },
+        "fees": {
+          "local": "€2,530/year",
+          "international": "€11,000/year"
+        },
+        "duration": "3 years",
+        "degreeType": "BSc"
+      }
+    }
+  }
+]

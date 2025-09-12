@@ -178,7 +178,7 @@ universities.forEach((u, i) => {
     id: u._id,
     position: dynamicPos as unknown as Cesium.PositionProperty,
     billboard: {
-      image: makeDotSVG(i + 1),
+      image: makeDotSVG(Number(u.rank) ?? i + 1),
       width: 40,
       height: 40,
       scaleByDistance: new Cesium.NearFarScalar(

@@ -1,0 +1,232 @@
+[
+  {
+    "name": "Royal College of Art",
+    "rank": 1,
+    "city": "London",
+    "country": "United Kingdom",
+    "website": "https://www.rca.ac.uk/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/62/Royal_College_of_Art%2C_London.JPG",
+    "location": { "type": "Point", "coordinates": [-0.178, 51.501] },
+    "programs": {
+      "art-design": {
+        "entryRequirements": {
+          "Portfolio": "Required",
+          "Degree": "Bachelor’s degree or equivalent"
+        },
+        "fees": {
+          "local": "£15,000–£30,000/year",
+          "international": "£30,000–£35,000/year"
+        },
+        "duration": "2 years (postgraduate focus)",
+        "degreeType": "MA"
+      }
+    }
+  },
+  {
+    "name": "University of the Arts London (UAL)",
+    "rank": 2,
+    "city": "London",
+    "country": "United Kingdom",
+    "website": "https://www.arts.ac.uk/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/73/Central_Saint_Martins%2C_University_of_the_Arts_London.jpg",
+    "location": { "type": "Point", "coordinates": [-0.1278, 51.5074] },
+    "programs": {
+      "art-design": {
+        "entryRequirements": {
+          "Portfolio": "Required",
+          "High School": "Strong grades in creative subjects"
+        },
+        "fees": {
+          "local": "£9,250/year",
+          "international": "£25,970/year"
+        },
+        "duration": "3–4 years",
+        "degreeType": "BA/BFA"
+      }
+    }
+  },
+  {
+    "name": "The New School (Parsons School of Design)",
+    "rank": 3,
+    "city": "New York, NY",
+    "country": "United States",
+    "website": "https://www.newschool.edu/parsons/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Parsons_School_of_Design_building.jpg",
+    "location": { "type": "Point", "coordinates": [-73.995, 40.7359] },
+    "programs": {
+      "art-design": {
+        "entryRequirements": {
+          "Portfolio": "Required",
+          "Essays": "Required"
+        },
+        "fees": {
+          "local": "$50,000/year",
+          "international": "$50,000/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BFA"
+      }
+    }
+  },
+  {
+    "name": "Rhode Island School of Design (RISD)",
+    "rank": 4,
+    "city": "Providence, RI",
+    "country": "United States",
+    "website": "https://www.risd.edu/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Rhode_Island_School_of_Design_Museum.jpg",
+    "location": { "type": "Point", "coordinates": [-71.407, 41.8268] },
+    "programs": {
+      "art-design": {
+        "entryRequirements": {
+          "Portfolio": "Required",
+          "High School": "Strong academic record"
+        },
+        "fees": {
+          "local": "$57,000/year",
+          "international": "$57,000/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BFA"
+      }
+    }
+  },
+  {
+    "name": "Massachusetts Institute of Technology (MIT)",
+    "rank": 5,
+    "city": "Cambridge, MA",
+    "country": "United States",
+    "website": "https://architecture.mit.edu/art-culture-and-technology",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0c/MIT_Dome_night1.jpg",
+    "location": { "type": "Point", "coordinates": [-71.092, 42.3601] },
+    "programs": {
+      "art-design": {
+        "entryRequirements": {
+          "SAT/ACT": "1500+ SAT or 34+ ACT",
+          "Portfolio": "Recommended"
+        },
+        "fees": {
+          "local": "$57,590/year",
+          "international": "$57,590/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BSc/BA"
+      }
+    }
+  },
+  {
+    "name": "Politecnico di Milano",
+    "rank": 6,
+    "city": "Milan",
+    "country": "Italy",
+    "website": "https://www.polimi.it/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Politecnico_di_Milano.jpg",
+    "location": { "type": "Point", "coordinates": [9.228, 45.478] },
+    "programs": {
+      "art-design": {
+        "entryRequirements": {
+          "High School": "Strong grades",
+          "Test": "Design aptitude test"
+        },
+        "fees": {
+          "local": "€3,500/year",
+          "international": "€3,800–€9,000/year"
+        },
+        "duration": "3 years",
+        "degreeType": "BA"
+      }
+    }
+  },
+  {
+    "name": "Pratt Institute",
+    "rank": 7,
+    "city": "New York, NY",
+    "country": "United States",
+    "website": "https://www.pratt.edu/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Pratt_Institute_Main_Building.jpg",
+    "location": { "type": "Point", "coordinates": [-73.963, 40.691] },
+    "programs": {
+      "art-design": {
+        "entryRequirements": {
+          "Portfolio": "Required",
+          "Essays": "Required"
+        },
+        "fees": {
+          "local": "$55,000/year",
+          "international": "$55,000/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BFA"
+      }
+    }
+  },
+  {
+    "name": "Aalto University",
+    "rank": 8,
+    "city": "Espoo",
+    "country": "Finland",
+    "website": "https://www.aalto.fi/en/school-of-arts-design-and-architecture",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Aalto_University_Campus.jpg",
+    "location": { "type": "Point", "coordinates": [24.828, 60.186] },
+    "programs": {
+      "art-design": {
+        "entryRequirements": {
+          "Portfolio": "Required",
+          "Language": "English or Finnish"
+        },
+        "fees": {
+          "local": "€0 (EU/EEA)",
+          "international": "€12,000–€15,000/year"
+        },
+        "duration": "3 years",
+        "degreeType": "BA"
+      }
+    }
+  },
+  {
+    "name": "School of the Art Institute of Chicago (SAIC)",
+    "rank": 9,
+    "city": "Chicago, IL",
+    "country": "United States",
+    "website": "https://www.saic.edu/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/64/School_of_the_Art_Institute_of_Chicago.JPG",
+    "location": { "type": "Point", "coordinates": [-87.623, 41.879] },
+    "programs": {
+      "art-design": {
+        "entryRequirements": {
+          "Portfolio": "Required",
+          "Essays": "Required"
+        },
+        "fees": {
+          "local": "$52,000/year",
+          "international": "$52,000/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BFA"
+      }
+    }
+  },
+  {
+    "name": "Design Academy Eindhoven",
+    "rank": 10,
+    "city": "Eindhoven",
+    "country": "Netherlands",
+    "website": "https://www.designacademy.nl/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/34/Design_Academy_Eindhoven.jpg",
+    "location": { "type": "Point", "coordinates": [5.479, 51.439] },
+    "programs": {
+      "art-design": {
+        "entryRequirements": {
+          "Portfolio": "Required",
+          "Language": "English required"
+        },
+        "fees": {
+          "local": "€2,530/year",
+          "international": "€12,000/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BA"
+      }
+    }
+  }
+]
