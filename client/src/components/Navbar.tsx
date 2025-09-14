@@ -13,8 +13,7 @@ export default function Navbar() {
   const navigate = useNavigate();
 
   const isGlobePage =
-  location.pathname.startsWith("/globe") ||
-  location.pathname.startsWith("/learning");
+  location.pathname.startsWith("/globe");
 
 
   async function handleLogout() {
