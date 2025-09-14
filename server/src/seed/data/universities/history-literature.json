@@ -1,0 +1,235 @@
+[
+  {
+    "name": "Harvard University",
+    "rank": 1,
+    "city": "Cambridge, MA",
+    "country": "United States",
+    "website": "https://history.fas.harvard.edu/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Harvard_University_Widener_Library.jpg",
+    "location": { "type": "Point", "coordinates": [-71.1167, 42.377] },
+    "programs": {
+      "history": {
+        "entryRequirements": {
+          "GPA": "4.0",
+          "SAT/ACT": "1500+ SAT or 34+ ACT",
+          "Essays": "Required"
+        },
+        "fees": {
+          "local": "$54,269/year",
+          "international": "$54,269/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BA"
+      }
+    }
+  },
+  {
+    "name": "University of Oxford",
+    "rank": 2,
+    "city": "Oxford",
+    "country": "United Kingdom",
+    "website": "https://www.history.ox.ac.uk/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Oxford_Sheldonian_Theatre.jpg",
+    "location": { "type": "Point", "coordinates": [-1.254, 51.754] },
+    "programs": {
+      "history": {
+        "entryRequirements": {
+          "A-levels": "AAA",
+          "IB": "39 with 6,6,6 at HL"
+        },
+        "fees": {
+          "local": "£9,250/year",
+          "international": "£28,950/year"
+        },
+        "duration": "3 years",
+        "degreeType": "BA (Hons)"
+      }
+    }
+  },
+  {
+    "name": "University of Cambridge",
+    "rank": 3,
+    "city": "Cambridge",
+    "country": "United Kingdom",
+    "website": "https://www.hist.cam.ac.uk/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/KingsCollegeChapelWest.jpg",
+    "location": { "type": "Point", "coordinates": [0.1167, 52.2053] },
+    "programs": {
+      "history": {
+        "entryRequirements": {
+          "A-levels": "A*AA",
+          "IB": "40–42 with 776 at HL"
+        },
+        "fees": {
+          "local": "£9,250/year",
+          "international": "£24,507/year"
+        },
+        "duration": "3 years",
+        "degreeType": "BA (Hons)"
+      }
+    }
+  },
+  {
+    "name": "Yale University",
+    "rank": 4,
+    "city": "New Haven, CT",
+    "country": "United States",
+    "website": "https://history.yale.edu/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Yale_University_Old_Campus_2014.jpg",
+    "location": { "type": "Point", "coordinates": [-72.9223, 41.3163] },
+    "programs": {
+      "history": {
+        "entryRequirements": {
+          "GPA": "3.9+",
+          "SAT/ACT": "1500+ SAT or 34+ ACT",
+          "Essays": "Required"
+        },
+        "fees": {
+          "local": "$62,250/year",
+          "international": "$62,250/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BA"
+      }
+    }
+  },
+  {
+    "name": "Peking University",
+    "rank": 5,
+    "city": "Beijing",
+    "country": "China",
+    "website": "https://english.pku.edu.cn/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Peking_University_West_Gate_2.jpg",
+    "location": { "type": "Point", "coordinates": [116.316, 39.992] },
+    "programs": {
+      "history": {
+        "entryRequirements": {
+          "High School": "Excellent grades",
+          "Language": "Chinese (some programs in English)"
+        },
+        "fees": {
+          "local": "¥26,000/year",
+          "international": "¥30,000/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BA"
+      }
+    }
+  },
+  {
+    "name": "Stanford University",
+    "rank": 6,
+    "city": "Stanford, CA",
+    "country": "United States",
+    "website": "https://history.stanford.edu/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Stanford_Oval_May_2011_panorama.jpg",
+    "location": { "type": "Point", "coordinates": [-122.1697, 37.4275] },
+    "programs": {
+      "history": {
+        "entryRequirements": {
+          "GPA": "3.9+",
+          "SAT/ACT": "1500+ SAT or 34+ ACT",
+          "Essays": "Required"
+        },
+        "fees": {
+          "local": "$56,169/year",
+          "international": "$56,169/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BA"
+      }
+    }
+  },
+  {
+    "name": "London School of Economics and Political Science (LSE)",
+    "rank": 7,
+    "city": "London",
+    "country": "United Kingdom",
+    "website": "https://www.lse.ac.uk/International-History",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/77/LSE_Entrance.jpg",
+    "location": { "type": "Point", "coordinates": [-0.116, 51.5145] },
+    "programs": {
+      "history": {
+        "entryRequirements": {
+          "A-levels": "AAA",
+          "IB": "38 points"
+        },
+        "fees": {
+          "local": "£9,250/year",
+          "international": "£23,330/year"
+        },
+        "duration": "3 years",
+        "degreeType": "BA (Hons)"
+      }
+    }
+  },
+  {
+    "name": "University of California, Berkeley",
+    "rank": 8,
+    "city": "Berkeley, CA",
+    "country": "United States",
+    "website": "https://history.berkeley.edu/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/UC_Berkeley_Campus_Overview.jpg",
+    "location": { "type": "Point", "coordinates": [-122.259, 37.8721] },
+    "programs": {
+      "history": {
+        "entryRequirements": {
+          "GPA": "3.8+",
+          "Essays": "Required"
+        },
+        "fees": {
+          "local": "$14,226/year",
+          "international": "$47,768/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BA"
+      }
+    }
+  },
+  {
+    "name": "Columbia University",
+    "rank": 9,
+    "city": "New York, NY",
+    "country": "United States",
+    "website": "https://history.columbia.edu/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Low_Memorial_Library_Columbia_University_College_Walk_jeh.jpg",
+    "location": { "type": "Point", "coordinates": [-73.9626, 40.8075] },
+    "programs": {
+      "history": {
+        "entryRequirements": {
+          "GPA": "3.9+",
+          "Essays": "Required"
+        },
+        "fees": {
+          "local": "$65,524/year",
+          "international": "$65,524/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BA"
+      }
+    }
+  },
+  {
+    "name": "Princeton University",
+    "rank": 10,
+    "city": "Princeton, NJ",
+    "country": "United States",
+    "website": "https://history.princeton.edu/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Princeton_University_campus.jpg",
+    "location": { "type": "Point", "coordinates": [-74.6514, 40.3431] },
+    "programs": {
+      "history": {
+        "entryRequirements": {
+          "GPA": "3.9+",
+          "Essays": "Required"
+        },
+        "fees": {
+          "local": "$57,410/year",
+          "international": "$57,410/year"
+        },
+        "duration": "4 years",
+        "degreeType": "BA"
+      }
+    }
+  }
+]

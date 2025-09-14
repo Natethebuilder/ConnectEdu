@@ -1,0 +1,240 @@
+[
+  {
+    "name": "Harvard University",
+    "rank": 1,
+    "city": "Cambridge, MA",
+    "country": "United States",
+    "website": "https://hms.harvard.edu/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Harvard_University_Widener_Library.jpg",
+    "location": { "type": "Point", "coordinates": [-71.1167, 42.377] },
+    "programs": {
+      "medicine": {
+        "entryRequirements": {
+          "Undergraduate": "Bachelor’s degree with pre-med courses",
+          "MCAT": "High score required",
+          "Recommendations": "2–3 letters"
+        },
+        "fees": {
+          "local": "$70,000/year",
+          "international": "$70,000/year"
+        },
+        "duration": "4 years (MD program)",
+        "degreeType": "MD"
+      }
+    }
+  },
+  {
+    "name": "University of Oxford",
+    "rank": 2,
+    "city": "Oxford",
+    "country": "United Kingdom",
+    "website": "https://www.medsci.ox.ac.uk/study/medicine",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Oxford_Sheldonian_Theatre.jpg",
+    "location": { "type": "Point", "coordinates": [-1.254, 51.754] },
+    "programs": {
+      "medicine": {
+        "entryRequirements": {
+          "A-levels": "A*AA including Chemistry & Biology",
+          "IB": "39 points with 766 at HL",
+          "BMAT": "Required"
+        },
+        "fees": {
+          "local": "£9,250/year",
+          "international": "£43,670/year"
+        },
+        "duration": "6 years",
+        "degreeType": "BM BCh"
+      }
+    }
+  },
+  {
+    "name": "Stanford University",
+    "rank": 3,
+    "city": "Stanford, CA",
+    "country": "United States",
+    "website": "https://med.stanford.edu/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Stanford_Oval_May_2011_panorama.jpg",
+    "location": { "type": "Point", "coordinates": [-122.1697, 37.4275] },
+    "programs": {
+      "medicine": {
+        "entryRequirements": {
+          "Undergraduate": "Bachelor’s degree with sciences",
+          "MCAT": "High score required",
+          "Essays": "Required"
+        },
+        "fees": {
+          "local": "$63,747/year",
+          "international": "$63,747/year"
+        },
+        "duration": "4 years (MD)",
+        "degreeType": "MD"
+      }
+    }
+  },
+  {
+    "name": "Johns Hopkins University",
+    "rank": 4,
+    "city": "Baltimore, MD",
+    "country": "United States",
+    "website": "https://www.hopkinsmedicine.org/som/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/48/Johns_Hopkins_Hospital.jpg",
+    "location": { "type": "Point", "coordinates": [-76.5908, 39.2965] },
+    "programs": {
+      "medicine": {
+        "entryRequirements": {
+          "Undergraduate": "Bachelor’s degree with sciences",
+          "MCAT": "High score required",
+          "Recommendations": "3 letters"
+        },
+        "fees": {
+          "local": "$59,700/year",
+          "international": "$59,700/year"
+        },
+        "duration": "4 years (MD)",
+        "degreeType": "MD"
+      }
+    }
+  },
+  {
+    "name": "University of Cambridge",
+    "rank": 5,
+    "city": "Cambridge",
+    "country": "United Kingdom",
+    "website": "https://www.undergraduate.study.cam.ac.uk/courses/medicine",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/KingsCollegeChapelWest.jpg",
+    "location": { "type": "Point", "coordinates": [0.1167, 52.2053] },
+    "programs": {
+      "medicine": {
+        "entryRequirements": {
+          "A-levels": "A*A*A including Chemistry & Biology",
+          "IB": "40–42 with 776 at HL",
+          "BMAT": "Required"
+        },
+        "fees": {
+          "local": "£9,250/year",
+          "international": "£63,990/year"
+        },
+        "duration": "6 years",
+        "degreeType": "MB BChir"
+      }
+    }
+  },
+  {
+    "name": "University of California, San Francisco (UCSF)",
+    "rank": 6,
+    "city": "San Francisco, CA",
+    "country": "United States",
+    "website": "https://medschool.ucsf.edu/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a6/UCSF_Mission_Bay_Campus.jpg",
+    "location": { "type": "Point", "coordinates": [-122.393, 37.767] },
+    "programs": {
+      "medicine": {
+        "entryRequirements": {
+          "Undergraduate": "Bachelor’s degree with sciences",
+          "MCAT": "High score required"
+        },
+        "fees": {
+          "local": "$42,791/year",
+          "international": "$55,036/year"
+        },
+        "duration": "4 years",
+        "degreeType": "MD"
+      }
+    }
+  },
+  {
+    "name": "Imperial College London",
+    "rank": 7,
+    "city": "London",
+    "country": "United Kingdom",
+    "website": "https://www.imperial.ac.uk/medicine/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Imperial_College_London_-_Faculty_Building.jpg",
+    "location": { "type": "Point", "coordinates": [-0.1749, 51.4988] },
+    "programs": {
+      "medicine": {
+        "entryRequirements": {
+          "A-levels": "AAA including Chemistry & Biology",
+          "IB": "38 points",
+          "BMAT": "Required"
+        },
+        "fees": {
+          "local": "£9,250/year",
+          "international": "£47,000/year"
+        },
+        "duration": "6 years",
+        "degreeType": "MBBS/BSc"
+      }
+    }
+  },
+  {
+    "name": "University College London (UCL)",
+    "rank": 8,
+    "city": "London",
+    "country": "United Kingdom",
+    "website": "https://www.ucl.ac.uk/medical-school/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0d/UCL_Portico_Building.jpg",
+    "location": { "type": "Point", "coordinates": [-0.1339, 51.5246] },
+    "programs": {
+      "medicine": {
+        "entryRequirements": {
+          "A-levels": "AAA including Chemistry & Biology",
+          "IB": "39 with 766 at HL",
+          "BMAT": "Required"
+        },
+        "fees": {
+          "local": "£9,250/year",
+          "international": "£47,000/year"
+        },
+        "duration": "6 years",
+        "degreeType": "MBBS/BSc"
+      }
+    }
+  },
+  {
+    "name": "Karolinska Institute",
+    "rank": 9,
+    "city": "Stockholm",
+    "country": "Sweden",
+    "website": "https://ki.se/en/education/study-programmes/undergraduate-programmes/medicine",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Karolinska_Institutet_2020.jpg",
+    "location": { "type": "Point", "coordinates": [18.022, 59.348] },
+    "programs": {
+      "medicine": {
+        "entryRequirements": {
+          "High School": "Excellent grades in sciences",
+          "Language": "Swedish (some courses in English)"
+        },
+        "fees": {
+          "local": "Free",
+          "international": "SEK 180,000/year"
+        },
+        "duration": "5.5 years",
+        "degreeType": "MD"
+      }
+    }
+  },
+  {
+    "name": "Yale University",
+    "rank": 10,
+    "city": "New Haven, CT",
+    "country": "United States",
+    "website": "https://medicine.yale.edu/",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Yale_University_Old_Campus_2014.jpg",
+    "location": { "type": "Point", "coordinates": [-72.9223, 41.3163] },
+    "programs": {
+      "medicine": {
+        "entryRequirements": {
+          "Undergraduate": "Bachelor’s degree with sciences",
+          "MCAT": "High score required",
+          "Recommendations": "2 professors"
+        },
+        "fees": {
+          "local": "$69,500/year",
+          "international": "$69,500/year"
+        },
+        "duration": "4 years",
+        "degreeType": "MD"
+      }
+    }
+  }
+]
