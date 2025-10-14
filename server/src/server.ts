@@ -6,10 +6,13 @@ import { env } from "./config/env.js";
 import { connectDB } from "./config/db.js";
 import universityRoutes from "./routes/universities.js";
 import learningHubRoutes from "./routes/learningHub.js";
+import learningProfileRoutes from "./routes/learningProfileRoutes.js";
 
 const app = express();
 app.use(cors({ origin: env.CORS_ORIGIN }));
 app.use(express.json());
+console.log("SUPABASE_URL:", process.env.SUPABASE_URL);
+console.log("SUPABASE_SERVICE_ROLE_KEY:", process.env.SUPABASE_SERVICE_ROLE_KEY?.slice(0, 10) + "...");
 
 // DB
 connectDB().catch((err) => {
@@ -20,4 +23,5 @@ connectDB().catch((err) => {
 // Routes
 app.use("/universities", universityRoutes);
 app.use("/api/learning-hub", learningHubRoutes);
+app.use("/api/learning-profiles", learningProfileRoutes);
 app.listen(env.PORT, () => console.log(`🚀 Server running on port ${env.PORT}`));

@@ -1,44 +1,42 @@
-import React, { useEffect, useRef, useState, Suspense } from "react";
+// pages/learning/[discipline].tsx
+import React, { useEffect, useRef, useState, Suspense, useMemo } from "react";
 import { useParams } from "react-router-dom";
-import { Canvas } from "@react-three/fiber";
-import {
-  OrbitControls,
-  Environment,
-  useGLTF,
-  Float,
-  Sky,
-  Sparkles,
-  ContactShadows,
-  Html,
-} from "@react-three/drei";
+import { Html, Float, Sky, Sparkles, useGLTF } from "@react-three/drei";
 import { motion, AnimatePresence } from "framer-motion";
 import { fetchLearningHub } from "../../api/learningHub";
 import type { LearningHub, LearningStage } from "../../types";
-import { supabase } from "../../lib/supabase";
 import { useSupabaseAuth } from "../../store/supabaseAuth";
-import type { MeshProps } from "@react-three/fiber";
+import * as THREE from "three";
+import { RigidBody } from "@react-three/rapier";
 
-const RPM_ORIGINS = [
-  "https://readyplayer.me",
-  "https://connectedu.readyplayer.me",
-];
-
+// core + characters
+import World from "../../core/World";
+import Character from "../../characters/Character";
+import { CameraOperator } from "../../core/CameraOperator";
+import { CameraProvider } from "../../core/CameraContext"; // ✅ added
+const API_BASE = import.meta.env.VITE_API_BASE;
 const MotionGroup = motion("group");
-const MotionMesh = motion<MeshProps>("mesh");
-
-// Clean any accidental double .glb
 const cleanGlbUrl = (url: string) => url.replace(/\.glb(\.glb)+$/, ".glb");
 
-function Avatar({ url }: { url: string }) {
-  const safeUrl = cleanGlbUrl(url);
-  const { scene } = useGLTF(safeUrl);
+/* ============================= Island ============================= */
+function FloatingIsland({
+  onReady,
+  position = [0, -5, 0],
+}: { onReady: (scene: THREE.Object3D) => void; position?: [number, number, number]; }) {
+  const { scene } = useGLTF("/models/island.glb") as any;
+
+  useEffect(() => {
+    onReady(scene);
+  }, [scene, onReady]);
+
   return (
-    <MotionGroup initial={{ y: -10, opacity: 0 }} animate={{ y: -2.5, opacity: 1 }}>
-      <primitive object={scene} scale={1.5} />
-    </MotionGroup>
+    <RigidBody type="fixed" colliders="trimesh" position={position}>
+      <primitive object={scene} />
+    </RigidBody>
   );
 }
 
+/* ========================= Stage Platform ========================= */
 function StagePlatform({
   position,
   stage,
@@ -46,28 +44,31 @@ function StagePlatform({
 }: {
   position: [number, number, number];
   stage: LearningStage;
-  onSelect: () => void;
+  onSelect: (pos: [number, number, number]) => void;
 }) {
   return (
     <group position={position}>
-      <pointLight position={[0, 1, 0]} intensity={2.5} color="#60a5fa" distance={8} />
-      <Float speed={2} rotationIntensity={0.2} floatIntensity={0.6}>
-        <MotionGroup initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} whileHover={{ scale: 1.05 }}>
-          <MotionMesh onClick={onSelect} className="cursor-pointer">
-            <cylinderGeometry args={[2, 2, 0.5, 64]} />
+      <Float speed={2} rotationIntensity={0.18} floatIntensity={0.6}>
+        <MotionGroup whileHover={{ scale: 1.08 }}>
+          <mesh
+            onClick={() => onSelect(position)}
+            onPointerOver={() => (document.body.style.cursor = "pointer")}
+            onPointerOut={() => (document.body.style.cursor = "default")}
+          >
+            <cylinderGeometry args={[1.6, 1.6, 0.5, 48]} />
             <meshStandardMaterial
               color="#93c5fd"
               emissive="#60a5fa"
-              emissiveIntensity={1.2}
-              metalness={0.6}
-              roughness={0.2}
+              emissiveIntensity={1.0}
+              metalness={0.55}
+              roughness={0.28}
             />
-          </MotionMesh>
+          </mesh>
         </MotionGroup>
       </Float>
-      <Sparkles count={20} scale={3} size={2} speed={0.3} position={[0, 1, 0]} />
+      <Sparkles count={10} scale={2.6} size={2} speed={0.35} position={[0, 1, 0]} />
       <Html center>
-        <div className="px-4 py-2 mt-4 rounded-xl bg-black/60 backdrop-blur-md border border-white/10 shadow-lg text-white text-sm font-semibold whitespace-nowrap">
+        <div className="px-3 py-1.5 mt-3 rounded-xl bg-black/60 backdrop-blur-md border border-white/10 shadow-lg text-white text-[12px] font-semibold whitespace-nowrap">
           {stage.title}
         </div>
       </Html>
@@ -75,219 +76,251 @@ function StagePlatform({
   );
 }
 
+/* ======================= Stage Auto-Placement ====================== */
+function useStageSpots(island: THREE.Object3D | null, count: number): [number, number, number][] {
+  return useMemo(() => {
+    if (!island || count <= 0) return [];
+    const ray = new THREE.Raycaster();
+    const up = new THREE.Vector3(0, 1, 0);
+
+    const hits: { p: THREE.Vector3; score: number }[] = [];
+    const Rmin = 6;
+    const Rmax = 24;
+    const radialSteps = 18;
+    const rings = 6;
+
+    for (let r = 0; r < rings; r++) {
+      const radius = THREE.MathUtils.lerp(Rmin, Rmax, r / (rings - 1));
+      for (let i = 0; i < radialSteps; i++) {
+        const angle = (i / radialSteps) * Math.PI * 2;
+        const x = Math.cos(angle) * radius;
+        const z = Math.sin(angle) * radius;
+        ray.set(new THREE.Vector3(x, 100, z), new THREE.Vector3(0, -1, 0));
+        const inter = ray.intersectObject(island, true);
+        if (inter.length) {
+          const hit = inter[0];
+          const normal = hit.face?.normal
+            ?.clone()
+            .applyMatrix3(new THREE.Matrix3().getNormalMatrix(hit.object.matrixWorld))
+            .normalize();
+          const flat = normal ? normal.dot(up) : 1;
+          const score = (flat + 1) * 0.5 + hit.point.y * 0.01;
+          hits.push({ p: hit.point.clone().addScaledVector(up, 0.35), score });
+        }
+      }
+    }
+
+    hits.sort((a, b) => b.score - a.score);
+    const out: THREE.Vector3[] = [];
+    const minDist = 3.5;
+    for (const h of hits) {
+      if (out.length >= count) break;
+      if (out.every((p) => p.distanceTo(h.p) >= minDist)) out.push(h.p);
+    }
+    return out.map((v) => [v.x, v.y, v.z] as [number, number, number]);
+  }, [island, count]);
+}
+
+/* ============================== Main Page ============================== */
 export default function LearningHubPage() {
   const { discipline } = useParams<{ discipline?: string }>();
   const [avatarUrl, setAvatarUrl] = useState<string | null>(null);
   const [hub, setHub] = useState<LearningHub | null>(null);
-  const [selectedStage, setSelectedStage] = useState<LearningStage | null>(null);
+  const [editing, setEditing] = useState(false);
+  const [manualGlb, setManualGlb] = useState("");
+  const [island, setIsland] = useState<THREE.Object3D | null>(null);
+  const [spawn, setSpawn] = useState<[number, number, number] | null>(null);
+
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const { user } = useSupabaseAuth();
+  const avatarRef = useRef<THREE.Group>(null);
 
-  const [saving, setSaving] = useState(false);
-  const [saved, setSaved] = useState(false);
-  const [manualUrl, setManualUrl] = useState("");
-
-  const prettyDiscipline = discipline ? discipline.charAt(0).toUpperCase() + discipline.slice(1) : "";
-
+  /* Hide navbar when in hub */
   useEffect(() => {
     document.body.classList.add("hide-navbar");
     return () => document.body.classList.remove("hide-navbar");
   }, []);
 
+  /* Load hub data */
   useEffect(() => {
     if (!discipline) return;
     fetchLearningHub(discipline).then(setHub).catch(console.error);
   }, [discipline]);
 
+  /* Load saved avatar */
   useEffect(() => {
-    if (!user) return;
-    supabase
-      .from("learning_profiles")
-      .select("avatar_url")
-      .eq("user_id", user.id)
-      .maybeSingle()
-      .then(({ data }) => {
+    if (!user?.id) return;
+    (async () => {
+      try {
+        const res = await fetch(`${API_BASE}/api/learning-profiles/${user.id}`);
+        if (!res.ok) return;
+        const data = await res.json();
         if (data?.avatar_url) setAvatarUrl(cleanGlbUrl(data.avatar_url));
-      });
+      } catch (err) {
+        console.error("Profile fetch error:", err);
+      }
+    })();
   }, [user]);
 
-  const postToRPM = (msg: object) => {
-    iframeRef.current?.contentWindow?.postMessage(msg, "*");
-  };
-
-  const subscribeExport = () => {
-    postToRPM({
-      target: "readyplayerme",
-      type: "subscribe",
-      eventName: "v1.avatar.exported",
-    });
-    console.log("[RPM] Subscribed to v1.avatar.exported");
-  };
-
+  /* ReadyPlayerMe integration */
   useEffect(() => {
-    subscribeExport();
-    const onLoad = () => {
-      console.log("[RPM] iframe loaded");
-      subscribeExport();
+    if (!editing) return;
+
+    const saveAvatarUrl = async (url?: string) => {
+      const newUrl = cleanGlbUrl(url || "");
+      if (!newUrl || !user?.id) return;
+      const res = await fetch(`${API_BASE}/api/learning-profiles`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ user_id: user.id, avatarUrl: newUrl }),
+      });
+      if (res.ok) {
+        setAvatarUrl(newUrl);
+        setEditing(false);
+        setManualGlb("");
+      } else {
+        console.error("❌ Failed to save avatar", await res.text());
+      }
     };
-    iframeRef.current?.addEventListener("load", onLoad);
 
-    const onMessage = async (event: MessageEvent) => {
-      if (!RPM_ORIGINS.includes(event.origin)) return;
-
-      const data = typeof event.data === "string" ? (() => { try { return JSON.parse(event.data); } catch { return null; } })() : event.data;
-      if (!data || data?.source !== "readyplayerme") return;
-
-      console.log("[RPM EVENT]", data.eventName, data);
-
-      if (data.eventName === "v1.frame.ready") {
-        subscribeExport();
+    const onMessage = (event: MessageEvent) => {
+      if (!["https://readyplayer.me", "https://connectedu.readyplayer.me"].includes(event.origin))
+        return;
+      let payload: any;
+      try {
+        payload = typeof event.data === "string" ? JSON.parse(event.data) : event.data;
+      } catch {
         return;
       }
+      if (!payload || payload.source !== "readyplayerme") return;
 
-      if (data.eventName === "v1.avatar.exported") {
-        let url: string = data.data?.url || "";
-        if (!url || !user?.id) return;
+      if (payload.eventName === "v1.frame.ready") {
+        iframeRef.current?.contentWindow?.postMessage(
+          { target: "readyplayerme", type: "subscribe", eventName: "v1.avatar.exported" },
+          "*"
+        );
+      }
 
-        url = cleanGlbUrl(url);
-
-        setSaving(true);
-        console.log("[RPM] Exported URL:", url);
-
-        const { error } = await supabase.from("learning_profiles").upsert({
-          user_id: user.id,
-          avatar_url: url,
-          discipline,
-        });
-
-        if (error) {
-          console.error("Supabase upsert error:", error);
-        } else {
-          console.log("✅ Avatar saved to Supabase");
-          setAvatarUrl(url);
-          setSaved(true);
-          setTimeout(() => setSaved(false), 2000);
-        }
-        setSaving(false);
+      if (payload.eventName === "v1.avatar.exported") {
+        saveAvatarUrl(payload.data?.url);
       }
     };
 
     window.addEventListener("message", onMessage);
-    return () => {
-      window.removeEventListener("message", onMessage);
-      iframeRef.current?.removeEventListener("load", onLoad);
-    };
-  }, [user, discipline]);
+    return () => window.removeEventListener("message", onMessage);
+  }, [editing, user]);
 
-  const handleExport = () => {
-    postToRPM({ target: "readyplayerme", type: "export" });
-    console.log("[RPM] Export requested");
-  };
-
-  const handleUseManual = async () => {
-    if (!manualUrl.trim() || !user) return;
-    const cleaned = cleanGlbUrl(manualUrl.trim());
-    setSaving(true);
-    const { error } = await supabase.from("learning_profiles").upsert({
-      user_id: user.id,
-      avatar_url: cleaned,
-      discipline,
+  /* Manual save */
+  const handleManualSave = () => {
+    if (!manualGlb.trim() || !user?.id) return;
+    const cleaned = cleanGlbUrl(manualGlb.trim());
+    fetch(`${API_BASE}/api/learning-profiles`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ user_id: user.id, avatarUrl: cleaned }),
+    }).then((res) => {
+      if (res.ok) {
+        setAvatarUrl(cleaned);
+        setEditing(false);
+        setManualGlb("");
+      }
     });
-    if (!error) {
-      setAvatarUrl(cleaned);
-      setSaved(true);
-      setTimeout(() => setSaved(false), 2000);
-    }
-    setSaving(false);
   };
 
   if (avatarUrl && !hub) {
     return <p className="text-white text-center mt-20">⚠️ Could not load learning hub data.</p>;
   }
 
-  return (
-    <section className="fixed inset-0 w-full h-full overflow-hidden bg-gradient-to-br from-slate-950 via-indigo-950 to-black flex items-center justify-center">
-      {!avatarUrl && (
-        <div className="flex flex-col items-center">
-          <div className="text-center mb-8">
-            <h1 className="text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400">
-              Design Your {prettyDiscipline} Explorer
-            </h1>
-            <p className="text-white/70 mt-3 text-lg">
-              Click “Next” or use Save & Continue — I’ll save your avatar automatically.
-            </p>
-          </div>
+  const stageSpots = useStageSpots(island, hub?.stages.length ?? 0);
 
+  return (
+    <section className="fixed inset-0 w-full h-full overflow-hidden bg-gradient-to-br from-slate-950 via-indigo-950 to-black">
+      {(!avatarUrl || editing) && (
+        <div className="flex flex-col items-center justify-center h-full">
+          <div className="text-center mb-6">
+            <h1 className="text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400">
+              {editing ? "Edit Your Avatar" : `Design Your ${discipline?.[0]?.toUpperCase()}${discipline?.slice(1)} Explorer`}
+            </h1>
+            <p className="text-white/70 mt-2 text-lg">Click “Next” in the top-right after finishing your avatar.</p>
+          </div>
           <div className="w-[90vw] max-w-6xl rounded-3xl overflow-hidden shadow-2xl border border-white/10 backdrop-blur-xl bg-black/40">
             <iframe
               ref={iframeRef}
-              src="https://connectedu.readyplayer.me/avatar?frameApi&quickStart=true&bodyType=fullbody"
+              src={`https://connectedu.readyplayer.me/avatar?frameApi&quickStart=true&bodyType=fullbody&avatarExport=true&t=${Date.now()}`}
               allow="camera *; microphone *; clipboard-write"
               className="w-full h-[720px] border-none"
             />
           </div>
-
-          <div className="flex items-center gap-3 mt-6">
+          <div className="flex items-center gap-2 mt-4">
+            <input
+              value={manualGlb}
+              onChange={(e) => setManualGlb(e.target.value)}
+              placeholder="...or paste the .glb URL here"
+              className="bg-black/30 border border-white/20 rounded-lg px-3 py-2 text-white w-96"
+            />
             <button
-              onClick={handleExport}
-              disabled={saving}
-              className={`px-6 py-3 rounded-xl text-white font-bold shadow-lg transition ${
-                saving ? "bg-gray-500 cursor-wait" : "bg-gradient-to-r from-green-500 to-emerald-500 hover:scale-105"
-              }`}
+              onClick={handleManualSave}
+              className="px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:scale-105 transition"
             >
-              {saving ? "Saving…" : saved ? "✅ Saved!" : "💾 Save & Continue"}
+              Save
             </button>
-
-            <div className="flex items-center gap-2 bg-white/10 border border-white/20 rounded-xl px-3 py-2">
-              <input
-                value={manualUrl}
-                onChange={(e) => setManualUrl(e.target.value)}
-                placeholder="…or paste the .glb URL here"
-                className="bg-transparent outline-none text-white placeholder-white/50 w-80"
-              />
-              <button
-                onClick={handleUseManual}
-                className="px-3 py-1 rounded-lg bg-blue-600 text-white text-sm font-semibold"
-              >
-                Use URL
-              </button>
-            </div>
           </div>
         </div>
       )}
 
       <AnimatePresence>
-        {avatarUrl && hub && (
+        {avatarUrl && hub && !editing && (
           <motion.div className="absolute inset-0">
-            <Canvas camera={{ position: [0, 5, 14], fov: 45 }}>
+            <World>
               <color attach="background" args={["#0f172a"]} />
-              <fog attach="fog" args={["#0f172a", 15, 45]} />
-              <Sky sunPosition={[100, 20, 100]} />
-              <ambientLight intensity={0.4} />
-              <directionalLight position={[10, 25, 10]} intensity={1.2} castShadow />
-              
+              <fog attach="fog" args={["#0f172a", 70, 220]} />
+              <Sky sunPosition={[100, 30, 50]} />
+              <ambientLight intensity={0.55} />
+              <directionalLight position={[30, 60, 30]} intensity={1.4} castShadow />
+              <hemisphereLight args={["#ffffff", "#2dd4bf", 0.35]} />
 
-              <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -3, 0]} receiveShadow>
-                <coneGeometry args={[10, 15, 64]} />
-                <meshStandardMaterial color="#1e293b" roughness={1} />
-              </mesh>
+              <FloatingIsland
+                onReady={(s) => {
+                  setIsland(s);
+                  const raycaster = new THREE.Raycaster();
+                  raycaster.set(new THREE.Vector3(0, 100, 0), new THREE.Vector3(0, -1, 0));
+                  const hits = raycaster.intersectObject(s, true);
+                  if (hits.length > 0) {
+                    const hit = hits[0].point;
+                    setSpawn([hit.x, hit.y + 1, hit.z]);
+                  } else {
+                    setSpawn([0, 2, 0]);
+                  }
+                }}
+              />
 
-              {hub.stages.map((stage, i) => (
-                <StagePlatform
-                  key={stage.title}
-                  position={[0, i * 3 - 2, 0]}
-                  stage={stage}
-                  onSelect={() => setSelectedStage(stage)}
-                />
-              ))}
+              {stageSpots.length === (hub.stages?.length ?? 0) &&
+                hub.stages.map((stage, i) => (
+                  <StagePlatform
+                    key={stage.title}
+                    stage={stage}
+                    position={stageSpots[i]}
+                    onSelect={(p) => console.log("Stage clicked", stage.title, p)}
+                  />
+                ))}
 
-              <Suspense fallback={<Html center><p className="text-white">Loading avatar…</p></Html>}>
-                <Avatar url={avatarUrl} />
-              </Suspense>
+              {/* ✅ CameraProvider makes Character + CameraOperator share yaw/pitch */}
+              <CameraProvider>
+                <Suspense fallback={<Html center><p className="text-white">Loading avatar…</p></Html>}>
+                  {spawn && (
+                    <Character url={avatarUrl} ref={avatarRef} spawn={spawn} />
+                  )}
+                </Suspense>
+                <CameraOperator targetRef={avatarRef} />
+              </CameraProvider>
+            </World>
 
-              <ContactShadows position={[0, -2.5, 0]} opacity={0.5} scale={20} blur={2.5} far={5} />
-              <OrbitControls enablePan={false} maxPolarAngle={Math.PI / 2.1} />
-            </Canvas>
+            <button
+              onClick={() => setEditing(true)}
+              className="absolute top-6 right-6 px-4 py-2 rounded-xl bg-blue-600 text-white font-semibold shadow-lg hover:scale-105 transition"
+            >
+              ✏️ Edit Avatar
+            </button>
           </motion.div>
         )}
       </AnimatePresence>

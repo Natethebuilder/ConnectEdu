@@ -2,14 +2,15 @@
   "name": "connectedu",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "install:all": "npm install && npm install --prefix client && npm install --prefix server",
-    "postinstall": "npm install --prefix client && npm install --prefix server",
-    "seed": "npm run seed --prefix server",
-    "server:dev": "npm run dev --prefix server",
-    "client:dev": "npm run dev --prefix client",
-    "dev:all": "concurrently -k -p \"[{name}]\" -n API,WEB -c green,cyan \"npm run dev --prefix server\" \"npm run dev --prefix client\""
-  },
+ "scripts": {
+  "install:all": "npm install --legacy-peer-deps && npm install --prefix client --legacy-peer-deps && npm install --prefix server --legacy-peer-deps",
+  "postinstall": "npm install --prefix client --legacy-peer-deps && npm install --prefix server --legacy-peer-deps",
+  "seed": "npm run seed --prefix server",
+  "server:dev": "npm run dev --prefix server",
+  "client:dev": "npm run dev --prefix client",
+  "dev:all": "concurrently -k -p \"[{name}]\" -n API,WEB -c green,cyan \"npm run dev --prefix server\" \"npm run dev --prefix client\""
+}
+,
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -25,6 +26,8 @@
     "@tailwindcss/typography": "^0.5.16",
     "canvas-confetti": "^1.9.3",
     "framer-motion": "^12.23.12",
-    "lucide-react": "^0.544.0"
+    "lucide-react": "^0.544.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   }
 }
