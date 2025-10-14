@@ -1,131 +1,385 @@
 {
   "discipline": "physics",
+  "availableRegions": ["Global", "US", "UK", "Asia"],
   "stages": [
     {
-      "order": 1,
-      "title": "Discover & Set Your Vision",
-      "description": "Understand what Physics at top universities looks like and define your goals.",
-      "icon": "🔭",
-      "color": "#38bdf8",
-      "estimatedTime": "1–2h",
-      "resources": [
+      "id": 1,
+      "title": "Define Your Physics Vision",
+      "description": "Clarify your academic direction, target universities, and how physics fits into your long-term goals.",
+      "regions": {
+        "Global": {
+          "overview": "Top universities seek applicants who combine analytical ability with curiosity about the universe. Start by mapping your interests to elite programs.",
+          "checklist": [
+            "Research 3–5 world-class physics programs (MIT, ETH, Cambridge, NUS)",
+            "Identify your preferred field (quantum, astro, materials, or theoretical)",
+            "Write a 3-year academic and extracurricular roadmap"
+          ],
+          "resources": [
+            {
+              "title": "What Top Physics Departments Look For",
+              "platform": "AcceptedX",
+              "type": "Article",
+              "link": "https://acceptedx.org/resources/physics-department-guide"
+            },
+            {
+              "title": "Physics Major Insights — MIT",
+              "platform": "YouTube",
+              "type": "Video",
+              "link": "https://www.youtube.com/watch?v=yV5Xy5p8s7A"
+            }
+          ]
+        },
+        "US": {
+          "overview": "US universities value strong academics plus unique intellectual curiosity. Combine AP/IB rigor with a clear admissions plan.",
+          "checklist": [
+            "Research reach, target, and safety schools for physics",
+            "Note AP Physics C and Calculus requirements",
+            "Plan your Common App personal statement theme"
+          ],
+          "resources": [
+            {
+              "title": "US Physics Admissions Requirements",
+              "platform": "AcceptedX",
+              "type": "Guide",
+              "link": "https://acceptedx.org/resources/us-physics-admissions"
+            },
+            {
+              "title": "Common App Essay Tips for STEM",
+              "platform": "AcceptedX",
+              "type": "Article",
+              "link": "https://acceptedx.org/resources/commonapp-stem"
+            }
+          ]
+        },
+        "UK": {
+          "overview": "UK programs prioritize A-levels and admissions tests. Focus early on UCAS and the Physics Aptitude Test (PAT).",
+          "checklist": [
+            "Review entry requirements for Oxford, Cambridge, and Imperial",
+            "Start PAT preparation (Year 12)",
+            "Outline a UCAS personal statement draft"
+          ],
+          "resources": [
+            {
+              "title": "Oxford PAT Preparation Hub",
+              "platform": "University of Oxford",
+              "type": "Official Resource",
+              "link": "https://www.physics.ox.ac.uk/study/outreach/pat-past-papers"
+            },
+            {
+              "title": "UCAS Physics Personal Statement Tips",
+              "platform": "UCAS",
+              "type": "Article",
+              "link": "https://www.ucas.com/personal-statement-examples/physics"
+            }
+          ]
+        },
+        "Asia": {
+          "overview": "Bridge national curricula (CBSE, IB, HKDSE, JEE) to global admissions standards while developing your research mindset.",
+          "checklist": [
+            "Review physics topics overlapping JEE/IB HL content",
+            "Identify international physics competitions (IPhO, APhO)",
+            "Explore scholarships or summer schools abroad"
+          ],
+          "resources": [
+            {
+              "title": "IPhO Preparation Guide",
+              "platform": "IPhO",
+              "type": "Competition Resource",
+              "link": "https://ipho-new.org/"
+            },
+            {
+              "title": "International Summer Schools in Physics",
+              "platform": "AcceptedX Asia",
+              "type": "Directory",
+              "link": "https://acceptedx.org/resources/asia-summer-programs"
+            }
+          ]
+        }
+      },
+      "quiz": [
         {
-          "type": "link",
-          "title": "QS Top Physics Universities",
-          "url": "https://www.topuniversities.com/university-rankings"
+          "q": "Which region’s admissions emphasize the Physics Aptitude Test (PAT)?",
+          "opts": ["US", "UK", "Asia", "Global"],
+          "correct": "UK"
         },
         {
-          "type": "video",
-          "title": "A Day in the Life of a Physics Student",
-          "url": "https://www.youtube.com/watch?v=example"
-        },
-        {
-          "type": "document",
-          "title": "Goal-Setting Template",
-          "url": "/resources/goal_planner.pdf"
+          "q": "What’s most valued by US universities in Physics applications?",
+          "opts": [
+            "Unique research experiences and intellectual curiosity",
+            "Memorizing formulas",
+            "A-level coursework only",
+            "Interview performance"
+          ],
+          "correct": "Unique research experiences and intellectual curiosity"
         }
       ]
     },
     {
-      "order": 2,
-      "title": "Build Your Academic Edge",
-      "description": "Create a standout academic profile (SAT/ACT, A-levels/IB, Olympiads).",
-      "icon": "📚",
-      "color": "#60a5fa",
-      "resources": [
-        {
-          "type": "link",
-          "title": "Khan Academy SAT Practice",
-          "url": "https://www.khanacademy.org/sat"
+      "id": 2,
+      "title": "Strengthen Your Academic Edge",
+      "description": "Align your studies, standardized tests, and achievements to demonstrate academic excellence.",
+      "regions": {
+        "Global": {
+          "overview": "Admissions officers look for rigorous physics and math preparation across all regions.",
+          "checklist": [
+            "Complete calculus-based physics modules (Mechanics, E&M)",
+            "Join a physics or math competition",
+            "Track progress using an academic portfolio"
+          ],
+          "resources": [
+            {
+              "title": "Fundamentals of Physics — edX",
+              "platform": "edX",
+              "type": "Online Course",
+              "link": "https://www.edx.org"
+            },
+            {
+              "title": "Physics Olympiad Archive",
+              "platform": "IPhO",
+              "type": "Problem Sets",
+              "link": "https://ipho-new.org/"
+            }
+          ]
         },
-        {
-          "type": "document",
-          "title": "Physics Olympiad Prep Guide",
-          "url": "/resources/physics/olympiad_guide.pdf"
+        "US": {
+          "overview": "Prioritize AP Physics and research-based extracurriculars.",
+          "checklist": [
+            "Complete AP Physics C and AP Calculus BC",
+            "Join a mentorship or research program",
+            "Participate in USAPhO or Science Olympiad"
+          ],
+          "resources": [
+            {
+              "title": "AP Physics C: Mechanics",
+              "platform": "Khan Academy",
+              "type": "Course",
+              "link": "https://www.khanacademy.org"
+            },
+            {
+              "title": "USAPhO Official Resources",
+              "platform": "AAPT",
+              "type": "Guide",
+              "link": "https://aapt.org/"
+            }
+          ]
         },
-        {
-          "type": "link",
-          "title": "UCAS Entry Requirements",
-          "url": "https://www.ucas.com/ucas/undergraduate/getting-started/entry-requirements"
+        "UK": {
+          "overview": "Excel in A-level Physics and prepare for PAT/NSAA assessments.",
+          "checklist": [
+            "Solve 5 past PAT papers",
+            "Strengthen problem-solving under timed conditions",
+            "Engage with Isaac Physics challenges"
+          ],
+          "resources": [
+            {
+              "title": "Isaac Physics Challenge Hub",
+              "platform": "University of Cambridge",
+              "type": "Problem Sets",
+              "link": "https://isaacphysics.org"
+            }
+          ]
+        },
+        "Asia": {
+          "overview": "Integrate physics excellence with Olympiads and national exams like JEE/NEET.",
+          "checklist": [
+            "Complete JEE Advanced-level Mechanics and Optics",
+            "Take 2 practice sets from IPhO or APhO archives",
+            "Write one reflection connecting physics to tech innovation"
+          ],
+          "resources": [
+            {
+              "title": "JEE Physics Practice",
+              "platform": "Byju's",
+              "type": "Practice Sets",
+              "link": "https://byjus.com/jee/physics/"
+            }
+          ]
         }
-      ],
-      "tasks": [
+      },
+      "quiz": [
         {
-          "type": "checklist",
-          "title": "Track Your Grades & Test Scores",
-          "url": "/trackers/academic"
+          "q": "What’s the best way to prove academic rigor in US physics applications?",
+          "opts": [
+            "Strong AP/IB results and Olympiad participation",
+            "Writing long essays only",
+            "Participating in sports",
+            "Taking unrelated electives"
+          ],
+          "correct": "Strong AP/IB results and Olympiad participation"
         }
       ]
     },
     {
-      "order": 3,
-      "title": "Passion & Personal Projects",
-      "description": "Show your love for physics with real-world impact.",
-      "icon": "💡",
-      "color": "#facc15",
-      "resources": [
-        {
-          "type": "link",
-          "title": "International Physics Olympiad",
-          "url": "https://www.ipho-new.org/"
+      "id": 3,
+      "title": "Research, Projects & Impact",
+      "description": "Turn your curiosity into tangible projects that impress admissions teams.",
+      "regions": {
+        "Global": {
+          "overview": "Admissions committees value originality — show it through hands-on physics or interdisciplinary projects.",
+          "checklist": [
+            "Design an independent experiment or simulation",
+            "Publish your findings or share them online",
+            "Collaborate with peers globally"
+          ],
+          "resources": [
+            {
+              "title": "How to Create a Research Portfolio",
+              "platform": "AcceptedX",
+              "type": "Guide",
+              "link": "https://acceptedx.org/resources/research-portfolio"
+            }
+          ],
+          "projectIdeas": [
+            "Model orbital mechanics in Python",
+            "Build a DIY cloud chamber",
+            "Develop a simple robotics experiment"
+          ]
         },
-        {
-          "type": "link",
-          "title": "How to Start a STEM Club",
-          "url": "https://www.stem.org.uk/clubs"
+        "US": {
+          "overview": "Link projects to summer research programs and college applications.",
+          "checklist": [
+            "Apply to MIT RSI or Stanford SIMR",
+            "Document your lab work in a portfolio",
+            "Create a Common App project entry"
+          ],
+          "resources": [
+            {
+              "title": "MIT Research Science Institute (RSI)",
+              "platform": "MIT",
+              "type": "Program",
+              "link": "https://www.cee.org/programs/research-science-institute"
+            }
+          ]
         },
+        "UK": {
+          "overview": "Integrate projects into your EPQ or UCAS statement to show initiative.",
+          "checklist": [
+            "Draft an EPQ proposal on a physics topic",
+            "Link your project to university research themes",
+            "Include project outcomes in UCAS essays"
+          ]
+        },
+        "Asia": {
+          "overview": "Use national fairs or Olympiad extensions to build standout portfolios.",
+          "checklist": [
+            "Participate in local research competitions",
+            "Work under a university mentor",
+            "Translate project results into English for global submission"
+          ]
+        }
+      },
+      "quiz": [
         {
-          "type": "document",
-          "title": "Personal Project Blueprint",
-          "url": "/resources/physics/personal_project_guide.pdf"
+          "q": "What’s the most impactful project for physics admissions?",
+          "opts": [
+            "Original research with measurable outcomes",
+            "Memorizing textbooks",
+            "Copying experiments",
+            "Avoiding collaboration"
+          ],
+          "correct": "Original research with measurable outcomes"
         }
       ]
     },
     {
-      "order": 4,
-      "title": "Craft Your Application",
-      "description": "Create outstanding essays, recommendations and motivation letters.",
-      "icon": "✍️",
-      "color": "#c084fc",
-      "resources": [
-        {
-          "type": "document",
-          "title": "Personal Statement Template",
-          "url": "/resources/applications/personal_statement_template.docx"
+      "id": 4,
+      "title": "Craft Your Application Narrative",
+      "description": "Translate your academic and research experiences into compelling application materials.",
+      "regions": {
+        "Global": {
+          "overview": "Connect your curiosity and achievements into a cohesive personal story.",
+          "checklist": [
+            "Write a 250-word draft personal statement",
+            "Ask mentors for feedback",
+            "Highlight academic depth and impact"
+          ]
         },
-        {
-          "type": "video",
-          "title": "How to Write a Motivation Letter",
-          "url": "https://www.youtube.com/watch?v=example"
+        "US": {
+          "overview": "Focus on Common App essays, recommendations, and activity descriptions.",
+          "checklist": [
+            "Draft your Common App essay with a STEM focus",
+            "Collect 2 recommendation letters early",
+            "Optimize your Activities section for clarity"
+          ]
         },
+        "UK": {
+          "overview": "Refine your UCAS statement and prepare for interview-style questions.",
+          "checklist": [
+            "Complete UCAS personal statement drafts",
+            "Add reading and outreach activities to your statement",
+            "Prepare for Oxbridge interviews"
+          ]
+        },
+        "Asia": {
+          "overview": "Adapt your statement of purpose for multiple university systems.",
+          "checklist": [
+            "Prepare a statement for both UCAS and Common App",
+            "Gather supporting documents (grades, references)",
+            "Draft one reflection on your academic goals"
+          ]
+        }
+      },
+      "quiz": [
         {
-          "type": "link",
-          "title": "Recommendation Letter Request Guide",
-          "url": "/resources/applications/recommendation_request.pdf"
+          "q": "What should your personal statement highlight?",
+          "opts": [
+            "Curiosity, depth, and connection between academics and impact",
+            "Extracurriculars only",
+            "Sports and unrelated hobbies",
+            "Generic career goals"
+          ],
+          "correct": "Curiosity, depth, and connection between academics and impact"
         }
       ]
     },
     {
-      "order": 5,
-      "title": "Interview & Final Prep",
-      "description": "Prepare for interviews and finalize your university shortlist.",
-      "icon": "🎤",
-      "color": "#fb7185",
-      "resources": [
-        {
-          "type": "link",
-          "title": "Common Physics Interview Questions",
-          "url": "/resources/interviews/physics_questions.pdf"
+      "id": 5,
+      "title": "Final Preparation & Interviews",
+      "description": "Polish your confidence, readiness, and strategy for final submissions.",
+      "regions": {
+        "Global": {
+          "overview": "Bring together everything you’ve learned and practiced for confident applications.",
+          "checklist": [
+            "Complete mock interviews",
+            "Submit all applications",
+            "Celebrate your effort and reflection"
+          ]
         },
-        {
-          "type": "link",
-          "title": "Book a Mock Interview",
-          "url": "/services/mock-interview"
+        "US": {
+          "overview": "Rehearse storytelling for alumni interviews and finalize application portals.",
+          "checklist": [
+            "Conduct a mock interview with feedback",
+            "Submit Common App and supplements",
+            "Follow up with recommenders"
+          ]
         },
+        "UK": {
+          "overview": "Prepare for Oxbridge interviews with problem-solving sessions.",
+          "checklist": [
+            "Review PAT-style interview problems",
+            "Simulate interviews under timed pressure",
+            "Finalize UCAS submission"
+          ]
+        },
+        "Asia": {
+          "overview": "Coordinate with international university offices for document verification.",
+          "checklist": [
+            "Confirm all transcripts and certificates",
+            "Practice interview questions in English",
+            "Submit final portfolios"
+          ]
+        }
+      },
+      "quiz": [
         {
-          "type": "document",
-          "title": "Final Application Checklist",
-          "url": "/resources/applications/final_checklist.pdf"
+          "q": "What’s key for Oxbridge interview prep?",
+          "opts": [
+            "Practicing problem-solving aloud under time pressure",
+            "Memorizing essays",
+            "Writing long notes",
+            "Ignoring current research"
+          ],
+          "correct": "Practicing problem-solving aloud under time pressure"
         }
       ]
     }

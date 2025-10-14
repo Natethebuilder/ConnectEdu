@@ -1,0 +1,299 @@
+{
+  "discipline": "chemistry",
+  "availableRegions": ["Global", "US", "UK", "Asia"],
+  "stages": [
+    {
+      "id": 1,
+      "title": "Foundations of Chemistry & Academic Positioning",
+      "description": "Build a competitive understanding of chemistry fundamentals and align it with your regional exam or curriculum expectations.",
+      "regions": {
+        "Global": {
+          "overview": "Master the essentials — atomic structure, bonding, and reactions — while framing your knowledge as evidence of analytical ability in your applications.",
+          "checklist": [
+            "Review key chemical principles (atoms, bonds, reactions)",
+            "Understand how chemistry demonstrates problem-solving ability in admissions essays",
+            "Map your current syllabus to international equivalents (AP, IB, A-Level)",
+            "Identify chemistry strengths to showcase in your profile"
+          ],
+          "resources": [
+            {
+              "title": "Chemistry Essentials: A Global Overview",
+              "platform": "Khan Academy",
+              "type": "Course",
+              "link": "https://www.khanacademy.org/science/chemistry"
+            },
+            {
+              "title": "How to Frame STEM Interests in Applications",
+              "platform": "AcceptedX",
+              "type": "Article",
+              "link": "https://acceptedx.org/resources/stem-profile-guide"
+            }
+          ]
+        },
+        "US": {
+          "overview": "Focus on AP Chemistry and SAT Subject readiness while linking your coursework to Common App essay themes.",
+          "checklist": [
+            "Complete AP Chemistry core topics or IB HL equivalents",
+            "Take 3–5 practice sets for AP Chemistry FRQs",
+            "Review SAT Chemistry practice questions",
+            "Draft one Common App essay paragraph connecting chemistry to real-world curiosity"
+          ],
+          "resources": [
+            {
+              "title": "AP Chemistry Review Playlist",
+              "platform": "YouTube (Heimler's History)",
+              "type": "Video Series",
+              "link": "https://www.youtube.com/playlist?list=PLoGgviqq4844z9U1P1Lij1p3EhtvWQxSA"
+            },
+            {
+              "title": "SAT Chemistry Practice Tests",
+              "platform": "College Board",
+              "type": "Practice",
+              "link": "https://satsuite.collegeboard.org/sat/subject-tests"
+            }
+          ]
+        },
+        "UK": {
+          "overview": "Tailor your foundation learning to A-Level specifications and UCAS expectations.",
+          "checklist": [
+            "Review AS/A2 Chemistry specification points (OCR, Edexcel, AQA)",
+            "Connect practical skills to UCAS personal statement examples",
+            "Complete one practice Section 2 Chemistry question from BMAT",
+            "Draft a 150-word UCAS statement paragraph linking chemistry to your motivation"
+          ],
+          "resources": [
+            {
+              "title": "A-Level Chemistry Notes & Past Papers",
+              "platform": "Physics & Maths Tutor",
+              "type": "Study Resource",
+              "link": "https://www.physicsandmathstutor.com/chemistry-revision/"
+            },
+            {
+              "title": "UCAS Personal Statement Chemistry Examples",
+              "platform": "UCAS",
+              "type": "Reference",
+              "link": "https://www.ucas.com/personal-statement-examples/chemistry"
+            }
+          ]
+        },
+        "Asia": {
+          "overview": "Bridge local curricula with international standards (IGCSE, IB, or JEE/NEET chemistry) to position yourself competitively for global universities.",
+          "checklist": [
+            "Review organic and physical chemistry fundamentals",
+            "Attempt 2 IGCSE or NEET Chemistry past papers",
+            "Translate key experiments into research or Olympiad entries",
+            "Document one reflection on how chemistry applies to sustainable technology"
+          ],
+          "resources": [
+            {
+              "title": "NEET Chemistry Practice",
+              "platform": "Byju's",
+              "type": "Practice Sets",
+              "link": "https://byjus.com/neet/chemistry/"
+            },
+            {
+              "title": "IGCSE Chemistry Notes",
+              "platform": "Save My Exams",
+              "type": "Revision Guide",
+              "link": "https://www.savemyexams.com/igcse/chemistry/"
+            }
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "Which exam primarily evaluates chemistry in US admissions?",
+          "opts": ["SAT Subject / AP Chemistry", "UCAS BMAT Section 3", "NEET Physics", "GRE Chemistry"],
+          "correct": "SAT Subject / AP Chemistry"
+        },
+        {
+          "q": "Why is chemistry valuable in university applications?",
+          "opts": [
+            "It shows quantitative reasoning and experimentation skills",
+            "It demonstrates artistic creativity",
+            "It replaces test scores",
+            "It is required only for med school"
+          ],
+          "correct": "It shows quantitative reasoning and experimentation skills"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Laboratory Inquiry & Research Extension",
+      "description": "Transform your curiosity into real-world experiments or mini-projects that strengthen your portfolio.",
+      "regions": {
+        "Global": {
+          "overview": "Engage in small-scale research or analysis tasks that demonstrate initiative and experimental design.",
+          "checklist": [
+            "Design a simple lab or data-based experiment",
+            "Document findings in a digital lab book",
+            "Summarize how your work connects to global sustainability or health challenges"
+          ],
+          "resources": [
+            {
+              "title": "ChemCollective Virtual Labs",
+              "platform": "Carnegie Mellon",
+              "type": "Simulation",
+              "link": "https://chemcollective.org/virtual-labs"
+            }
+          ],
+          "projectIdeas": [
+            "Test reaction rate factors (temperature vs. concentration)",
+            "Investigate green chemistry alternatives to plastics",
+            "Explore pH impact on soil or water quality"
+          ]
+        },
+        "US": {
+          "overview": "Link lab work to science fairs, AP Research, or summer programs.",
+          "checklist": [
+            "Submit one project to a local science fair or AP Research proposal",
+            "Join a university summer research program (Stanford, MIT, RSI, etc.)",
+            "Write a 100-word project abstract for your Common App activities section"
+          ],
+          "resources": [
+            {
+              "title": "Science Fair Project Chemistry Ideas",
+              "platform": "ScienceBuddies",
+              "type": "Guide",
+              "link": "https://www.sciencebuddies.org/science-fair-projects/science-projects/chemistry"
+            }
+          ]
+        },
+        "UK": {
+          "overview": "Translate your practical skills into an EPQ or personal investigation linked to your target course.",
+          "checklist": [
+            "Outline an Extended Project Qualification (EPQ) idea",
+            "Connect your EPQ to university course chemistry modules",
+            "Add reflective notes for your UCAS statement"
+          ],
+          "resources": [
+            {
+              "title": "EPQ Chemistry Topics",
+              "platform": "The Student Room",
+              "type": "Forum Discussion",
+              "link": "https://www.thestudentroom.co.uk/showthread.php?t=7354653"
+            }
+          ]
+        },
+        "Asia": {
+          "overview": "Build competitive research experiences through local Olympiads or national fairs.",
+          "checklist": [
+            "Select one experiment for Olympiad qualification",
+            "Contact a mentor at a nearby university lab",
+            "Summarize project findings in an English portfolio format"
+          ],
+          "resources": [
+            {
+              "title": "Asian Chemistry Olympiad Prep",
+              "platform": "HBCSE",
+              "type": "Problem Sets",
+              "link": "https://olympiads.hbcse.tifr.res.in/"
+            }
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What is a strong way to demonstrate chemistry inquiry skills in admissions?",
+          "opts": [
+            "Include a personal research project or lab report summary",
+            "Memorize reaction mechanisms",
+            "List random experiments without context",
+            "Avoid research topics altogether"
+          ],
+          "correct": "Include a personal research project or lab report summary"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Admissions Alignment & Application Strategy",
+      "description": "Translate your academic and lab experiences into powerful application materials that impress admissions teams.",
+      "regions": {
+        "Global": {
+          "overview": "Connect chemistry learning to real-world challenges like climate change, sustainability, and medicine, emphasizing your analytical mindset.",
+          "checklist": [
+            "Draft a short reflection linking chemistry to global problems",
+            "Identify 2 universities whose programs align with your chemistry interests",
+            "Collect one mentor or teacher recommendation"
+          ],
+          "resources": [
+            {
+              "title": "How to Write Impactful Academic Reflections",
+              "platform": "AcceptedX",
+              "type": "Guide",
+              "link": "https://acceptedx.org/resources/reflection-guide"
+            }
+          ]
+        },
+        "US": {
+          "overview": "Focus on Common App essays, SAT/ACT alignment, and AP credit planning for chemistry-related majors.",
+          "checklist": [
+            "Refine your Common App essay’s STEM narrative",
+            "Complete one ACT Science practice section",
+            "Plan how AP credits map to your target universities’ chemistry majors"
+          ],
+          "resources": [
+            {
+              "title": "Common App Essay Chemistry Examples",
+              "platform": "AcceptedX",
+              "type": "Article",
+              "link": "https://acceptedx.org/resources/commonapp-stem"
+            },
+            {
+              "title": "ACT Science Practice",
+              "platform": "Official ACT",
+              "type": "Practice",
+              "link": "https://www.act.org/"
+            }
+          ]
+        },
+        "UK": {
+          "overview": "Perfect your UCAS personal statement and admissions test readiness (BMAT, NSAA).",
+          "checklist": [
+            "Refine chemistry examples in your personal statement",
+            "Attempt one BMAT chemistry question set",
+            "Review college chemistry requirements at your target universities"
+          ],
+          "resources": [
+            {
+              "title": "BMAT Past Papers",
+              "platform": "Cambridge Assessment",
+              "type": "Practice Papers",
+              "link": "https://www.admissionstesting.org/for-test-takers/bmat/preparing-for-bmat/"
+            }
+          ]
+        },
+        "Asia": {
+          "overview": "Link your chemistry work to global university application platforms (UCAS, Common App, etc.).",
+          "checklist": [
+            "Create a short statement of purpose connecting chemistry and career goals",
+            "Compile grades, certifications, and research evidence for international applications",
+            "Join a mentoring program for international admissions"
+          ],
+          "resources": [
+            {
+              "title": "Applying Abroad with Chemistry Background",
+              "platform": "AcceptedX Asia",
+              "type": "Webinar",
+              "link": "https://acceptedx.org/webinars/asia-chemistry"
+            }
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "How can chemistry experiences strengthen your personal statement?",
+          "opts": [
+            "By showing curiosity, persistence, and relevance to global challenges",
+            "By listing every reaction memorized",
+            "By replacing academic results entirely",
+            "By focusing only on hobbies"
+          ],
+          "correct": "By showing curiosity, persistence, and relevance to global challenges"
+        }
+      ]
+    }
+  ]
+}

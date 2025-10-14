@@ -1,15 +1,10 @@
+// server/src/middleware/auth.ts
 import { Request, Response, NextFunction } from "express";
-import jwt, { TokenExpiredError } from "jsonwebtoken";
+import jwt, { JwtPayload } from "jsonwebtoken";
 import { env } from "../config/env.js";
 
 export interface AuthedRequest extends Request {
   userId?: string;
-}
-
-interface JwtPayload {
-  id: string;
-  iat?: number;
-  exp?: number;
 }
 
 export function requireAuth(
@@ -23,16 +18,14 @@ export function requireAuth(
     return res.status(401).json({ error: "Missing or malformed token" });
   }
 
-  const token = header.slice(7); // remove "Bearer "
+  const token = header.slice(7);
 
   try {
-    const payload = jwt.verify(token, env.JWT_SECRET) as JwtPayload;
-    req.userId = payload.id;
-    return next();
-  } catch (err) {
-    if (err instanceof TokenExpiredError) {
-      return res.status(401).json({ error: "Token expired" });
-    }
-    return res.status(401).json({ error: "Invalid token" });
+    const decoded = jwt.verify(token, env.JWT_SECRET) as JwtPayload;
+    req.userId = decoded.sub || decoded.user_id || decoded.id;
+    next();
+  } catch (err: any) {
+    console.error("JWT verification failed:", err.message);
+    return res.status(401).json({ error: "Invalid or expired token" });
   }
 }

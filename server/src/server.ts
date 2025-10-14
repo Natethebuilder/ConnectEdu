@@ -5,7 +5,7 @@ import cors from "cors";
 import { env } from "./config/env.js";
 import { connectDB } from "./config/db.js";
 import universityRoutes from "./routes/universities.js";
-import learningHubRoutes from "./routes/learningHub.js";
+import learningHubRoutes from "./routes/learningHubRoutes.js";
 import learningProfileRoutes from "./routes/learningProfileRoutes.js";
 
 const app = express();
@@ -22,6 +22,6 @@ connectDB().catch((err) => {
 
 // Routes
 app.use("/universities", universityRoutes);
-app.use("/api/learning-hub", learningHubRoutes);
+app.use("/learning", learningHubRoutes);
 app.use("/api/learning-profiles", learningProfileRoutes);
 app.listen(env.PORT, () => console.log(`🚀 Server running on port ${env.PORT}`));

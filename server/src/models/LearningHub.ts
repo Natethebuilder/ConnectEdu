@@ -1,31 +1,29 @@
 import mongoose from "mongoose";
 
 const ResourceSchema = new mongoose.Schema({
-  type: { type: String, required: true }, // link, video, document, checklist, etc.
-  title: { type: String, required: true },
-  url: { type: String, required: true }
+  title: String,
+  type: String, // "course", "article", "project"
+  link: String,
+  platform: String,
+  estimatedHours: Number,
 });
 
-const TaskSchema = new mongoose.Schema({
-  type: { type: String, required: true }, // checklist, tracker, etc.
-  title: { type: String, required: true },
-  url: { type: String, required: false }
+const RegionSchema = new mongoose.Schema({
+  overview: String,
+  resources: [ResourceSchema],
+  checklist: [String],
 });
 
 const StageSchema = new mongoose.Schema({
-  order: { type: Number, required: true },
-  title: { type: String, required: true },
-  description: { type: String, required: true },
-  icon: { type: String },
-  color: { type: String },
-  estimatedTime: { type: String },
-  resources: [ResourceSchema],
-  tasks: [TaskSchema]
+  id: Number,
+  title: String,
+  description: String,
+  regions: { type: Map, of: RegionSchema },
 });
 
 const LearningHubSchema = new mongoose.Schema({
-  discipline: { type: String, required: true, unique: true },
-  stages: [StageSchema]
+  discipline: { type: String, unique: true },
+  stages: [StageSchema],
 });
 
 export default mongoose.model("LearningHub", LearningHubSchema);
