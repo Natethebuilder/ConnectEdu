@@ -29,7 +29,9 @@ import { saveQuizScore, saveReflection } from "../../hooks/useLearningProgress";
 function cx(...classes: Array<string | false | undefined>) {
   return classes.filter(Boolean).join(" ");
 }
+
 const springy = { type: "spring", stiffness: 180, damping: 22 } as const;
+
 function titleCase(str: string) {
   return str
     .toLowerCase()
@@ -38,7 +40,6 @@ function titleCase(str: string) {
     .join(" ");
 }
 
-
 // ---------- 3D background ----------
 function NebulaBG() {
   return (
@@ -46,15 +47,7 @@ function NebulaBG() {
       <Canvas camera={{ position: [0, 0, 8], fov: 60 }} dpr={[1, 2]}>
         <color attach="background" args={["#0b1026"]} />
         <Suspense fallback={null}>
-          <Stars
-            radius={80}
-            depth={50}
-            count={6000}
-            factor={2}
-            saturation={0}
-            fade
-            speed={0.8}
-          />
+          <Stars radius={80} depth={50} count={6000} factor={2} saturation={0} fade speed={0.8} />
         </Suspense>
         <ambientLight intensity={0.15} />
         <pointLight position={[5, 5, 5]} intensity={0.8} color="#7c3aed" />
@@ -72,6 +65,7 @@ function ProjectileSim() {
   const [angle, setAngle] = useState(45);
   const [speed, setSpeed] = useState(35);
   const g = 9.81;
+
   const points = useMemo(() => {
     const rad = (angle * Math.PI) / 180;
     const vx = speed * Math.cos(rad);
@@ -88,7 +82,9 @@ function ProjectileSim() {
     const maxY = Math.max(...pts.map((p) => p[1])) || 1;
     return pts.map(([x, y]) => [((x / maxX) * 100) as number, 40 - ((y / maxY) * 35 + 5)] as [number, number]);
   }, [angle, speed]);
+
   const d = `M ${points.map((p) => p.join(",")).join(" L ")}`;
+
   return (
     <div className="rounded-2xl bg-white/5 ring-1 ring-white/10 p-4">
       <div className="mb-3 flex items-center justify-between">
@@ -123,6 +119,7 @@ function PendulumSim() {
   const [length, setLength] = useState(1);
   const [theta0, setTheta0] = useState(20);
   const t = useMotionValue(0);
+
   useEffect(() => {
     let raf = 0;
     const loop = () => {
@@ -132,13 +129,16 @@ function PendulumSim() {
     raf = requestAnimationFrame(loop);
     return () => cancelAnimationFrame(raf);
   }, [t]);
+
   const theta = useTransform(t, (time) => {
     const g = 9.81;
     const w = Math.sqrt(g / Math.max(0.2, length));
     return ((theta0 * Math.PI) / 180) * Math.cos(w * time);
   });
+
   const x = useTransform(theta, (th) => 50 + Math.sin(th) * 30);
   const y = useTransform(theta, (th) => 10 + Math.cos(th) * 30);
+
   return (
     <div className="rounded-2xl bg-white/5 ring-1 ring-white/10 p-4">
       <div className="mb-3 flex items-center justify-between">
@@ -164,8 +164,13 @@ function PendulumSim() {
 }
 
 // ---------- Resource Card ----------
-
-type Resource = { title: string; type: string; link: string; platform: string; estimatedHours?: number };
+type Resource = {
+  title: string;
+  type: string;
+  link: string;
+  platform: string;
+  estimatedHours?: number;
+};
 
 function ResourceCard({ r, bookmarked, onBookmark }: { r: Resource; bookmarked?: boolean; onBookmark?: () => void }) {
   return (
@@ -188,8 +193,19 @@ function ResourceCard({ r, bookmarked, onBookmark }: { r: Resource; bookmarked?:
           <h4 className="font-semibold text-white/90">{r.title}</h4>
           <div className="flex items-center gap-2">
             <ExternalLink className="h-4 w-4 text-white/60" />
-            <button type="button" onClick={(e) => { e.preventDefault(); onBookmark?.(); }} className="rounded-full bg-white/10 p-1 hover:bg-white/20">
-              {bookmarked ? <BookmarkCheck className="h-4 w-4 text-emerald-300" /> : <Bookmark className="h-4 w-4 text-white/70" />}
+            <button
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                onBookmark?.();
+              }}
+              className="rounded-full bg-white/10 p-1 hover:bg-white/20"
+            >
+              {bookmarked ? (
+                <BookmarkCheck className="h-4 w-4 text-emerald-300" />
+              ) : (
+                <Bookmark className="h-4 w-4 text-white/70" />
+              )}
             </button>
           </div>
         </div>
@@ -229,51 +245,54 @@ export default function PhysicsLearningHub() {
   const [activeStage, setActiveStage] = useState<any | null>(null);
   const [loading, setLoading] = useState(true);
   // store progress for ALL regions (not just the current one)
-const [stageState, setStageState] = useState<Record<string, Record<string, any>>>({});
+  const [stageState, setStageState] = useState<Record<string, Record<string, any>>>({});
+
   const [bookmarks, setBookmarks] = useState<any[]>([]);
   const [quizAnswers, setQuizAnswers] = useState<Record<string, string>>({});
   const [quizScore, setQuizScore] = useState<number | null>(null);
 
   useEffect(() => {
-    supabase.auth.getUser().then(({ data }) => setUser(data.user));
-  }, []);
-
- useEffect(() => {
-  if (!user?.id) return; // wait until Supabase user is loaded
-
   let mounted = true;
-  async function load() {
-    setLoading(true);
-    try {
-      const res = await http.get(`/learning/${discipline}`);
-      if (!mounted) return;
-      setHub(res.data);
 
-      // Fetch saved data
-      const { data } = await supabase
-        .from("learning_progress")
-        .select("stage_state, region, bookmarks")
-        .eq("user_id", user.id)
-        .eq("discipline", discipline)
-        .maybeSingle();
+  async function init() {
+    // 1️⃣ Wait for the user
+    const { data: userData } = await supabase.auth.getUser();
+    const currentUser = userData?.user;
+    if (!currentUser || !mounted) return;
+    setUser(currentUser);
 
-      if (data) {
-        // ✅ full restore from Supabase
-        setStageState(data.stage_state || {});
-        setRegion(data.region || "Global");
-        setBookmarks(data.bookmarks || []);
-      } else {
-        // If no record, initialize
-        setStageState({});
-      }
-    } finally {
-      if (mounted) setLoading(false);
+    // 2️⃣ Load hub JSON
+    const res = await http.get(`/learning/${discipline}`);
+    if (!mounted) return;
+    setHub(res.data);
+
+    // 3️⃣ Load user progress
+    const { data: progress } = await supabase
+      .from("learning_progress")
+      .select("stage_state, region, bookmarks")
+      .eq("user_id", currentUser.id)
+      .eq("discipline", discipline)
+      .maybeSingle();
+
+    if (progress) {
+      console.log("✅ Loaded progress:", progress.stage_state); // <— debug line
+      setStageState(progress.stage_state || {});
+      setRegion(progress.region || "Global");
+      setBookmarks(progress.bookmarks || []);
+    } else {
+      console.log("ℹ️ No saved progress found for this user.");
+      setStageState({});
     }
+
+    setLoading(false);
   }
 
-  load();
-  return () => { mounted = false; };
-}, [discipline, user?.id]);
+  init();
+
+  return () => {
+    mounted = false;
+  };
+}, [discipline]);
 
 
 
@@ -282,8 +301,7 @@ const [stageState, setStageState] = useState<Record<string, Record<string, any>>
     [hub]
   );
 
-  // overall progress
-  const overallProgress = useMemo(() => {
+ const overallProgress = useMemo(() => {
   if (!hub || !hub.stages) return 0;
   const currentRegionState = stageState[region] || {};
   let total = 0; let done = 0;
@@ -339,31 +357,51 @@ const [stageState, setStageState] = useState<Record<string, Record<string, any>>
     { onConflict: "user_id,discipline" } // 👈 IMPORTANT
   )
   .select(); // (optional) return the row
-  }
-  
 
-  function isBookmarked(link: string) { return bookmarks?.some((b) => b.link === link); }
+
+  setStageState(merged);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  function isBookmarked(link: string) {
+    return bookmarks?.some((b) => b.link === link);
+  }
+
   function toggleBookmark(r: Resource) {
     const exists = bookmarks.some((b: any) => b.link === r.link);
     const next = exists ? bookmarks.filter((b: any) => b.link !== r.link) : [...bookmarks, r];
-    setBookmarks(next); persist(stageState, region, next);
+    setBookmarks(next);
+    persist(stageState, region, next);
   }
-  // checklist toggler
- function toggleTask(stageId: number, task: string) {
+
+   // checklist toggler
+  function toggleTask(stageId: number, task: string) {
   setStageState((prev) => {
     const regionState = { ...(prev[region] || {}) };
-    const stage = {
+    const currentStage = {
       ...(regionState[stageId] || {}),
       checklist: { ...(regionState[stageId]?.checklist || {}) },
     };
 
-    // toggle specific task
-    stage.checklist[task] = !stage.checklist[task];
+    // Toggle task
+    currentStage.checklist[task] = !currentStage.checklist[task];
 
-    const updatedRegionState = { ...regionState, [stageId]: stage };
+    const updatedRegionState = { ...regionState, [stageId]: currentStage };
     const next = { ...prev, [region]: updatedRegionState };
 
-    // Persist entire updated structure
+    // Save the updated all-region state
     persist(next, region);
     return next;
   });
@@ -372,13 +410,25 @@ const [stageState, setStageState] = useState<Record<string, Record<string, any>>
 
 
 
-  // quiz score calc
+
+
+
   useEffect(() => {
     if (!activeStage) return;
-    const q = activeStage.quiz || [
-      { q: `What is emphasized in "${activeStage.title}"?`, opts: ["Vision & direction", "Memorization", "Graphic design", "Public speaking"], correct: "Vision & direction" },
-      { q: "Which skill is core to physics?", opts: ["Mathematical reasoning", "Rote copying", "Fashion", "Vocabulary"], correct: "Mathematical reasoning" },
-    ];
+    const q =
+      activeStage.quiz ||
+      [
+        {
+          q: `What is emphasized in "${activeStage.title}"?`,
+          opts: ["Vision & direction", "Memorization", "Graphic design", "Public speaking"],
+          correct: "Vision & direction",
+        },
+        {
+          q: "Which skill is core to physics?",
+          opts: ["Mathematical reasoning", "Rote copying", "Fashion", "Vocabulary"],
+          correct: "Mathematical reasoning",
+        },
+      ];
     const allAnswered = Object.keys(quizAnswers).length >= q.length;
     if (allAnswered) {
       const score = q.reduce((acc: number, cur: any, i: number) => acc + (quizAnswers[i] === cur.correct ? 1 : 0), 0);
@@ -406,10 +456,14 @@ const [stageState, setStageState] = useState<Record<string, Record<string, any>>
   return (
     <div className="relative min-h-screen text-white">
       <NebulaBG />
-
       {/* Header / Hero */}
       <header className="relative mx-auto max-w-6xl px-6 pt-14">
-        <motion.div initial={{ opacity: 0, y: -12 }} animate={{ opacity: 1, y: 0 }} transition={springy} className="flex flex-col items-center gap-6 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: -12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={springy}
+          className="flex flex-col items-center gap-6 text-center"
+        >
           <div className="relative">
             <div className="absolute inset-0 -z-10 blur-2xl bg-gradient-to-r from-indigo-500/40 to-fuchsia-500/40 rounded-full" />
             <div className="flex items-center justify-center gap-3 rounded-full bg-white/5 px-6 py-3 ring-1 ring-white/10 backdrop-blur">
@@ -418,19 +472,24 @@ const [stageState, setStageState] = useState<Record<string, Record<string, any>>
             </div>
           </div>
           <h1 className="text-balance bg-gradient-to-br from-white to-indigo-200 bg-clip-text text-center text-4xl font-extrabold text-transparent sm:text-6xl">
-            From curiosity to cosmic mastery
+            "Reach for the moon, if you miss you'll land on the stars"
           </h1>
           <p className="max-w-2xl text-white/80">
-            A beautifully guided journey through physics — with hands-on simulations, curated resources, and progress that adapts to your region.
+            A guided journey through physics, with hands-on simulations, curated resources, and progress that
+            adapts to your selected region.
           </p>
-
           {/* progress ring */}
           <div className="relative grid place-items-center">
             <svg width="120" height="120" viewBox="0 0 120 120" className="drop-shadow">
               <circle cx="60" cy="60" r="52" stroke="rgba(255,255,255,.12)" strokeWidth="10" fill="none" />
               <motion.circle
-                cx="60" cy="60" r="52" fill="none" strokeWidth="10"
-                stroke="url(#grad)" strokeLinecap="round"
+                cx="60"
+                cy="60"
+                r="52"
+                fill="none"
+                strokeWidth="10"
+                stroke="url(#grad)"
+                strokeLinecap="round"
                 strokeDasharray={`${Math.PI * 2 * 52}`}
                 strokeDashoffset={(1 - overallProgress / 100) * Math.PI * 2 * 52}
                 initial={{ strokeDashoffset: Math.PI * 2 * 52 }}
@@ -446,18 +505,21 @@ const [stageState, setStageState] = useState<Record<string, Record<string, any>>
             </svg>
             <div className="absolute text-xl font-bold">{overallProgress}%</div>
           </div>
-
           {/* Region chips */}
           <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
             {allRegions.map((r) => (
               <button
-                key={r}
-               onClick={() => { 
-                setRegion(r);
-                persist(stageState, r); 
-                }}  
+  key={r}
+  onClick={() => {
+    setRegion(r);
+    persist(stageState, r); // stores preferred region; keeps all checklists
+  }}
 
 
+
+
+
+              
 
 
                 className={cx(
@@ -471,9 +533,6 @@ const [stageState, setStageState] = useState<Record<string, Record<string, any>>
           </div>
         </motion.div>
       </header>
-
-
-
       {/* Stages timeline */}
       <main className="mx-auto mt-12 max-w-6xl px-6 pb-28">
         <ol className="relative border-l border-white/10">
@@ -481,20 +540,22 @@ const [stageState, setStageState] = useState<Record<string, Record<string, any>>
             const rData = stage.regions?.[region] || stage.regions?.Global;
             const list: string[] = rData?.checklist || [];
            const regionState = stageState?.[region] || {};
-            const checked = Object.keys(regionState?.[stage.id]?.checklist || {}).filter(
-            (k) => regionState?.[stage.id]?.checklist?.[k]
-            ).length;
+           const checked = Object.keys(regionState?.[stage.id]?.checklist || {}).filter(
+             (k) => regionState?.[stage.id]?.checklist?.[k]
+           ).length;
 
             const pct = list.length ? Math.round((checked / list.length) * 100) : 0;
             return (
               <li key={stage.id} className="ml-6 pb-10">
                 <span className="absolute -left-[9px] mt-1 grid h-4 w-4 place-items-center rounded-full bg-indigo-400 ring-2 ring-indigo-300/50" />
-                <motion.div whileHover={{ y: -2 }} className="rounded-2xl bg-white/5 p-5 backdrop-blur ring-1 ring-white/10">
+                <motion.div
+                  whileHover={{ y: -2 }}
+                  className="rounded-2xl bg-white/5 p-5 backdrop-blur ring-1 ring-white/10"
+                >
                   <div className="flex flex-wrap items-start justify-between gap-4">
                     <div>
                       <h3 className="text-lg font-semibold">
-                        <span className="mr-2 text-white/70">Stage {idx + 1}:</span>
-                        {stage.title}
+                        <span className="mr-2 text-white/70">Stage {idx + 1}:</span> {stage.title}
                       </h3>
                       <p className="mt-1 max-w-2xl text-sm text-white/70">{stage.description}</p>
                     </div>
@@ -502,7 +563,10 @@ const [stageState, setStageState] = useState<Record<string, Record<string, any>>
                       <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-sm text-white/80">
                         <CheckCircle2 className="h-4 w-4 text-emerald-300" /> {pct}%
                       </div>
-                      <button onClick={() => setActiveStage(stage)} className="inline-flex items-center gap-1 rounded-full bg-indigo-500/20 px-3 py-1 text-indigo-200 ring-1 ring-indigo-300/30 hover:bg-indigo-500/30">
+                      <button
+                        onClick={() => setActiveStage(stage)}
+                        className="inline-flex items-center gap-1 rounded-full bg-indigo-500/20 px-3 py-1 text-indigo-200 ring-1 ring-indigo-300/30 hover:bg-indigo-500/30"
+                      >
                         Open <ChevronRight className="h-4 w-4" />
                       </button>
                     </div>
@@ -512,11 +576,12 @@ const [stageState, setStageState] = useState<Record<string, Record<string, any>>
             );
           })}
         </ol>
-
         {/* Bookmarks gallery */}
         {bookmarks?.length > 0 && (
           <section className="mt-14">
-            <h4 className="mb-3 flex items-center gap-2 text-lg font-semibold"><Bookmark className="h-5 w-5" /> Your bookmarks</h4>
+            <h4 className="mb-3 flex items-center gap-2 text-lg font-semibold">
+              <Bookmark className="h-5 w-5" /> Your bookmarks
+            </h4>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {bookmarks.map((r: Resource) => (
                 <ResourceCard key={r.link} r={r} bookmarked onBookmark={() => toggleBookmark(r)} />
@@ -525,35 +590,39 @@ const [stageState, setStageState] = useState<Record<string, Record<string, any>>
           </section>
         )}
       </main>
-
       {/* Stage Modal */}
       <AnimatePresence>
         {activeStage && (
           <motion.div
-            initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             className="fixed inset-0 z-50 grid place-items-center bg-black/50 p-4 backdrop-blur-sm"
           >
             <motion.div
-              initial={{ y: 30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: 30, opacity: 0 }} transition={springy}
+              initial={{ y: 30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: 30, opacity: 0 }}
+              transition={springy}
               className="relative w-full max-w-5xl overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-b from-white/10 to-white/5 shadow-2xl"
             >
-              <button onClick={() => setActiveStage(null)} className="absolute right-3 top-3 rounded-full bg-white/10 p-2 hover:bg-white/20">
+              <button
+                onClick={() => setActiveStage(null)}
+                className="absolute right-3 top-3 rounded-full bg-white/10 p-2 hover:bg-white/20"
+              >
                 <X className="h-5 w-5" />
               </button>
-
               <div className="grid gap-6 p-6 sm:grid-cols-5">
                 {/* Left column: overview + checklist + resources + reflection */}
                 <div className="sm:col-span-3">
                   <h3 className="text-2xl font-bold">{activeStage.title}</h3>
                   <p className="mt-1 text-sm text-white/75">{activeStage.description}</p>
-
                   {/* Region overview */}
                   <div className="mt-5 rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
                     <p className="text-sm text-white/80">
                       {(activeStage.regions?.[region] || activeStage.regions?.Global)?.overview}
                     </p>
                   </div>
-
                   {/* Checklist */}
                   <div className="mt-6">
                     <h4 className="mb-2 font-semibold text-indigo-200">Checklist</h4>
@@ -563,33 +632,36 @@ const [stageState, setStageState] = useState<Record<string, Record<string, any>>
                           <button
                             onClick={() => toggleTask(activeStage.id, task)}
                             className={cx(
-                                "mt-0.5 grid h-5 w-5 place-items-center rounded-full border",
-                                stageState?.[region]?.[activeStage.id]?.checklist?.[task]
+                              "mt-0.5 grid h-5 w-5 place-items-center rounded-full border",
+                              stageState?.[region]?.[activeStage.id]?.checklist?.[task]
                                 ? "border-emerald-400 bg-emerald-400/20"
                                 : "border-white/30"
                             )}
-                            >
+                          >
                             {stageState?.[region]?.[activeStage.id]?.checklist?.[task] && (
-                                <CheckCircle2 className="h-3.5 w-3.5 text-emerald-300" />
+                              <CheckCircle2 className="h-3.5 w-3.5 text-emerald-300" />
                             )}
-                            </button>
+                          </button>
 
                           <span className="text-sm text-white/85">{task}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
-
                   {/* Resources */}
                   <div className="mt-6">
                     <h4 className="mb-2 font-semibold text-indigo-200">Curated resources</h4>
                     <div className="grid gap-3 sm:grid-cols-2">
                       {(activeStage.regions?.[region] || activeStage.regions?.Global)?.resources?.map((r: Resource) => (
-                        <ResourceCard key={r.link} r={r} bookmarked={isBookmarked(r.link)} onBookmark={() => toggleBookmark(r)} />
+                        <ResourceCard
+                          key={r.link}
+                          r={r}
+                          bookmarked={isBookmarked(r.link)}
+                          onBookmark={() => toggleBookmark(r)}
+                        />
                       ))}
                     </div>
                   </div>
-
                   {/* Reflection */}
                   <div className="mt-6 rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
                     <h4 className="mb-2 font-semibold text-indigo-200">Reflection</h4>
@@ -615,7 +687,6 @@ const [stageState, setStageState] = useState<Record<string, Record<string, any>>
 
                   </div>
                 </div>
-
                 {/* Right column: sims + quiz + projects */}
                 <div className="sm:col-span-2 flex flex-col gap-4">
                   <div className="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
@@ -627,17 +698,25 @@ const [stageState, setStageState] = useState<Record<string, Record<string, any>>
                       <PendulumSim />
                     </div>
                   </div>
-
                   {/* Quick quiz */}
                   <div className="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
                     <div className="mb-2 flex items-center gap-2 text-sm text-white/80">
                       <GraduationCap className="h-4 w-4 text-indigo-300" /> Quick quiz
                     </div>
                     <div className="space-y-3">
-                      {(activeStage.quiz || [
-                        { q: `What is emphasized in "${activeStage.title}"?`, opts: ["Vision & direction", "Memorization", "Graphic design", "Public speaking"], correct: "Vision & direction" },
-                        { q: "Which skill is core to physics?", opts: ["Mathematical reasoning", "Rote copying", "Fashion", "Vocabulary"], correct: "Mathematical reasoning" },
-                      ]).map((Q: any, i: number) => (
+                      {(activeStage.quiz ||
+                        [
+                          {
+                            q: `What is emphasized in "${activeStage.title}"?`,
+                            opts: ["Vision & direction", "Memorization", "Graphic design", "Public speaking"],
+                            correct: "Vision & direction",
+                          },
+                          {
+                            q: "Which skill is core to physics?",
+                            opts: ["Mathematical reasoning", "Rote copying", "Fashion", "Vocabulary"],
+                            correct: "Mathematical reasoning",
+                          },
+                        ]).map((Q: any, i: number) => (
                         <div key={i}>
                           <p className="text-sm text-white/85">{Q.q}</p>
                           <div className="mt-1 flex flex-wrap gap-2">
@@ -663,7 +742,6 @@ const [stageState, setStageState] = useState<Record<string, Record<string, any>>
                       </motion.div>
                     )}
                   </div>
-
                   {/* Projects */}
                   {activeStage.regions?.Global?.projectIdeas && (
                     <div className="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
@@ -679,7 +757,6 @@ const [stageState, setStageState] = useState<Record<string, Record<string, any>>
           </motion.div>
         )}
       </AnimatePresence>
-
       <footer className="py-10 text-center text-xs text-white/50">Made for learners who aim for orbit 🚀</footer>
     </div>
   );
