@@ -592,171 +592,193 @@ export default function PhysicsLearningHub() {
       </main>
       {/* Stage Modal */}
       <AnimatePresence>
-        {activeStage && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 grid place-items-center bg-black/50 p-4 backdrop-blur-sm"
-          >
-            <motion.div
-              initial={{ y: 30, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: 30, opacity: 0 }}
-              transition={springy}
-              className="relative w-full max-w-5xl overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-b from-white/10 to-white/5 shadow-2xl"
-            >
-              <button
-                onClick={() => setActiveStage(null)}
-                className="absolute right-3 top-3 rounded-full bg-white/10 p-2 hover:bg-white/20"
-              >
-                <X className="h-5 w-5" />
-              </button>
-              <div className="grid gap-6 p-6 sm:grid-cols-5">
-                {/* Left column: overview + checklist + resources + reflection */}
-                <div className="sm:col-span-3">
-                  <h3 className="text-2xl font-bold">{activeStage.title}</h3>
-                  <p className="mt-1 text-sm text-white/75">{activeStage.description}</p>
-                  {/* Region overview */}
-                  <div className="mt-5 rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
-                    <p className="text-sm text-white/80">
-                      {(activeStage.regions?.[region] || activeStage.regions?.Global)?.overview}
-                    </p>
-                  </div>
-                  {/* Checklist */}
-                  <div className="mt-6">
-                    <h4 className="mb-2 font-semibold text-indigo-200">Checklist</h4>
-                    <ul className="space-y-2">
-                      {(activeStage.regions?.[region] || activeStage.regions?.Global)?.checklist?.map((task: string) => (
-                        <li key={task} className="flex items-start gap-3 rounded-xl bg-white/5 p-3 ring-1 ring-white/10">
-                          <button
-                            onClick={() => toggleTask(activeStage.id, task)}
-                            className={cx(
-                              "mt-0.5 grid h-5 w-5 place-items-center rounded-full border",
-                              stageState?.[region]?.[activeStage.id]?.checklist?.[task]
-                                ? "border-emerald-400 bg-emerald-400/20"
-                                : "border-white/30"
-                            )}
-                          >
-                            {stageState?.[region]?.[activeStage.id]?.checklist?.[task] && (
-                              <CheckCircle2 className="h-3.5 w-3.5 text-emerald-300" />
-                            )}
-                          </button>
+  {activeStage && (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="fixed inset-0 z-50 grid place-items-center bg-black/70 p-4 backdrop-blur-sm"
+    >
+      <motion.div
+        initial={{ y: 30, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        exit={{ y: 30, opacity: 0 }}
+        transition={springy}
+        className="relative w-full max-w-5xl overflow-hidden rounded-3xl 
+                   border border-white/20 bg-white/10 backdrop-blur-2xl 
+                   shadow-[0_8px_32px_rgba(0,0,0,0.4)] text-white/90 leading-relaxed"
+      >
+        {/* Close Button */}
+        <button
+          onClick={() => setActiveStage(null)}
+          className="absolute right-3 top-3 rounded-full bg-white/15 p-2 hover:bg-white/25"
+        >
+          <X className="h-5 w-5" />
+        </button>
 
-                          <span className="text-sm text-white/85">{task}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  {/* Resources */}
-                  <div className="mt-6">
-                    <h4 className="mb-2 font-semibold text-indigo-200">Curated resources</h4>
-                    <div className="grid gap-3 sm:grid-cols-2">
-                      {(activeStage.regions?.[region] || activeStage.regions?.Global)?.resources?.map((r: Resource) => (
-                        <ResourceCard
-                          key={r.link}
-                          r={r}
-                          bookmarked={isBookmarked(r.link)}
-                          onBookmark={() => toggleBookmark(r)}
-                        />
-                      ))}
-                    </div>
-                  </div>
-                  {/* Reflection */}
-                  <div className="mt-6 rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
-                    <h4 className="mb-2 font-semibold text-indigo-200">Reflection</h4>
-                    <textarea
-  className="min-h-[96px] w-full rounded-xl bg-white/5 p-3 text-sm outline-none ring-1 ring-inset ring-white/10 placeholder:text-white/50"
-  placeholder="What did you explore, prove, or build in this stage?"
-  defaultValue={stageState?.[region]?.[activeStage.id]?.notes || ""}  // 👈 correct path
-  onBlur={(e) => {
-    const val = e.currentTarget.value;
-    setStageState(prev => {
-      const regionState = { ...(prev[region] || {}) };
-      const nextStage = { ...(regionState[activeStage.id] || {}), notes: val };
-      const next = { ...prev, [region]: { ...regionState, [activeStage.id]: nextStage } };
-      persist(next, region);              // 👈 single correct persist
-      return next;
-    });
+        <div className="grid gap-6 p-6 sm:grid-cols-5">
+          {/* LEFT COLUMN */}
+          <div className="sm:col-span-3 space-y-6">
+            {/* Title & Description */}
+            <div>
+              <h3 className="text-2xl font-bold text-white drop-shadow-[0_2px_3px_rgba(0,0,0,0.8)]">
+                {activeStage.title}
+              </h3>
+              <p className="mt-1 text-sm text-white/90 drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]">
+                {activeStage.description}
+              </p>
+            </div>
 
-    if (user?.id) {
-      saveReflection(user.id, discipline, activeStage.id, val);
-    }
-  }}
-/>
+            {/* Region Overview */}
+            <div className="rounded-2xl bg-black/35 p-4 ring-1 ring-white/10 backdrop-blur-md">
+              <p className="text-sm text-white/90 leading-relaxed">
+                {(activeStage.regions?.[region] || activeStage.regions?.Global)?.overview}
+              </p>
+            </div>
 
-                  </div>
-                </div>
-                {/* Right column: sims + quiz + projects */}
-                <div className="sm:col-span-2 flex flex-col gap-4">
-                  <div className="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
-                    <div className="mb-2 flex items-center gap-2 text-sm text-white/80">
-                      <Star className="h-4 w-4 text-yellow-300" /> Physics Playground
-                    </div>
-                    <div className="grid gap-3">
-                      <ProjectileSim />
-                      <PendulumSim />
-                    </div>
-                  </div>
-                  {/* Quick quiz */}
-                  <div className="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
-                    <div className="mb-2 flex items-center gap-2 text-sm text-white/80">
-                      <GraduationCap className="h-4 w-4 text-indigo-300" /> Quick quiz
-                    </div>
-                    <div className="space-y-3">
-                      {(activeStage.quiz ||
-                        [
-                          {
-                            q: `What is emphasized in "${activeStage.title}"?`,
-                            opts: ["Vision & direction", "Memorization", "Graphic design", "Public speaking"],
-                            correct: "Vision & direction",
-                          },
-                          {
-                            q: "Which skill is core to physics?",
-                            opts: ["Mathematical reasoning", "Rote copying", "Fashion", "Vocabulary"],
-                            correct: "Mathematical reasoning",
-                          },
-                        ]).map((Q: any, i: number) => (
-                        <div key={i}>
-                          <p className="text-sm text-white/85">{Q.q}</p>
-                          <div className="mt-1 flex flex-wrap gap-2">
-                            {Q.opts.map((opt: string) => (
-                              <button
-                                key={opt}
-                                onClick={() => setQuizAnswers((prev) => ({ ...prev, [i]: opt }))}
-                                className={cx(
-                                  "rounded-full border border-white/15 px-3 py-1 text-sm",
-                                  quizAnswers[i] === opt ? "bg-indigo-500/30" : "bg-white/5 hover:bg-white/10"
-                                )}
-                              >
-                                {opt}
-                              </button>
-                            ))}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                    {quizScore !== null && (
-                      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="mt-3 text-emerald-300">
-                        ✅ You scored {quizScore}%
-                      </motion.div>
-                    )}
-                  </div>
-                  {/* Projects */}
-                  {activeStage.regions?.Global?.projectIdeas && (
-                    <div className="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
-                      <div className="mb-2 flex items-center gap-2 text-sm text-white/80">
-                        <Sparkles className="h-4 w-4 text-fuchsia-300" /> Explore Physics Projects
-                      </div>
-                      <ProjectCarousel ideas={activeStage.regions.Global.projectIdeas} />
-                    </div>
-                  )}
-                </div>
+            {/* Checklist */}
+            <div className="rounded-2xl bg-black/30 p-4 ring-1 ring-white/10 backdrop-blur-md">
+              <h4 className="mb-3 font-semibold text-indigo-200">Checklist</h4>
+              <ul className="space-y-2">
+                {(activeStage.regions?.[region] || activeStage.regions?.Global)?.checklist?.map((task: string) => (
+                  <li
+                    key={task}
+                    className="flex items-start gap-3 rounded-xl bg-white/5 p-3 ring-1 ring-white/10 hover:bg-white/10 transition"
+                  >
+                    <button
+                      onClick={() => toggleTask(activeStage.id, task)}
+                      className={cx(
+                        "mt-0.5 grid h-5 w-5 place-items-center rounded-full border transition",
+                        stageState?.[region]?.[activeStage.id]?.checklist?.[task]
+                          ? "border-emerald-400 bg-emerald-400/25"
+                          : "border-white/30 hover:border-indigo-300"
+                      )}
+                    >
+                      {stageState?.[region]?.[activeStage.id]?.checklist?.[task] && (
+                        <CheckCircle2 className="h-3.5 w-3.5 text-emerald-300" />
+                      )}
+                    </button>
+                    <span className="text-sm text-white/90 drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]">
+                      {task}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Curated Resources */}
+            <div className="rounded-2xl bg-black/30 p-4 ring-1 ring-white/10 backdrop-blur-md">
+              <h4 className="mb-2 font-semibold text-indigo-200">Curated Resources</h4>
+              <div className="grid gap-3 sm:grid-cols-2">
+                {(activeStage.regions?.[region] || activeStage.regions?.Global)?.resources?.map((r: Resource) => (
+                  <ResourceCard
+                    key={r.link}
+                    r={r}
+                    bookmarked={isBookmarked(r.link)}
+                    onBookmark={() => toggleBookmark(r)}
+                  />
+                ))}
               </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            </div>
+
+            {/* Reflection Box */}
+            <div className="rounded-2xl bg-black/30 p-4 ring-1 ring-white/10 backdrop-blur-md">
+              <h4 className="mb-2 font-semibold text-indigo-200">Reflection</h4>
+              <textarea
+                className="min-h-[96px] w-full rounded-xl bg-white/10 p-3 text-sm text-white/90 
+                           placeholder:text-white/50 outline-none ring-1 ring-inset ring-white/15 
+                           focus:ring-indigo-400 transition"
+                placeholder="What did you explore, prove, or build in this stage?"
+                defaultValue={stageState?.[region]?.[activeStage.id]?.notes || ""}
+                onBlur={(e) => {
+                  const val = e.currentTarget.value;
+                  setStageState((prev) => {
+                    const regionState = { ...(prev[region] || {}) };
+                    const nextStage = { ...(regionState[activeStage.id] || {}), notes: val };
+                    const next = { ...prev, [region]: { ...regionState, [activeStage.id]: nextStage } };
+                    persist(next, region);
+                    return next;
+                  });
+                  if (user?.id) saveReflection(user.id, discipline, activeStage.id, val);
+                }}
+              />
+            </div>
+          </div>
+
+          {/* RIGHT COLUMN */}
+          <div className="sm:col-span-2 flex flex-col gap-4">
+            {/* Simulations */}
+            <div className="rounded-2xl bg-black/30 p-4 ring-1 ring-white/10 backdrop-blur-md">
+              <div className="mb-2 flex items-center gap-2 text-sm text-white/80">
+                <Star className="h-4 w-4 text-yellow-300" /> Physics Playground
+              </div>
+              <div className="grid gap-3">
+                <ProjectileSim />
+                <PendulumSim />
+              </div>
+            </div>
+
+            {/* Quick Quiz */}
+            <div className="rounded-2xl bg-black/30 p-4 ring-1 ring-white/10 backdrop-blur-md">
+              <div className="mb-2 flex items-center gap-2 text-sm text-white/80">
+                <GraduationCap className="h-4 w-4 text-indigo-300" /> Quick Quiz
+              </div>
+              <div className="space-y-3">
+                {(activeStage.quiz || [
+                  {
+                    q: `What is emphasized in "${activeStage.title}"?`,
+                    opts: ["Vision & direction", "Memorization", "Graphic design", "Public speaking"],
+                    correct: "Vision & direction",
+                  },
+                ]).map((Q: any, i: number) => (
+                  <div key={i}>
+                    <p className="text-sm text-white/90 drop-shadow-[0_1px_1px_rgba(0,0,0,0.6)]">{Q.q}</p>
+                    <div className="mt-1 flex flex-wrap gap-2">
+                      {Q.opts.map((opt: string) => (
+                        <button
+                          key={opt}
+                          onClick={() => setQuizAnswers((prev) => ({ ...prev, [i]: opt }))}
+                          className={cx(
+                            "rounded-full border border-white/15 px-3 py-1 text-sm transition",
+                            quizAnswers[i] === opt
+                              ? "bg-indigo-500/40 ring-1 ring-indigo-300/40"
+                              : "bg-white/10 hover:bg-white/15"
+                          )}
+                        >
+                          {opt}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+              {quizScore !== null && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  className="mt-3 text-emerald-300 font-medium drop-shadow-[0_1px_1px_rgba(0,0,0,0.6)]"
+                >
+                  ✅ You scored {quizScore}%
+                </motion.div>
+              )}
+            </div>
+
+            {/* Projects */}
+            {activeStage.regions?.Global?.projectIdeas && (
+              <div className="rounded-2xl bg-black/30 p-4 ring-1 ring-white/10 backdrop-blur-md">
+                <div className="mb-2 flex items-center gap-2 text-sm text-white/80">
+                  <Sparkles className="h-4 w-4 text-fuchsia-300" /> Explore Physics Projects
+                </div>
+                <ProjectCarousel ideas={activeStage.regions.Global.projectIdeas} />
+              </div>
+            )}
+          </div>
+        </div>
+      </motion.div>
+    </motion.div>
+  )}
+</AnimatePresence>
+
       <footer className="py-10 text-center text-xs text-white/50">Made for learners who aim for orbit 🚀</footer>
     </div>
   );
