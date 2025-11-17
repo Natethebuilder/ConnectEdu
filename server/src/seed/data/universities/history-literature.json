@@ -5,7 +5,7 @@
     "city": "Cambridge, MA",
     "country": "United States",
     "website": "https://history.fas.harvard.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Harvard_University_Widener_Library.jpg",
+    "photoUrl": "/images/harvard.jpg",
     "location": { "type": "Point", "coordinates": [-71.1167, 42.377] },
     "programs": {
       "history": {
@@ -29,7 +29,7 @@
     "city": "Oxford",
     "country": "United Kingdom",
     "website": "https://www.history.ox.ac.uk/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Oxford_Sheldonian_Theatre.jpg",
+    "photoUrl": "/images/oxford.jpg",
     "location": { "type": "Point", "coordinates": [-1.254, 51.754] },
     "programs": {
       "history": {
@@ -52,7 +52,7 @@
     "city": "Cambridge",
     "country": "United Kingdom",
     "website": "https://www.hist.cam.ac.uk/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/KingsCollegeChapelWest.jpg",
+    "photoUrl": "/images/cambridge.jpg",
     "location": { "type": "Point", "coordinates": [0.1167, 52.2053] },
     "programs": {
       "history": {
@@ -75,7 +75,7 @@
     "city": "New Haven, CT",
     "country": "United States",
     "website": "https://history.yale.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Yale_University_Old_Campus_2014.jpg",
+    "photoUrl": "/images/yale.jpg",
     "location": { "type": "Point", "coordinates": [-72.9223, 41.3163] },
     "programs": {
       "history": {
@@ -99,7 +99,7 @@
     "city": "Beijing",
     "country": "China",
     "website": "https://english.pku.edu.cn/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Peking_University_West_Gate_2.jpg",
+    "photoUrl": "/images/pecking.jpg",
     "location": { "type": "Point", "coordinates": [116.316, 39.992] },
     "programs": {
       "history": {
@@ -122,7 +122,7 @@
     "city": "Stanford, CA",
     "country": "United States",
     "website": "https://history.stanford.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Stanford_Oval_May_2011_panorama.jpg",
+    "photoUrl": "/images/stanford.jpg",
     "location": { "type": "Point", "coordinates": [-122.1697, 37.4275] },
     "programs": {
       "history": {
@@ -146,7 +146,7 @@
     "city": "London",
     "country": "United Kingdom",
     "website": "https://www.lse.ac.uk/International-History",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/77/LSE_Entrance.jpg",
+    "photoUrl": "/images/lse.jpg",
     "location": { "type": "Point", "coordinates": [-0.116, 51.5145] },
     "programs": {
       "history": {
@@ -169,7 +169,7 @@
     "city": "Berkeley, CA",
     "country": "United States",
     "website": "https://history.berkeley.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/UC_Berkeley_Campus_Overview.jpg",
+    "photoUrl": "/images/UCBerkeley.jpg",
     "location": { "type": "Point", "coordinates": [-122.259, 37.8721] },
     "programs": {
       "history": {
@@ -192,7 +192,7 @@
     "city": "New York, NY",
     "country": "United States",
     "website": "https://history.columbia.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Low_Memorial_Library_Columbia_University_College_Walk_jeh.jpg",
+    "photoUrl": "/images/columbia.jpeg",
     "location": { "type": "Point", "coordinates": [-73.9626, 40.8075] },
     "programs": {
       "history": {
@@ -215,7 +215,7 @@
     "city": "Princeton, NJ",
     "country": "United States",
     "website": "https://history.princeton.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Princeton_University_campus.jpg",
+    "photoUrl": "/images/princeton.jpg",
     "location": { "type": "Point", "coordinates": [-74.6514, 40.3431] },
     "programs": {
       "history": {

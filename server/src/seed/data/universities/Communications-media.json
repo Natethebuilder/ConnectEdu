@@ -5,7 +5,7 @@
     "city": "Amsterdam",
     "country": "Netherlands",
     "website": "https://www.uva.nl/en/programmes/bachelors/media-and-information/media-and-information.html",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/University_of_Amsterdam%2C_main_building.jpg",
+    "photoUrl": "/images/uva.jpg",
     "location": { "type": "Point", "coordinates": [4.8936, 52.3667] },
     "programs": {
       "communications-media": {
@@ -28,7 +28,7 @@
     "city": "Cambridge, MA",
     "country": "United States",
     "website": "https://gsas.harvard.edu/programs-of-study/all/film-and-visual-studies",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Harvard_University_Widener_Library.jpg",
+    "photoUrl": "/images/harvard.jpg",
     "location": { "type": "Point", "coordinates": [-71.1167, 42.377] },
     "programs": {
       "communications-media": {
@@ -52,7 +52,7 @@
     "city": "Austin, TX",
     "country": "United States",
     "website": "https://moody.utexas.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/64/UT_Tower_Medium.jpeg",
+    "photoUrl": "/images/uta.jpg",
     "location": { "type": "Point", "coordinates": [-97.733, 30.285] },
     "programs": {
       "communications-media": {
@@ -75,7 +75,7 @@
     "city": "Singapore",
     "country": "Singapore",
     "website": "https://www.ntu.edu.sg/wkwsci",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/00/Nanyang_Technological_University_Admin_Building.jpg",
+    "photoUrl": "/images/nyanyang.jpg",
     "location": { "type": "Point", "coordinates": [103.6800, 1.3483] },
     "programs": {
       "communications-media": {
@@ -98,7 +98,7 @@
     "city": "Stanford, CA",
     "country": "United States",
     "website": "https://comm.stanford.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Stanford_Oval_May_2011_panorama.jpg",
+    "photoUrl": "/images/stanford.jpg",
     "location": { "type": "Point", "coordinates": [-122.1697, 37.4275] },
     "programs": {
       "communications-media": {
@@ -121,7 +121,7 @@
     "city": "London",
     "country": "United Kingdom",
     "website": "https://www.lse.ac.uk/media-and-communications",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/77/LSE_Entrance.jpg",
+    "photoUrl": "/images/lse.jpg",
     "location": { "type": "Point", "coordinates": [-0.116, 51.5145] },
     "programs": {
       "communications-media": {
@@ -144,7 +144,7 @@
     "city": "Los Angeles, CA",
     "country": "United States",
     "website": "https://annenberg.usc.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2e/USC_Athletic_Dept_Building.JPG",
+    "photoUrl": "/images/usc.jpeg",
     "location": { "type": "Point", "coordinates": [-118.285, 34.022] },
     "programs": {
       "communications-media": {
@@ -167,7 +167,7 @@
     "city": "Philadelphia, PA",
     "country": "United States",
     "website": "https://www.asc.upenn.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3e/UPenn_Quadrangle.jpg",
+    "photoUrl": "/images/upenn.jpg",
     "location": { "type": "Point", "coordinates": [-75.1932, 39.9522] },
     "programs": {
       "communications-media": {
@@ -190,7 +190,7 @@
     "city": "New York, NY",
     "country": "United States",
     "website": "https://sps.columbia.edu/academics/masters/strategic-communication",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Low_Memorial_Library_Columbia_University_College_Walk_jeh.jpg",
+    "photoUrl": "/images/columbia.jpeg",
     "location": { "type": "Point", "coordinates": [-73.9626, 40.8075] },
     "programs": {
       "communications-media": {
@@ -213,7 +213,7 @@
     "city": "Cambridge",
     "country": "United Kingdom",
     "website": "https://www.polis.cam.ac.uk/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/KingsCollegeChapelWest.jpg",
+    "photoUrl": "/images/cambridge.jpg",
     "location": { "type": "Point", "coordinates": [0.1167, 52.2053] },
     "programs": {
       "communications-media": {

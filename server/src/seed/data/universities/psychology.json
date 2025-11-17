@@ -5,7 +5,7 @@
     "city": "Cambridge, MA",
     "country": "United States",
     "website": "https://psychology.fas.harvard.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Harvard_University_Widener_Library.jpg",
+    "photoUrl": "/images/harvard.jpg",
     "location": { "type": "Point", "coordinates": [-71.1167, 42.377] },
     "programs": {
       "psychology": {
@@ -29,7 +29,7 @@
     "city": "Oxford",
     "country": "United Kingdom",
     "website": "https://www.psy.ox.ac.uk/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Oxford_Sheldonian_Theatre.jpg",
+    "photoUrl": "/images/oxford.jpg",
     "location": { "type": "Point", "coordinates": [-1.254, 51.754] },
     "programs": {
       "psychology": {
@@ -52,7 +52,7 @@
     "city": "Stanford, CA",
     "country": "United States",
     "website": "https://psychology.stanford.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Stanford_Oval_May_2011_panorama.jpg",
+    "photoUrl": "/images/stanford.jpg",
     "location": { "type": "Point", "coordinates": [-122.1697, 37.4275] },
     "programs": {
       "psychology": {
@@ -76,7 +76,7 @@
     "city": "Cambridge",
     "country": "United Kingdom",
     "website": "https://www.psychol.cam.ac.uk/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/KingsCollegeChapelWest.jpg",
+    "photoUrl": "/images/cambridge.jpg",
     "location": { "type": "Point", "coordinates": [0.1167, 52.2053] },
     "programs": {
       "psychology": {
@@ -99,7 +99,7 @@
     "city": "New Haven, CT",
     "country": "United States",
     "website": "https://psychology.yale.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Yale_University_Old_Campus_2014.jpg",
+    "photoUrl": "/images/yale.jpg",
     "location": { "type": "Point", "coordinates": [-72.9223, 41.3163] },
     "programs": {
       "psychology": {
@@ -123,7 +123,7 @@
     "city": "London",
     "country": "United Kingdom",
     "website": "https://www.ucl.ac.uk/psychology-language-sciences/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0d/UCL_Portico_Building.jpg",
+    "photoUrl": "/images/ucl.jpg",
     "location": { "type": "Point", "coordinates": [-0.1339, 51.5246] },
     "programs": {
       "psychology": {
@@ -146,7 +146,7 @@
     "city": "New York, NY",
     "country": "United States",
     "website": "https://psychology.columbia.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Low_Memorial_Library_Columbia_University_College_Walk_jeh.jpg",
+    "photoUrl": "/images/columbia.jpg",
     "location": { "type": "Point", "coordinates": [-73.9626, 40.8075] },
     "programs": {
       "psychology": {
@@ -165,12 +165,12 @@
     }
   },
   {
-    "name": "University of Michigan–Ann Arbor",
+    "name": "University of Michigan Ann Arbor",
     "rank": 8,
     "city": "Ann Arbor, MI",
     "country": "United States",
     "website": "https://lsa.umich.edu/psych/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f5/University_of_Michigan_campus.jpg",
+    "photoUrl": "/images/annarbor.jpg",
     "location": { "type": "Point", "coordinates": [-83.7382, 42.278] },
     "programs": {
       "psychology": {
@@ -194,7 +194,7 @@
     "city": "Los Angeles, CA",
     "country": "United States",
     "website": "https://www.psych.ucla.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/09/Royce_Hall_at_UCLA.jpg",
+    "photoUrl": "/images/ucla.jpg",
     "location": { "type": "Point", "coordinates": [-118.4452, 34.0689] },
     "programs": {
       "psychology": {
@@ -218,7 +218,7 @@
     "city": "Amsterdam",
     "country": "Netherlands",
     "website": "https://www.uva.nl/en/programmes/bachelors/psychology/psychology.html",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/University_of_Amsterdam%2C_main_building.jpg",
+    "photoUrl": "/images/uva.jpg",
     "location": { "type": "Point", "coordinates": [4.8936, 52.3667] },
     "programs": {
       "psychology": {

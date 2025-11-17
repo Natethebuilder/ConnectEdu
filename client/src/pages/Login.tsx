@@ -8,7 +8,7 @@ export default function Login() {
   const { setRole } = useSupabaseAuth();
   const navigate = useNavigate();
 
-  const selectRole = (role: "student" | "alumni") => {
+  const selectRole = (role: "student" | "mentor") => {
     setRole(role);
     navigate("/auth");
   };
@@ -51,18 +51,18 @@ export default function Login() {
             <GraduationCap className="h-14 w-14 text-blue-600 mb-4" />
             <span className="text-lg font-semibold text-gray-800">Student</span>
             <p className="text-sm text-gray-500 mt-2 text-center">
-              Find universities, explore programs, and connect with alumni.
+              Find universities, explore programs, and connect with mentors.
             </p>
           </motion.button>
 
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
-            onClick={() => selectRole("alumni")}
+            onClick={() => selectRole("mentor")}
             className="w-full flex flex-col items-center justify-center rounded-2xl bg-gradient-to-br from-green-100 to-white p-8 shadow-md hover:shadow-xl transition"
           >
             <Users className="h-14 w-14 text-green-600 mb-4" />
-            <span className="text-lg font-semibold text-gray-800">Alumni</span>
+            <span className="text-lg font-semibold text-gray-800">Mentor</span>
             <p className="text-sm text-gray-500 mt-2 text-center">
               Share your experience and guide the next generation.
             </p>

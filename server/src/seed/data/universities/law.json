@@ -5,7 +5,7 @@
     "city": "Cambridge, MA",
     "country": "United States",
     "website": "https://hls.harvard.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Harvard_University_Widener_Library.jpg",
+    "photoUrl": "/images/harvard,jpg",
     "location": { "type": "Point", "coordinates": [-71.1167, 42.377] },
     "programs": {
       "law": {
@@ -29,7 +29,7 @@
     "city": "Oxford",
     "country": "United Kingdom",
     "website": "https://www.law.ox.ac.uk/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Oxford_Sheldonian_Theatre.jpg",
+    "photoUrl": "/images/oxford.jpg",
     "location": { "type": "Point", "coordinates": [-1.254, 51.754] },
     "programs": {
       "law": {
@@ -53,7 +53,7 @@
     "city": "Cambridge",
     "country": "United Kingdom",
     "website": "https://www.law.cam.ac.uk/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/KingsCollegeChapelWest.jpg",
+    "photoUrl": "/images/cambridge.jpg",
     "location": { "type": "Point", "coordinates": [0.1167, 52.2053] },
     "programs": {
       "law": {
@@ -77,7 +77,7 @@
     "city": "New Haven, CT",
     "country": "United States",
     "website": "https://law.yale.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Yale_University_Old_Campus_2014.jpg",
+    "photoUrl": "/images/yale.jpg",
     "location": { "type": "Point", "coordinates": [-72.9223, 41.3163] },
     "programs": {
       "law": {
@@ -101,7 +101,7 @@
     "city": "Stanford, CA",
     "country": "United States",
     "website": "https://law.stanford.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Stanford_Oval_May_2011_panorama.jpg",
+    "photoUrl": "/images/stanford.jpg",
     "location": { "type": "Point", "coordinates": [-122.1697, 37.4275] },
     "programs": {
       "law": {
@@ -125,7 +125,7 @@
     "city": "London",
     "country": "United Kingdom",
     "website": "https://www.lse.ac.uk/law",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/77/LSE_Entrance.jpg",
+    "photoUrl": "/images/lse.jpg",
     "location": { "type": "Point", "coordinates": [-0.116, 51.5145] },
     "programs": {
       "law": {
@@ -149,7 +149,7 @@
     "city": "Berkeley, CA",
     "country": "United States",
     "website": "https://www.law.berkeley.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/UC_Berkeley_Campus_Overview.jpg",
+    "photoUrl": "/images/UCBerkeley.jpg",
     "location": { "type": "Point", "coordinates": [-122.259, 37.8721] },
     "programs": {
       "law": {
@@ -173,7 +173,7 @@
     "city": "New York, NY",
     "country": "United States",
     "website": "https://www.law.columbia.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Low_Memorial_Library_Columbia_University_College_Walk_jeh.jpg",
+    "photoUrl": "/images/columbia.jpeg",
     "location": { "type": "Point", "coordinates": [-73.9626, 40.8075] },
     "programs": {
       "law": {
@@ -197,7 +197,7 @@
     "city": "New York, NY",
     "country": "United States",
     "website": "https://www.law.nyu.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/40/Nyu_law.jpg",
+    "photoUrl": "/images/nyu.jpg",
     "location": { "type": "Point", "coordinates": [-73.9973, 40.7306] },
     "programs": {
       "law": {
@@ -221,7 +221,7 @@
     "city": "Singapore",
     "country": "Singapore",
     "website": "https://law.nus.edu.sg/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/76/NUS_School_of_Science.jpg",
+    "photoUrl": "/images/nus.jpg",
     "location": { "type": "Point", "coordinates": [103.7764, 1.2966] },
     "programs": {
       "law": {

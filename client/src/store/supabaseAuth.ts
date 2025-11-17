@@ -6,7 +6,7 @@ type AppUser = {
   id: string;
   email: string;
   name?: string;
-  role?: "student" | "alumni";
+  role?: "student" | "mentor";
   avatarSeed?: string; // ✅ add this
 } | null;
 
@@ -23,10 +23,10 @@ function normalize(user?: SupaUser | null): AppUser {
 
 type AuthState = {
   user: AppUser;
-  role: "student" | "alumni" | null;
+  role: "student" | "mentor" | null;
   ready: boolean;
   setUser: (u: AppUser) => void;
-  setRole: (r: "student" | "alumni" | null) => void;
+  setRole: (r: "student" | "mentor" | null) => void;
   initAuth: () => Promise<void>;
   logout: () => Promise<void>;
 };

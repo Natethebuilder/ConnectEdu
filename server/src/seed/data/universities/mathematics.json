@@ -5,7 +5,7 @@
     "city": "Cambridge, MA",
     "country": "United States",
     "website": "https://math.mit.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0c/MIT_Dome_night1.jpg",
+    "photoUrl": "/images/MIT.jpg",
     "location": { "type": "Point", "coordinates": [-71.092, 42.3601] },
     "programs": {
       "mathematics": {
@@ -29,7 +29,7 @@
     "city": "Cambridge, MA",
     "country": "United States",
     "website": "https://math.harvard.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Harvard_University_Widener_Library.jpg",
+    "photoUrl": "/images/harvard.jpg",
     "location": { "type": "Point", "coordinates": [-71.1167, 42.377] },
     "programs": {
       "mathematics": {
@@ -53,7 +53,7 @@
     "city": "Oxford",
     "country": "United Kingdom",
     "website": "https://www.maths.ox.ac.uk/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Oxford_Sheldonian_Theatre.jpg",
+    "photoUrl": "/images/oxford.jpg",
     "location": { "type": "Point", "coordinates": [-1.254, 51.754] },
     "programs": {
       "mathematics": {
@@ -76,7 +76,7 @@
     "city": "Cambridge",
     "country": "United Kingdom",
     "website": "https://www.maths.cam.ac.uk/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/KingsCollegeChapelWest.jpg",
+    "photoUrl": "/images/cambridge.jpg",
     "location": { "type": "Point", "coordinates": [0.1167, 52.2053] },
     "programs": {
       "mathematics": {
@@ -99,7 +99,7 @@
     "city": "Stanford, CA",
     "country": "United States",
     "website": "https://mathematics.stanford.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Stanford_Oval_May_2011_panorama.jpg",
+    "photoUrl": "/images/stanford.jpg",
     "location": { "type": "Point", "coordinates": [-122.1697, 37.4275] },
     "programs": {
       "mathematics": {
@@ -123,7 +123,7 @@
     "city": "Berkeley, CA",
     "country": "United States",
     "website": "https://math.berkeley.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/UC_Berkeley_Campus_Overview.jpg",
+    "photoUrl": "/images/UCBerkeley.jpg",
     "location": { "type": "Point", "coordinates": [-122.259, 37.8721] },
     "programs": {
       "mathematics": {
@@ -147,7 +147,7 @@
     "city": "Princeton, NJ",
     "country": "United States",
     "website": "https://math.princeton.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Princeton_University_campus.jpg",
+    "photoUrl": "/images/princeton.jpg",
     "location": { "type": "Point", "coordinates": [-74.6514, 40.3431] },
     "programs": {
       "mathematics": {
@@ -171,7 +171,7 @@
     "city": "Zurich",
     "country": "Switzerland",
     "website": "https://math.ethz.ch/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0a/ETH_Zurich_Mainbuilding.jpg",
+    "photoUrl": "/images/ethzurich.jpg",
     "location": { "type": "Point", "coordinates": [8.5476, 47.3769] },
     "programs": {
       "mathematics": {
@@ -194,7 +194,7 @@
     "city": "Singapore",
     "country": "Singapore",
     "website": "https://www.math.nus.edu.sg/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/76/NUS_School_of_Science.jpg",
+    "photoUrl": "/images/nus.jpg",
     "location": { "type": "Point", "coordinates": [103.7764, 1.2966] },
     "programs": {
       "mathematics": {
@@ -217,7 +217,7 @@
     "city": "London",
     "country": "United Kingdom",
     "website": "https://www.imperial.ac.uk/mathematics/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Imperial_College_London_Mechanical_Engineering_Building.jpg",
+    "photoUrl": "/images/imperial.jpg",
     "location": { "type": "Point", "coordinates": [-0.1749, 51.4988] },
     "programs": {
       "mathematics": {

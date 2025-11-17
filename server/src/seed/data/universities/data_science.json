@@ -5,7 +5,7 @@
     "city": "Cambridge, MA",
     "country": "United States",
     "website": "https://idss.mit.edu/academics/undergraduate/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0c/MIT_Dome_night1.jpg",
+    "photoUrl": "/images/MIT.jpg",
     "location": { "type": "Point", "coordinates": [-71.092, 42.3601] },
     "programs": {
       "data-science": {
@@ -29,7 +29,7 @@
     "city": "Pittsburgh, PA",
     "country": "United States",
     "website": "https://datascience.cmu.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/72/Hammerschlag_Hall%2C_Carnegie_Mellon_University.jpg",
+    "photoUrl": "/images/carnegie.jpg",
     "location": { "type": "Point", "coordinates": [-79.9436, 40.4433] },
     "programs": {
       "data-science": {
@@ -53,7 +53,7 @@
     "city": "Oxford",
     "country": "United Kingdom",
     "website": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-list/data-science",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Oxford_Sheldonian_Theatre.jpg",
+    "photoUrl": "/images/oxford.jpg",
     "location": { "type": "Point", "coordinates": [-1.254, 51.754] },
     "programs": {
       "data-science": {
@@ -76,7 +76,7 @@
     "city": "Berkeley, CA",
     "country": "United States",
     "website": "https://data.berkeley.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/UC_Berkeley_Campus_Overview.jpg",
+    "photoUrl": "/images/UCBerkeley.jpg",
     "location": { "type": "Point", "coordinates": [-122.259, 37.8721] },
     "programs": {
       "data-science": {
@@ -100,7 +100,7 @@
     "city": "Singapore",
     "country": "Singapore",
     "website": "https://www.ntu.edu.sg/scse/programmes/undergraduate-programmes/data-science-and-ai",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/00/Nanyang_Technological_University_Admin_Building.jpg",
+    "photoUrl": "/images/nyanyang.jpg",
     "location": { "type": "Point", "coordinates": [103.6800, 1.3483] },
     "programs": {
       "data-science": {
@@ -123,7 +123,7 @@
     "city": "Cambridge, MA",
     "country": "United States",
     "website": "https://datascience.harvard.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Harvard_University_Widener_Library.jpg",
+    "photoUrl": "/images/harvard.jpg",
     "location": { "type": "Point", "coordinates": [-71.1167, 42.377] },
     "programs": {
       "data-science": {
@@ -147,7 +147,7 @@
     "city": "Singapore",
     "country": "Singapore",
     "website": "https://www.stat.nus.edu.sg/data-science/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/76/NUS_School_of_Science.jpg",
+    "photoUrl": "/images/nus.jpg",
     "location": { "type": "Point", "coordinates": [103.7764, 1.2966] },
     "programs": {
       "data-science": {
@@ -170,7 +170,7 @@
     "city": "Zurich",
     "country": "Switzerland",
     "website": "https://ethz.ch/en/studies/degree-programmes/bachelor/data-science.html",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0a/ETH_Zurich_Mainbuilding.jpg",
+    "photoUrl": "/images/ethzurich.jpg",
     "location": { "type": "Point", "coordinates": [8.5476, 47.3769] },
     "programs": {
       "data-science": {
@@ -193,7 +193,7 @@
     "city": "New Haven, CT",
     "country": "United States",
     "website": "https://datascience.yale.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Yale_University_Old_Campus_2014.jpg",
+    "photoUrl": "/images/yale.jpg",
     "location": { "type": "Point", "coordinates": [-72.9223, 41.3163] },
     "programs": {
       "data-science": {
@@ -217,7 +217,7 @@
     "city": "Toronto",
     "country": "Canada",
     "website": "https://artsci.utoronto.ca/future/academics/undergraduate-programs/data-science",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cf/University_College_UofT.JPG",
+    "photoUrl": "/images/toronto.jpg",
     "location": { "type": "Point", "coordinates": [-79.3948, 43.6629] },
     "programs": {
       "data-science": {

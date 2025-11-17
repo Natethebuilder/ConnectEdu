@@ -5,7 +5,7 @@
     "city": "Cambridge",
     "country": "United States",
     "website": "https://physics.mit.edu",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0c/MIT_Dome_night1.jpg",
+    "photoUrl": "/images/MIT.jpg",
     "location": { "type": "Point", "coordinates": [-71.092, 42.3601] },
     "programs": {
       "physics": {
@@ -29,7 +29,7 @@
     "city": "Cambridge, MA",
     "country": "United States",
     "website": "https://physics.harvard.edu",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Harvard_University_Widener_Library.jpg",
+    "photoUrl": "/images/harvard.jpg",
     "location": { "type": "Point", "coordinates": [-71.1167, 42.377] },
     "programs": {
       "physics": {
@@ -53,7 +53,7 @@
     "city": "Oxford",
     "country": "United Kingdom",
     "website": "https://www.ox.ac.uk",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Oxford_Sheldonian_Theatre.jpg",
+    "photoUrl": "/images/oxford.jpg",
     "location": { "type": "Point", "coordinates": [-1.254, 51.754] },
     "programs": {
       "physics": {
@@ -76,7 +76,7 @@
     "city": "Stanford, CA",
     "country": "United States",
     "website": "https://physics.stanford.edu",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Stanford_Oval_May_2011_panorama.jpg",
+    "photoUrl": "/images/stanford.jpg",
     "location": { "type": "Point", "coordinates": [-122.1697, 37.4275] },
     "programs": {
       "physics": {
@@ -100,7 +100,7 @@
     "city": "Cambridge",
     "country": "United Kingdom",
     "website": "https://www.phy.cam.ac.uk",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/KingsCollegeChapelWest.jpg",
+    "photoUrl": "/images/cambridge.jpg",
     "location": { "type": "Point", "coordinates": [0.1167, 52.2053] },
     "programs": {
       "physics": {
@@ -123,7 +123,7 @@
     "city": "Berkeley, CA",
     "country": "United States",
     "website": "https://physics.berkeley.edu",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/UC_Berkeley_Campus_Overview.jpg",
+    "photoUrl": "/images/UCBerkeley.jpg",
     "location": { "type": "Point", "coordinates": [-122.259, 37.8721] },
     "programs": {
       "physics": {
@@ -147,7 +147,7 @@
     "city": "Pasadena, CA",
     "country": "United States",
     "website": "https://physics.caltech.edu",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/74/Caltech_Moore_Lab_of_Engineering.jpg",
+    "photoUrl": "/images/caltech.jpg",
     "location": { "type": "Point", "coordinates": [-118.1253, 34.1377] },
     "programs": {
       "physics": {
@@ -171,7 +171,7 @@
     "city": "Zurich",
     "country": "Switzerland",
     "website": "https://ethz.ch",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0a/ETH_Zurich_Mainbuilding.jpg",
+    "photoUrl": "/images/ethzurich.jpg",
     "location": { "type": "Point", "coordinates": [8.5476, 47.3769] },
     "programs": {
       "physics": {
@@ -194,7 +194,7 @@
     "city": "Tokyo",
     "country": "Japan",
     "website": "https://www.s.u-tokyo.ac.jp/en/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6e/University_of_Tokyo_Yasuda_Auditorium.jpg",
+    "photoUrl": "/images/tokyo.jpg",
     "location": { "type": "Point", "coordinates": [139.761, 35.7126] },
     "programs": {
       "physics": {
@@ -218,7 +218,7 @@
     "city": "Princeton, NJ",
     "country": "United States",
     "website": "https://phy.princeton.edu",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Princeton_University_campus.jpg",
+    "photoUrl": "/images/princeton.jpg",
     "location": { "type": "Point", "coordinates": [-74.6514, 40.3431] },
     "programs": {
       "physics": {

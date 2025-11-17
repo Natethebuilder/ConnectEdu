@@ -5,7 +5,7 @@
     "city": "London",
     "country": "United Kingdom",
     "website": "https://www.ucl.ac.uk/bartlett/architecture",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0d/UCL_Portico_Building.jpg",
+    "photoUrl": "/images/ucl.jpg",
     "location": { "type": "Point", "coordinates": [-0.1339, 51.5246] },
     "programs": {
       "architecture": {
@@ -29,7 +29,7 @@
     "city": "Cambridge, MA",
     "country": "United States",
     "website": "https://architecture.mit.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0c/MIT_Dome_night1.jpg",
+    "photoUrl": "/images/MIT.jpg",
     "location": { "type": "Point", "coordinates": [-71.092, 42.3601] },
     "programs": {
       "architecture": {
@@ -52,7 +52,7 @@
     "city": "Delft",
     "country": "Netherlands",
     "website": "https://www.tudelft.nl/en/education/programmes/bachelors/architecture",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/d/df/TU_Delft_Aerospace_Faculty.jpg",
+    "photoUrl": "/images/delft.jpg",
     "location": { "type": "Point", "coordinates": [4.373, 52.002] },
     "programs": {
       "architecture": {
@@ -75,7 +75,7 @@
     "city": "Zurich",
     "country": "Switzerland",
     "website": "https://arch.ethz.ch/en/studies/bachelor.html",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0a/ETH_Zurich_Mainbuilding.jpg",
+    "photoUrl": "images/ethzurich.jpg",
     "location": { "type": "Point", "coordinates": [8.5476, 47.3769] },
     "programs": {
       "architecture": {
@@ -98,7 +98,7 @@
     "city": "Manchester",
     "country": "United Kingdom",
     "website": "https://www.manchester.ac.uk/study/undergraduate/courses/2025/architecture/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Whitworth_Hall%2C_University_of_Manchester.jpg",
+    "photoUrl": "/images/manchester.jpg",
     "location": { "type": "Point", "coordinates": [-2.232, 53.466] },
     "programs": {
       "architecture": {
@@ -122,7 +122,7 @@
     "city": "Cambridge, MA",
     "country": "United States",
     "website": "https://www.gsd.harvard.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Harvard_University_Widener_Library.jpg",
+    "photoUrl": "/images/harvard.jpg",
     "location": { "type": "Point", "coordinates": [-71.1167, 42.377] },
     "programs": {
       "architecture": {
@@ -145,7 +145,7 @@
     "city": "Milan",
     "country": "Italy",
     "website": "https://www.polimi.it/en/programmes/bachelor-of-science/architecture",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Politecnico_di_Milano.jpg",
+    "photoUrl": "/images/milano.jpg",
     "location": { "type": "Point", "coordinates": [9.228, 45.478] },
     "programs": {
       "architecture": {
@@ -168,7 +168,7 @@
     "city": "Beijing",
     "country": "China",
     "website": "https://www.arch.tsinghua.edu.cn/en/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/47/Tsinghua_University_Gate.jpg",
+    "photoUrl": "/images/tsinghua.jpg",
     "location": { "type": "Point", "coordinates": [116.3269, 40.0025] },
     "programs": {
       "architecture": {
@@ -191,7 +191,7 @@
     "city": "Singapore",
     "country": "Singapore",
     "website": "https://www.arch.nus.edu.sg/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/76/NUS_School_of_Science.jpg",
+    "photoUrl": "/images/nus.jpg",
     "location": { "type": "Point", "coordinates": [103.7764, 1.2966] },
     "programs": {
       "architecture": {
@@ -215,7 +215,7 @@
     "city": "Berkeley, CA",
     "country": "United States",
     "website": "https://ced.berkeley.edu/academics/architecture/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/UC_Berkeley_Campus_Overview.jpg",
+    "photoUrl": "/images/UCBerkeley.jpg",
     "location": { "type": "Point", "coordinates": [-122.259, 37.8721] },
     "programs": {
       "architecture": {

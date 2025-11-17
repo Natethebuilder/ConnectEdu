@@ -46,7 +46,7 @@ export default function Auth() {
         });
 
           if (u.user_metadata?.role === "student") navigate("/discipline-choice");
-          else if (u.user_metadata?.role === "alumni") navigate("/alumni-dashboard");
+          else if (u.user_metadata?.role === "mentor") navigate("/mentor-dashboard");
         }
       }
     } catch (err: any) {

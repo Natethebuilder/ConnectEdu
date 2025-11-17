@@ -9,7 +9,7 @@ const registerSchema = z.object({
   email: z.string().email(),
   password: z.string().min(8),
   name: z.string().min(1),
-  role: z.enum(["student", "alumni"]), // ✅ added
+  role: z.enum(["student", "mentor"]), // ✅ added
 });
 
 export async function register(req: Request, res: Response) {

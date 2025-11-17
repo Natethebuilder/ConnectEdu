@@ -5,7 +5,7 @@
     "city": "London",
     "country": "United Kingdom",
     "website": "https://www.ucl.ac.uk/ioe",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0d/UCL_Portico_Building.jpg",
+    "photoUrl": "/images/ucl.jpg",
     "location": { "type": "Point", "coordinates": [-0.1339, 51.5246] },
     "programs": {
       "education": {
@@ -28,7 +28,7 @@
     "city": "Cambridge, MA",
     "country": "United States",
     "website": "https://www.gse.harvard.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Harvard_University_Widener_Library.jpg",
+    "photoUrl": "/images/harvard.jpg",
     "location": { "type": "Point", "coordinates": [-71.1167, 42.377] },
     "programs": {
       "education": {
@@ -52,7 +52,7 @@
     "city": "Hong Kong",
     "country": "China (Hong Kong SAR)",
     "website": "https://web.edu.hku.hk/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/8/87/University_of_Hong_Kong_Main_Building.JPG",
+    "photoUrl": "/images/hongkong.jpg",
     "location": { "type": "Point", "coordinates": [114.137, 22.283] },
     "programs": {
       "education": {
@@ -75,7 +75,7 @@
     "city": "Stanford, CA",
     "country": "United States",
     "website": "https://ed.stanford.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Stanford_Oval_May_2011_panorama.jpg",
+    "photoUrl": "/images/stanford.jpg",
     "location": { "type": "Point", "coordinates": [-122.1697, 37.4275] },
     "programs": {
       "education": {
@@ -99,7 +99,7 @@
     "city": "Cambridge",
     "country": "United Kingdom",
     "website": "https://www.educ.cam.ac.uk/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/KingsCollegeChapelWest.jpg",
+    "photoUrl": "/images/cambridge.jpg",
     "location": { "type": "Point", "coordinates": [0.1167, 52.2053] },
     "programs": {
       "education": {
@@ -122,7 +122,7 @@
     "city": "Oxford",
     "country": "United Kingdom",
     "website": "https://www.education.ox.ac.uk/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Oxford_Sheldonian_Theatre.jpg",
+    "photoUrl": "/images/oxford.jpg",
     "location": { "type": "Point", "coordinates": [-1.254, 51.754] },
     "programs": {
       "education": {
@@ -145,7 +145,7 @@
     "city": "Beijing",
     "country": "China",
     "website": "https://english.bnu.edu.cn/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/66/Beijing_Normal_University.jpg",
+    "photoUrl": "/images/beiging.jpg",
     "location": { "type": "Point", "coordinates": [116.366, 39.961] },
     "programs": {
       "education": {
@@ -168,7 +168,7 @@
     "city": "Singapore",
     "country": "Singapore",
     "website": "https://www.ntu.edu.sg/nie",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/00/Nanyang_Technological_University_Admin_Building.jpg",
+    "photoUrl": "/images/nyanyang.jpg",
     "location": { "type": "Point", "coordinates": [103.6800, 1.3483] },
     "programs": {
       "education": {
@@ -191,7 +191,7 @@
     "city": "Berkeley, CA",
     "country": "United States",
     "website": "https://gse.berkeley.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/UC_Berkeley_Campus_Overview.jpg",
+    "photoUrl": "/images/UCBerkeley.jpg",
     "location": { "type": "Point", "coordinates": [-122.259, 37.8721] },
     "programs": {
       "education": {
@@ -214,7 +214,7 @@
     "city": "Toronto",
     "country": "Canada",
     "website": "https://www.oise.utoronto.ca/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cf/University_College_UofT.JPG",
+    "photoUrl": "/images/toronto.jpg",
     "location": { "type": "Point", "coordinates": [-79.3948, 43.6629] },
     "programs": {
       "education": {

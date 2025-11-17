@@ -5,7 +5,7 @@
     "city": "Cambridge, MA",
     "country": "United States",
     "website": "https://environment.harvard.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Harvard_University_Widener_Library.jpg",
+    "photoUrl": "/images/harvard.jpg",
     "location": { "type": "Point", "coordinates": [-71.1167, 42.377] },
     "programs": {
       "environmental-science": {
@@ -29,7 +29,7 @@
     "city": "Beijing",
     "country": "China",
     "website": "https://www.tsinghua.edu.cn/en/env/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/47/Tsinghua_University_Gate.jpg",
+    "photoUrl": "/images/tsinghua.jpg",
     "location": { "type": "Point", "coordinates": [116.3269, 40.0025] },
     "programs": {
       "environmental-science": {
@@ -52,7 +52,7 @@
     "city": "Wageningen",
     "country": "Netherlands",
     "website": "https://www.wur.nl/en/education-programmes/bachelor/environmental-sciences.htm",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/38/Wageningen_University_Campus.jpg",
+    "photoUrl": "/images/wageningen.jpg",
     "location": { "type": "Point", "coordinates": [5.663, 51.985] },
     "programs": {
       "environmental-science": {
@@ -75,7 +75,7 @@
     "city": "Oxford",
     "country": "United Kingdom",
     "website": "https://www.geog.ox.ac.uk/study/undergraduate/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Oxford_Sheldonian_Theatre.jpg",
+    "photoUrl": "/images/oxford.jpg",
     "location": { "type": "Point", "coordinates": [-1.254, 51.754] },
     "programs": {
       "environmental-science": {
@@ -98,7 +98,7 @@
     "city": "Stanford, CA",
     "country": "United States",
     "website": "https://earth.stanford.edu/programs/undergraduate",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Stanford_Oval_May_2011_panorama.jpg",
+    "photoUrl": "/images/stanford.jpg",
     "location": { "type": "Point", "coordinates": [-122.1697, 37.4275] },
     "programs": {
       "environmental-science": {
@@ -122,7 +122,7 @@
     "city": "Cambridge, MA",
     "country": "United States",
     "website": "https://eapsweb.mit.edu/education/undergraduate",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0c/MIT_Dome_night1.jpg",
+    "photoUrl": "/images/MIT.jpg",
     "location": { "type": "Point", "coordinates": [-71.092, 42.3601] },
     "programs": {
       "environmental-science": {
@@ -146,7 +146,7 @@
     "city": "Berkeley, CA",
     "country": "United States",
     "website": "https://nature.berkeley.edu/undergraduate/espm-majors",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/UC_Berkeley_Campus_Overview.jpg",
+    "photoUrl": "/images/UCBerkeley.jpg",
     "location": { "type": "Point", "coordinates": [-122.259, 37.8721] },
     "programs": {
       "environmental-science": {
@@ -169,7 +169,7 @@
     "city": "Zurich",
     "country": "Switzerland",
     "website": "https://usys.ethz.ch/en/studies/bachelor/environmental-sciences.html",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0a/ETH_Zurich_Mainbuilding.jpg",
+    "photoUrl": "/images/ethzurich.jpg",
     "location": { "type": "Point", "coordinates": [8.5476, 47.3769] },
     "programs": {
       "environmental-science": {
@@ -192,7 +192,7 @@
     "city": "Cambridge",
     "country": "United Kingdom",
     "website": "https://www.geog.cam.ac.uk/undergraduate/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/KingsCollegeChapelWest.jpg",
+    "photoUrl": "/images/cambridge.jpg",
     "location": { "type": "Point", "coordinates": [0.1167, 52.2053] },
     "programs": {
       "environmental-science": {
@@ -215,7 +215,7 @@
     "city": "Singapore",
     "country": "Singapore",
     "website": "https://www.science.nus.edu.sg/undergraduate-programmes/environmental-studies/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/76/NUS_School_of_Science.jpg",
+    "photoUrl": "/images/nus.jpg",
     "location": { "type": "Point", "coordinates": [103.7764, 1.2966] },
     "programs": {
       "environmental-science": {

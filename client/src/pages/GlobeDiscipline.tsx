@@ -212,127 +212,201 @@ export default function GlobeDiscipline() {
 
       {/* Info panel */}
       <AnimatePresence>
-        {selected && (
-          <motion.aside
-            key={selected._id}
-            initial={{ x: 500, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            exit={{ x: 500, opacity: 0 }}
-            transition={{ type: "spring", stiffness: 80, damping: 20 }}
-            className="absolute right-0 top-0 bottom-0 z-[66] w-[420px] overflow-y-auto bg-white/95 backdrop-blur-xl shadow-2xl border-l border-white/60"
-            aria-label="University details"
-          >
-            {/* Hero */}
-            <div className="relative">
-              <img
-                src={photoFor(selected)}
-                alt={selected?.name}
-                className="h-52 w-full object-cover"
-                onError={(e) => {
-                  (e.currentTarget as HTMLImageElement).src =
-                    "/images/universities/default.jpg";
-                }}
-              />
-              <button
-                onClick={closePanel}
-                className="absolute top-3 right-3 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full transition focus:outline-none focus:ring-2 focus:ring-white/80"
-                aria-label="Close"
-              >
-                <X className="w-5 h-5" />
-              </button>
+  {selected && (
+    <motion.aside
+      key={selected._id}
+      initial={{ x: 500, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      exit={{ x: 500, opacity: 0 }}
+      transition={{ type: "spring", stiffness: 70, damping: 18 }}
+      className="
+        absolute right-0 top-0 bottom-0 z-[66]
+        w-[420px] 
+        backdrop-blur-2xl bg-white/10
+        border-l border-white/20
+        shadow-[0_8px_40px_rgba(0,0,0,0.4)]
+        overflow-y-auto
+      "
+    >
+      {/* HERO IMAGE */}
+      <div className="relative h-64 w-full overflow-hidden rounded-bl-3xl rounded-br-none">
+        <img
+          src={photoFor(selected)}
+          alt={selected.name}
+          className="absolute inset-0 h-full w-full object-cover"
+          onError={(e) => {
+            e.currentTarget.src = "/images/universities/default.jpg";
+          }}
+        />
 
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                <h3 className="text-xl font-bold text-white">{selected?.name}</h3>
-                <p className="text-sm text-gray-200">
-                  #{selected?.rank ?? "–"} · {selected?.city} · {selected?.country}
-                </p>
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+
+        {/* Close button */}
+        <button
+          onClick={closePanel}
+          className="
+            absolute top-4 right-4
+            p-2 rounded-full 
+            bg-black/40 hover:bg-black/60 
+            text-white 
+            backdrop-blur-md
+            shadow-md
+            transition
+          "
+        >
+          <X className="w-5 h-5" />
+        </button>
+
+        {/* Title */}
+        <div className="absolute bottom-4 left-4 right-4 text-white">
+          <h3 className="text-xl font-semibold leading-tight drop-shadow-lg">
+            {selected.name}
+          </h3>
+          <p className="text-sm opacity-80">
+            #{selected.rank ?? "–"} · {selected.city}, {selected.country}
+          </p>
+        </div>
+      </div>
+
+      {/* CONTENT */}
+      <div className="p-6 space-y-6">
+
+        {/* SUMMARY CARD */}
+        <div
+          className="
+            p-5 rounded-2xl 
+            bg-white/10 backdrop-blur-xl 
+            border border-white/20 
+            shadow-[0_4px_20px_rgba(0,0,0,0.2)]
+          "
+        >
+          <h4 className="text-sm font-semibold text-white/90 mb-3">
+            Overview
+          </h4>
+          <div className="grid grid-cols-2 gap-y-2 text-sm">
+            <div className="text-white/60">City</div>
+            <div className="text-white/90">{selected.city}</div>
+
+            <div className="text-white/60">Country</div>
+            <div className="text-white/90">{selected.country}</div>
+
+            <div className="text-white/60">Rank</div>
+            <div className="text-white/90">#{selected.rank}</div>
+
+            <div className="text-white/60">Discipline</div>
+            <div className="text-white/90">{prettyDiscipline}</div>
+          </div>
+        </div>
+
+        {/* ENTRY REQUIREMENTS */}
+        {entry && (
+          <div
+            className="
+              p-5 rounded-2xl 
+              bg-white/10 backdrop-blur-xl 
+              border border-white/20
+              shadow-[0_4px_20px_rgba(0,0,0,0.2)]
+            "
+          >
+            <h4 className="text-sm font-semibold text-white/90 mb-3">
+              Entry Requirements
+            </h4>
+
+            <ul className="space-y-2">
+              {Object.entries(entry).map(([label, value]) => (
+                <li
+                  key={label}
+                  className="
+                    flex justify-between 
+                    text-sm text-white/80 
+                    border-b border-white/10 pb-1
+                  "
+                >
+                  <span className="text-white/50">{label}</span>
+                  <span className="font-medium text-white/90">{value as any}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {/* TUITION */}
+        {(fees?.local || fees?.international) && (
+          <div className="grid grid-cols-2 gap-4">
+            <div
+              className="
+                p-4 rounded-2xl 
+                bg-white/10 backdrop-blur-xl 
+                border border-white/20 
+                text-center shadow-md
+              "
+            >
+              <div className="text-xs text-white/60">Local Fees</div>
+              <div className="text-lg font-semibold text-white/90">
+                {fees?.local ?? "—"}
               </div>
             </div>
-
-            {/* Content */}
-            <div className="p-6 space-y-6">
-              {entry && (
-                <section>
-                  <h4 className="text-sm font-semibold text-gray-900 mb-2">
-                    Entry Requirements
-                  </h4>
-                  <ul className="space-y-1 text-sm text-gray-700">
-                    {Object.entries(entry).map(([k, v]) => (
-                      <li key={k} className="flex gap-2">
-                        <span className="min-w-[110px] text-gray-500">{k}:</span>
-                        <span className="font-medium">{v as any}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </section>
-              )}
-
-              {(fees?.local || fees?.international) && (
-                <section className="grid grid-cols-2 gap-3">
-                  <div className="rounded-xl border border-gray-200/70 bg-white/70 p-3 text-center">
-                    <div className="text-xs text-gray-500">Local Fees</div>
-                    <div className="text-base font-semibold">{fees?.local ?? "—"}</div>
-                  </div>
-                  <div className="rounded-xl border border-gray-200/70 bg-white/70 p-3 text-center">
-                    <div className="text-xs text-gray-500">International</div>
-                    <div className="text-base font-semibold">{fees?.international ?? "—"}</div>
-                  </div>
-                </section>
-              )}
-
-              <section className="grid grid-cols-2 gap-3">
-                {selected?.website && (
-                  <motion.a
-                    whileHover={{ scale: 1.03 }}
-                    href={selected.website}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 bg-gray-900 text-white hover:bg-black transition focus:outline-none focus:ring-2 focus:ring-gray-400"
-                  >
-                    <ExternalLink className="h-4 w-4" />
-                    Website
-                  </motion.a>
-                )}
-
-                <motion.a
-                  whileHover={{ scale: 1.03 }}
-                  href={`https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${lat},${lon}`}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 bg-blue-600 text-white hover:bg-blue-700 transition focus:outline-none focus:ring-2 focus:ring-blue-300"
-                >
-                  Street View
-                </motion.a>
-
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  onClick={() => {
-                    navigate(`/learning/${discipline}`, {
-                      state: { university: selected },
-                    });
-                  }}
-                >
-                  <GraduationCap className="h-4 w-4" />
-                  Open Learning Hub
-                </motion.button>
-
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  onClick={() =>
-                    navigate(
-                      `/alumni-chat?u=${encodeURIComponent(selected?.name || "")}`
-                    )
-                  }
-                  className="col-span-2 inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 bg-emerald-600 text-white hover:bg-emerald-700 transition focus:outline-none focus:ring-2 focus:ring-emerald-300"
-                >
-                  <MessageCircle className="h-4 w-4" />
-                  Chat with Alumni
-                </motion.button>
-              </section>
+            <div
+              className="
+                p-4 rounded-2xl 
+                bg-white/10 backdrop-blur-xl 
+                border border-white/20 
+                text-center shadow-md
+              "
+            >
+              <div className="text-xs text-white/60">International</div>
+              <div className="text-lg font-semibold text-white/90">
+                {fees?.international ?? "—"}
+              </div>
             </div>
-          </motion.aside>
+          </div>
         )}
-      </AnimatePresence>
+
+        {/* ACTION BUTTONS */}
+        <div className="grid grid-cols-2 gap-3 pt-2">
+          {selected.website && (
+            <motion.a
+              whileHover={{ scale: 1.03 }}
+              href={selected.website}
+              target="_blank"
+              rel="noreferrer"
+              className="
+                flex items-center justify-center gap-2
+                rounded-xl px-4 py-2.5
+                bg-black/80 text-white
+                backdrop-blur-xl
+                shadow-md hover:bg-black
+                transition
+              "
+            >
+              <ExternalLink className="w-4 h-4" />
+              Website
+            </motion.a>
+          )}
+
+          <motion.a
+            whileHover={{ scale: 1.03 }}
+            href={`https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${lat},${lon}`}
+            target="_blank"
+            rel="noreferrer"
+            className="
+              flex items-center justify-center gap-2
+              rounded-xl px-4 py-2.5
+              bg-blue-600/90 text-white
+              backdrop-blur-xl
+              shadow-md hover:bg-blue-700
+              transition
+            "
+          >
+            Street View
+          </motion.a>
+        </div>
+      </div>
+    </motion.aside>
+  )}
+</AnimatePresence>
+
     </div>
   );
 }

@@ -5,7 +5,7 @@
     "city": "Cambridge, MA",
     "country": "United States",
     "website": "https://mcb.harvard.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Harvard_University_Widener_Library.jpg",
+    "photoUrl": "/images/harvard.jpg",
     "location": { "type": "Point", "coordinates": [-71.1167, 42.377] },
     "programs": {
       "biology": {
@@ -29,7 +29,7 @@
     "city": "Cambridge, MA",
     "country": "United States",
     "website": "https://biology.mit.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0c/MIT_Dome_night1.jpg",
+    "photoUrl": "/images/MIT.jpg",
     "location": { "type": "Point", "coordinates": [-71.092, 42.3601] },
     "programs": {
       "biology": {
@@ -53,7 +53,7 @@
     "city": "Stanford, CA",
     "country": "United States",
     "website": "https://biology.stanford.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Stanford_Oval_May_2011_panorama.jpg",
+    "photoUrl": "/images/stanford.jpg",
     "location": { "type": "Point", "coordinates": [-122.1697, 37.4275] },
     "programs": {
       "biology": {
@@ -77,7 +77,7 @@
     "city": "Oxford",
     "country": "United Kingdom",
     "website": "https://www.biology.ox.ac.uk/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Oxford_Sheldonian_Theatre.jpg",
+    "photoUrl": "/images/oxford.jpg",
     "location": { "type": "Point", "coordinates": [-1.254, 51.754] },
     "programs": {
       "biology": {
@@ -100,7 +100,7 @@
     "city": "Cambridge",
     "country": "United Kingdom",
     "website": "https://www.natsci.tripos.cam.ac.uk/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/KingsCollegeChapelWest.jpg",
+    "photoUrl": "/images/cambridge.jpg",
     "location": { "type": "Point", "coordinates": [0.1167, 52.2053] },
     "programs": {
       "biology": {
@@ -123,7 +123,7 @@
     "city": "New Haven, CT",
     "country": "United States",
     "website": "https://mbb.yale.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Yale_University_Old_Campus_2014.jpg",
+    "photoUrl": "/images/yale.jpg",
     "location": { "type": "Point", "coordinates": [-72.9223, 41.3163] },
     "programs": {
       "biology": {
@@ -147,7 +147,7 @@
     "city": "Baltimore, MD",
     "country": "United States",
     "website": "https://bio.jhu.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Johns_Hopkins_University_Academic_Buildings.jpg",
+    "photoUrl": "/images/johnshopkins.jpg",
     "location": { "type": "Point", "coordinates": [-76.6205, 39.3299] },
     "programs": {
       "biology": {
@@ -171,7 +171,7 @@
     "city": "Berkeley, CA",
     "country": "United States",
     "website": "https://biology.berkeley.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/UC_Berkeley_Campus_Overview.jpg",
+    "photoUrl": "/images/UCBerkeley.jpg",
     "location": { "type": "Point", "coordinates": [-122.259, 37.8721] },
     "programs": {
       "biology": {
@@ -195,7 +195,7 @@
     "city": "San Francisco, CA",
     "country": "United States",
     "website": "https://biology.ucsf.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/04/UCSF_Parnassus_Campus.jpg",
+    "photoUrl": "/images/ucsf.jpg",
     "location": { "type": "Point", "coordinates": [-122.458, 37.763] },
     "programs": {
       "biology": {
@@ -218,7 +218,7 @@
     "city": "London",
     "country": "United Kingdom",
     "website": "https://www.imperial.ac.uk/biology/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Imperial_College_London_Mechanical_Engineering_Building.jpg",
+    "photoUrl": "/images/imperial.jpg",
     "location": { "type": "Point", "coordinates": [-0.1749, 51.4988] },
     "programs": {
       "biology": {

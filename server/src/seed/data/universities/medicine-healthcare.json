@@ -5,7 +5,7 @@
     "city": "Cambridge, MA",
     "country": "United States",
     "website": "https://hms.harvard.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Harvard_University_Widener_Library.jpg",
+    "photoUrl": "/images/harvard.jpg",
     "location": { "type": "Point", "coordinates": [-71.1167, 42.377] },
     "programs": {
       "medicine": {
@@ -29,7 +29,7 @@
     "city": "Oxford",
     "country": "United Kingdom",
     "website": "https://www.medsci.ox.ac.uk/study/medicine",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Oxford_Sheldonian_Theatre.jpg",
+    "photoUrl": "/images/oxford.jpg",
     "location": { "type": "Point", "coordinates": [-1.254, 51.754] },
     "programs": {
       "medicine": {
@@ -53,7 +53,7 @@
     "city": "Stanford, CA",
     "country": "United States",
     "website": "https://med.stanford.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Stanford_Oval_May_2011_panorama.jpg",
+    "photoUrl": "/images/stanford.jpg",
     "location": { "type": "Point", "coordinates": [-122.1697, 37.4275] },
     "programs": {
       "medicine": {
@@ -77,7 +77,7 @@
     "city": "Baltimore, MD",
     "country": "United States",
     "website": "https://www.hopkinsmedicine.org/som/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/48/Johns_Hopkins_Hospital.jpg",
+    "photoUrl": "/images/johnshopkins.jpg",
     "location": { "type": "Point", "coordinates": [-76.5908, 39.2965] },
     "programs": {
       "medicine": {
@@ -101,7 +101,7 @@
     "city": "Cambridge",
     "country": "United Kingdom",
     "website": "https://www.undergraduate.study.cam.ac.uk/courses/medicine",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/KingsCollegeChapelWest.jpg",
+    "photoUrl": "/images/cambridge.jpg",
     "location": { "type": "Point", "coordinates": [0.1167, 52.2053] },
     "programs": {
       "medicine": {
@@ -125,7 +125,7 @@
     "city": "San Francisco, CA",
     "country": "United States",
     "website": "https://medschool.ucsf.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a6/UCSF_Mission_Bay_Campus.jpg",
+    "photoUrl": "/images/ucsf.jpg",
     "location": { "type": "Point", "coordinates": [-122.393, 37.767] },
     "programs": {
       "medicine": {
@@ -148,7 +148,7 @@
     "city": "London",
     "country": "United Kingdom",
     "website": "https://www.imperial.ac.uk/medicine/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Imperial_College_London_-_Faculty_Building.jpg",
+    "photoUrl": "/images/imperial.jpg",
     "location": { "type": "Point", "coordinates": [-0.1749, 51.4988] },
     "programs": {
       "medicine": {
@@ -172,7 +172,7 @@
     "city": "London",
     "country": "United Kingdom",
     "website": "https://www.ucl.ac.uk/medical-school/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0d/UCL_Portico_Building.jpg",
+    "photoUrl": "/images/ucl.jpg",
     "location": { "type": "Point", "coordinates": [-0.1339, 51.5246] },
     "programs": {
       "medicine": {
@@ -196,7 +196,7 @@
     "city": "Stockholm",
     "country": "Sweden",
     "website": "https://ki.se/en/education/study-programmes/undergraduate-programmes/medicine",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Karolinska_Institutet_2020.jpg",
+    "photoUrl": "/images/karolina.jpg",
     "location": { "type": "Point", "coordinates": [18.022, 59.348] },
     "programs": {
       "medicine": {
@@ -219,7 +219,7 @@
     "city": "New Haven, CT",
     "country": "United States",
     "website": "https://medicine.yale.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Yale_University_Old_Campus_2014.jpg",
+    "photoUrl": "/images/yale.jpg",
     "location": { "type": "Point", "coordinates": [-72.9223, 41.3163] },
     "programs": {
       "medicine": {

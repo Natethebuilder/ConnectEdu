@@ -5,7 +5,7 @@
     "city": "London",
     "country": "United Kingdom",
     "website": "https://www.rca.ac.uk/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/62/Royal_College_of_Art%2C_London.JPG",
+    "photoUrl": "/images/rca.jpg",
     "location": { "type": "Point", "coordinates": [-0.178, 51.501] },
     "programs": {
       "art-design": {
@@ -28,7 +28,7 @@
     "city": "London",
     "country": "United Kingdom",
     "website": "https://www.arts.ac.uk/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/73/Central_Saint_Martins%2C_University_of_the_Arts_London.jpg",
+    "photoUrl": "/images/ual.jpg",
     "location": { "type": "Point", "coordinates": [-0.1278, 51.5074] },
     "programs": {
       "art-design": {
@@ -51,7 +51,7 @@
     "city": "New York, NY",
     "country": "United States",
     "website": "https://www.newschool.edu/parsons/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Parsons_School_of_Design_building.jpg",
+    "photoUrl": "/images/newschool.jpg",
     "location": { "type": "Point", "coordinates": [-73.995, 40.7359] },
     "programs": {
       "art-design": {
@@ -74,7 +74,7 @@
     "city": "Providence, RI",
     "country": "United States",
     "website": "https://www.risd.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Rhode_Island_School_of_Design_Museum.jpg",
+    "photoUrl": "/images/risd.jpg",
     "location": { "type": "Point", "coordinates": [-71.407, 41.8268] },
     "programs": {
       "art-design": {
@@ -97,7 +97,7 @@
     "city": "Cambridge, MA",
     "country": "United States",
     "website": "https://architecture.mit.edu/art-culture-and-technology",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0c/MIT_Dome_night1.jpg",
+    "photoUrl": "/images/MIT.jpg",
     "location": { "type": "Point", "coordinates": [-71.092, 42.3601] },
     "programs": {
       "art-design": {
@@ -120,7 +120,7 @@
     "city": "Milan",
     "country": "Italy",
     "website": "https://www.polimi.it/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Politecnico_di_Milano.jpg",
+    "photoUrl": "/images/milano.jpg",
     "location": { "type": "Point", "coordinates": [9.228, 45.478] },
     "programs": {
       "art-design": {
@@ -143,7 +143,7 @@
     "city": "New York, NY",
     "country": "United States",
     "website": "https://www.pratt.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Pratt_Institute_Main_Building.jpg",
+    "photoUrl": "/images/pratt.jpeg",
     "location": { "type": "Point", "coordinates": [-73.963, 40.691] },
     "programs": {
       "art-design": {
@@ -166,7 +166,7 @@
     "city": "Espoo",
     "country": "Finland",
     "website": "https://www.aalto.fi/en/school-of-arts-design-and-architecture",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Aalto_University_Campus.jpg",
+    "photoUrl": "/images/aalto.jpg",
     "location": { "type": "Point", "coordinates": [24.828, 60.186] },
     "programs": {
       "art-design": {
@@ -189,7 +189,7 @@
     "city": "Chicago, IL",
     "country": "United States",
     "website": "https://www.saic.edu/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/64/School_of_the_Art_Institute_of_Chicago.JPG",
+    "photoUrl": "/images/saic.jpeg",
     "location": { "type": "Point", "coordinates": [-87.623, 41.879] },
     "programs": {
       "art-design": {
@@ -212,7 +212,7 @@
     "city": "Eindhoven",
     "country": "Netherlands",
     "website": "https://www.designacademy.nl/",
-    "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/34/Design_Academy_Eindhoven.jpg",
+    "photoUrl": "/images/dae.jpg",
     "location": { "type": "Point", "coordinates": [5.479, 51.439] },
     "programs": {
       "art-design": {
