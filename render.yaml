@@ -1,11 +1,15 @@
 services:
-  - type: web
-    name: connectedu-api
+  - name: connectedu-api 
+    type: web
+    repo: https://github.com/Natethebuilder/ConnectEdu
     runtime: node
+    plan: free
+    branch: main
     rootDir: server
     buildCommand: npm install && npm run build
     startCommand: npm run start
-    autoDeploy: true
+    region: frankfurt
+    autoDeployTrigger: commit
     envVars:
       - key: MONGO_URI
         sync: false
