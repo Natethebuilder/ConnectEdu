@@ -9,7 +9,21 @@ import learningHubRoutes from "./routes/learningHubRoutes.js";
 import learningProfileRoutes from "./routes/learningProfileRoutes.js";
 
 const app = express();
-app.use(cors({ origin: env.CORS_ORIGIN }));
+// CORS CONFIG
+const allowedOrigins = env.CORS_ORIGIN.split(",").map(o => o.trim());
+
+app.use(cors({
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      console.error("❌ CORS blocked:", origin);
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true
+}));
+
 app.use(express.json());
 console.log("SUPABASE_URL:", process.env.SUPABASE_URL);
 console.log("SUPABASE_SERVICE_ROLE_KEY:", process.env.SUPABASE_SERVICE_ROLE_KEY?.slice(0, 10) + "...");
