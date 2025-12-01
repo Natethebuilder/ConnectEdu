@@ -11,15 +11,9 @@ services:
     region: frankfurt
     autoDeployTrigger: commit
     envVars:
-      - key: MONGO_URI
-        sync: false
-      - key: SUPABASE_URL
-        sync: false
-      - key: SUPABASE_SERVICE_ROLE_KEY
-        sync: false
-      - key: JWT_SECRET
-        sync: false
-      - key: CORS_ORIGIN
-        sync: false
-      - key: PORT
-        sync: false
+      MONGO_URI: ""
+      SUPABASE_URL: ""
+      SUPABASE_SERVICE_ROLE_KEY: ""
+      JWT_SECRET: ""
+      CORS_ORIGIN: ""
+      PORT: ""
