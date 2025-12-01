@@ -285,17 +285,17 @@ export default function GlobeDiscipline() {
             Overview
           </h4>
           <div className="grid grid-cols-2 gap-y-2 text-sm">
-            <div className="text-white/60">City</div>
-            <div className="text-white/90">{selected.city}</div>
+            <div className="text-white/80">City</div>
+            <div className="text-white/100">{selected.city}</div>
 
-            <div className="text-white/60">Country</div>
-            <div className="text-white/90">{selected.country}</div>
+            <div className="text-white/80">Country</div>
+            <div className="text-white/100">{selected.country}</div>
 
-            <div className="text-white/60">Rank</div>
-            <div className="text-white/90">#{selected.rank}</div>
+            <div className="text-white/80">Rank</div>
+            <div className="text-white/100">#{selected.rank}</div>
 
-            <div className="text-white/60">Discipline</div>
-            <div className="text-white/90">{prettyDiscipline}</div>
+            <div className="text-white/80">Discipline</div>
+            <div className="text-white/100">{prettyDiscipline}</div>
           </div>
         </div>
 
@@ -323,8 +323,8 @@ export default function GlobeDiscipline() {
                     border-b border-white/10 pb-1
                   "
                 >
-                  <span className="text-white/50">{label}</span>
-                  <span className="font-medium text-white/90">{value as any}</span>
+                  <span className="text-white/80">{label}</span>
+                  <span className="font-medium text-white/100">{value as any}</span>
                 </li>
               ))}
             </ul>
@@ -342,8 +342,8 @@ export default function GlobeDiscipline() {
                 text-center shadow-md
               "
             >
-              <div className="text-xs text-white/60">Local Fees</div>
-              <div className="text-lg font-semibold text-white/90">
+              <div className="text-xs text-white/80">Local Fees</div>
+              <div className="text-lg font-semibold text-white/100">
                 {fees?.local ?? "—"}
               </div>
             </div>

@@ -18,8 +18,8 @@ import LearningHub from "./pages/learning/[discipline]";
 import ScrollToTop from "./components/ScrollToTop";
 import Navbar from "./components/Navbar";
 
-function AlumniDashboard() {
-  return <div className="p-6">Alumni Dashboard (coming soon)</div>;
+function MentorDashboard() {
+  return <div className="p-6">Mentor Dashboard (coming soon)</div>;
 }
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
@@ -37,7 +37,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
           <Route path="disciplines" element={<DisciplineSelect />} />
           <Route path="survey" element={<Survey />} />
           <Route path="globe/:discipline" element={<GlobeDiscipline />} />
-          <Route path="alumni-dashboard" element={<AlumniDashboard />} />
+          <Route path="mentor-dashboard" element={<MentorDashboard />} />
           <Route path="profile" element={<Profile />} />
           <Route path="survey-results" element={<SurveyResults />} />
           <Route path="discipline-choice" element={<DisciplineChoice />} />
