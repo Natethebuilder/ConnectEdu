@@ -1,0 +1,2 @@
+Mentor prompt beginning
+okay. now i would also like to add a section for mentors. at the beginning when the app is opened this is the page that it opens to. when i make an account as a student then try to login with that same account as a mentor it automatically takes me to the mentor page but it should rather say this account is already registered as a student or something idk we need to make it clear how to differentiate between students and mentors from an authentication poiint of view. also, 
