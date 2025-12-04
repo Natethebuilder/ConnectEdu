@@ -1,8 +1,7 @@
-// client/src/pages/Profile.tsx
 import { useState } from "react";
 import { useSupabaseAuth } from "../store/supabaseAuth";
 import { supabase } from "../lib/supabase";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation, Navigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Loader2, RefreshCw, CheckCircle, XCircle } from "lucide-react";
 
@@ -11,24 +10,32 @@ const getDicebearUrl = (seed: string) =>
 
 export default function Profile() {
   const { user, setUser } = useSupabaseAuth();
+
+  // 🚨 Prevent mentors from accessing wrong profile page
+  if (user?.role === "mentor") {
+    return <Navigate to="/mentor-onboarding" replace />;
+  }
+
   const navigate = useNavigate();
   const location = useLocation();
-  const backTo = location.state?.from || "/disciplines"; // 👈 fallback
+  const backTo = location.state?.from || "/disciplines";
 
   const [name, setName] = useState(user?.name || "");
   const [avatarSeed, setAvatarSeed] = useState(
     user?.avatarSeed || user?.id || "default"
   );
   const [saving, setSaving] = useState(false);
-  const [msg, setMsg] = useState<{ type: "success" | "error"; text: string } | null>(
-    null
-  );
+  const [msg, setMsg] = useState<{
+    type: "success" | "error";
+    text: string;
+  } | null>(null);
 
   const [newPassword, setNewPassword] = useState("");
   const [pwSaving, setPwSaving] = useState(false);
-  const [pwMsg, setPwMsg] = useState<{ type: "success" | "error"; text: string } | null>(
-    null
-  );
+  const [pwMsg, setPwMsg] = useState<{
+    type: "success" | "error";
+    text: string;
+  } | null>(null);
 
   if (!user) return <div className="p-6">Please log in.</div>;
 
@@ -82,29 +89,15 @@ export default function Profile() {
 
   return (
     <div className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50 overflow-hidden">
-      {/* Floating blobs background */}
-      <motion.div
-        animate={{ y: [0, 30, 0], opacity: [0.4, 0.7, 0.4] }}
-        transition={{ duration: 10, repeat: Infinity }}
-        className="absolute top-10 left-20 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30"
-      />
-      <motion.div
-        animate={{ y: [0, -30, 0], opacity: [0.4, 0.8, 0.4] }}
-        transition={{ duration: 12, repeat: Infinity }}
-        className="absolute bottom-20 right-20 w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30"
-      />
-
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6 }}
         className="relative z-10 w-full max-w-lg p-8 rounded-3xl bg-white/70 backdrop-blur-xl shadow-2xl border border-white/40 space-y-8"
       >
-        {/* Close button */}
         <button
           onClick={() => navigate(backTo)}
           className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-lg"
-          aria-label="Close profile"
         >
           ✕
         </button>
@@ -113,7 +106,7 @@ export default function Profile() {
           Profile
         </h1>
 
-        {/* Feedback banner */}
+        {/* Feedback */}
         {msg && (
           <div
             className={`flex items-center gap-2 p-3 rounded-lg text-sm ${
@@ -131,7 +124,6 @@ export default function Profile() {
           </div>
         )}
 
-        {/* Avatar */}
         <div className="text-center space-y-4">
           <img
             src={getDicebearUrl(avatarSeed)}
@@ -161,7 +153,6 @@ export default function Profile() {
           </button>
         </div>
 
-        {/* Name */}
         <div>
           <label className="block mb-1 text-sm font-medium">Name</label>
           <input
@@ -171,13 +162,8 @@ export default function Profile() {
           />
         </div>
 
-        {/* Role */}
-        <div>
-          <label className="block mb-1 text-sm font-medium">Role</label>
-          <p className="text-gray-700 capitalize">{user.role}</p>
-        </div>
+        <p className="text-sm text-gray-500 text-center">Email: {user.email}</p>
 
-        {/* Save Profile */}
         <button
           onClick={saveProfile}
           disabled={saving}
@@ -186,13 +172,11 @@ export default function Profile() {
           {saving ? <Loader2 className="w-5 h-5 animate-spin" /> : "Save profile"}
         </button>
 
-        <p className="text-sm text-gray-500 text-center">Email: {user.email}</p>
-
         <hr className="my-6" />
 
-        {/* Password Section */}
         <div className="space-y-4">
           <h2 className="text-lg font-semibold">Change Password</h2>
+
           {pwMsg && (
             <div
               className={`flex items-center gap-2 p-3 rounded-lg text-sm ${
@@ -209,6 +193,7 @@ export default function Profile() {
               {pwMsg.text}
             </div>
           )}
+
           <input
             type="password"
             placeholder="New password"
@@ -216,6 +201,7 @@ export default function Profile() {
             value={newPassword}
             onChange={(e) => setNewPassword(e.target.value)}
           />
+
           <button
             onClick={changePassword}
             disabled={pwSaving}

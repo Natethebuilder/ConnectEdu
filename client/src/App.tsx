@@ -1,13 +1,17 @@
-// client/src/App.tsx
+import { useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import { useSupabaseAuth } from "./store/supabaseAuth";
 
 export default function App() {
   const location = useLocation();
-  const { user } = useSupabaseAuth();
+  const { user, initAuth } = useSupabaseAuth();
 
-  // Hide Navbar on auth/login/register pages
+  // Run once on app load
+  useEffect(() => {
+    initAuth();
+  }, []);
+
   const hideNavbar = ["/login", "/auth"].includes(location.pathname);
 
   return (

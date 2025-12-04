@@ -12,14 +12,23 @@ export default function Navbar() {
   const { discipline } = useParams();
   const navigate = useNavigate();
 
-  const isGlobePage =
-  location.pathname.startsWith("/globe");
-
+  const isGlobePage = location.pathname.startsWith("/globe");
 
   async function handleLogout() {
     await supabase.auth.signOut();
     window.location.href = "/login";
   }
+
+  function handleProfileClick() {
+    if (!user) return navigate("/login");
+
+    if (user.role === "mentor") {
+      navigate("/mentor-onboarding", { replace: false });
+    } else {
+      navigate("/profile", { state: { from: location.pathname } });
+    }
+  }
+
 
   return (
     <header
@@ -56,7 +65,7 @@ export default function Navbar() {
           </span>
         </Link>
 
-        {/* Center: Discipline pill */}
+        {/* Center discipline pill (unchanged) */}
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
           <AnimatePresence>
             {discipline && (
@@ -74,7 +83,6 @@ export default function Navbar() {
                       : "bg-white/70 border-white/40 shadow-lg"
                   }`}
                 >
-                  {/* Text */}
                   <span
                     className={`text-sm font-semibold ${
                       isGlobePage ? "text-white" : "text-gray-800"
@@ -90,13 +98,11 @@ export default function Navbar() {
                           ? "from-cyan-300 via-pink-400 to-fuchsia-600"
                           : "from-blue-600 via-purple-600 to-pink-600"
                       }`}
-                      style={{ letterSpacing: "0.03em" }}
                     >
                       {titleCase(discipline)}
                     </span>
                   </span>
 
-                  {/* Button */}
                   <button
                     onClick={() => navigate(`/learning/${discipline}`)}
                     className="px-3 py-1 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-xs font-medium shadow hover:from-indigo-700 hover:to-purple-700 transition whitespace-nowrap"
@@ -109,13 +115,12 @@ export default function Navbar() {
           </AnimatePresence>
         </div>
 
-        {/* Right: Auth */}
+        {/* Right: Profile + Logout */}
         <nav className="flex items-center gap-3">
           {user ? (
             <>
-              <Link
-                to="/profile"
-                state={{ from: location.pathname }}
+              <button
+                onClick={handleProfileClick}
                 className={`flex items-center gap-2 px-3 py-1.5 rounded-full backdrop-blur-md border shadow hover:shadow-lg transition ${
                   isGlobePage
                     ? "bg-black/40 border-white/20"
@@ -140,7 +145,7 @@ export default function Navbar() {
                 >
                   {user.name || "Profile"}
                 </span>
-              </Link>
+              </button>
 
               <button
                 onClick={handleLogout}

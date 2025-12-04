@@ -7,6 +7,8 @@ import { connectDB } from "./config/db.js";
 import universityRoutes from "./routes/universities.js";
 import learningHubRoutes from "./routes/learningHubRoutes.js";
 import learningProfileRoutes from "./routes/learningProfileRoutes.js";
+import adminDomainRoutes from "./routes/adminDomainRoutes.js";
+import mentorProfileRoutes from "./routes/mentorProfileRoutes.js";
 
 const app = express();
 // CORS CONFIG
@@ -38,4 +40,6 @@ connectDB().catch((err) => {
 app.use("/universities", universityRoutes);
 app.use("/learning", learningHubRoutes);
 app.use("/api/learning-profiles", learningProfileRoutes);
+app.use("/admin/domains", adminDomainRoutes);
+app.use("/api/mentors", mentorProfileRoutes);
 app.listen(env.PORT, () => console.log(`🚀 Server running on port ${env.PORT}`));

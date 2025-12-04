@@ -12,15 +12,15 @@ import Survey from "./pages/Survey";
 import GlobeDiscipline from "./pages/GlobeDiscipline";
 import DisciplineChoice from "./pages/DisciplineChoice";
 import LearningHub from "./pages/learning/[discipline]";
+import MentorOnboarding from "./pages/MentorOnboarding";
+import MentorDashboard from "./pages/MentorDashboard";
 
 
 // ✅ new components
 import ScrollToTop from "./components/ScrollToTop";
 import Navbar from "./components/Navbar";
 
-function MentorDashboard() {
-  return <div className="p-6">Mentor Dashboard (coming soon)</div>;
-}
+
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -37,11 +37,12 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
           <Route path="disciplines" element={<DisciplineSelect />} />
           <Route path="survey" element={<Survey />} />
           <Route path="globe/:discipline" element={<GlobeDiscipline />} />
-          <Route path="mentor-dashboard" element={<MentorDashboard />} />
           <Route path="profile" element={<Profile />} />
           <Route path="survey-results" element={<SurveyResults />} />
           <Route path="discipline-choice" element={<DisciplineChoice />} />
           <Route path="learning/:discipline" element={<LearningHub />} />
+          <Route path="mentor-onboarding" element={<MentorOnboarding />} />
+          <Route path="mentor-dashboard" element={<MentorDashboard />} />
          
 
         </Route>
