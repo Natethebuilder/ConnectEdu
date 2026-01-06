@@ -10,7 +10,10 @@ export default function AuthCallback() {
     async function process() {
       // Read params from hash fragment (Supabase password reset format)
       const hashParams = new URLSearchParams(window.location.hash.substring(1));
-      const type = hashParams.get("type");
+      const url = new URL(window.location.href);
+      const hashType = hashParams.get("type");
+      const queryType = url.searchParams.get("type");
+      const type = hashType || queryType;
       const access_token = hashParams.get("access_token");
       const refresh_token = hashParams.get("refresh_token");
 
@@ -43,11 +46,6 @@ export default function AuthCallback() {
           // Fall through to check query/hash params
         } else if (data?.session) {
           // Successfully exchanged code, now check what type of callback
-          const url = new URL(window.location.href);
-          const queryType = url.searchParams.get("type");
-          const hashType = hashParams.get("type");
-          const type = hashType || queryType;
-
           if (type === "email_confirmation" || type === "email_change" || type === "signup") {
             navigate("/email-confirmed");
             return;
@@ -58,11 +56,6 @@ export default function AuthCallback() {
       }
 
       // Check query params as fallback
-      const url = new URL(window.location.href);
-      const queryType = url.searchParams.get("type");
-      const hashType = hashParams.get("type");
-      const type = hashType || queryType;
-
       if (type === "recovery" || (access_token && refresh_token)) {
         navigate("/auth/reset", { replace: true });
         return;
