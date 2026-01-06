@@ -8,45 +8,67 @@ export default function AuthCallback() {
 
   useEffect(() => {
     async function process() {
-      // Supabase: exchange auth code for local session
+      // Read params from hash fragment (Supabase password reset format)
+      const hashParams = new URLSearchParams(window.location.hash.substring(1));
+      const type = hashParams.get("type");
+      const access_token = hashParams.get("access_token");
+      const refresh_token = hashParams.get("refresh_token");
+
+      // If we have hash-based tokens (password reset flow)
+      if (access_token && refresh_token) {
+        if (type === "recovery") {
+          // Set the session and redirect to password reset page
+          const { error } = await supabase.auth.setSession({
+            access_token,
+            refresh_token,
+          });
+          
+          if (error) {
+            console.error("Session error:", error);
+            navigate("/login?error=invalid_token");
+            return;
+          }
+          
+          navigate("/auth/reset", { replace: true });
+          return;
+        }
+      }
+
+      // Try code-based exchange (for email confirmation, etc.)
       try {
-        await supabase.auth.exchangeCodeForSession(window.location.href);
+        const { data, error } = await supabase.auth.exchangeCodeForSession(window.location.href);
+        
+        if (error) {
+          console.warn("Exchange code failed:", error);
+          // Fall through to check query/hash params
+        } else if (data?.session) {
+          // Successfully exchanged code, now check what type of callback
+          const url = new URL(window.location.href);
+          const queryType = url.searchParams.get("type");
+          const hashType = hashParams.get("type");
+          const type = hashType || queryType;
+
+          if (type === "email_confirmation" || type === "email_change" || type === "signup") {
+            navigate("/email-confirmed");
+            return;
+          }
+        }
       } catch (err) {
         console.warn("Exchange code failed:", err);
       }
 
-    const url = new URL(window.location.href);
+      // Check query params as fallback
+      const url = new URL(window.location.href);
+      const queryType = url.searchParams.get("type");
+      const hashType = hashParams.get("type");
+      const type = hashType || queryType;
 
-        // Query type
-    const queryType = url.searchParams.get("type");
-
-        // Hash params type
-    const hashParams = new URLSearchParams(window.location.hash.substring(1));
-    const hashType = hashParams.get("type");
-
-        // Combined type
-    const type = hashType || queryType;
-
-        // If a recovery token exists but no type param, treat as recovery
-    const hasAccessToken = window.location.hash.includes("access_token");
-
-    if (type === "recovery" || hasAccessToken) {
-        navigate("/auth/reset", { replace: true });
-        return;
-    }
-
-
-      // If access_token exists but no type → it's also a reset
-      if (window.location.hash.includes("access_token")) {
+      if (type === "recovery" || (access_token && refresh_token)) {
         navigate("/auth/reset", { replace: true });
         return;
       }
 
-      if (
-        type === "email_confirmation" ||
-        type === "email_change" ||
-        type === "signup"
-      ) {
+      if (type === "email_confirmation" || type === "email_change" || type === "signup") {
         navigate("/email-confirmed");
         return;
       }

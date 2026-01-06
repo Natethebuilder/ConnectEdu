@@ -17,6 +17,7 @@ import MentorDashboard from "./pages/MentorDashboard";
 import MentorSettings from "./pages/MentorSettings";
 import EmailConfirmed from "./pages/EmailConfirmed";
 import PasswordReset from "./pages/PasswordReset";
+import AuthCallback from "./pages/AuthCallback";
 import MentorHub from "./pages/MentorHub";
 import ChatPage from "./pages/ChatPage";
 import Messages from "./pages/Messages";
@@ -37,7 +38,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <Route path="/auth" element={<Auth />} />
 
         {/* Supabase magic routes */}
-        <Route path="/auth/v1/callback" element={<PasswordReset />} />
+        <Route path="/auth/v1/callback" element={<AuthCallback />} />
         <Route path="/auth/reset" element={<PasswordReset />} />
         <Route path="/email-confirmed" element={<EmailConfirmed />} />
 
