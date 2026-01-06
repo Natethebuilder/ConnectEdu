@@ -1,0 +1,342 @@
+{
+  "discipline": "communications-media",
+  "availableRegions": ["Global", "US", "UK", "Asia"],
+  "stages": [
+    {
+      "id": 1,
+      "title": "Define Your Communications & Media Vision",
+      "description": "Clarify your interests in journalism, public relations, media studies, or broadcasting, and identify target universities.",
+      "regions": {
+        "Global": {
+          "overview": "Top communications and media programs value strong writing, communication skills, and media experience.",
+          "checklist": [
+            "Research 5-7 top programs (Northwestern, USC, LSE, UCL, NUS)",
+            "Identify your interest (journalism, PR, media studies, broadcasting, digital media)",
+            "Assess your writing and communication experience",
+            "Create a 3-year roadmap connecting media work, academics, and applications"
+          ],
+          "resources": [
+            {
+              "title": "Communications Specializations",
+              "platform": "AcceptedX",
+              "type": "Article",
+              "link": "https://acceptedx.org/resources/communications-specializations"
+            },
+            {
+              "title": "Introduction to Media Studies",
+              "platform": "Coursera",
+              "type": "Course",
+              "link": "https://www.coursera.org/courses?query=media%20studies"
+            }
+          ]
+        },
+        "US": {
+          "overview": "US programs emphasize writing, media experience, and strong personal statements.",
+          "checklist": [
+            "Research reach, target, and safety schools",
+            "Note portfolio or writing sample requirements",
+            "Plan your Common App personal statement theme",
+            "Identify journalism or media opportunities"
+          ],
+          "resources": [
+            {
+              "title": "US Communications Admissions",
+              "platform": "AcceptedX",
+              "type": "Guide",
+              "link": "https://acceptedx.org/resources/us-communications-admissions"
+            }
+          ]
+        },
+        "UK": {
+          "overview": "UK programs prioritize A-levels, writing samples, and strong personal statements.",
+          "checklist": [
+            "Review entry requirements for LSE, UCL, etc.",
+            "Prepare writing samples or portfolio",
+            "Outline UCAS personal statement draft",
+            "Research UK communications program structures"
+          ],
+          "resources": [
+            {
+              "title": "UCAS Media Personal Statement",
+              "platform": "UCAS",
+              "type": "Article",
+              "link": "https://www.ucas.com/personal-statement-examples/media-studies"
+            }
+          ]
+        },
+        "Asia": {
+          "overview": "Bridge national curricula with global standards.",
+          "checklist": [
+            "Review communications topics in national exams",
+            "Identify media or journalism opportunities",
+            "Explore summer programs abroad",
+            "Document interest in specific fields"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What do top communications programs value most?",
+          "opts": [
+            "Strong writing + media experience + communication skills",
+            "Only test scores",
+            "Sports achievements",
+            "Unrelated activities"
+          ],
+          "correct": "Strong writing + media experience + communication skills"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Build Media Skills & Portfolio",
+      "description": "Develop writing, journalism, and media production skills through real projects.",
+      "regions": {
+        "Global": {
+          "overview": "Demonstrate communications ability through writing, media production, or journalism work.",
+          "checklist": [
+            "Write articles for school newspaper, blog, or publications",
+            "Create media content (videos, podcasts, social media)",
+            "Participate in journalism competitions or programs",
+            "Build a portfolio of writing or media work"
+          ],
+          "resources": [
+            {
+              "title": "Journalism Resources",
+              "platform": "Poynter",
+              "type": "Resources",
+              "link": "https://www.poynter.org/"
+            },
+            {
+              "title": "Media Production",
+              "platform": "YouTube Creator Academy",
+              "type": "Course",
+              "link": "https://creatoracademy.youtube.com/"
+            }
+          ],
+          "projectIdeas": [
+            "Start a school newspaper or blog",
+            "Create a podcast or video series",
+            "Write investigative journalism pieces",
+            "Develop a social media campaign"
+          ]
+        },
+        "US": {
+          "overview": "Link media work to applications and programs.",
+          "checklist": [
+            "Submit work to journalism competitions",
+            "Apply to journalism/media summer programs",
+            "Create professional portfolio",
+            "Document media achievements"
+          ]
+        },
+        "UK": {
+          "overview": "Integrate media work into UCAS.",
+          "checklist": [
+            "Prepare writing samples for UCAS",
+            "Include media work in personal statement",
+            "Link to university themes",
+            "Prepare for interviews"
+          ]
+        },
+        "Asia": {
+          "overview": "Use media work to build portfolios.",
+          "checklist": [
+            "Participate in journalism/media programs",
+            "Work with media mentor",
+            "Document in English",
+            "Connect to global media challenges"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What's the best way to demonstrate communications skills?",
+          "opts": [
+            "Writing articles, creating media content, and building a portfolio",
+            "Only studying theory",
+            "Memorizing media history",
+            "Avoiding creating content"
+          ],
+          "correct": "Writing articles, creating media content, and building a portfolio"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Strengthen Academic Foundation",
+      "description": "Excel in English, writing, and social sciences coursework.",
+      "regions": {
+        "Global": {
+          "overview": "Strong writing, reading, and communication preparation is essential.",
+          "checklist": [
+            "Master writing and communication skills",
+            "Study media theory and history",
+            "Read journalism and current events",
+            "Maintain strong grades in English and social sciences"
+          ],
+          "resources": [
+            {
+              "title": "Writing Course",
+              "platform": "Coursera",
+              "type": "Course",
+              "link": "https://www.coursera.org/courses?query=writing"
+            },
+            {
+              "title": "Media Literacy",
+              "platform": "Khan Academy",
+              "type": "Course",
+              "link": "https://www.khanacademy.org/humanities/media-studies"
+            }
+          ]
+        },
+        "US": {
+          "overview": "Prioritize relevant coursework.",
+          "checklist": [
+            "Complete AP English Language or Literature",
+            "Take journalism or media coursework",
+            "Achieve strong SAT/ACT scores",
+            "Read journalism and media publications"
+          ]
+        },
+        "UK": {
+          "overview": "Excel in A-levels.",
+          "checklist": [
+            "Achieve A* in A-level English",
+            "Complete relevant A-levels",
+            "Study media theory",
+            "Prepare for interviews"
+          ]
+        },
+        "Asia": {
+          "overview": "Integrate with national exams.",
+          "checklist": [
+            "Complete strong English coursework",
+            "Study communications fundamentals",
+            "Maintain strong exam performance",
+            "Bridge to international standards"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What academic areas are most critical for communications?",
+          "opts": [
+            "Writing, reading, and communication skills",
+            "Only memorization",
+            "Math only",
+            "Science only"
+          ],
+          "correct": "Writing, reading, and communication skills"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Craft Your Communications Narrative",
+      "description": "Translate your media work and achievements into compelling applications.",
+      "regions": {
+        "Global": {
+          "overview": "Connect your communications passion, media work, and achievements.",
+          "checklist": [
+            "Write 250-word draft personal statement",
+            "Highlight writing and media experiences",
+            "Connect to communication goals",
+            "Get feedback from teachers or mentors"
+          ]
+        },
+        "US": {
+          "overview": "Focus on Common App essays.",
+          "checklist": [
+            "Draft Common App essay with communications focus",
+            "Collect strong recommendation letters",
+            "Optimize Activities section",
+            "Write communications school supplements"
+          ]
+        },
+        "UK": {
+          "overview": "Perfect UCAS statement.",
+          "checklist": [
+            "Complete UCAS personal statement",
+            "Include writing samples and media work",
+            "Prepare for interviews",
+            "Practice explaining media vision"
+          ]
+        },
+        "Asia": {
+          "overview": "Adapt for multiple systems.",
+          "checklist": [
+            "Prepare statements for UCAS and Common App",
+            "Gather supporting documents",
+            "Draft reflection on communications career goals",
+            "Document media achievements"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What should your communications statement highlight?",
+          "opts": [
+            "Writing skills, media experience, and communication passion",
+            "Only test scores",
+            "Unrelated hobbies",
+            "Generic goals"
+          ],
+          "correct": "Writing skills, media experience, and communication passion"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Final Preparation & Interviews",
+      "description": "Polish portfolio and prepare for interviews.",
+      "regions": {
+        "Global": {
+          "overview": "Bring together all your work.",
+          "checklist": [
+            "Finalize writing portfolio",
+            "Complete mock interviews",
+            "Submit applications",
+            "Celebrate journey"
+          ]
+        },
+        "US": {
+          "overview": "Rehearse and finalize.",
+          "checklist": [
+            "Mock interview",
+            "Submit applications",
+            "Follow up recommenders"
+          ]
+        },
+        "UK": {
+          "overview": "Prepare for interviews.",
+          "checklist": [
+            "Practice explaining media work",
+            "Review portfolio",
+            "Finalize UCAS"
+          ]
+        },
+        "Asia": {
+          "overview": "Coordinate and prepare.",
+          "checklist": [
+            "Confirm documents and portfolio",
+            "Practice interviews in English",
+            "Submit applications"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What's key for communications interviews?",
+          "opts": [
+            "Clear communication, knowledge of media, and portfolio discussion",
+            "Memorizing answers",
+            "Avoiding media details",
+            "Only grades"
+          ],
+          "correct": "Clear communication, knowledge of media, and portfolio discussion"
+        }
+      ]
+    }
+  ]
+}

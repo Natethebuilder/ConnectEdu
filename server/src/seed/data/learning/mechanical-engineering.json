@@ -1,0 +1,474 @@
+{
+  "discipline": "mechanical-engineering",
+  "availableRegions": ["Global", "US", "UK", "Asia"],
+  "stages": [
+    {
+      "id": 1,
+      "title": "Define Your Mechanical Engineering Path",
+      "description": "Clarify your specialization interests, target universities, and how mechanical engineering aligns with your career goals.",
+      "regions": {
+        "Global": {
+          "overview": "Top mechanical engineering programs value strong math/physics foundations, hands-on experience, and clear specialization interests. Start by identifying your focus area.",
+          "checklist": [
+            "Research 5-7 top mechanical engineering programs (MIT, Stanford, Cambridge, ETH Zurich, NUS)",
+            "Identify your specialization interest (robotics, automotive, aerospace, energy, manufacturing)",
+            "Map your current math/physics preparation to program requirements",
+            "Write a 3-year roadmap connecting academics, projects, and applications"
+          ],
+          "resources": [
+            {
+              "title": "Mechanical Engineering Specializations Guide",
+              "platform": "AcceptedX",
+              "type": "Article",
+              "link": "https://acceptedx.org/resources/mechanical-engineering-specializations"
+            },
+            {
+              "title": "What Top ME Programs Look For",
+              "platform": "YouTube",
+              "type": "Video",
+              "link": "https://www.youtube.com/watch?v=mechanical-engineering-admissions"
+            }
+          ]
+        },
+        "US": {
+          "overview": "US programs emphasize AP/IB rigor, hands-on projects, and research experience. Combine strong academics with practical engineering work.",
+          "checklist": [
+            "Complete AP Physics C (Mechanics) and AP Calculus BC",
+            "Research reach, target, and safety schools for mechanical engineering",
+            "Identify summer programs (MIT RSI, Stanford SIMR, engineering camps)",
+            "Plan your Common App essay theme around engineering passion"
+          ],
+          "resources": [
+            {
+              "title": "US Mechanical Engineering Admissions",
+              "platform": "AcceptedX",
+              "type": "Guide",
+              "link": "https://acceptedx.org/resources/us-me-admissions"
+            },
+            {
+              "title": "Engineering Summer Programs Directory",
+              "platform": "AcceptedX",
+              "type": "Directory",
+              "link": "https://acceptedx.org/resources/engineering-summer-programs"
+            }
+          ]
+        },
+        "UK": {
+          "overview": "UK programs prioritize A-levels, STEP/ENGAA tests, and strong personal statements. Focus on mathematics and physics excellence.",
+          "checklist": [
+            "Review entry requirements for Cambridge, Imperial, Oxford ME programs",
+            "Start STEP or ENGAA preparation (Year 12)",
+            "Outline UCAS personal statement connecting math/physics to engineering",
+            "Research UK engineering accreditation (IMechE)"
+          ],
+          "resources": [
+            {
+              "title": "Cambridge ENGAA Preparation",
+              "platform": "University of Cambridge",
+              "type": "Official Resource",
+              "link": "https://www.undergraduate.study.cam.ac.uk/applying/entrance-assessments/engaa"
+            },
+            {
+              "title": "UCAS Engineering Personal Statement Guide",
+              "platform": "UCAS",
+              "type": "Article",
+              "link": "https://www.ucas.com/personal-statement-examples/engineering"
+            }
+          ]
+        },
+        "Asia": {
+          "overview": "Bridge national curricula (JEE, IB, A-levels) with global standards. Emphasize problem-solving and practical skills.",
+          "checklist": [
+            "Review mechanics topics in JEE/IB HL Physics",
+            "Identify international engineering competitions (RoboCup, F1 in Schools)",
+            "Explore summer programs at NUS, NTU, or international universities",
+            "Document your interest in specific ME specializations"
+          ],
+          "resources": [
+            {
+              "title": "JEE Mechanical Engineering Preparation",
+              "platform": "Byju's",
+              "type": "Practice Sets",
+              "link": "https://byjus.com/jee/mechanical-engineering/"
+            },
+            {
+              "title": "International Engineering Competitions",
+              "platform": "RoboCup",
+              "type": "Competition Resource",
+              "link": "https://www.robocup.org/"
+            }
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "Which test is most important for UK mechanical engineering admissions?",
+          "opts": ["STEP/ENGAA", "SAT", "JEE", "AP"],
+          "correct": "STEP/ENGAA"
+        },
+        {
+          "q": "What do top US ME programs value most?",
+          "opts": [
+            "Strong academics + hands-on projects + research experience",
+            "Only high test scores",
+            "Sports achievements",
+            "Unrelated extracurriculars"
+          ],
+          "correct": "Strong academics + hands-on projects + research experience"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Build Technical Skills & Projects",
+      "description": "Develop hands-on engineering skills through projects, competitions, and technical coursework.",
+      "regions": {
+        "Global": {
+          "overview": "Demonstrate engineering ability through tangible projects. Build, design, and document your work.",
+          "checklist": [
+            "Complete a hands-on engineering project (robot, vehicle, mechanism)",
+            "Learn CAD software (SolidWorks, Fusion 360, AutoCAD)",
+            "Document your project with photos, videos, and technical drawings",
+            "Participate in an engineering competition or hackathon"
+          ],
+          "resources": [
+            {
+              "title": "Fusion 360 for Students (Free)",
+              "platform": "Autodesk",
+              "type": "Software",
+              "link": "https://www.autodesk.com/products/fusion-360/students-teachers-educators"
+            },
+            {
+              "title": "Engineering Project Ideas",
+              "platform": "Science Buddies",
+              "type": "Guide",
+              "link": "https://www.sciencebuddies.org/science-fair-projects/project-ideas/mechanical-engineering"
+            }
+          ],
+          "projectIdeas": [
+            "Build a simple robot or robotic arm",
+            "Design and 3D print a mechanical device",
+            "Create a working prototype (wind turbine, gear system, etc.)",
+            "Develop a solution to a real-world problem"
+          ]
+        },
+        "US": {
+          "overview": "Link projects to AP Research, science fairs, and summer programs. Show initiative and technical depth.",
+          "checklist": [
+            "Submit project to local/regional science fair or engineering competition",
+            "Apply to engineering summer programs (MIT, Stanford, etc.)",
+            "Create a portfolio showcasing your projects",
+            "Write technical documentation for your work"
+          ],
+          "resources": [
+            {
+              "title": "FIRST Robotics Competition",
+              "platform": "FIRST",
+              "type": "Competition",
+              "link": "https://www.firstinspires.org/robotics/frc"
+            },
+            {
+              "title": "MIT Engineering Projects",
+              "platform": "MIT",
+              "type": "Examples",
+              "link": "https://web.mit.edu/invent/"
+            }
+          ]
+        },
+        "UK": {
+          "overview": "Integrate projects into EPQ or personal investigations. Connect to university research themes.",
+          "checklist": [
+            "Draft EPQ proposal on mechanical engineering topic",
+            "Link project to university course modules",
+            "Include project outcomes in UCAS personal statement",
+            "Prepare to discuss projects in interviews"
+          ],
+          "resources": [
+            {
+              "title": "EPQ Engineering Topics",
+              "platform": "The Student Room",
+              "type": "Forum Discussion",
+              "link": "https://www.thestudentroom.co.uk/showthread.php?t=engineering-epq"
+            }
+          ]
+        },
+        "Asia": {
+          "overview": "Use national competitions and Olympiads to build standout portfolios.",
+          "checklist": [
+            "Participate in local engineering competitions",
+            "Work with a university mentor on a project",
+            "Document project in English for international applications",
+            "Connect project to global engineering challenges"
+          ],
+          "resources": [
+            {
+              "title": "Asian Engineering Competitions",
+              "platform": "Various",
+              "type": "Directory",
+              "link": "https://acceptedx.org/resources/asia-engineering-competitions"
+            }
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What's the best way to demonstrate mechanical engineering skills?",
+          "opts": [
+            "Build tangible projects and document them thoroughly",
+            "Only study theory",
+            "Memorize formulas",
+            "Avoid hands-on work"
+          ],
+          "correct": "Build tangible projects and document them thoroughly"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Strengthen Academic Foundation",
+      "description": "Excel in mathematics, physics, and engineering-related coursework to demonstrate academic readiness.",
+      "regions": {
+        "Global": {
+          "overview": "Strong math and physics preparation is essential. Focus on calculus, mechanics, and problem-solving.",
+          "checklist": [
+            "Master calculus-based mechanics (kinematics, dynamics, statics)",
+            "Complete advanced mathematics (calculus, linear algebra)",
+            "Join math/physics competitions or Olympiads",
+            "Maintain strong grades in STEM subjects"
+          ],
+          "resources": [
+            {
+              "title": "Khan Academy - AP Physics C",
+              "platform": "Khan Academy",
+              "type": "Course",
+              "link": "https://www.khanacademy.org/science/physics"
+            },
+            {
+              "title": "Engineering Mathematics",
+              "platform": "Coursera",
+              "type": "Online Course",
+              "link": "https://www.coursera.org/courses?query=engineering%20mathematics"
+            }
+          ]
+        },
+        "US": {
+          "overview": "Prioritize AP courses and standardized test preparation.",
+          "checklist": [
+            "Complete AP Physics C: Mechanics and AP Calculus BC",
+            "Take SAT Math Level 2 or ACT with strong math score",
+            "Consider AP Computer Science for modern ME applications",
+            "Participate in USAMO or physics competitions"
+          ],
+          "resources": [
+            {
+              "title": "AP Physics C Review",
+              "platform": "Khan Academy",
+              "type": "Course",
+              "link": "https://www.khanacademy.org/science/physics"
+            },
+            {
+              "title": "USAMO Preparation",
+              "platform": "Art of Problem Solving",
+              "type": "Resources",
+              "link": "https://artofproblemsolving.com/"
+            }
+          ]
+        },
+        "UK": {
+          "overview": "Excel in A-levels and prepare for STEP/ENGAA assessments.",
+          "checklist": [
+            "Achieve A* in A-level Mathematics and Physics",
+            "Solve 5+ past STEP or ENGAA papers",
+            "Engage with Isaac Physics challenges",
+            "Consider Further Mathematics A-level"
+          ],
+          "resources": [
+            {
+              "title": "Isaac Physics",
+              "platform": "University of Cambridge",
+              "type": "Problem Sets",
+              "link": "https://isaacphysics.org"
+            },
+            {
+              "title": "STEP Past Papers",
+              "platform": "Cambridge Assessment",
+              "type": "Practice Papers",
+              "link": "https://www.admissionstesting.org/for-test-takers/step/about-step/"
+            }
+          ]
+        },
+        "Asia": {
+          "overview": "Integrate preparation with national exams while building international readiness.",
+          "checklist": [
+            "Complete JEE-level mechanics and mathematics",
+            "Take practice sets from international engineering tests",
+            "Maintain strong performance in national exams",
+            "Bridge local curriculum to international standards"
+          ],
+          "resources": [
+            {
+              "title": "JEE Mechanics Practice",
+              "platform": "Byju's",
+              "type": "Practice Sets",
+              "link": "https://byjus.com/jee/mechanics/"
+            }
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What academic areas are most critical for mechanical engineering?",
+          "opts": [
+            "Mathematics, Physics, and hands-on problem-solving",
+            "Only memorization",
+            "Languages",
+            "History"
+          ],
+          "correct": "Mathematics, Physics, and hands-on problem-solving"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Craft Your Engineering Narrative",
+      "description": "Translate your technical skills and projects into compelling application materials.",
+      "regions": {
+        "Global": {
+          "overview": "Connect your engineering passion, projects, and academic achievements into a cohesive story.",
+          "checklist": [
+            "Write a 250-word draft personal statement",
+            "Highlight specific projects and their impact",
+            "Connect engineering to solving real-world problems",
+            "Get feedback from mentors or teachers"
+          ],
+          "resources": [
+            {
+              "title": "Engineering Personal Statement Guide",
+              "platform": "AcceptedX",
+              "type": "Guide",
+              "link": "https://acceptedx.org/resources/engineering-personal-statement"
+            }
+          ]
+        },
+        "US": {
+          "overview": "Focus on Common App essays, recommendations, and activity descriptions.",
+          "checklist": [
+            "Draft Common App essay with engineering focus",
+            "Collect 2 strong recommendation letters (preferably from STEM teachers)",
+            "Optimize Activities section to highlight projects",
+            "Write supplemental essays for engineering schools"
+          ],
+          "resources": [
+            {
+              "title": "Common App Essay for STEM",
+              "platform": "AcceptedX",
+              "type": "Article",
+              "link": "https://acceptedx.org/resources/commonapp-stem"
+            }
+          ]
+        },
+        "UK": {
+          "overview": "Perfect your UCAS statement and prepare for interviews.",
+          "checklist": [
+            "Complete UCAS personal statement drafts",
+            "Include technical reading and project work",
+            "Prepare for Oxbridge engineering interviews",
+            "Practice explaining your projects clearly"
+          ],
+          "resources": [
+            {
+              "title": "UCAS Engineering Examples",
+              "platform": "UCAS",
+              "type": "Reference",
+              "link": "https://www.ucas.com/personal-statement-examples/engineering"
+            }
+          ]
+        },
+        "Asia": {
+          "overview": "Adapt your narrative for multiple university systems.",
+          "checklist": [
+            "Prepare statements for UCAS and Common App",
+            "Gather supporting documents (grades, project portfolios)",
+            "Draft reflection on engineering career goals",
+            "Translate project documentation to English"
+          ],
+          "resources": [
+            {
+              "title": "International Engineering Applications",
+              "platform": "AcceptedX Asia",
+              "type": "Webinar",
+              "link": "https://acceptedx.org/webinars/asia-engineering"
+            }
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What should your engineering personal statement highlight?",
+          "opts": [
+            "Technical passion, hands-on projects, and problem-solving ability",
+            "Only test scores",
+            "Unrelated hobbies",
+            "Generic career goals"
+          ],
+          "correct": "Technical passion, hands-on projects, and problem-solving ability"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Final Preparation & Interviews",
+      "description": "Polish your applications and prepare for interviews and final submissions.",
+      "regions": {
+        "Global": {
+          "overview": "Bring together all your work for confident applications.",
+          "checklist": [
+            "Complete mock interviews focusing on technical questions",
+            "Submit all applications before deadlines",
+            "Prepare to discuss your projects in detail",
+            "Celebrate your engineering journey"
+          ]
+        },
+        "US": {
+          "overview": "Rehearse for alumni interviews and finalize applications.",
+          "checklist": [
+            "Conduct mock interview with technical focus",
+            "Submit Common App and engineering supplements",
+            "Follow up with recommenders",
+            "Prepare portfolio presentation if required"
+          ]
+        },
+        "UK": {
+          "overview": "Prepare for Oxbridge interviews with problem-solving sessions.",
+          "checklist": [
+            "Review STEP/ENGAA-style interview problems",
+            "Practice explaining engineering concepts clearly",
+            "Simulate interviews under pressure",
+            "Finalize UCAS submission"
+          ]
+        },
+        "Asia": {
+          "overview": "Coordinate with international offices and prepare for interviews.",
+          "checklist": [
+            "Confirm all transcripts and project portfolios",
+            "Practice interview questions in English",
+            "Prepare to discuss your engineering projects",
+            "Submit final applications"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What's key for engineering interviews?",
+          "opts": [
+            "Clear explanation of projects and problem-solving approach",
+            "Memorizing answers",
+            "Avoiding technical details",
+            "Only discussing grades"
+          ],
+          "correct": "Clear explanation of projects and problem-solving approach"
+        }
+      ]
+    }
+  ]
+}

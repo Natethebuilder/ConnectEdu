@@ -1,0 +1,348 @@
+{
+  "discipline": "environmental-science",
+  "availableRegions": ["Global", "US", "UK", "Asia"],
+  "stages": [
+    {
+      "id": 1,
+      "title": "Define Your Environmental Science Vision",
+      "description": "Clarify your interests in conservation, climate science, sustainability, or environmental policy, and identify target universities.",
+      "regions": {
+        "Global": {
+          "overview": "Top environmental science programs value strong science foundations, environmental passion, and commitment to sustainability.",
+          "checklist": [
+            "Research 5-7 top programs (Stanford, UC Berkeley, Cambridge, Wageningen, NUS)",
+            "Identify your interest (conservation, climate, sustainability, policy, ecology)",
+            "Assess your biology, chemistry, and math preparation",
+            "Create a 3-year roadmap connecting environmental work, academics, and applications"
+          ],
+          "resources": [
+            {
+              "title": "Environmental Science Specializations",
+              "platform": "AcceptedX",
+              "type": "Article",
+              "link": "https://acceptedx.org/resources/environmental-science-specializations"
+            },
+            {
+              "title": "Introduction to Environmental Science",
+              "platform": "Coursera",
+              "type": "Course",
+              "link": "https://www.coursera.org/courses?query=environmental%20science"
+            }
+          ]
+        },
+        "US": {
+          "overview": "US programs emphasize AP/IB rigor, research, and environmental activism.",
+          "checklist": [
+            "Research reach, target, and safety schools",
+            "Note AP Environmental Science and Biology requirements",
+            "Plan your Common App personal statement theme",
+            "Identify environmental research or activism opportunities"
+          ],
+          "resources": [
+            {
+              "title": "US Environmental Science Admissions",
+              "platform": "AcceptedX",
+              "type": "Guide",
+              "link": "https://acceptedx.org/resources/us-environmental-admissions"
+            },
+            {
+              "title": "AP Environmental Science",
+              "platform": "Khan Academy",
+              "type": "Course",
+              "link": "https://www.khanacademy.org/science/ap-college-environmental-science"
+            }
+          ]
+        },
+        "UK": {
+          "overview": "UK programs prioritize A-levels, research, and strong personal statements.",
+          "checklist": [
+            "Review entry requirements for Cambridge, Imperial, etc.",
+            "Start research or environmental project",
+            "Outline UCAS personal statement draft",
+            "Research UK environmental program structures"
+          ],
+          "resources": [
+            {
+              "title": "UCAS Environmental Science Statement",
+              "platform": "UCAS",
+              "type": "Article",
+              "link": "https://www.ucas.com/personal-statement-examples/environmental-science"
+            }
+          ]
+        },
+        "Asia": {
+          "overview": "Bridge national curricula with global standards.",
+          "checklist": [
+            "Review environmental topics in national exams",
+            "Identify environmental research or programs",
+            "Explore summer programs abroad",
+            "Document interest in specific environmental fields"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What do top environmental science programs value most?",
+          "opts": [
+            "Strong science + environmental passion + research/activism",
+            "Only test scores",
+            "Sports achievements",
+            "Unrelated activities"
+          ],
+          "correct": "Strong science + environmental passion + research/activism"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Gain Environmental Research & Activism Experience",
+      "description": "Develop environmental skills through research, conservation work, or sustainability projects.",
+      "regions": {
+        "Global": {
+          "overview": "Demonstrate environmental commitment through research, conservation, or sustainability projects.",
+          "checklist": [
+            "Participate in environmental research or field work",
+            "Volunteer with conservation organizations",
+            "Start or join environmental clubs or initiatives",
+            "Document your environmental work and impact"
+          ],
+          "resources": [
+            {
+              "title": "Environmental Research Opportunities",
+              "platform": "AcceptedX",
+              "type": "Guide",
+              "link": "https://acceptedx.org/resources/environmental-research"
+            },
+            {
+              "title": "Conservation Organizations",
+              "platform": "WWF",
+              "type": "Resources",
+              "link": "https://www.worldwildlife.org/"
+            }
+          ],
+          "projectIdeas": [
+            "Conduct local environmental research or monitoring",
+            "Start a sustainability initiative at school",
+            "Volunteer with conservation or environmental groups",
+            "Create environmental awareness campaigns"
+          ]
+        },
+        "US": {
+          "overview": "Link environmental work to research programs and applications.",
+          "checklist": [
+            "Apply to environmental research programs",
+            "Join environmental clubs or organizations",
+            "Document research for applications",
+            "Write environmental project reports"
+          ]
+        },
+        "UK": {
+          "overview": "Integrate environmental work into EPQ or UCAS.",
+          "checklist": [
+            "Draft EPQ proposal on environmental topic",
+            "Link research to university themes",
+            "Include in UCAS statement",
+            "Prepare for interviews"
+          ]
+        },
+        "Asia": {
+          "overview": "Use environmental work to build portfolios.",
+          "checklist": [
+            "Participate in environmental programs",
+            "Work with environmental mentor",
+            "Document in English",
+            "Connect to global environmental challenges"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What's the best way to demonstrate environmental commitment?",
+          "opts": [
+            "Environmental research, conservation work, and sustainability projects",
+            "Only studying",
+            "Memorizing facts",
+            "Avoiding practical work"
+          ],
+          "correct": "Environmental research, conservation work, and sustainability projects"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Strengthen Academic Foundation",
+      "description": "Excel in biology, chemistry, and mathematics.",
+      "regions": {
+        "Global": {
+          "overview": "Strong science preparation is essential for environmental science.",
+          "checklist": [
+            "Master biology, chemistry, and earth science",
+            "Complete advanced mathematics and statistics",
+            "Study climate science and ecology",
+            "Maintain strong grades in sciences"
+          ],
+          "resources": [
+            {
+              "title": "Environmental Science Course",
+              "platform": "Khan Academy",
+              "type": "Course",
+              "link": "https://www.khanacademy.org/science/ap-college-environmental-science"
+            },
+            {
+              "title": "Climate Science",
+              "platform": "Coursera",
+              "type": "Course",
+              "link": "https://www.coursera.org/courses?query=climate%20science"
+            }
+          ]
+        },
+        "US": {
+          "overview": "Prioritize AP courses.",
+          "checklist": [
+            "Complete AP Environmental Science and AP Biology",
+            "Take AP Chemistry if available",
+            "Achieve strong SAT/ACT scores",
+            "Read environmental research"
+          ]
+        },
+        "UK": {
+          "overview": "Excel in A-levels.",
+          "checklist": [
+            "Achieve A* in A-level Biology and Chemistry",
+            "Complete A-level Mathematics",
+            "Study environmental science",
+            "Prepare for interviews"
+          ]
+        },
+        "Asia": {
+          "overview": "Integrate with national exams.",
+          "checklist": [
+            "Complete advanced biology and chemistry",
+            "Study environmental fundamentals",
+            "Maintain strong exam performance",
+            "Bridge to international standards"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What academic areas are most critical for environmental science?",
+          "opts": [
+            "Biology, chemistry, earth science, and mathematics",
+            "Only memorization",
+            "Languages",
+            "History only"
+          ],
+          "correct": "Biology, chemistry, earth science, and mathematics"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Craft Your Environmental Science Narrative",
+      "description": "Translate your environmental work and achievements into compelling applications.",
+      "regions": {
+        "Global": {
+          "overview": "Connect your environmental passion, research, and achievements.",
+          "checklist": [
+            "Write 250-word draft personal statement",
+            "Highlight environmental research and activism",
+            "Connect to solving environmental challenges",
+            "Get feedback from teachers or mentors"
+          ]
+        },
+        "US": {
+          "overview": "Focus on Common App essays.",
+          "checklist": [
+            "Draft Common App essay with environmental focus",
+            "Collect strong recommendation letters",
+            "Optimize Activities section",
+            "Write environmental school supplements"
+          ]
+        },
+        "UK": {
+          "overview": "Perfect UCAS statement.",
+          "checklist": [
+            "Complete UCAS personal statement",
+            "Include environmental research and reading",
+            "Prepare for interviews",
+            "Practice explaining environmental vision"
+          ]
+        },
+        "Asia": {
+          "overview": "Adapt for multiple systems.",
+          "checklist": [
+            "Prepare statements for UCAS and Common App",
+            "Gather supporting documents",
+            "Draft reflection on environmental career goals",
+            "Document environmental achievements"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What should your environmental science statement highlight?",
+          "opts": [
+            "Environmental passion, research, and commitment to sustainability",
+            "Only test scores",
+            "Unrelated hobbies",
+            "Generic goals"
+          ],
+          "correct": "Environmental passion, research, and commitment to sustainability"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Final Preparation & Interviews",
+      "description": "Polish applications and prepare for interviews.",
+      "regions": {
+        "Global": {
+          "overview": "Bring together all your work.",
+          "checklist": [
+            "Complete mock interviews",
+            "Submit applications",
+            "Prepare to discuss environmental research",
+            "Celebrate journey"
+          ]
+        },
+        "US": {
+          "overview": "Rehearse and finalize.",
+          "checklist": [
+            "Mock interview",
+            "Submit applications",
+            "Follow up recommenders"
+          ]
+        },
+        "UK": {
+          "overview": "Prepare for interviews.",
+          "checklist": [
+            "Practice explaining environmental concepts",
+            "Review research projects",
+            "Finalize UCAS"
+          ]
+        },
+        "Asia": {
+          "overview": "Coordinate and prepare.",
+          "checklist": [
+            "Confirm documents",
+            "Practice interviews in English",
+            "Submit applications"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What's key for environmental science interviews?",
+          "opts": [
+            "Clear explanation of research and environmental passion",
+            "Memorizing answers",
+            "Avoiding research details",
+            "Only grades"
+          ],
+          "correct": "Clear explanation of research and environmental passion"
+        }
+      ]
+    }
+  ]
+}

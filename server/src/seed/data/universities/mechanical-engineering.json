@@ -1,0 +1,235 @@
+[
+    {
+      "name": "Massachusetts Institute of Technology (MIT)",
+      "rank": 1,
+      "city": "Cambridge, MA",
+      "country": "United States",
+      "website": "https://meche.mit.edu/",
+      "photoUrl": "/images/MIT.jpg",
+      "location": { "type": "Point", "coordinates": [-71.092, 42.3601] },
+      "programs": {
+        "mechanical-engineering": {
+          "entryRequirements": {
+            "SAT/ACT": "1500+ SAT or 34+ ACT",
+            "Essays": "Required",
+            "Recommendations": "2 teachers"
+          },
+          "fees": {
+            "local": "$57,590/year",
+            "international": "$57,590/year"
+          },
+          "duration": "4 years",
+          "degreeType": "BS (Bachelor of Science)"
+        }
+      }
+    },
+    {
+      "name": "Stanford University",
+      "rank": 2,
+      "city": "Stanford, CA",
+      "country": "United States",
+      "website": "https://me.stanford.edu/",
+      "photoUrl": "/images/stanford.jpg",
+      "location": { "type": "Point", "coordinates": [-122.1697, 37.4275] },
+      "programs": {
+        "mechanical-engineering": {
+          "entryRequirements": {
+            "GPA": "3.9+",
+            "SAT/ACT": "1500+ SAT or 34+ ACT",
+            "Essays": "Required"
+          },
+          "fees": {
+            "local": "$56,169/year",
+            "international": "$56,169/year"
+          },
+          "duration": "4 years",
+          "degreeType": "BS"
+        }
+      }
+    },
+    {
+      "name": "University of Cambridge",
+      "rank": 3,
+      "city": "Cambridge",
+      "country": "United Kingdom",
+      "website": "https://www.eng.cam.ac.uk/",
+      "photoUrl": "/images/cambridge.jpg",
+      "location": { "type": "Point", "coordinates": [0.1167, 52.2053] },
+      "programs": {
+        "mechanical-engineering": {
+          "entryRequirements": {
+            "A-levels": "A*A*A including Mathematics and Physics",
+            "IB": "40–42 with 776 at HL"
+          },
+          "fees": {
+            "local": "£9,250/year",
+            "international": "£36,000/year"
+          },
+          "duration": "4 years",
+          "degreeType": "MEng"
+        }
+      }
+    },
+    {
+      "name": "Nanyang Technological University (NTU)",
+      "rank": 4,
+      "city": "Singapore",
+      "country": "Singapore",
+      "website": "https://www.ntu.edu.sg/mae",
+      "photoUrl": "/images/nyanyang.jpg",
+      "location": { "type": "Point", "coordinates": [103.6800, 1.3483] },
+      "programs": {
+        "mechanical-engineering": {
+          "entryRequirements": {
+            "High School": "Excellent grades in Math & Physics",
+            "Language": "English required"
+          },
+          "fees": {
+            "local": "S$8,200/year",
+            "international": "S$31,200/year"
+          },
+          "duration": "4 years",
+          "degreeType": "BEng"
+        }
+      }
+    },
+    {
+      "name": "Harvard University",
+      "rank": 5,
+      "city": "Cambridge, MA",
+      "country": "United States",
+      "website": "https://www.seas.harvard.edu/mechanical-engineering",
+      "photoUrl": "/images/harvard.jpg",
+      "location": { "type": "Point", "coordinates": [-71.1167, 42.377] },
+      "programs": {
+        "mechanical-engineering": {
+          "entryRequirements": {
+            "GPA": "4.0",
+            "SAT/ACT": "1500+ SAT or 34+ ACT",
+            "Recommendations": "2 teachers + counselor"
+          },
+          "fees": {
+            "local": "$54,269/year",
+            "international": "$54,269/year"
+          },
+          "duration": "4 years",
+          "degreeType": "BS"
+        }
+      }
+    },
+    {
+      "name": "ETH Zurich",
+      "rank": 6,
+      "city": "Zurich",
+      "country": "Switzerland",
+      "website": "https://ethz.ch/en/studies/degree-programmes/bachelor/mechanical-engineering.html",
+      "photoUrl": "/images/ethzurich.jpg",
+      "location": { "type": "Point", "coordinates": [8.5476, 47.3769] },
+      "programs": {
+        "mechanical-engineering": {
+          "entryRequirements": {
+            "High School": "Excellent grades in Math & Physics",
+            "Language": "German or English"
+          },
+          "fees": {
+            "local": "CHF 730/semester",
+            "international": "CHF 730/semester"
+          },
+          "duration": "3 years",
+          "degreeType": "BSc"
+        }
+      }
+    },
+    {
+      "name": "Tsinghua University",
+      "rank": 7,
+      "city": "Beijing",
+      "country": "China",
+      "website": "https://www.tsinghua.edu.cn/en/",
+      "photoUrl": "/images/tsinghua.jpg",
+      "location": { "type": "Point", "coordinates": [116.3269, 40.0025] },
+      "programs": {
+        "mechanical-engineering": {
+          "entryRequirements": {
+            "High School": "Excellent grades in Math & Physics",
+            "Language": "Chinese (some courses in English)"
+          },
+          "fees": {
+            "local": "¥26,000/year",
+            "international": "¥30,000/year"
+          },
+          "duration": "4 years",
+          "degreeType": "BEng"
+        }
+      }
+    },
+    {
+      "name": "University of Oxford",
+      "rank": 8,
+      "city": "Oxford",
+      "country": "United Kingdom",
+      "website": "https://www.eng.ox.ac.uk/",
+      "photoUrl": "/images/oxford.jpg",
+      "location": { "type": "Point", "coordinates": [-1.254, 51.754] },
+      "programs": {
+        "mechanical-engineering": {
+          "entryRequirements": {
+            "A-levels": "A*A*A including Mathematics and Physics",
+            "IB": "39 with 766 at HL (Math & Physics required)"
+          },
+          "fees": {
+            "local": "£9,250/year",
+            "international": "£36,800/year"
+          },
+          "duration": "4 years",
+          "degreeType": "MEng"
+        }
+      }
+    },
+    {
+      "name": "Imperial College London",
+      "rank": 9,
+      "city": "London",
+      "country": "United Kingdom",
+      "website": "https://www.imperial.ac.uk/mechanical-engineering/",
+      "photoUrl": "/images/imperial.jpg",
+      "location": { "type": "Point", "coordinates": [-0.1749, 51.4988] },
+      "programs": {
+        "mechanical-engineering": {
+          "entryRequirements": {
+            "A-levels": "A*A*A including Mathematics and Physics",
+            "IB": "40 points with 7 in HL Math & Physics"
+          },
+          "fees": {
+            "local": "£9,250/year",
+            "international": "£34,000/year"
+          },
+          "duration": "4 years",
+          "degreeType": "MEng"
+        }
+      }
+    },
+    {
+      "name": "National University of Singapore (NUS)",
+      "rank": 10,
+      "city": "Singapore",
+      "country": "Singapore",
+      "website": "https://www.eng.nus.edu.sg/me/",
+      "photoUrl": "/images/nus.jpg",
+      "location": { "type": "Point", "coordinates": [103.7764, 1.2966] },
+      "programs": {
+        "mechanical-engineering": {
+          "entryRequirements": {
+            "High School": "Excellent grades in Math & Physics",
+            "Language": "English required"
+          },
+          "fees": {
+            "local": "S$8,200/year",
+            "international": "S$31,200/year"
+          },
+          "duration": "4 years",
+          "degreeType": "BEng"
+        }
+      }
+    }
+  ]

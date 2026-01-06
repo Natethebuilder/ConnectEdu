@@ -294,6 +294,172 @@
           "correct": "By showing curiosity, persistence, and relevance to global challenges"
         }
       ]
+    },
+    {
+      "id": 4,
+      "title": "Craft Your Application Narrative",
+      "description": "Translate your academic and research experiences into compelling application materials.",
+      "regions": {
+        "Global": {
+          "overview": "Connect your chemistry curiosity and achievements into a cohesive personal story that demonstrates analytical thinking and real-world impact.",
+          "checklist": [
+            "Write a 250-word draft personal statement",
+            "Ask mentors for feedback on your chemistry narrative",
+            "Highlight academic depth and research impact"
+          ],
+          "resources": [
+            {
+              "title": "How to Write Impactful Academic Reflections",
+              "platform": "AcceptedX",
+              "type": "Guide",
+              "link": "https://acceptedx.org/resources/reflection-guide"
+            }
+          ]
+        },
+        "US": {
+          "overview": "Focus on Common App essays, recommendations, and activity descriptions that showcase your chemistry passion.",
+          "checklist": [
+            "Draft your Common App essay with a chemistry/STEM focus",
+            "Collect 2 recommendation letters from chemistry teachers or mentors",
+            "Optimize your Activities section to highlight chemistry projects"
+          ],
+          "resources": [
+            {
+              "title": "Common App Essay Chemistry Examples",
+              "platform": "AcceptedX",
+              "type": "Article",
+              "link": "https://acceptedx.org/resources/commonapp-stem"
+            }
+          ]
+        },
+        "UK": {
+          "overview": "Refine your UCAS statement and prepare for interview-style questions about chemistry concepts.",
+          "checklist": [
+            "Complete UCAS personal statement drafts with chemistry examples",
+            "Add reading and outreach activities to your statement",
+            "Prepare for Oxbridge chemistry interviews"
+          ],
+          "resources": [
+            {
+              "title": "BMAT Past Papers",
+              "platform": "Cambridge Assessment",
+              "type": "Practice Papers",
+              "link": "https://www.admissionstesting.org/for-test-takers/bmat/preparing-for-bmat/"
+            }
+          ]
+        },
+        "Asia": {
+          "overview": "Adapt your statement of purpose for multiple university systems, emphasizing chemistry excellence.",
+          "checklist": [
+            "Prepare a statement for both UCAS and Common App",
+            "Gather supporting documents (grades, research certificates)",
+            "Draft one reflection on your chemistry academic goals"
+          ],
+          "resources": [
+            {
+              "title": "Applying Abroad with Chemistry Background",
+              "platform": "AcceptedX Asia",
+              "type": "Webinar",
+              "link": "https://acceptedx.org/webinars/asia-chemistry"
+            }
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What should your chemistry personal statement highlight?",
+          "opts": [
+            "Curiosity, depth, and connection between chemistry and real-world impact",
+            "Extracurriculars only",
+            "Sports and unrelated hobbies",
+            "Generic career goals"
+          ],
+          "correct": "Curiosity, depth, and connection between chemistry and real-world impact"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Final Preparation & Interviews",
+      "description": "Polish your confidence, readiness, and strategy for final submissions and interviews.",
+      "regions": {
+        "Global": {
+          "overview": "Bring together everything you've learned and practiced for confident chemistry applications.",
+          "checklist": [
+            "Complete mock interviews with chemistry focus",
+            "Submit all applications",
+            "Celebrate your effort and reflection"
+          ],
+          "resources": [
+            {
+              "title": "Chemistry Interview Preparation Guide",
+              "platform": "AcceptedX",
+              "type": "Guide",
+              "link": "https://acceptedx.org/resources/interview-prep"
+            }
+          ]
+        },
+        "US": {
+          "overview": "Rehearse storytelling for alumni interviews and finalize application portals.",
+          "checklist": [
+            "Conduct a mock interview with chemistry focus and feedback",
+            "Submit Common App and supplements",
+            "Follow up with recommenders"
+          ],
+          "resources": [
+            {
+              "title": "Common App Essay Chemistry Examples",
+              "platform": "AcceptedX",
+              "type": "Article",
+              "link": "https://acceptedx.org/resources/commonapp-stem"
+            }
+          ]
+        },
+        "UK": {
+          "overview": "Prepare for Oxbridge interviews with chemistry problem-solving sessions.",
+          "checklist": [
+            "Review BMAT-style chemistry interview problems",
+            "Simulate interviews under timed pressure",
+            "Finalize UCAS submission"
+          ],
+          "resources": [
+            {
+              "title": "BMAT Past Papers",
+              "platform": "Cambridge Assessment",
+              "type": "Practice Papers",
+              "link": "https://www.admissionstesting.org/for-test-takers/bmat/preparing-for-bmat/"
+            }
+          ]
+        },
+        "Asia": {
+          "overview": "Coordinate with international university offices for document verification and final submissions.",
+          "checklist": [
+            "Confirm all transcripts and chemistry certificates",
+            "Practice interview questions in English about chemistry",
+            "Submit final portfolios with research evidence"
+          ],
+          "resources": [
+            {
+              "title": "Applying Abroad with Chemistry Background",
+              "platform": "AcceptedX Asia",
+              "type": "Webinar",
+              "link": "https://acceptedx.org/webinars/asia-chemistry"
+            }
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What's key for Oxbridge chemistry interview prep?",
+          "opts": [
+            "Practicing problem-solving aloud under time pressure",
+            "Memorizing reaction mechanisms",
+            "Writing long notes",
+            "Ignoring current research"
+          ],
+          "correct": "Practicing problem-solving aloud under time pressure"
+        }
+      ]
     }
   ]
 }

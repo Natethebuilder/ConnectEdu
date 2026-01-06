@@ -1,0 +1,402 @@
+{
+  "discipline": "biology",
+  "availableRegions": ["Global", "US", "UK", "Asia"],
+  "stages": [
+    {
+      "id": 1,
+      "title": "Define Your Biology Vision",
+      "description": "Clarify your interests in molecular biology, ecology, medicine, or research, and identify target universities.",
+      "regions": {
+        "Global": {
+          "overview": "Top biology programs value strong science foundations, research experience, and clear specialization interests. Start by mapping your interests.",
+          "checklist": [
+            "Research 5-7 top biology programs (Harvard, Cambridge, MIT, Stanford, Oxford)",
+            "Identify your preferred field (molecular, ecology, genetics, medicine, biotechnology)",
+            "Assess your chemistry and math preparation",
+            "Write a 3-year academic and research roadmap"
+          ],
+          "resources": [
+            {
+              "title": "Biology Specializations Guide",
+              "platform": "AcceptedX",
+              "type": "Article",
+              "link": "https://acceptedx.org/resources/biology-specializations"
+            },
+            {
+              "title": "Biology Major Overview",
+              "platform": "YouTube",
+              "type": "Video",
+              "link": "https://www.youtube.com/watch?v=biology-major-overview"
+            }
+          ]
+        },
+        "US": {
+          "overview": "US universities value strong academics plus research experience. Combine AP/IB rigor with lab work.",
+          "checklist": [
+            "Research reach, target, and safety schools for biology",
+            "Note AP Biology and Chemistry requirements",
+            "Plan your Common App personal statement theme",
+            "Identify research opportunities or summer programs"
+          ],
+          "resources": [
+            {
+              "title": "US Biology Admissions Requirements",
+              "platform": "AcceptedX",
+              "type": "Guide",
+              "link": "https://acceptedx.org/resources/us-biology-admissions"
+            },
+            {
+              "title": "Biology Summer Programs",
+              "platform": "AcceptedX",
+              "type": "Directory",
+              "link": "https://acceptedx.org/resources/biology-summer-programs"
+            }
+          ]
+        },
+        "UK": {
+          "overview": "UK programs prioritize A-levels and admissions tests. Focus on Biology, Chemistry, and BMAT/NSAA.",
+          "checklist": [
+            "Review entry requirements for Oxford, Cambridge, Imperial",
+            "Start BMAT or NSAA preparation (Year 12)",
+            "Outline UCAS personal statement draft",
+            "Research UK biology program structures"
+          ],
+          "resources": [
+            {
+              "title": "BMAT Preparation Hub",
+              "platform": "Cambridge Assessment",
+              "type": "Official Resource",
+              "link": "https://www.admissionstesting.org/for-test-takers/bmat/"
+            },
+            {
+              "title": "UCAS Biology Personal Statement Tips",
+              "platform": "UCAS",
+              "type": "Article",
+              "link": "https://www.ucas.com/personal-statement-examples/biology"
+            }
+          ]
+        },
+        "Asia": {
+          "overview": "Bridge national curricula to global standards while developing research mindset.",
+          "checklist": [
+            "Review biology topics in IB HL or national exams",
+            "Identify international biology competitions (IBO, APhO)",
+            "Explore summer schools or research programs abroad",
+            "Document interest in specific biology fields"
+          ],
+          "resources": [
+            {
+              "title": "IBO Preparation Guide",
+              "platform": "IBO",
+              "type": "Competition Resource",
+              "link": "https://www.ibo-info.org/"
+            }
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "Which test is important for UK biology/medicine admissions?",
+          "opts": ["BMAT/NSAA", "SAT", "JEE", "AP"],
+          "correct": "BMAT/NSAA"
+        },
+        {
+          "q": "What do US biology programs value most?",
+          "opts": [
+            "Strong academics + research experience + lab work",
+            "Only test scores",
+            "Sports achievements",
+            "Unrelated activities"
+          ],
+          "correct": "Strong academics + research experience + lab work"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Strengthen Academic & Research Foundation",
+      "description": "Excel in biology, chemistry, and math while gaining research experience.",
+      "regions": {
+        "Global": {
+          "overview": "Admissions officers look for rigorous science preparation and research involvement.",
+          "checklist": [
+            "Complete advanced biology and chemistry coursework",
+            "Join biology competitions or research programs",
+            "Gain lab experience (school, university, or summer programs)",
+            "Track progress using an academic portfolio"
+          ],
+          "resources": [
+            {
+              "title": "Khan Academy - Biology",
+              "platform": "Khan Academy",
+              "type": "Online Course",
+              "link": "https://www.khanacademy.org/science/biology"
+            },
+            {
+              "title": "Biology Olympiad Resources",
+              "platform": "IBO",
+              "type": "Problem Sets",
+              "link": "https://www.ibo-info.org/"
+            }
+          ]
+        },
+        "US": {
+          "overview": "Prioritize AP Biology, Chemistry, and research-based extracurriculars.",
+          "checklist": [
+            "Complete AP Biology and AP Chemistry",
+            "Join a research mentorship or lab program",
+            "Participate in science fairs or competitions",
+            "Document lab work in a portfolio"
+          ],
+          "resources": [
+            {
+              "title": "AP Biology Review",
+              "platform": "Khan Academy",
+              "type": "Course",
+              "link": "https://www.khanacademy.org/science/biology"
+            },
+            {
+              "title": "Science Fair Project Ideas",
+              "platform": "Science Buddies",
+              "type": "Guide",
+              "link": "https://www.sciencebuddies.org/science-fair-projects/project-ideas/biology"
+            }
+          ]
+        },
+        "UK": {
+          "overview": "Excel in A-level Biology and Chemistry, prepare for BMAT/NSAA.",
+          "checklist": [
+            "Achieve A* in A-level Biology and Chemistry",
+            "Solve 5 past BMAT or NSAA papers",
+            "Engage with practical biology challenges",
+            "Prepare for Oxbridge interviews"
+          ],
+          "resources": [
+            {
+              "title": "A-Level Biology Notes",
+              "platform": "Physics & Maths Tutor",
+              "type": "Study Resource",
+              "link": "https://www.physicsandmathstutor.com/biology-revision/"
+            }
+          ]
+        },
+        "Asia": {
+          "overview": "Integrate biology excellence with national exams and Olympiads.",
+          "checklist": [
+            "Complete IB HL Biology or equivalent",
+            "Take practice sets from IBO archives",
+            "Write reflection connecting biology to global challenges",
+            "Participate in local biology competitions"
+          ],
+          "resources": [
+            {
+              "title": "IB Biology Resources",
+              "platform": "IB",
+              "type": "Study Guide",
+              "link": "https://www.ibo.org/programmes/diploma-programme/curriculum/sciences/biology/"
+            }
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What's the best way to prove academic rigor in biology applications?",
+          "opts": [
+            "Strong science results, lab experience, and research participation",
+            "Writing long essays only",
+            "Participating in sports",
+            "Taking unrelated electives"
+          ],
+          "correct": "Strong science results, lab experience, and research participation"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Research, Projects & Impact",
+      "description": "Turn your curiosity into tangible research projects that impress admissions teams.",
+      "regions": {
+        "Global": {
+          "overview": "Admissions committees value originality — show it through hands-on biology research or interdisciplinary projects.",
+          "checklist": [
+            "Design an independent biology experiment or research project",
+            "Document findings in a lab notebook or research report",
+            "Present your work (science fair, symposium, or online)",
+            "Collaborate with peers or mentors"
+          ],
+          "resources": [
+            {
+              "title": "How to Create a Research Portfolio",
+              "platform": "AcceptedX",
+              "type": "Guide",
+              "link": "https://acceptedx.org/resources/research-portfolio"
+            }
+          ],
+          "projectIdeas": [
+            "Investigate plant growth factors",
+            "Study microbial diversity in local environments",
+            "Analyze genetic patterns or inheritance",
+            "Research environmental impact on ecosystems"
+          ]
+        },
+        "US": {
+          "overview": "Link projects to summer research programs and college applications.",
+          "checklist": [
+            "Apply to research programs (RSI, SIMR, or university labs)",
+            "Document lab work in a portfolio",
+            "Create a Common App project entry",
+            "Write research abstract or paper"
+          ],
+          "resources": [
+            {
+              "title": "MIT Research Science Institute (RSI)",
+              "platform": "MIT",
+              "type": "Program",
+              "link": "https://www.cee.org/programs/research-science-institute"
+            }
+          ]
+        },
+        "UK": {
+          "overview": "Integrate projects into EPQ or UCAS statement.",
+          "checklist": [
+            "Draft EPQ proposal on biology topic",
+            "Link project to university research themes",
+            "Include project outcomes in UCAS essays",
+            "Prepare to discuss research in interviews"
+          ]
+        },
+        "Asia": {
+          "overview": "Use national fairs or Olympiad extensions to build portfolios.",
+          "checklist": [
+            "Participate in local research competitions",
+            "Work under a university mentor",
+            "Translate project results into English",
+            "Connect to global biology challenges"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What's the most impactful project for biology admissions?",
+          "opts": [
+            "Original research with measurable outcomes and documentation",
+            "Memorizing textbooks",
+            "Copying experiments",
+            "Avoiding collaboration"
+          ],
+          "correct": "Original research with measurable outcomes and documentation"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Craft Your Application Narrative",
+      "description": "Translate your academic and research experiences into compelling application materials.",
+      "regions": {
+        "Global": {
+          "overview": "Connect your curiosity and achievements into a cohesive personal story.",
+          "checklist": [
+            "Write a 250-word draft personal statement",
+            "Ask mentors for feedback",
+            "Highlight research depth and impact",
+            "Connect biology to solving real-world problems"
+          ]
+        },
+        "US": {
+          "overview": "Focus on Common App essays, recommendations, and activity descriptions.",
+          "checklist": [
+            "Draft Common App essay with biology focus",
+            "Collect 2 recommendation letters (preferably from science teachers)",
+            "Optimize Activities section for clarity",
+            "Write supplemental essays"
+          ]
+        },
+        "UK": {
+          "overview": "Refine UCAS statement and prepare for interview questions.",
+          "checklist": [
+            "Complete UCAS personal statement drafts",
+            "Add reading and research activities",
+            "Prepare for Oxbridge interviews",
+            "Practice explaining research clearly"
+          ]
+        },
+        "Asia": {
+          "overview": "Adapt statement for multiple university systems.",
+          "checklist": [
+            "Prepare statement for both UCAS and Common App",
+            "Gather supporting documents",
+            "Draft reflection on biology career goals",
+            "Translate research documentation"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What should your biology personal statement highlight?",
+          "opts": [
+            "Curiosity, research depth, and connection to global challenges",
+            "Extracurriculars only",
+            "Sports and unrelated hobbies",
+            "Generic career goals"
+          ],
+          "correct": "Curiosity, research depth, and connection to global challenges"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Final Preparation & Interviews",
+      "description": "Polish your confidence and strategy for final submissions.",
+      "regions": {
+        "Global": {
+          "overview": "Bring together everything for confident applications.",
+          "checklist": [
+            "Complete mock interviews",
+            "Submit all applications",
+            "Prepare to discuss research in detail",
+            "Celebrate your effort"
+          ]
+        },
+        "US": {
+          "overview": "Rehearse storytelling for interviews and finalize applications.",
+          "checklist": [
+            "Conduct mock interview with feedback",
+            "Submit Common App and supplements",
+            "Follow up with recommenders",
+            "Prepare research presentation if needed"
+          ]
+        },
+        "UK": {
+          "overview": "Prepare for Oxbridge interviews with problem-solving sessions.",
+          "checklist": [
+            "Review BMAT/NSAA-style interview problems",
+            "Simulate interviews under pressure",
+            "Practice explaining research clearly",
+            "Finalize UCAS submission"
+          ]
+        },
+        "Asia": {
+          "overview": "Coordinate with international offices.",
+          "checklist": [
+            "Confirm transcripts and research portfolios",
+            "Practice interview questions in English",
+            "Prepare to discuss research",
+            "Submit final applications"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What's key for biology interview prep?",
+          "opts": [
+            "Practicing explanation of research and scientific concepts",
+            "Memorizing essays",
+            "Writing long notes",
+            "Ignoring current research"
+          ],
+          "correct": "Practicing explanation of research and scientific concepts"
+        }
+      ]
+    }
+  ]
+}

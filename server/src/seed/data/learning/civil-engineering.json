@@ -1,0 +1,309 @@
+{
+  "discipline": "civil-engineering",
+  "availableRegions": ["Global", "US", "UK", "Asia"],
+  "stages": [
+    {
+      "id": 1,
+      "title": "Define Your Civil Engineering Path",
+      "description": "Clarify your interests in structures, transportation, environmental, or geotechnical engineering.",
+      "regions": {
+        "Global": {
+          "overview": "Top civil engineering programs value strong math/physics, problem-solving, and interest in infrastructure. Identify your specialization early.",
+          "checklist": [
+            "Research 5-7 top civil engineering programs (MIT, ETH Zurich, NUS, UC Berkeley, Cambridge)",
+            "Identify specialization (structures, transportation, environmental, geotechnical, water resources)",
+            "Map your math/physics preparation to program requirements",
+            "Create a 3-year roadmap connecting academics, projects, and applications"
+          ],
+          "resources": [
+            {
+              "title": "Civil Engineering Specializations",
+              "platform": "AcceptedX",
+              "type": "Article",
+              "link": "https://acceptedx.org/resources/civil-engineering-specializations"
+            }
+          ]
+        },
+        "US": {
+          "overview": "US programs emphasize AP/IB rigor, projects, and research. Combine academics with practical infrastructure work.",
+          "checklist": [
+            "Complete AP Physics C and AP Calculus BC",
+            "Research reach, target, and safety schools for civil engineering",
+            "Identify summer programs or internships",
+            "Plan Common App essay theme"
+          ]
+        },
+        "UK": {
+          "overview": "UK programs prioritize A-levels, STEP/ENGAA, and strong personal statements.",
+          "checklist": [
+            "Review entry requirements for Cambridge, Imperial, etc.",
+            "Start STEP or ENGAA preparation",
+            "Outline UCAS personal statement",
+            "Research UK engineering accreditation (ICE)"
+          ]
+        },
+        "Asia": {
+          "overview": "Bridge national curricula with global standards.",
+          "checklist": [
+            "Review mechanics topics in JEE/IB HL Physics",
+            "Identify international competitions",
+            "Explore summer programs",
+            "Document interest in civil engineering specializations"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What do top civil engineering programs value?",
+          "opts": [
+            "Strong math/physics, problem-solving, and infrastructure interest",
+            "Only test scores",
+            "Sports achievements",
+            "Unrelated activities"
+          ],
+          "correct": "Strong math/physics, problem-solving, and infrastructure interest"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Build Engineering Projects & Skills",
+      "description": "Develop hands-on skills through structural design, modeling, and infrastructure projects.",
+      "regions": {
+        "Global": {
+          "overview": "Demonstrate civil engineering ability through tangible projects.",
+          "checklist": [
+            "Complete a structural design project (bridge, building, etc.)",
+            "Learn CAD software (AutoCAD, Revit, or similar)",
+            "Build a physical model or prototype",
+            "Document project with drawings, calculations, and photos"
+          ],
+          "resources": [
+            {
+              "title": "AutoCAD for Students",
+              "platform": "Autodesk",
+              "type": "Software",
+              "link": "https://www.autodesk.com/education/students"
+            },
+            {
+              "title": "Bridge Building Competitions",
+              "platform": "Various",
+              "type": "Competition",
+              "link": "https://acceptedx.org/resources/bridge-competitions"
+            }
+          ],
+          "projectIdeas": [
+            "Design and build a model bridge",
+            "Create a structural analysis of a local building",
+            "Design a sustainable infrastructure solution",
+            "Develop a transportation planning project"
+          ]
+        },
+        "US": {
+          "overview": "Link projects to competitions and summer programs.",
+          "checklist": [
+            "Submit project to engineering competition",
+            "Apply to civil engineering summer programs",
+            "Create portfolio showcasing projects",
+            "Write technical documentation"
+          ]
+        },
+        "UK": {
+          "overview": "Integrate projects into EPQ.",
+          "checklist": [
+            "Draft EPQ proposal on civil engineering topic",
+            "Link project to university modules",
+            "Include in UCAS statement",
+            "Prepare for interviews"
+          ]
+        },
+        "Asia": {
+          "overview": "Use competitions to build portfolios.",
+          "checklist": [
+            "Participate in local engineering competitions",
+            "Work with university mentor",
+            "Document in English",
+            "Connect to global challenges"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What's the best way to demonstrate civil engineering skills?",
+          "opts": [
+            "Design and build structural projects with documentation",
+            "Only study theory",
+            "Memorize formulas",
+            "Avoid hands-on work"
+          ],
+          "correct": "Design and build structural projects with documentation"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Strengthen Academic Foundation",
+      "description": "Excel in mathematics, physics, and engineering coursework.",
+      "regions": {
+        "Global": {
+          "overview": "Strong math and physics preparation is essential.",
+          "checklist": [
+            "Master statics, dynamics, and mechanics of materials",
+            "Complete advanced mathematics",
+            "Join math/physics competitions",
+            "Maintain strong STEM grades"
+          ],
+          "resources": [
+            {
+              "title": "Engineering Mechanics",
+              "platform": "Coursera",
+              "type": "Course",
+              "link": "https://www.coursera.org/courses?query=engineering%20mechanics"
+            }
+          ]
+        },
+        "US": {
+          "overview": "Prioritize AP courses.",
+          "checklist": [
+            "Complete AP Physics C and AP Calculus BC",
+            "Take strong SAT Math or ACT",
+            "Participate in competitions"
+          ]
+        },
+        "UK": {
+          "overview": "Excel in A-levels.",
+          "checklist": [
+            "Achieve A* in Mathematics and Physics",
+            "Solve past STEP/ENGAA papers",
+            "Consider Further Mathematics"
+          ]
+        },
+        "Asia": {
+          "overview": "Integrate with national exams.",
+          "checklist": [
+            "Complete JEE-level mechanics",
+            "Maintain strong exam performance",
+            "Bridge to international standards"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What academic areas are most critical for civil engineering?",
+          "opts": [
+            "Mathematics, physics, and structural analysis",
+            "Only memorization",
+            "Languages",
+            "History"
+          ],
+          "correct": "Mathematics, physics, and structural analysis"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Craft Your Engineering Narrative",
+      "description": "Translate skills and projects into compelling applications.",
+      "regions": {
+        "Global": {
+          "overview": "Connect your civil engineering passion and achievements.",
+          "checklist": [
+            "Write 250-word draft personal statement",
+            "Highlight structural projects and impact",
+            "Connect to solving infrastructure challenges",
+            "Get mentor feedback"
+          ]
+        },
+        "US": {
+          "overview": "Focus on Common App essays.",
+          "checklist": [
+            "Draft Common App essay",
+            "Collect recommendations",
+            "Optimize Activities section",
+            "Write supplements"
+          ]
+        },
+        "UK": {
+          "overview": "Perfect UCAS statement.",
+          "checklist": [
+            "Complete UCAS personal statement",
+            "Include technical reading and projects",
+            "Prepare for interviews"
+          ]
+        },
+        "Asia": {
+          "overview": "Adapt for multiple systems.",
+          "checklist": [
+            "Prepare statements for UCAS and Common App",
+            "Gather documents",
+            "Draft career goals reflection"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What should your civil engineering statement highlight?",
+          "opts": [
+            "Technical passion, structural projects, and problem-solving",
+            "Only test scores",
+            "Unrelated hobbies",
+            "Generic goals"
+          ],
+          "correct": "Technical passion, structural projects, and problem-solving"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Final Preparation & Interviews",
+      "description": "Polish applications and prepare for interviews.",
+      "regions": {
+        "Global": {
+          "overview": "Bring together all your work.",
+          "checklist": [
+            "Complete mock interviews",
+            "Submit applications",
+            "Prepare to discuss projects",
+            "Celebrate journey"
+          ]
+        },
+        "US": {
+          "overview": "Rehearse and finalize.",
+          "checklist": [
+            "Mock interview",
+            "Submit applications",
+            "Follow up recommenders"
+          ]
+        },
+        "UK": {
+          "overview": "Prepare for interviews.",
+          "checklist": [
+            "Review STEP/ENGAA problems",
+            "Practice explaining concepts",
+            "Finalize UCAS"
+          ]
+        },
+        "Asia": {
+          "overview": "Coordinate and prepare.",
+          "checklist": [
+            "Confirm documents",
+            "Practice interviews in English",
+            "Submit applications"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What's key for civil engineering interviews?",
+          "opts": [
+            "Clear explanation of projects and structural concepts",
+            "Memorizing answers",
+            "Avoiding technical details",
+            "Only grades"
+          ],
+          "correct": "Clear explanation of projects and structural concepts"
+        }
+      ]
+    }
+  ]
+}

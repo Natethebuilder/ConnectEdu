@@ -197,7 +197,7 @@ const helpAreaLabel = (id: string) =>
   HELP_AREAS.find((h) => h.id === id)?.label ?? id;
 
 export default function MentorOnboarding() {
-  const { user, role } = useSupabaseAuth();
+  const { user, role, ready } = useSupabaseAuth();
   const navigate = useNavigate();
 
   const [loading, setLoading] = useState(true);
@@ -226,8 +226,9 @@ export default function MentorOnboarding() {
   const [imagePreview, setImagePreview] = useState<string>("");
 
   const [bioExpanded, setBioExpanded] = useState(false);
-  // Guard
+  // Guard - wait for auth to be ready before checking
   useEffect(() => {
+    if (!ready) return; // Wait for auth to initialize
     if (!user) {
       navigate("/login");
       return;
@@ -236,7 +237,7 @@ export default function MentorOnboarding() {
       navigate("/discipline-choice");
       return;
     }
-  }, [user, role, navigate]);
+  }, [user, role, ready, navigate]);
 
   // Load existing profile
   useEffect(() => {
@@ -244,10 +245,11 @@ export default function MentorOnboarding() {
 
     (async () => {
       try {
-        const res = await http.get<MentorProfileResponse>("/api/mentors/me", {
-          params: { userId: user.id },
-        });
+        console.log("📥 Loading existing mentor profile...");
+        // ❌ NO params
+        const res = await http.get<MentorProfileResponse>("/api/mentors/me");
         const p = res.data;
+        console.log("✅ Loaded profile:", p.name);
 
         setName(p.name ?? user.name ?? "");
         setHeadline(p.headline ?? "");
@@ -258,17 +260,16 @@ export default function MentorOnboarding() {
         setDegree(p.degree ?? "");
         setLinkedin(p.linkedin ?? "");
         setCalendly(p.calendly ?? "");
-
         setDisciplines(p.disciplines ?? []);
         setHelpAreas(p.helpAreas ?? []);
 
-        const loadedAffType =
-          p.affiliationType === "company" ? "company" : "university";
+        const loadedAffType = p.affiliationType === "company" ? "company" : "university";
         setAffiliationType(loadedAffType);
         setAffiliationName(p.affiliationName ?? "");
 
         if (p.imageUrl) setImagePreview(p.imageUrl);
-      } catch {
+      } catch (err: any) {
+        console.error("⚠️ Profile load failed (first time is OK):", err.response?.status);
         setName(user.name ?? "");
       } finally {
         setLoading(false);
@@ -324,7 +325,7 @@ export default function MentorOnboarding() {
       const imageUrl = await uploadImageIfNeeded();
 
       await http.post("/api/mentors/me", {
-        userId: user.id,
+        // ❌ REMOVE userId - backend gets from JWT
         name,
         headline,
         bio,
@@ -397,10 +398,10 @@ export default function MentorOnboarding() {
           </div>
 
           <h1 className="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-blue-700 via-purple-600 to-indigo-700 bg-clip-text text-transparent">
-            Craft a profile students instantly trust
+            Craft your profile
           </h1>
           <p className="mt-3 text-sm sm:text-base text-gray-500 max-w-2xl mx-auto">
-            This is exactly how you’ll appear in the{" "}
+            This is how you’ll appear in the{" "}
             <span className="font-semibold">Mentor Hub</span> when students
             search by discipline, language, and support type.
           </p>
@@ -926,27 +927,27 @@ export default function MentorOnboarding() {
                 </div>
               </div>
             </div>
+
+            {/* Save button */}
+            <div className="flex justify-end">
+              <motion.button
+                whileHover={{ scale: saving ? 1 : 1.03, y: saving ? 0 : -1 }}
+                whileTap={{ scale: saving ? 1 : 0.97 }}
+                disabled={saving}
+                type="submit"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const form = e.currentTarget.closest("form");
+                  if (form) form.requestSubmit();
+                }}
+                className={`inline-flex items-center gap-2 px-7 py-3 rounded-2xl bg-gradient-to-r ${ACCENT_GRADIENT} text-white text-sm font-semibold shadow-lg disabled:opacity-60`}
+              >
+                {saving && <Loader2 className="w-4 h-4 animate-spin" />}
+                {saving ? "Saving profile..." : "Save profile & continue"}
+              </motion.button>
+            </div>
           </div>
         </form>
-
-        {/* Save button */}
-        <div className="flex justify-end mt-8">
-          <motion.button
-            whileHover={{ scale: saving ? 1 : 1.03, y: saving ? 0 : -1 }}
-            whileTap={{ scale: saving ? 1 : 0.97 }}
-            disabled={saving}
-            type="submit"
-            onClick={(e) => {
-              e.preventDefault();
-              const form = e.currentTarget.closest("form");
-              if (form) form.requestSubmit();
-            }}
-            className={`inline-flex items-center gap-2 px-7 py-3 rounded-2xl bg-gradient-to-r ${ACCENT_GRADIENT} text-white text-sm font-semibold shadow-lg disabled:opacity-60`}
-          >
-            {saving && <Loader2 className="w-4 h-4 animate-spin" />}
-            {saving ? "Saving profile..." : "Save profile & continue"}
-          </motion.button>
-        </div>
       </div>
     </div>
   );

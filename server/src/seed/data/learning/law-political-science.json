@@ -1,0 +1,360 @@
+{
+  "discipline": "law-political-science",
+  "availableRegions": ["Global", "US", "UK", "Asia"],
+  "stages": [
+    {
+      "id": 1,
+      "title": "Define Your Law & Political Science Vision",
+      "description": "Clarify your interests in law, political science, public policy, or international relations, and identify target universities.",
+      "regions": {
+        "Global": {
+          "overview": "Top law and political science programs value strong analytical skills, debate experience, and clear specialization interests.",
+          "checklist": [
+            "Research 5-7 top programs (Harvard, Oxford, Cambridge, LSE, NUS)",
+            "Identify your interest (law, political science, public policy, international relations)",
+            "Assess your debate, writing, and analytical preparation",
+            "Create a 3-year roadmap connecting experiences, academics, and applications"
+          ],
+          "resources": [
+            {
+              "title": "Law & Political Science Specializations",
+              "platform": "AcceptedX",
+              "type": "Article",
+              "link": "https://acceptedx.org/resources/law-political-science-specializations"
+            },
+            {
+              "title": "Introduction to Political Science",
+              "platform": "Coursera",
+              "type": "Course",
+              "link": "https://www.coursera.org/courses?query=political%20science"
+            }
+          ]
+        },
+        "US": {
+          "overview": "US programs emphasize strong academics, debate, writing, and leadership experience.",
+          "checklist": [
+            "Research reach, target, and safety schools",
+            "Note LSAT preparation timeline (for law)",
+            "Plan your Common App personal statement theme",
+            "Identify debate, Model UN, or political activities"
+          ],
+          "resources": [
+            {
+              "title": "US Law School Admissions",
+              "platform": "LSAC",
+              "type": "Official Resource",
+              "link": "https://www.lsac.org/lsat"
+            },
+            {
+              "title": "US Political Science Admissions",
+              "platform": "AcceptedX",
+              "type": "Guide",
+              "link": "https://acceptedx.org/resources/us-political-science-admissions"
+            }
+          ]
+        },
+        "UK": {
+          "overview": "UK programs prioritize A-levels, LNAT/TSA, and strong personal statements.",
+          "checklist": [
+            "Review entry requirements for Oxford, Cambridge, LSE",
+            "Start LNAT (for law) or TSA preparation (Year 12)",
+            "Outline UCAS personal statement draft",
+            "Research UK law/political science program structures"
+          ],
+          "resources": [
+            {
+              "title": "LNAT Preparation",
+              "platform": "LNAT",
+              "type": "Official Resource",
+              "link": "https://www.lnat.ac.uk/"
+            },
+            {
+              "title": "UCAS Law Personal Statement",
+              "platform": "UCAS",
+              "type": "Article",
+              "link": "https://www.ucas.com/personal-statement-examples/law"
+            }
+          ]
+        },
+        "Asia": {
+          "overview": "Bridge national curricula with global standards.",
+          "checklist": [
+            "Review law/political science topics in national exams",
+            "Identify debate or Model UN opportunities",
+            "Explore summer programs abroad",
+            "Document interest in specific fields"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "Which test is important for UK law admissions?",
+          "opts": ["LNAT", "SAT", "JEE", "AP"],
+          "correct": "LNAT"
+        },
+        {
+          "q": "What do top law/political science programs value most?",
+          "opts": [
+            "Strong academics + debate/writing + analytical thinking",
+            "Only test scores",
+            "Sports achievements",
+            "Unrelated activities"
+          ],
+          "correct": "Strong academics + debate/writing + analytical thinking"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Build Debate, Writing & Leadership Skills",
+      "description": "Develop argumentation, writing, and leadership skills through debate, Model UN, or political activities.",
+      "regions": {
+        "Global": {
+          "overview": "Demonstrate law/political science ability through debate, writing, and leadership experiences.",
+          "checklist": [
+            "Join debate team, Model UN, or mock trial",
+            "Write opinion pieces or articles on current events",
+            "Participate in political clubs or student government",
+            "Document your debate and writing achievements"
+          ],
+          "resources": [
+            {
+              "title": "Debate Resources",
+              "platform": "National Speech & Debate Association",
+              "type": "Resources",
+              "link": "https://www.speechanddebate.org/"
+            },
+            {
+              "title": "Model UN Guide",
+              "platform": "UNA-USA",
+              "type": "Guide",
+              "link": "https://unausa.org/model-un/"
+            }
+          ],
+          "projectIdeas": [
+            "Start a debate club or Model UN chapter",
+            "Write articles for school newspaper on political topics",
+            "Organize political awareness events",
+            "Participate in mock trial competitions"
+          ]
+        },
+        "US": {
+          "overview": "Link experiences to competitions and applications.",
+          "checklist": [
+            "Compete in debate tournaments",
+            "Participate in Model UN conferences",
+            "Join mock trial teams",
+            "Document achievements for applications"
+          ]
+        },
+        "UK": {
+          "overview": "Integrate experiences into EPQ or UCAS.",
+          "checklist": [
+            "Draft EPQ proposal on law/political topic",
+            "Link debate experiences to university themes",
+            "Include in UCAS statement",
+            "Prepare for interviews"
+          ]
+        },
+        "Asia": {
+          "overview": "Use experiences to build portfolios.",
+          "checklist": [
+            "Participate in debate or Model UN",
+            "Work with mentor on political project",
+            "Document in English",
+            "Connect to global political challenges"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What's the best way to demonstrate law/political science skills?",
+          "opts": [
+            "Debate, writing, and analytical argumentation",
+            "Only studying",
+            "Memorizing cases",
+            "Avoiding discussion"
+          ],
+          "correct": "Debate, writing, and analytical argumentation"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Strengthen Academic Foundation",
+      "description": "Excel in history, English, and analytical coursework.",
+      "regions": {
+        "Global": {
+          "overview": "Strong reading, writing, and analytical preparation is essential.",
+          "checklist": [
+            "Master critical reading and analytical writing",
+            "Study history, politics, and current events",
+            "Read legal cases or political theory",
+            "Maintain strong grades in humanities and social sciences"
+          ],
+          "resources": [
+            {
+              "title": "Critical Reading",
+              "platform": "Khan Academy",
+              "type": "Course",
+              "link": "https://www.khanacademy.org/test-prep/sat-reading-writing"
+            },
+            {
+              "title": "Political Theory",
+              "platform": "Coursera",
+              "type": "Course",
+              "link": "https://www.coursera.org/courses?query=political%20theory"
+            }
+          ]
+        },
+        "US": {
+          "overview": "Prioritize relevant coursework.",
+          "checklist": [
+            "Complete AP US History, Government, or English",
+            "Take strong humanities coursework",
+            "Achieve strong SAT/ACT scores",
+            "Read current events and political news"
+          ]
+        },
+        "UK": {
+          "overview": "Excel in A-levels.",
+          "checklist": [
+            "Achieve A* in A-level History or English",
+            "Complete relevant A-levels",
+            "Prepare for LNAT/TSA",
+            "Read legal or political literature"
+          ]
+        },
+        "Asia": {
+          "overview": "Integrate with national exams.",
+          "checklist": [
+            "Complete strong humanities coursework",
+            "Study law/political fundamentals",
+            "Maintain strong exam performance",
+            "Bridge to international standards"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What academic areas are most critical for law/political science?",
+          "opts": [
+            "Reading, writing, analytical thinking, and current events knowledge",
+            "Only memorization",
+            "Math only",
+            "Science only"
+          ],
+          "correct": "Reading, writing, analytical thinking, and current events knowledge"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Craft Your Law/Political Science Narrative",
+      "description": "Translate your debate, writing, and achievements into compelling applications.",
+      "regions": {
+        "Global": {
+          "overview": "Connect your law/political science passion and achievements.",
+          "checklist": [
+            "Write 250-word draft personal statement",
+            "Highlight debate, writing, and leadership experiences",
+            "Connect to solving legal or political problems",
+            "Get feedback from teachers or mentors"
+          ]
+        },
+        "US": {
+          "overview": "Focus on Common App essays.",
+          "checklist": [
+            "Draft Common App essay with law/political focus",
+            "Collect strong recommendation letters",
+            "Optimize Activities section",
+            "Write law/political science school supplements"
+          ]
+        },
+        "UK": {
+          "overview": "Perfect UCAS statement.",
+          "checklist": [
+            "Complete UCAS personal statement",
+            "Include debate experiences and reading",
+            "Prepare for Oxbridge interviews",
+            "Practice explaining arguments clearly"
+          ]
+        },
+        "Asia": {
+          "overview": "Adapt for multiple systems.",
+          "checklist": [
+            "Prepare statements for UCAS and Common App",
+            "Gather supporting documents",
+            "Draft reflection on law/political career goals",
+            "Document debate and writing achievements"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What should your law/political science statement highlight?",
+          "opts": [
+            "Analytical thinking, debate/writing skills, and commitment to justice/policy",
+            "Only test scores",
+            "Unrelated hobbies",
+            "Generic goals"
+          ],
+          "correct": "Analytical thinking, debate/writing skills, and commitment to justice/policy"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Final Preparation & Interviews",
+      "description": "Polish applications and prepare for interviews.",
+      "regions": {
+        "Global": {
+          "overview": "Bring together all your work.",
+          "checklist": [
+            "Complete mock interviews",
+            "Submit applications",
+            "Prepare to discuss arguments and current events",
+            "Celebrate journey"
+          ]
+        },
+        "US": {
+          "overview": "Rehearse and finalize.",
+          "checklist": [
+            "Mock interview",
+            "Submit applications",
+            "Follow up recommenders",
+            "Continue LSAT prep if applicable"
+          ]
+        },
+        "UK": {
+          "overview": "Prepare for interviews.",
+          "checklist": [
+            "Review LNAT/TSA problems",
+            "Practice explaining arguments",
+            "Finalize UCAS"
+          ]
+        },
+        "Asia": {
+          "overview": "Coordinate and prepare.",
+          "checklist": [
+            "Confirm documents",
+            "Practice interviews in English",
+            "Submit applications"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What's key for law/political science interviews?",
+          "opts": [
+            "Clear argumentation, knowledge of current events, and analytical thinking",
+            "Memorizing answers",
+            "Avoiding debate",
+            "Only grades"
+          ],
+          "correct": "Clear argumentation, knowledge of current events, and analytical thinking"
+        }
+      ]
+    }
+  ]
+}

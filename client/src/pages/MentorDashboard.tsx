@@ -19,13 +19,14 @@ type MentorProfile = {
 };
 
 export default function MentorDashboard() {
-  const { user, role, ready } = useSupabaseAuth();
+  const { user, role, ready, setUser } = useSupabaseAuth();
   const navigate = useNavigate();
   const [profile, setProfile] = useState<MentorProfile | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (!ready) return;
+    if (loading && profile) return; // Already loaded, don't fetch again
 
     if (!user) {
         navigate("/login");
@@ -37,16 +38,34 @@ export default function MentorDashboard() {
         return;
     }
 
-    // 🚨 ALWAYS check MongoDB profile on page load
-    http.get("/api/mentors/me", { params: { userId: user.id } })
+    // Only fetch if we don't have a profile yet
+    if (profile) {
+      setLoading(false);
+      return;
+    }
+
+    // 🚨 Check MongoDB profile on page load (only once)
+    http.get("/api/mentors/me")
         .then((res) => {
         setProfile(res.data);
+        // Only update user if imageUrl changed
+        if (res.data.imageUrl && res.data.imageUrl !== user.imageUrl) {
+          setUser({
+            ...user,
+            imageUrl: res.data.imageUrl,
+          });
+        }
         setLoading(false);
         })
         .catch(err => {
-         
+          console.error("Mentor profile fetch failed:", err);
+          setLoading(false);
+          navigate("/mentor-onboarding");
         });
-    }, [ready, user, role, navigate]);
+
+    // Remove setUser from dependencies - it's stable and causes infinite loops
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [ready, user?.id, role, navigate]);
 
 
   if (!ready || loading) {
@@ -206,6 +225,21 @@ export default function MentorDashboard() {
                   </a>
                 )}
               </div>
+            </div>
+            {/* Messages inbox card */}
+            <div className="bg-white/80 border border-white/70 shadow-xl rounded-3xl p-6">
+              <h3 className="text-sm font-semibold text-gray-700 mb-3">Your Messages</h3>
+
+              <p className="text-sm text-gray-500 mb-4">
+                View and reply to your student conversations.
+              </p>
+
+              <button
+                onClick={() => navigate("/messages")}
+                className="px-4 py-2 bg-purple-600 text-white rounded-xl text-sm shadow hover:bg-purple-700 transition"
+              >
+                Open Messages Inbox
+              </button>
             </div>
 
             {/* Future: stats, messages, etc. */}

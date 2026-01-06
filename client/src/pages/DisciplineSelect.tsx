@@ -1,4 +1,5 @@
 // client/src/pages/DisciplineSelect.tsx
+import { useState } from "react";
 import { motion, Variants } from "framer-motion";
 import {
   BookOpen,
@@ -18,6 +19,7 @@ import {
   GraduationCap,
   Briefcase,
   Scale,
+  ChevronRight,
 } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useSupabaseAuth } from "../store/supabaseAuth";
@@ -30,6 +32,15 @@ const slugify = (name: string) =>
     .replace(/\s*&\s*/g, "-") // replace & with hyphen
     .replace(/[\s_]+/g, "-")  // spaces/underscores -> hyphen
     .replace(/-+/g, "-");     // collapse multiple hyphens
+
+// Sub-disciplines for disciplines that need them
+const DISCIPLINES_WITH_SUB: Record<string, Array<{ name: string; slug: string }>> = {
+  "Engineering": [
+    { name: "Mechanical Engineering", slug: "mechanical-engineering" },
+    { name: "Electrical Engineering", slug: "electrical-engineering" },
+    { name: "Civil Engineering", slug: "civil-engineering" }
+  ]
+};
 
 // Expanded disciplines
 const disciplines = [
@@ -70,13 +81,23 @@ export default function DisciplineSelect() {
   const navigate = useNavigate();
   const location = useLocation();
   const { user } = useSupabaseAuth();
+  const [hoveredDiscipline, setHoveredDiscipline] = useState<string | null>(null);
 
   const suggestion = location.state?.suggestion as string | undefined;
   const scores = (location.state?.scores || {}) as Record<string, number>;
 
   const selectDiscipline = (disciplineName: string) => {
+    // If discipline has sub-disciplines, don't navigate directly
+    if (DISCIPLINES_WITH_SUB[disciplineName]) {
+      return; // Let hover overlay handle navigation
+    }
     const slug = slugify(disciplineName);
     navigate(`/globe/${slug}`);
+  };
+
+  const selectSubDiscipline = (subDisciplineSlug: string) => {
+    setHoveredDiscipline(null);
+    navigate(`/globe/${subDisciplineSlug}`);
   };
 
   return (
@@ -141,31 +162,75 @@ export default function DisciplineSelect() {
           variants={containerVariants}
           initial="hidden"
           animate="show"
-          className="flex flex-wrap justify-center gap-8 w-full max-w-6xl"
+          className="flex flex-wrap justify-center gap-8 w-full max-w-6xl relative"
         >
-          {disciplines.map((d) => (
-            <motion.button
-              key={d.name}
-              variants={itemVariants}
-              whileHover={{
-                scale: 1.07,
-                rotate: -1,
-                boxShadow: "0 15px 40px rgba(0,0,0,0.15)",
-              }}
-              whileTap={{ scale: 0.97 }}
-              onClick={() => selectDiscipline(d.name)}
-              className={`w-72 flex flex-col items-center justify-center p-8 rounded-2xl shadow-md text-white font-semibold text-lg bg-gradient-to-br ${d.color} relative overflow-hidden`}
-            >
-              {suggestion === d.name && (
-                <motion.span
-                  layoutId="highlight"
-                  className="absolute inset-0 rounded-2xl ring-4 ring-blue-400 pointer-events-none"
-                />
-              )}
-              <d.icon className="w-12 h-12 mb-3" />
-              {d.name}
-            </motion.button>
-          ))}
+          {disciplines.map((d) => {
+            const hasSubDisciplines = DISCIPLINES_WITH_SUB[d.name];
+            return (
+              <div
+                key={d.name}
+                className="relative"
+                onMouseEnter={() => hasSubDisciplines && setHoveredDiscipline(d.name)}
+                onMouseLeave={() => setHoveredDiscipline(null)}
+              >
+                <motion.button
+                  variants={itemVariants}
+                  whileHover={{
+                    scale: 1.07,
+                    rotate: -1,
+                    boxShadow: "0 15px 40px rgba(0,0,0,0.15)",
+                  }}
+                  whileTap={{ scale: 0.97 }}
+                  onClick={() => selectDiscipline(d.name)}
+                  className={`w-72 flex flex-col items-center justify-center p-8 rounded-2xl shadow-md text-white font-semibold text-lg bg-gradient-to-br ${d.color} relative overflow-hidden`}
+                >
+                  {suggestion === d.name && (
+                    <motion.span
+                      layoutId="highlight"
+                      className="absolute inset-0 rounded-2xl ring-4 ring-blue-400 pointer-events-none"
+                    />
+                  )}
+                  <d.icon className="w-12 h-12 mb-3" />
+                  <div className="flex items-center gap-2">
+                    {d.name}
+                    {hasSubDisciplines && (
+                      <ChevronRight className="w-5 h-5" />
+                    )}
+                  </div>
+                </motion.button>
+
+                {/* Hover Overlay for Sub-disciplines */}
+                {hasSubDisciplines && hoveredDiscipline === d.name && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-full left-0 mt-2 w-72 bg-white rounded-xl shadow-2xl border border-gray-200 overflow-hidden z-50"
+                    onMouseEnter={() => setHoveredDiscipline(d.name)}
+                    onMouseLeave={() => setHoveredDiscipline(null)}
+                  >
+                    <div className="p-2">
+                      {DISCIPLINES_WITH_SUB[d.name]?.map((sub) => (
+                        <button
+                          key={sub.slug}
+                          onClick={() => selectSubDiscipline(sub.slug)}
+                          className="w-full text-left px-4 py-3 rounded-lg hover:bg-amber-50 transition-colors group"
+                        >
+                          <div className="flex items-center justify-between">
+                            <span className="font-semibold text-gray-800 group-hover:text-amber-600">
+                              {sub.name}
+                            </span>
+                            <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-amber-600" />
+                          </div>
+                        </button>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </div>
+            );
+          })}
         </motion.div>
 
         {/* Actions */}

@@ -1,0 +1,342 @@
+{
+  "discipline": "education",
+  "availableRegions": ["Global", "US", "UK", "Asia"],
+  "stages": [
+    {
+      "id": 1,
+      "title": "Define Your Education Vision",
+      "description": "Clarify your interests in teaching, educational policy, or educational research, and identify target universities.",
+      "regions": {
+        "Global": {
+          "overview": "Top education programs value genuine passion for teaching, leadership experience, and commitment to improving education.",
+          "checklist": [
+            "Research 5-7 top education programs (Harvard GSE, Stanford, UCL, Cambridge, NUS)",
+            "Identify your interest (teaching, policy, research, administration)",
+            "Assess your teaching or tutoring experience",
+            "Create a 3-year roadmap connecting experiences, academics, and applications"
+          ],
+          "resources": [
+            {
+              "title": "Education Specializations Guide",
+              "platform": "AcceptedX",
+              "type": "Article",
+              "link": "https://acceptedx.org/resources/education-specializations"
+            },
+            {
+              "title": "Introduction to Education",
+              "platform": "Coursera",
+              "type": "Course",
+              "link": "https://www.coursera.org/courses?query=education"
+            }
+          ]
+        },
+        "US": {
+          "overview": "US programs emphasize teaching experience, leadership, and strong personal statements.",
+          "checklist": [
+            "Research reach, target, and safety schools for education",
+            "Note teaching certification requirements",
+            "Plan your Common App personal statement theme",
+            "Identify teaching or tutoring opportunities"
+          ],
+          "resources": [
+            {
+              "title": "US Education Admissions Guide",
+              "platform": "AcceptedX",
+              "type": "Guide",
+              "link": "https://acceptedx.org/resources/us-education-admissions"
+            }
+          ]
+        },
+        "UK": {
+          "overview": "UK programs prioritize A-levels, teaching experience, and strong personal statements.",
+          "checklist": [
+            "Review entry requirements for UCL, Cambridge, Oxford education",
+            "Gain teaching or tutoring experience",
+            "Outline UCAS personal statement draft",
+            "Research UK teacher training programs"
+          ],
+          "resources": [
+            {
+              "title": "UCAS Education Personal Statement",
+              "platform": "UCAS",
+              "type": "Article",
+              "link": "https://www.ucas.com/personal-statement-examples/education"
+            }
+          ]
+        },
+        "Asia": {
+          "overview": "Bridge national curricula with global standards.",
+          "checklist": [
+            "Review education topics in national exams",
+            "Identify teaching opportunities or programs",
+            "Explore summer programs abroad",
+            "Document interest in education fields"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What do top education programs value most?",
+          "opts": [
+            "Genuine passion for teaching + leadership + teaching experience",
+            "Only test scores",
+            "Sports achievements",
+            "Unrelated activities"
+          ],
+          "correct": "Genuine passion for teaching + leadership + teaching experience"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Gain Teaching & Leadership Experience",
+      "description": "Develop teaching skills and leadership through tutoring, volunteering, or educational initiatives.",
+      "regions": {
+        "Global": {
+          "overview": "Demonstrate education commitment through real teaching, tutoring, or educational leadership experiences.",
+          "checklist": [
+            "Tutor peers or younger students regularly",
+            "Volunteer at schools, after-school programs, or educational nonprofits",
+            "Lead educational initiatives or clubs",
+            "Document your teaching experiences and reflections"
+          ],
+          "resources": [
+            {
+              "title": "How to Get Teaching Experience",
+              "platform": "AcceptedX",
+              "type": "Guide",
+              "link": "https://acceptedx.org/resources/teaching-experience"
+            },
+            {
+              "title": "Teaching Resources",
+              "platform": "Khan Academy",
+              "type": "Resources",
+              "link": "https://www.khanacademy.org/coach-res"
+            }
+          ],
+          "projectIdeas": [
+            "Start a tutoring program or club",
+            "Create educational content or videos",
+            "Volunteer at local schools or libraries",
+            "Organize educational workshops or events"
+          ]
+        },
+        "US": {
+          "overview": "Link experiences to applications and programs.",
+          "checklist": [
+            "Complete 20+ hours of teaching/tutoring",
+            "Join education clubs or organizations",
+            "Document teaching experiences",
+            "Write reflections on teaching"
+          ]
+        },
+        "UK": {
+          "overview": "Integrate experiences into EPQ or UCAS.",
+          "checklist": [
+            "Draft EPQ proposal on education topic",
+            "Link teaching experiences to university themes",
+            "Include in UCAS statement",
+            "Prepare for interviews"
+          ]
+        },
+        "Asia": {
+          "overview": "Use experiences to build portfolios.",
+          "checklist": [
+            "Participate in teaching programs",
+            "Work with education mentor",
+            "Document in English",
+            "Connect to global education challenges"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What's the best way to demonstrate education commitment?",
+          "opts": [
+            "Teaching experience, tutoring, and educational leadership",
+            "Only studying",
+            "Memorizing theories",
+            "Avoiding student contact"
+          ],
+          "correct": "Teaching experience, tutoring, and educational leadership"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Strengthen Academic Foundation",
+      "description": "Excel in relevant coursework and develop understanding of educational theory.",
+      "regions": {
+        "Global": {
+          "overview": "Strong academic preparation and understanding of education is essential.",
+          "checklist": [
+            "Maintain strong grades across subjects",
+            "Read educational theory and research",
+            "Study child development or psychology",
+            "Participate in debate, leadership, or communication activities"
+          ],
+          "resources": [
+            {
+              "title": "Educational Psychology",
+              "platform": "Coursera",
+              "type": "Course",
+              "link": "https://www.coursera.org/courses?query=educational%20psychology"
+            },
+            {
+              "title": "Child Development",
+              "platform": "Khan Academy",
+              "type": "Course",
+              "link": "https://www.khanacademy.org/test-prep/mcat/behavior/theories-of-attachment"
+            }
+          ]
+        },
+        "US": {
+          "overview": "Prioritize relevant coursework.",
+          "checklist": [
+            "Complete AP Psychology if available",
+            "Take strong coursework across subjects",
+            "Achieve strong SAT/ACT scores",
+            "Read education research"
+          ]
+        },
+        "UK": {
+          "overview": "Excel in A-levels.",
+          "checklist": [
+            "Achieve strong A-level results",
+            "Complete relevant A-levels (Psychology, Sociology, etc.)",
+            "Read educational literature",
+            "Prepare for interviews"
+          ]
+        },
+        "Asia": {
+          "overview": "Integrate with national exams.",
+          "checklist": [
+            "Complete strong coursework",
+            "Study education fundamentals",
+            "Maintain strong exam performance",
+            "Bridge to international standards"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What academic areas are most relevant for education?",
+          "opts": [
+            "Strong general academics + psychology + communication skills",
+            "Only memorization",
+            "Languages only",
+            "Math only"
+          ],
+          "correct": "Strong general academics + psychology + communication skills"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Craft Your Education Narrative",
+      "description": "Translate your teaching experiences and achievements into compelling applications.",
+      "regions": {
+        "Global": {
+          "overview": "Connect your education passion, teaching experiences, and achievements.",
+          "checklist": [
+            "Write 250-word draft personal statement",
+            "Highlight teaching and leadership experiences",
+            "Connect to improving education",
+            "Get feedback from teachers or mentors"
+          ]
+        },
+        "US": {
+          "overview": "Focus on Common App essays.",
+          "checklist": [
+            "Draft Common App essay with education focus",
+            "Collect strong recommendation letters",
+            "Optimize Activities section",
+            "Write education school supplements"
+          ]
+        },
+        "UK": {
+          "overview": "Perfect UCAS statement.",
+          "checklist": [
+            "Complete UCAS personal statement",
+            "Include teaching experiences and reading",
+            "Prepare for interviews",
+            "Practice explaining teaching philosophy"
+          ]
+        },
+        "Asia": {
+          "overview": "Adapt for multiple systems.",
+          "checklist": [
+            "Prepare statements for UCAS and Common App",
+            "Gather supporting documents",
+            "Draft reflection on education career goals",
+            "Document teaching experiences"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What should your education personal statement highlight?",
+          "opts": [
+            "Genuine passion for teaching, teaching experiences, and commitment to education",
+            "Only test scores",
+            "Unrelated hobbies",
+            "Generic career goals"
+          ],
+          "correct": "Genuine passion for teaching, teaching experiences, and commitment to education"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Final Preparation & Interviews",
+      "description": "Polish applications and prepare for interviews.",
+      "regions": {
+        "Global": {
+          "overview": "Bring together all your work.",
+          "checklist": [
+            "Complete mock interviews",
+            "Submit applications",
+            "Prepare to discuss teaching experiences",
+            "Celebrate journey"
+          ]
+        },
+        "US": {
+          "overview": "Rehearse and finalize.",
+          "checklist": [
+            "Mock interview",
+            "Submit applications",
+            "Follow up recommenders"
+          ]
+        },
+        "UK": {
+          "overview": "Prepare for interviews.",
+          "checklist": [
+            "Practice explaining teaching philosophy",
+            "Review educational scenarios",
+            "Finalize UCAS"
+          ]
+        },
+        "Asia": {
+          "overview": "Coordinate and prepare.",
+          "checklist": [
+            "Confirm documents",
+            "Practice interviews in English",
+            "Submit applications"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What's key for education interviews?",
+          "opts": [
+            "Clear explanation of teaching experiences and passion for education",
+            "Memorizing answers",
+            "Avoiding student stories",
+            "Only grades"
+          ],
+          "correct": "Clear explanation of teaching experiences and passion for education"
+        }
+      ]
+    }
+  ]
+}

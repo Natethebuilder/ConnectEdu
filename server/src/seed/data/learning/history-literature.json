@@ -1,0 +1,348 @@
+{
+  "discipline": "history-literature",
+  "availableRegions": ["Global", "US", "UK", "Asia"],
+  "stages": [
+    {
+      "id": 1,
+      "title": "Define Your History & Literature Vision",
+      "description": "Clarify your interests in history, literature, comparative literature, or cultural studies, and identify target universities.",
+      "regions": {
+        "Global": {
+          "overview": "Top history and literature programs value strong reading, writing, analytical skills, and clear specialization interests.",
+          "checklist": [
+            "Research 5-7 top programs (Harvard, Oxford, Cambridge, Yale, UCL)",
+            "Identify your interest (history, literature, comparative literature, cultural studies)",
+            "Assess your reading, writing, and analytical preparation",
+            "Create a 3-year roadmap connecting research, academics, and applications"
+          ],
+          "resources": [
+            {
+              "title": "History & Literature Specializations",
+              "platform": "AcceptedX",
+              "type": "Article",
+              "link": "https://acceptedx.org/resources/history-literature-specializations"
+            },
+            {
+              "title": "Introduction to Literature",
+              "platform": "Coursera",
+              "type": "Course",
+              "link": "https://www.coursera.org/courses?query=literature"
+            }
+          ]
+        },
+        "US": {
+          "overview": "US programs emphasize strong academics, writing, and research experience.",
+          "checklist": [
+            "Research reach, target, and safety schools",
+            "Note AP History and English requirements",
+            "Plan your Common App personal statement theme",
+            "Identify research or writing opportunities"
+          ],
+          "resources": [
+            {
+              "title": "US History/Literature Admissions",
+              "platform": "AcceptedX",
+              "type": "Guide",
+              "link": "https://acceptedx.org/resources/us-history-literature-admissions"
+            }
+          ]
+        },
+        "UK": {
+          "overview": "UK programs prioritize A-levels, HAT/ELAT, and strong personal statements.",
+          "checklist": [
+            "Review entry requirements for Oxford, Cambridge, etc.",
+            "Start HAT (History) or ELAT (Literature) preparation if required",
+            "Outline UCAS personal statement draft",
+            "Research UK program structures"
+          ],
+          "resources": [
+            {
+              "title": "HAT Preparation",
+              "platform": "Oxford",
+              "type": "Official Resource",
+              "link": "https://www.ox.ac.uk/admissions/undergraduate/applying-to-oxford/tests/hat"
+            },
+            {
+              "title": "UCAS History Personal Statement",
+              "platform": "UCAS",
+              "type": "Article",
+              "link": "https://www.ucas.com/personal-statement-examples/history"
+            }
+          ]
+        },
+        "Asia": {
+          "overview": "Bridge national curricula with global standards.",
+          "checklist": [
+            "Review history/literature topics in national exams",
+            "Identify research or writing opportunities",
+            "Explore summer programs abroad",
+            "Document interest in specific fields"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What do top history/literature programs value most?",
+          "opts": [
+            "Strong reading + writing + analytical thinking + research",
+            "Only test scores",
+            "Sports achievements",
+            "Unrelated activities"
+          ],
+          "correct": "Strong reading + writing + analytical thinking + research"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Build Research & Writing Skills",
+      "description": "Develop research, writing, and analytical skills through historical or literary research projects.",
+      "regions": {
+        "Global": {
+          "overview": "Demonstrate history/literature ability through research, writing, and analytical work.",
+          "checklist": [
+            "Conduct independent research on historical or literary topic",
+            "Write research papers or essays",
+            "Participate in history or literature competitions",
+            "Read extensively in your area of interest"
+          ],
+          "resources": [
+            {
+              "title": "Historical Research Methods",
+              "platform": "Coursera",
+              "type": "Course",
+              "link": "https://www.coursera.org/courses?query=historical%20research"
+            },
+            {
+              "title": "Literary Analysis",
+              "platform": "Khan Academy",
+              "type": "Course",
+              "link": "https://www.khanacademy.org/humanities/grammar"
+            }
+          ],
+          "projectIdeas": [
+            "Write a historical research paper",
+            "Create a literary analysis blog or podcast",
+            "Participate in history or literature competitions",
+            "Organize a reading group or book club"
+          ]
+        },
+        "US": {
+          "overview": "Link research to applications and programs.",
+          "checklist": [
+            "Submit research to competitions or journals",
+            "Apply to history/literature summer programs",
+            "Create writing portfolio",
+            "Document research achievements"
+          ]
+        },
+        "UK": {
+          "overview": "Integrate research into EPQ or UCAS.",
+          "checklist": [
+            "Draft EPQ proposal on history/literature topic",
+            "Link research to university themes",
+            "Include in UCAS statement",
+            "Prepare for interviews"
+          ]
+        },
+        "Asia": {
+          "overview": "Use research to build portfolios.",
+          "checklist": [
+            "Participate in research programs",
+            "Work with history/literature mentor",
+            "Document in English",
+            "Connect to global historical/literary themes"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What's the best way to demonstrate history/literature skills?",
+          "opts": [
+            "Research, writing, and extensive reading",
+            "Only studying",
+            "Memorizing dates",
+            "Avoiding writing"
+          ],
+          "correct": "Research, writing, and extensive reading"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Strengthen Academic Foundation",
+      "description": "Excel in history, English, and humanities coursework.",
+      "regions": {
+        "Global": {
+          "overview": "Strong reading, writing, and analytical preparation is essential.",
+          "checklist": [
+            "Master critical reading and analytical writing",
+            "Study history and literature extensively",
+            "Read primary sources and literary works",
+            "Maintain strong grades in humanities"
+          ],
+          "resources": [
+            {
+              "title": "World History",
+              "platform": "Khan Academy",
+              "type": "Course",
+              "link": "https://www.khanacademy.org/humanities/world-history"
+            },
+            {
+              "title": "Literary Theory",
+              "platform": "Coursera",
+              "type": "Course",
+              "link": "https://www.coursera.org/courses?query=literary%20theory"
+            }
+          ]
+        },
+        "US": {
+          "overview": "Prioritize relevant coursework.",
+          "checklist": [
+            "Complete AP US History, World History, or English Literature",
+            "Take strong humanities coursework",
+            "Achieve strong SAT/ACT scores",
+            "Read widely in history and literature"
+          ]
+        },
+        "UK": {
+          "overview": "Excel in A-levels.",
+          "checklist": [
+            "Achieve A* in A-level History and English",
+            "Complete relevant A-levels",
+            "Prepare for HAT/ELAT if required",
+            "Read historical and literary works"
+          ]
+        },
+        "Asia": {
+          "overview": "Integrate with national exams.",
+          "checklist": [
+            "Complete strong humanities coursework",
+            "Study history/literature fundamentals",
+            "Maintain strong exam performance",
+            "Bridge to international standards"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What academic areas are most critical for history/literature?",
+          "opts": [
+            "Reading, writing, analytical thinking, and extensive knowledge",
+            "Only memorization",
+            "Math only",
+            "Science only"
+          ],
+          "correct": "Reading, writing, analytical thinking, and extensive knowledge"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Craft Your History/Literature Narrative",
+      "description": "Translate your research, writing, and achievements into compelling applications.",
+      "regions": {
+        "Global": {
+          "overview": "Connect your history/literature passion and achievements.",
+          "checklist": [
+            "Write 250-word draft personal statement",
+            "Highlight research and writing experiences",
+            "Connect to historical or literary themes",
+            "Get feedback from teachers or mentors"
+          ]
+        },
+        "US": {
+          "overview": "Focus on Common App essays.",
+          "checklist": [
+            "Draft Common App essay with history/literature focus",
+            "Collect strong recommendation letters",
+            "Optimize Activities section",
+            "Write history/literature school supplements"
+          ]
+        },
+        "UK": {
+          "overview": "Perfect UCAS statement.",
+          "checklist": [
+            "Complete UCAS personal statement",
+            "Include research and reading",
+            "Prepare for Oxbridge interviews",
+            "Practice explaining historical/literary analysis"
+          ]
+        },
+        "Asia": {
+          "overview": "Adapt for multiple systems.",
+          "checklist": [
+            "Prepare statements for UCAS and Common App",
+            "Gather supporting documents",
+            "Draft reflection on history/literature career goals",
+            "Document research achievements"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What should your history/literature statement highlight?",
+          "opts": [
+            "Analytical thinking, research, and passion for history/literature",
+            "Only test scores",
+            "Unrelated hobbies",
+            "Generic goals"
+          ],
+          "correct": "Analytical thinking, research, and passion for history/literature"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Final Preparation & Interviews",
+      "description": "Polish applications and prepare for interviews.",
+      "regions": {
+        "Global": {
+          "overview": "Bring together all your work.",
+          "checklist": [
+            "Complete mock interviews",
+            "Submit applications",
+            "Prepare to discuss research and reading",
+            "Celebrate journey"
+          ]
+        },
+        "US": {
+          "overview": "Rehearse and finalize.",
+          "checklist": [
+            "Mock interview",
+            "Submit applications",
+            "Follow up recommenders"
+          ]
+        },
+        "UK": {
+          "overview": "Prepare for interviews.",
+          "checklist": [
+            "Review HAT/ELAT problems",
+            "Practice explaining historical/literary analysis",
+            "Finalize UCAS"
+          ]
+        },
+        "Asia": {
+          "overview": "Coordinate and prepare.",
+          "checklist": [
+            "Confirm documents",
+            "Practice interviews in English",
+            "Submit applications"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What's key for history/literature interviews?",
+          "opts": [
+            "Clear analysis, knowledge of texts/history, and critical thinking",
+            "Memorizing answers",
+            "Avoiding discussion",
+            "Only grades"
+          ],
+          "correct": "Clear analysis, knowledge of texts/history, and critical thinking"
+        }
+      ]
+    }
+  ]
+}

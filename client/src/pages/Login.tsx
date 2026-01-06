@@ -10,7 +10,7 @@ export default function Login() {
 
   const selectRole = (role: "student" | "mentor") => {
     setRole(role);
-    navigate("/auth");
+    navigate("/auth"); // 👈 go to the Auth page
   };
 
   return (
@@ -27,10 +27,8 @@ export default function Login() {
         className="absolute bottom-20 right-20 w-80 h-80 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30"
       />
 
-      {/* Brand logo (centered above card) */}
       <EduLogo size={72} />
 
-      {/* Role Select Card */}
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}

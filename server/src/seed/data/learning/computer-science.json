@@ -1,0 +1,390 @@
+{
+  "discipline": "computer-science",
+  "availableRegions": ["Global", "US", "UK", "Asia"],
+  "stages": [
+    {
+      "id": 1,
+      "title": "Define Your Computer Science Vision",
+      "description": "Clarify your interests in software engineering, AI, systems, or theory, and identify target universities.",
+      "regions": {
+        "Global": {
+          "overview": "Top CS programs value strong math foundations, programming skills, and clear specialization interests. Start by identifying your focus area.",
+          "checklist": [
+            "Research 5-7 top CS programs (MIT, Stanford, Carnegie Mellon, Cambridge, ETH Zurich)",
+            "Identify your specialization (AI/ML, systems, theory, software engineering, cybersecurity)",
+            "Assess your programming experience and math preparation",
+            "Create a 3-year roadmap connecting coding, projects, and applications"
+          ],
+          "resources": [
+            {
+              "title": "CS Specializations Guide",
+              "platform": "AcceptedX",
+              "type": "Article",
+              "link": "https://acceptedx.org/resources/cs-specializations"
+            },
+            {
+              "title": "CS Program Overview - MIT",
+              "platform": "YouTube",
+              "type": "Video",
+              "link": "https://www.youtube.com/watch?v=cs-mit-overview"
+            }
+          ]
+        },
+        "US": {
+          "overview": "US programs emphasize AP/IB rigor, programming projects, and research. Combine strong academics with coding experience.",
+          "checklist": [
+            "Complete AP Computer Science A and AP Calculus BC",
+            "Build a portfolio of programming projects",
+            "Research reach, target, and safety schools for CS",
+            "Identify summer programs (MIT, Stanford, research internships)"
+          ],
+          "resources": [
+            {
+              "title": "US CS Admissions Guide",
+              "platform": "AcceptedX",
+              "type": "Guide",
+              "link": "https://acceptedx.org/resources/us-cs-admissions"
+            },
+            {
+              "title": "CS Summer Programs",
+              "platform": "AcceptedX",
+              "type": "Directory",
+              "link": "https://acceptedx.org/resources/cs-summer-programs"
+            }
+          ]
+        },
+        "UK": {
+          "overview": "UK programs prioritize A-levels, STEP/MAT, and strong personal statements. Focus on mathematics and computing.",
+          "checklist": [
+            "Review entry requirements for Cambridge, Oxford, Imperial CS programs",
+            "Start STEP or MAT preparation (Year 12)",
+            "Outline UCAS personal statement connecting math/computing to CS",
+            "Research UK CS program structures"
+          ],
+          "resources": [
+            {
+              "title": "Cambridge MAT Preparation",
+              "platform": "University of Cambridge",
+              "type": "Official Resource",
+              "link": "https://www.maths.ox.ac.uk/study-here/undergraduate-study/mathematics-admissions-test"
+            },
+            {
+              "title": "UCAS CS Personal Statement Guide",
+              "platform": "UCAS",
+              "type": "Article",
+              "link": "https://www.ucas.com/personal-statement-examples/computer-science"
+            }
+          ]
+        },
+        "Asia": {
+          "overview": "Bridge national curricula with global standards. Emphasize programming and problem-solving.",
+          "checklist": [
+            "Review programming and algorithms in national exams",
+            "Identify international CS competitions (IOI, ICPC)",
+            "Explore summer programs at top Asian universities",
+            "Document interest in specific CS specializations"
+          ],
+          "resources": [
+            {
+              "title": "IOI Preparation",
+              "platform": "IOI",
+              "type": "Competition Resource",
+              "link": "https://ioinformatics.org/"
+            },
+            {
+              "title": "Competitive Programming",
+              "platform": "Codeforces",
+              "type": "Practice Platform",
+              "link": "https://codeforces.com/"
+            }
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "Which test is important for UK CS admissions?",
+          "opts": ["STEP/MAT", "SAT", "JEE", "AP"],
+          "correct": "STEP/MAT"
+        },
+        {
+          "q": "What do top US CS programs value most?",
+          "opts": [
+            "Strong academics + programming projects + problem-solving",
+            "Only test scores",
+            "Sports achievements",
+            "Unrelated activities"
+          ],
+          "correct": "Strong academics + programming projects + problem-solving"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Build Programming Skills & Projects",
+      "description": "Develop coding skills through projects, competitions, and technical coursework.",
+      "regions": {
+        "Global": {
+          "overview": "Demonstrate CS ability through tangible programming projects. Build, code, and document your work.",
+          "checklist": [
+            "Complete 3-5 substantial programming projects",
+            "Learn multiple programming languages (Python, Java, C++)",
+            "Participate in coding competitions or hackathons",
+            "Create a GitHub portfolio showcasing your code"
+          ],
+          "resources": [
+            {
+              "title": "Python for Beginners",
+              "platform": "Codecademy",
+              "type": "Course",
+              "link": "https://www.codecademy.com/learn/learn-python-3"
+            },
+            {
+              "title": "LeetCode Practice",
+              "platform": "LeetCode",
+              "type": "Practice Platform",
+              "link": "https://leetcode.com/"
+            }
+          ],
+          "projectIdeas": [
+            "Build a web application or mobile app",
+            "Create a machine learning project",
+            "Develop a game or interactive program",
+            "Contribute to open source projects"
+          ]
+        },
+        "US": {
+          "overview": "Link projects to competitions, research, and summer programs.",
+          "checklist": [
+            "Submit project to hackathon or coding competition",
+            "Apply to CS summer programs or research internships",
+            "Create detailed GitHub portfolio",
+            "Write technical documentation for projects"
+          ],
+          "resources": [
+            {
+              "title": "USACO Programming Competition",
+              "platform": "USACO",
+              "type": "Competition",
+              "link": "https://usaco.org/"
+            },
+            {
+              "title": "GitHub Student Pack",
+              "platform": "GitHub",
+              "type": "Resources",
+              "link": "https://education.github.com/pack"
+            }
+          ]
+        },
+        "UK": {
+          "overview": "Integrate projects into EPQ or personal investigations.",
+          "checklist": [
+            "Draft EPQ proposal on CS topic",
+            "Link project to university course modules",
+            "Include project in UCAS personal statement",
+            "Prepare to discuss code in interviews"
+          ]
+        },
+        "Asia": {
+          "overview": "Use competitions to build standout portfolios.",
+          "checklist": [
+            "Participate in IOI, ICPC, or local coding competitions",
+            "Work with university mentor on project",
+            "Document project in English",
+            "Connect to global CS challenges"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What's the best way to demonstrate CS skills?",
+          "opts": [
+            "Build programming projects and showcase them on GitHub",
+            "Only study theory",
+            "Memorize code",
+            "Avoid coding"
+          ],
+          "correct": "Build programming projects and showcase them on GitHub"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Strengthen Academic Foundation",
+      "description": "Excel in mathematics, algorithms, and computer science theory.",
+      "regions": {
+        "Global": {
+          "overview": "Strong math and algorithmic thinking is essential for CS.",
+          "checklist": [
+            "Master discrete mathematics and algorithms",
+            "Complete advanced mathematics (calculus, linear algebra)",
+            "Study data structures and algorithms",
+            "Participate in math/CS competitions"
+          ],
+          "resources": [
+            {
+              "title": "Algorithms Course",
+              "platform": "Coursera",
+              "type": "Course",
+              "link": "https://www.coursera.org/specializations/algorithms"
+            },
+            {
+              "title": "Discrete Mathematics",
+              "platform": "Khan Academy",
+              "type": "Course",
+              "link": "https://www.khanacademy.org/math/discrete-math"
+            }
+          ]
+        },
+        "US": {
+          "overview": "Prioritize AP courses and competitive programming.",
+          "checklist": [
+            "Complete AP Computer Science A and AP Calculus BC",
+            "Take AP Statistics if available",
+            "Participate in USACO or similar competitions",
+            "Achieve strong SAT Math scores"
+          ]
+        },
+        "UK": {
+          "overview": "Excel in A-levels and prepare for STEP/MAT.",
+          "checklist": [
+            "Achieve A* in A-level Mathematics",
+            "Solve past STEP or MAT papers",
+            "Consider Further Mathematics A-level",
+            "Study computing or computer science A-level"
+          ]
+        },
+        "Asia": {
+          "overview": "Integrate with national exams while building international readiness.",
+          "checklist": [
+            "Complete JEE-level mathematics",
+            "Practice competitive programming",
+            "Maintain strong exam performance",
+            "Bridge local curriculum to international standards"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What academic areas are most critical for computer science?",
+          "opts": [
+            "Mathematics, algorithms, and programming",
+            "Only memorization",
+            "Languages",
+            "History"
+          ],
+          "correct": "Mathematics, algorithms, and programming"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Craft Your CS Narrative",
+      "description": "Translate your programming skills and projects into compelling applications.",
+      "regions": {
+        "Global": {
+          "overview": "Connect your CS passion, projects, and achievements into a cohesive story.",
+          "checklist": [
+            "Write 250-word draft personal statement",
+            "Highlight specific programming projects and impact",
+            "Connect coding to solving real-world problems",
+            "Get feedback from mentors or teachers"
+          ]
+        },
+        "US": {
+          "overview": "Focus on Common App essays and activity descriptions.",
+          "checklist": [
+            "Draft Common App essay with CS focus",
+            "Collect strong recommendation letters",
+            "Optimize Activities section to highlight projects",
+            "Write CS school supplements"
+          ]
+        },
+        "UK": {
+          "overview": "Perfect UCAS statement and prepare for interviews.",
+          "checklist": [
+            "Complete UCAS personal statement",
+            "Include technical reading and projects",
+            "Prepare for Oxbridge CS interviews",
+            "Practice explaining algorithms clearly"
+          ]
+        },
+        "Asia": {
+          "overview": "Adapt narrative for multiple university systems.",
+          "checklist": [
+            "Prepare statements for UCAS and Common App",
+            "Gather supporting documents",
+            "Draft reflection on CS career goals",
+            "Link GitHub portfolio in applications"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What should your CS personal statement highlight?",
+          "opts": [
+            "Programming passion, technical projects, and problem-solving",
+            "Only test scores",
+            "Unrelated hobbies",
+            "Generic goals"
+          ],
+          "correct": "Programming passion, technical projects, and problem-solving"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Final Preparation & Interviews",
+      "description": "Polish applications and prepare for technical interviews.",
+      "regions": {
+        "Global": {
+          "overview": "Bring together all your work for confident applications.",
+          "checklist": [
+            "Complete mock technical interviews",
+            "Submit all applications",
+            "Prepare to discuss projects and algorithms",
+            "Celebrate your coding journey"
+          ]
+        },
+        "US": {
+          "overview": "Rehearse for interviews and finalize applications.",
+          "checklist": [
+            "Conduct mock technical interview",
+            "Submit Common App and supplements",
+            "Follow up with recommenders",
+            "Prepare GitHub portfolio presentation"
+          ]
+        },
+        "UK": {
+          "overview": "Prepare for Oxbridge interviews with problem-solving.",
+          "checklist": [
+            "Review STEP/MAT-style interview problems",
+            "Practice coding problems aloud",
+            "Simulate technical interviews",
+            "Finalize UCAS submission"
+          ]
+        },
+        "Asia": {
+          "overview": "Coordinate and prepare for interviews.",
+          "checklist": [
+            "Confirm transcripts and portfolios",
+            "Practice technical questions in English",
+            "Prepare to discuss code and algorithms",
+            "Submit final applications"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What's key for CS interviews?",
+          "opts": [
+            "Clear explanation of algorithms and problem-solving approach",
+            "Memorizing code",
+            "Avoiding technical details",
+            "Only discussing grades"
+          ],
+          "correct": "Clear explanation of algorithms and problem-solving approach"
+        }
+      ]
+    }
+  ]
+}

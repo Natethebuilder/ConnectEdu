@@ -1,0 +1,366 @@
+{
+  "discipline": "medicine-healthcare",
+  "availableRegions": ["Global", "US", "UK", "Asia"],
+  "stages": [
+    {
+      "id": 1,
+      "title": "Define Your Medicine & Healthcare Path",
+      "description": "Clarify your interests in medicine, nursing, public health, or biomedical research, and identify target programs.",
+      "regions": {
+        "Global": {
+          "overview": "Top medicine and healthcare programs value strong science foundations, research experience, and genuine commitment to helping others.",
+          "checklist": [
+            "Research 5-7 top programs (Harvard, Oxford, Cambridge, Johns Hopkins, NUS)",
+            "Identify your path (pre-med, nursing, public health, biomedical sciences)",
+            "Assess your biology, chemistry, and math preparation",
+            "Create a 3-year roadmap connecting academics, research, and applications"
+          ],
+          "resources": [
+            {
+              "title": "Medicine & Healthcare Specializations",
+              "platform": "AcceptedX",
+              "type": "Article",
+              "link": "https://acceptedx.org/resources/medicine-specializations"
+            }
+          ]
+        },
+        "US": {
+          "overview": "US pre-med programs emphasize strong academics, MCAT preparation, and clinical/research experience.",
+          "checklist": [
+            "Research pre-med programs and medical school requirements",
+            "Note AP Biology, Chemistry, and Physics requirements",
+            "Plan MCAT preparation timeline",
+            "Identify clinical volunteering or shadowing opportunities"
+          ],
+          "resources": [
+            {
+              "title": "US Pre-Med Guide",
+              "platform": "AcceptedX",
+              "type": "Guide",
+              "link": "https://acceptedx.org/resources/us-premed-guide"
+            },
+            {
+              "title": "MCAT Preparation Resources",
+              "platform": "AAMC",
+              "type": "Official Resource",
+              "link": "https://students-residents.aamc.org/preparing-mcat-exam/preparing-mcat-exam"
+            }
+          ]
+        },
+        "UK": {
+          "overview": "UK medicine programs prioritize A-levels, BMAT/UCAT, and strong personal statements.",
+          "checklist": [
+            "Review entry requirements for Oxford, Cambridge, Imperial medicine",
+            "Start BMAT or UCAT preparation (Year 12)",
+            "Outline UCAS personal statement",
+            "Research UK medical school structures"
+          ],
+          "resources": [
+            {
+              "title": "BMAT Preparation",
+              "platform": "Cambridge Assessment",
+              "type": "Official Resource",
+              "link": "https://www.admissionstesting.org/for-test-takers/bmat/"
+            },
+            {
+              "title": "UCAS Medicine Personal Statement",
+              "platform": "UCAS",
+              "type": "Article",
+              "link": "https://www.ucas.com/personal-statement-examples/medicine"
+            }
+          ]
+        },
+        "Asia": {
+          "overview": "Bridge national curricula with global standards while developing research mindset.",
+          "checklist": [
+            "Review biology and chemistry in national exams",
+            "Identify international medicine competitions or programs",
+            "Explore summer programs or research opportunities",
+            "Document interest in specific healthcare fields"
+          ],
+          "resources": [
+            {
+              "title": "International Medicine Programs",
+              "platform": "AcceptedX Asia",
+              "type": "Directory",
+              "link": "https://acceptedx.org/resources/asia-medicine-programs"
+            }
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "Which test is important for UK medicine admissions?",
+          "opts": ["BMAT/UCAT", "SAT", "JEE", "AP"],
+          "correct": "BMAT/UCAT"
+        },
+        {
+          "q": "What do US pre-med programs value most?",
+          "opts": [
+            "Strong academics + research + clinical experience + service",
+            "Only test scores",
+            "Sports achievements",
+            "Unrelated activities"
+          ],
+          "correct": "Strong academics + research + clinical experience + service"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Gain Clinical & Research Experience",
+      "description": "Develop hands-on healthcare experience through volunteering, shadowing, or research.",
+      "regions": {
+        "Global": {
+          "overview": "Demonstrate commitment to healthcare through real experiences with patients, research, or community service.",
+          "checklist": [
+            "Volunteer at a hospital, clinic, or healthcare facility",
+            "Shadow a doctor or healthcare professional",
+            "Participate in biomedical research or lab work",
+            "Document your healthcare experiences and reflections"
+          ],
+          "resources": [
+            {
+              "title": "How to Find Clinical Experience",
+              "platform": "AcceptedX",
+              "type": "Guide",
+              "link": "https://acceptedx.org/resources/clinical-experience"
+            }
+          ],
+          "projectIdeas": [
+            "Volunteer at a local hospital or clinic",
+            "Shadow healthcare professionals",
+            "Participate in public health initiatives",
+            "Conduct biomedical research project"
+          ]
+        },
+        "US": {
+          "overview": "Link experiences to applications and medical school preparation.",
+          "checklist": [
+            "Complete 50+ hours of clinical volunteering",
+            "Shadow multiple healthcare professionals",
+            "Participate in research programs (RSI, SIMR, etc.)",
+            "Document experiences for medical school applications"
+          ],
+          "resources": [
+            {
+              "title": "Pre-Med Volunteering Guide",
+              "platform": "AcceptedX",
+              "type": "Article",
+              "link": "https://acceptedx.org/resources/premed-volunteering"
+            }
+          ]
+        },
+        "UK": {
+          "overview": "Integrate experiences into UCAS statement.",
+          "checklist": [
+            "Gain work experience in healthcare settings",
+            "Shadow doctors or healthcare professionals",
+            "Include experiences in UCAS personal statement",
+            "Prepare to discuss in interviews"
+          ]
+        },
+        "Asia": {
+          "overview": "Use experiences to build portfolios.",
+          "checklist": [
+            "Volunteer at local healthcare facilities",
+            "Work with healthcare mentor",
+            "Document in English",
+            "Connect to global health challenges"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What's the best way to demonstrate commitment to medicine?",
+          "opts": [
+            "Clinical experience, research, and genuine service to others",
+            "Only studying",
+            "Memorizing medical terms",
+            "Avoiding patient contact"
+          ],
+          "correct": "Clinical experience, research, and genuine service to others"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Strengthen Academic Foundation",
+      "description": "Excel in biology, chemistry, physics, and mathematics.",
+      "regions": {
+        "Global": {
+          "overview": "Strong science preparation is essential for medicine and healthcare.",
+          "checklist": [
+            "Master biology, chemistry, and physics fundamentals",
+            "Complete advanced science coursework",
+            "Maintain exceptional grades in sciences",
+            "Participate in science competitions or research"
+          ],
+          "resources": [
+            {
+              "title": "Biology Course",
+              "platform": "Khan Academy",
+              "type": "Course",
+              "link": "https://www.khanacademy.org/science/biology"
+            },
+            {
+              "title": "Chemistry Course",
+              "platform": "Khan Academy",
+              "type": "Course",
+              "link": "https://www.khanacademy.org/science/chemistry"
+            }
+          ]
+        },
+        "US": {
+          "overview": "Prioritize AP courses and MCAT preparation.",
+          "checklist": [
+            "Complete AP Biology, AP Chemistry, and AP Physics",
+            "Take AP Statistics if available",
+            "Begin MCAT content review",
+            "Participate in science competitions"
+          ]
+        },
+        "UK": {
+          "overview": "Excel in A-levels and prepare for BMAT/UCAT.",
+          "checklist": [
+            "Achieve A* in A-level Biology and Chemistry",
+            "Complete A-level Physics or Mathematics",
+            "Solve past BMAT or UCAT papers",
+            "Prepare for Oxbridge interviews"
+          ]
+        },
+        "Asia": {
+          "overview": "Integrate with national exams.",
+          "checklist": [
+            "Complete advanced biology and chemistry",
+            "Study physics fundamentals",
+            "Maintain strong exam performance",
+            "Bridge to international standards"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What academic areas are most critical for medicine?",
+          "opts": [
+            "Biology, chemistry, physics, and mathematics",
+            "Only memorization",
+            "Languages",
+            "History"
+          ],
+          "correct": "Biology, chemistry, physics, and mathematics"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Craft Your Medicine Narrative",
+      "description": "Translate your experiences and achievements into compelling applications.",
+      "regions": {
+        "Global": {
+          "overview": "Connect your medicine passion, experiences, and achievements.",
+          "checklist": [
+            "Write 250-word draft personal statement",
+            "Highlight clinical experiences and research",
+            "Connect to genuine desire to help others",
+            "Get feedback from mentors or healthcare professionals"
+          ]
+        },
+        "US": {
+          "overview": "Focus on Common App essays and medical school preparation.",
+          "checklist": [
+            "Draft Common App essay with medicine focus",
+            "Collect strong recommendation letters",
+            "Optimize Activities section",
+            "Begin medical school application planning"
+          ]
+        },
+        "UK": {
+          "overview": "Perfect UCAS statement and prepare for interviews.",
+          "checklist": [
+            "Complete UCAS personal statement",
+            "Include clinical experiences and reading",
+            "Prepare for Oxbridge medicine interviews",
+            "Practice ethical scenario discussions"
+          ]
+        },
+        "Asia": {
+          "overview": "Adapt for multiple systems.",
+          "checklist": [
+            "Prepare statements for UCAS and Common App",
+            "Gather supporting documents",
+            "Draft reflection on medicine career goals",
+            "Document clinical experiences"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What should your medicine personal statement highlight?",
+          "opts": [
+            "Genuine passion for helping others, clinical experiences, and research",
+            "Only test scores",
+            "Unrelated hobbies",
+            "Generic career goals"
+          ],
+          "correct": "Genuine passion for helping others, clinical experiences, and research"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Final Preparation & Interviews",
+      "description": "Polish applications and prepare for medical interviews.",
+      "regions": {
+        "Global": {
+          "overview": "Bring together all your work for confident applications.",
+          "checklist": [
+            "Complete mock medical interviews",
+            "Submit all applications",
+            "Prepare to discuss clinical experiences and ethics",
+            "Celebrate your healthcare journey"
+          ]
+        },
+        "US": {
+          "overview": "Rehearse for interviews and finalize applications.",
+          "checklist": [
+            "Conduct mock interview with medical focus",
+            "Submit Common App and supplements",
+            "Follow up with recommenders",
+            "Continue MCAT preparation"
+          ]
+        },
+        "UK": {
+          "overview": "Prepare for Oxbridge medicine interviews.",
+          "checklist": [
+            "Review BMAT/UCAT interview scenarios",
+            "Practice ethical problem-solving",
+            "Simulate medicine interviews",
+            "Finalize UCAS submission"
+          ]
+        },
+        "Asia": {
+          "overview": "Coordinate and prepare for interviews.",
+          "checklist": [
+            "Confirm transcripts and portfolios",
+            "Practice interview questions in English",
+            "Prepare to discuss clinical experiences",
+            "Submit final applications"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What's key for medicine interviews?",
+          "opts": [
+            "Clear explanation of experiences, empathy, and ethical reasoning",
+            "Memorizing answers",
+            "Avoiding patient stories",
+            "Only discussing grades"
+          ],
+          "correct": "Clear explanation of experiences, empathy, and ethical reasoning"
+        }
+      ]
+    }
+  ]
+}

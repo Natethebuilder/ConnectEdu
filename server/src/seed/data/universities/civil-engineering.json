@@ -1,0 +1,235 @@
+[
+    {
+      "name": "Massachusetts Institute of Technology (MIT)",
+      "rank": 1,
+      "city": "Cambridge, MA",
+      "country": "United States",
+      "website": "https://cee.mit.edu/",
+      "photoUrl": "/images/MIT.jpg",
+      "location": { "type": "Point", "coordinates": [-71.092, 42.3601] },
+      "programs": {
+        "civil-engineering": {
+          "entryRequirements": {
+            "SAT/ACT": "1500+ SAT or 34+ ACT",
+            "Essays": "Required",
+            "Recommendations": "2 teachers"
+          },
+          "fees": {
+            "local": "$57,590/year",
+            "international": "$57,590/year"
+          },
+          "duration": "4 years",
+          "degreeType": "BS (Bachelor of Science)"
+        }
+      }
+    },
+    {
+      "name": "ETH Zurich",
+      "rank": 2,
+      "city": "Zurich",
+      "country": "Switzerland",
+      "website": "https://ethz.ch/en/studies/degree-programmes/bachelor/civil-engineering.html",
+      "photoUrl": "/images/ethzurich.jpg",
+      "location": { "type": "Point", "coordinates": [8.5476, 47.3769] },
+      "programs": {
+        "civil-engineering": {
+          "entryRequirements": {
+            "High School": "Excellent grades in Math & Physics",
+            "Language": "German or English"
+          },
+          "fees": {
+            "local": "CHF 730/semester",
+            "international": "CHF 730/semester"
+          },
+          "duration": "3 years",
+          "degreeType": "BSc"
+        }
+      }
+    },
+    {
+      "name": "National University of Singapore (NUS)",
+      "rank": 3,
+      "city": "Singapore",
+      "country": "Singapore",
+      "website": "https://www.eng.nus.edu.sg/cee/",
+      "photoUrl": "/images/nus.jpg",
+      "location": { "type": "Point", "coordinates": [103.7764, 1.2966] },
+      "programs": {
+        "civil-engineering": {
+          "entryRequirements": {
+            "High School": "Excellent grades in Math & Physics",
+            "Language": "English required"
+          },
+          "fees": {
+            "local": "S$8,200/year",
+            "international": "S$31,200/year"
+          },
+          "duration": "4 years",
+          "degreeType": "BEng"
+        }
+      }
+    },
+    {
+      "name": "University of California, Berkeley",
+      "rank": 4,
+      "city": "Berkeley, CA",
+      "country": "United States",
+      "website": "https://ce.berkeley.edu/",
+      "photoUrl": "/images/UCBerkeley.jpg",
+      "location": { "type": "Point", "coordinates": [-122.259, 37.8721] },
+      "programs": {
+        "civil-engineering": {
+          "entryRequirements": {
+            "GPA": "3.8+",
+            "SAT/ACT": "Optional",
+            "Essays": "Required"
+          },
+          "fees": {
+            "local": "$14,226/year",
+            "international": "$47,768/year"
+          },
+          "duration": "4 years",
+          "degreeType": "BS"
+        }
+      }
+    },
+    {
+      "name": "Tsinghua University",
+      "rank": 5,
+      "city": "Beijing",
+      "country": "China",
+      "website": "https://www.tsinghua.edu.cn/en/",
+      "photoUrl": "/images/tsinghua.jpg",
+      "location": { "type": "Point", "coordinates": [116.3269, 40.0025] },
+      "programs": {
+        "civil-engineering": {
+          "entryRequirements": {
+            "High School": "Excellent grades in Math & Physics",
+            "Language": "Chinese (some courses in English)"
+          },
+          "fees": {
+            "local": "¥26,000/year",
+            "international": "¥30,000/year"
+          },
+          "duration": "4 years",
+          "degreeType": "BEng"
+        }
+      }
+    },
+    {
+      "name": "Delft University of Technology (TU Delft)",
+      "rank": 6,
+      "city": "Delft",
+      "country": "Netherlands",
+      "website": "https://www.tudelft.nl/en/ceg/",
+      "photoUrl": "/images/delft.jpg",
+      "location": { "type": "Point", "coordinates": [4.373, 52.002] },
+      "programs": {
+        "civil-engineering": {
+          "entryRequirements": {
+            "High School": "Strong grades in Mathematics and Sciences",
+            "Language": "English required (IELTS/TOEFL)"
+          },
+          "fees": {
+            "local": "€2,530/year",
+            "international": "€13,500/year"
+          },
+          "duration": "3 years",
+          "degreeType": "BSc"
+        }
+      }
+    },
+    {
+      "name": "Stanford University",
+      "rank": 7,
+      "city": "Stanford, CA",
+      "country": "United States",
+      "website": "https://cee.stanford.edu/",
+      "photoUrl": "/images/stanford.jpg",
+      "location": { "type": "Point", "coordinates": [-122.1697, 37.4275] },
+      "programs": {
+        "civil-engineering": {
+          "entryRequirements": {
+            "GPA": "3.9+",
+            "SAT/ACT": "1500+ SAT or 34+ ACT",
+            "Essays": "Required"
+          },
+          "fees": {
+            "local": "$56,169/year",
+            "international": "$56,169/year"
+          },
+          "duration": "4 years",
+          "degreeType": "BS"
+        }
+      }
+    },
+    {
+      "name": "University of Cambridge",
+      "rank": 8,
+      "city": "Cambridge",
+      "country": "United Kingdom",
+      "website": "https://www.eng.cam.ac.uk/",
+      "photoUrl": "/images/cambridge.jpg",
+      "location": { "type": "Point", "coordinates": [0.1167, 52.2053] },
+      "programs": {
+        "civil-engineering": {
+          "entryRequirements": {
+            "A-levels": "A*A*A including Mathematics and Physics",
+            "IB": "40–42 with 776 at HL"
+          },
+          "fees": {
+            "local": "£9,250/year",
+            "international": "£36,000/year"
+          },
+          "duration": "4 years",
+          "degreeType": "MEng"
+        }
+      }
+    },
+    {
+      "name": "Nanyang Technological University (NTU)",
+      "rank": 9,
+      "city": "Singapore",
+      "country": "Singapore",
+      "website": "https://www.ntu.edu.sg/cce",
+      "photoUrl": "/images/nyanyang.jpg",
+      "location": { "type": "Point", "coordinates": [103.6800, 1.3483] },
+      "programs": {
+        "civil-engineering": {
+          "entryRequirements": {
+            "High School": "Excellent grades in Math & Physics",
+            "Language": "English required"
+          },
+          "fees": {
+            "local": "S$8,200/year",
+            "international": "S$31,200/year"
+          },
+          "duration": "4 years",
+          "degreeType": "BEng"
+        }
+      }
+    },
+    {
+      "name": "EPFL (École Polytechnique Fédérale de Lausanne)",
+      "rank": 10,
+      "city": "Lausanne",
+      "country": "Switzerland",
+      "website": "https://www.epfl.ch/schools/enac/",
+      "photoUrl": "/images/epfl.jpg",
+      "location": { "type": "Point", "coordinates": [6.5683, 46.5191] },
+      "programs": {
+        "civil-engineering": {
+          "entryRequirements": {
+            "High School": "Excellent grades in Math & Physics",
+            "Language": "French or English"
+          },
+          "fees": {
+            "local": "CHF 1,266/year",
+            "international": "CHF 1,266/year"
+          },
+          "duration": "3 years",
+          "degreeType": "BSc"
+        }
+      }
+    }
+  ]

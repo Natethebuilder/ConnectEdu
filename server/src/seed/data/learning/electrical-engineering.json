@@ -1,0 +1,373 @@
+{
+  "discipline": "electrical-engineering",
+  "availableRegions": ["Global", "US", "UK", "Asia"],
+  "stages": [
+    {
+      "id": 1,
+      "title": "Define Your Electrical Engineering Vision",
+      "description": "Clarify your interests in electronics, power systems, or signal processing, and identify target universities.",
+      "regions": {
+        "Global": {
+          "overview": "Top electrical engineering programs value strong math/physics, programming skills, and clear specialization interests. Identify your focus area early.",
+          "checklist": [
+            "Research 5-7 top EE programs (MIT, Stanford, UC Berkeley, Cambridge, ETH Zurich)",
+            "Identify specialization (electronics, power systems, signal processing, embedded systems, communications)",
+            "Assess your programming and circuit design experience",
+            "Create a 3-year roadmap connecting academics, projects, and applications"
+          ],
+          "resources": [
+            {
+              "title": "Electrical Engineering Specializations",
+              "platform": "AcceptedX",
+              "type": "Article",
+              "link": "https://acceptedx.org/resources/electrical-engineering-specializations"
+            },
+            {
+              "title": "EE Program Overview - MIT",
+              "platform": "YouTube",
+              "type": "Video",
+              "link": "https://www.youtube.com/watch?v=electrical-engineering-mit"
+            }
+          ]
+        },
+        "US": {
+          "overview": "US programs emphasize AP/IB rigor, programming skills, and research. Combine strong academics with practical electronics work.",
+          "checklist": [
+            "Complete AP Physics C (E&M) and AP Calculus BC",
+            "Learn programming (Python, C/C++, or MATLAB)",
+            "Research reach, target, and safety schools for EE",
+            "Identify summer programs (MIT, Stanford, research internships)"
+          ],
+          "resources": [
+            {
+              "title": "US Electrical Engineering Admissions",
+              "platform": "AcceptedX",
+              "type": "Guide",
+              "link": "https://acceptedx.org/resources/us-ee-admissions"
+            },
+            {
+              "title": "Python for Engineers",
+              "platform": "Coursera",
+              "type": "Course",
+              "link": "https://www.coursera.org/courses?query=python%20engineering"
+            }
+          ]
+        },
+        "UK": {
+          "overview": "UK programs prioritize A-levels, STEP/ENGAA, and strong personal statements. Focus on mathematics and physics.",
+          "checklist": [
+            "Review entry requirements for Cambridge, Imperial, Oxford EE programs",
+            "Start STEP or ENGAA preparation",
+            "Outline UCAS personal statement connecting math/physics to electronics",
+            "Research UK engineering accreditation (IET)"
+          ],
+          "resources": [
+            {
+              "title": "Cambridge ENGAA Guide",
+              "platform": "University of Cambridge",
+              "type": "Official Resource",
+              "link": "https://www.undergraduate.study.cam.ac.uk/applying/entrance-assessments/engaa"
+            }
+          ]
+        },
+        "Asia": {
+          "overview": "Bridge national curricula with global standards. Emphasize problem-solving and practical electronics skills.",
+          "checklist": [
+            "Review electromagnetism topics in JEE/IB HL Physics",
+            "Learn basic circuit design and simulation",
+            "Explore summer programs at top Asian universities",
+            "Document interest in specific EE specializations"
+          ],
+          "resources": [
+            {
+              "title": "JEE Electromagnetism",
+              "platform": "Byju's",
+              "type": "Practice Sets",
+              "link": "https://byjus.com/jee/electromagnetism/"
+            },
+            {
+              "title": "Circuit Design Basics",
+              "platform": "Khan Academy",
+              "type": "Course",
+              "link": "https://www.khanacademy.org/science/electrical-engineering"
+            }
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What skills are most important for electrical engineering?",
+          "opts": [
+            "Math, physics, programming, and circuit design",
+            "Only memorization",
+            "Artistic creativity",
+            "Languages"
+          ],
+          "correct": "Math, physics, programming, and circuit design"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Build Electronics Projects & Skills",
+      "description": "Develop hands-on skills through electronics projects, programming, and circuit design.",
+      "regions": {
+        "Global": {
+          "overview": "Demonstrate EE ability through tangible projects. Build circuits, program microcontrollers, and document your work.",
+          "checklist": [
+            "Complete an electronics project (Arduino, Raspberry Pi, or custom circuit)",
+            "Learn circuit simulation software (LTspice, Multisim)",
+            "Program a microcontroller (Arduino, ESP32, or similar)",
+            "Document project with schematics, code, and demonstrations"
+          ],
+          "resources": [
+            {
+              "title": "Arduino Getting Started",
+              "platform": "Arduino",
+              "type": "Tutorial",
+              "link": "https://www.arduino.cc/en/Guide"
+            },
+            {
+              "title": "LTspice Circuit Simulator",
+              "platform": "Analog Devices",
+              "type": "Software",
+              "link": "https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html"
+            }
+          ],
+          "projectIdeas": [
+            "Build a home automation system",
+            "Design and build a power supply",
+            "Create a digital signal processing project",
+            "Develop an IoT device"
+          ]
+        },
+        "US": {
+          "overview": "Link projects to competitions, research, and summer programs.",
+          "checklist": [
+            "Submit project to science fair or engineering competition",
+            "Apply to EE summer programs or research internships",
+            "Create GitHub portfolio showcasing code and projects",
+            "Write technical documentation"
+          ],
+          "resources": [
+            {
+              "title": "IEEE Student Competitions",
+              "platform": "IEEE",
+              "type": "Competition",
+              "link": "https://www.ieee.org/membership/students/competitions/index.html"
+            }
+          ]
+        },
+        "UK": {
+          "overview": "Integrate projects into EPQ or personal investigations.",
+          "checklist": [
+            "Draft EPQ proposal on electronics topic",
+            "Link project to university course modules",
+            "Include project in UCAS personal statement",
+            "Prepare to discuss projects in interviews"
+          ]
+        },
+        "Asia": {
+          "overview": "Use competitions and projects to build portfolios.",
+          "checklist": [
+            "Participate in local electronics competitions",
+            "Work with university mentor on project",
+            "Document project in English",
+            "Connect to global engineering challenges"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What's the best way to demonstrate electrical engineering skills?",
+          "opts": [
+            "Build working electronics projects and document them",
+            "Only study theory",
+            "Memorize circuit diagrams",
+            "Avoid hands-on work"
+          ],
+          "correct": "Build working electronics projects and document them"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Strengthen Academic Foundation",
+      "description": "Excel in mathematics, physics, and programming to demonstrate readiness.",
+      "regions": {
+        "Global": {
+          "overview": "Strong math, physics, and programming preparation is essential.",
+          "checklist": [
+            "Master calculus-based electromagnetism",
+            "Complete advanced mathematics (calculus, linear algebra, differential equations)",
+            "Learn programming fundamentals (Python, C/C++, or MATLAB)",
+            "Maintain strong grades in STEM subjects"
+          ],
+          "resources": [
+            {
+              "title": "Electromagnetism Course",
+              "platform": "Khan Academy",
+              "type": "Course",
+              "link": "https://www.khanacademy.org/science/physics/electricity-magnetism"
+            },
+            {
+              "title": "Python Programming",
+              "platform": "Codecademy",
+              "type": "Course",
+              "link": "https://www.codecademy.com/learn/learn-python-3"
+            }
+          ]
+        },
+        "US": {
+          "overview": "Prioritize AP courses and programming skills.",
+          "checklist": [
+            "Complete AP Physics C: E&M and AP Calculus BC",
+            "Take AP Computer Science A or equivalent",
+            "Achieve strong SAT Math or ACT scores",
+            "Participate in math/physics competitions"
+          ]
+        },
+        "UK": {
+          "overview": "Excel in A-levels and prepare for assessments.",
+          "checklist": [
+            "Achieve A* in A-level Mathematics and Physics",
+            "Solve past STEP or ENGAA papers",
+            "Consider Further Mathematics A-level",
+            "Engage with Isaac Physics challenges"
+          ]
+        },
+        "Asia": {
+          "overview": "Integrate with national exams while building international readiness.",
+          "checklist": [
+            "Complete JEE-level electromagnetism and mathematics",
+            "Learn programming basics",
+            "Maintain strong performance in national exams",
+            "Bridge local curriculum to international standards"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What academic areas are most critical for electrical engineering?",
+          "opts": [
+            "Mathematics, physics, and programming",
+            "Only memorization",
+            "Languages",
+            "History"
+          ],
+          "correct": "Mathematics, physics, and programming"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Craft Your Engineering Narrative",
+      "description": "Translate your technical skills and projects into compelling applications.",
+      "regions": {
+        "Global": {
+          "overview": "Connect your EE passion, projects, and achievements into a cohesive story.",
+          "checklist": [
+            "Write 250-word draft personal statement",
+            "Highlight specific electronics projects and impact",
+            "Connect engineering to solving real-world problems",
+            "Get feedback from mentors"
+          ]
+        },
+        "US": {
+          "overview": "Focus on Common App essays and activity descriptions.",
+          "checklist": [
+            "Draft Common App essay with EE focus",
+            "Collect strong recommendation letters",
+            "Optimize Activities section",
+            "Write engineering school supplements"
+          ]
+        },
+        "UK": {
+          "overview": "Perfect your UCAS statement and prepare for interviews.",
+          "checklist": [
+            "Complete UCAS personal statement",
+            "Include technical reading and projects",
+            "Prepare for Oxbridge interviews",
+            "Practice explaining projects clearly"
+          ]
+        },
+        "Asia": {
+          "overview": "Adapt narrative for multiple university systems.",
+          "checklist": [
+            "Prepare statements for UCAS and Common App",
+            "Gather supporting documents",
+            "Draft reflection on EE career goals",
+            "Translate project documentation"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What should your EE personal statement highlight?",
+          "opts": [
+            "Technical passion, electronics projects, and problem-solving",
+            "Only test scores",
+            "Unrelated hobbies",
+            "Generic goals"
+          ],
+          "correct": "Technical passion, electronics projects, and problem-solving"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Final Preparation & Interviews",
+      "description": "Polish applications and prepare for interviews.",
+      "regions": {
+        "Global": {
+          "overview": "Bring together all your work for confident applications.",
+          "checklist": [
+            "Complete mock interviews with technical focus",
+            "Submit all applications",
+            "Prepare to discuss projects in detail",
+            "Celebrate your engineering journey"
+          ]
+        },
+        "US": {
+          "overview": "Rehearse for interviews and finalize applications.",
+          "checklist": [
+            "Conduct mock interview",
+            "Submit Common App and supplements",
+            "Follow up with recommenders",
+            "Prepare portfolio if required"
+          ]
+        },
+        "UK": {
+          "overview": "Prepare for Oxbridge interviews.",
+          "checklist": [
+            "Review STEP/ENGAA-style problems",
+            "Practice explaining concepts clearly",
+            "Simulate interviews",
+            "Finalize UCAS submission"
+          ]
+        },
+        "Asia": {
+          "overview": "Coordinate and prepare for interviews.",
+          "checklist": [
+            "Confirm transcripts and portfolios",
+            "Practice interview questions in English",
+            "Prepare to discuss projects",
+            "Submit final applications"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What's key for EE interviews?",
+          "opts": [
+            "Clear explanation of projects and technical concepts",
+            "Memorizing answers",
+            "Avoiding technical details",
+            "Only discussing grades"
+          ],
+          "correct": "Clear explanation of projects and technical concepts"
+        }
+      ]
+    }
+  ]
+}

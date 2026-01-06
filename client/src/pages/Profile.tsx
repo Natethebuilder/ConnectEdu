@@ -1,9 +1,11 @@
+// client/src/pages/Profile.tsx
 import { useState } from "react";
 import { useSupabaseAuth } from "../store/supabaseAuth";
 import { supabase } from "../lib/supabase";
 import { useNavigate, useLocation, Navigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Loader2, RefreshCw, CheckCircle, XCircle } from "lucide-react";
+import { isValidEmail } from "../utils/validate";
 
 const getDicebearUrl = (seed: string) =>
   `https://api.dicebear.com/7.x/avataaars/svg?seed=${seed}`;
@@ -11,10 +13,8 @@ const getDicebearUrl = (seed: string) =>
 export default function Profile() {
   const { user, setUser } = useSupabaseAuth();
 
-  // 🚨 Prevent mentors from accessing wrong profile page
-  if (user?.role === "mentor") {
-    return <Navigate to="/mentor-onboarding" replace />;
-  }
+  // mentors should use mentor settings instead
+  if (user?.role === "mentor") return <Navigate to="/mentor-settings" replace />;
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -24,18 +24,15 @@ export default function Profile() {
   const [avatarSeed, setAvatarSeed] = useState(
     user?.avatarSeed || user?.id || "default"
   );
-  const [saving, setSaving] = useState(false);
-  const [msg, setMsg] = useState<{
-    type: "success" | "error";
-    text: string;
-  } | null>(null);
+  const [newEmail, setNewEmail] = useState("");
 
-  const [newPassword, setNewPassword] = useState("");
+  const [saving, setSaving] = useState(false);
   const [pwSaving, setPwSaving] = useState(false);
-  const [pwMsg, setPwMsg] = useState<{
-    type: "success" | "error";
-    text: string;
-  } | null>(null);
+  const [emailSaving, setEmailSaving] = useState(false);
+
+  const [msg, setMsg] = useState<{ type: "success" | "error"; text: string } | null>(null);
+  const [pwMsg, setPwMsg] = useState<{ type: "success" | "error"; text: string } | null>(null);
+  const [emailMsg, setEmailMsg] = useState<{ type: "success" | "error"; text: string } | null>(null);
 
   if (!user) return <div className="p-6">Please log in.</div>;
 
@@ -53,6 +50,7 @@ export default function Profile() {
       setMsg({ type: "error", text: error.message });
     } else {
       setMsg({ type: "success", text: "Profile updated!" });
+
       if (data.user) {
         setUser({
           id: data.user.id,
@@ -65,12 +63,38 @@ export default function Profile() {
     }
   }
 
-  async function changePassword() {
+  async function changeEmail() {
+    if (!newEmail || newEmail === user.email) return;
+
+    if (!isValidEmail(newEmail)) {
+      setEmailMsg({ type: "error", text: "Please enter a valid email." });
+      return;
+    }
+
+    setEmailSaving(true);
+    setEmailMsg(null);
+
+    const { error } = await supabase.auth.updateUser({ email: newEmail });
+
+    setEmailSaving(false);
+
+    if (error) {
+      setEmailMsg({ type: "error", text: error.message });
+    } else {
+      setEmailMsg({
+        type: "success",
+        text: "Verification link sent to your new email.",
+      });
+      setNewEmail("");
+    }
+  }
+
+  async function sendPasswordReset() {
     setPwSaving(true);
     setPwMsg(null);
 
-    const { error } = await supabase.auth.updateUser({
-      password: newPassword,
+    const { error } = await supabase.auth.resetPasswordForEmail(user.email!, {
+      redirectTo: `${window.location.origin}/auth/v1/callback`,
     });
 
     setPwSaving(false);
@@ -78,8 +102,10 @@ export default function Profile() {
     if (error) {
       setPwMsg({ type: "error", text: error.message });
     } else {
-      setPwMsg({ type: "success", text: "Password updated successfully!" });
-      setNewPassword("");
+      setPwMsg({
+        type: "success",
+        text: "Password reset email sent! Check your inbox.",
+      });
     }
   }
 
@@ -88,7 +114,7 @@ export default function Profile() {
   );
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50 overflow-hidden">
+    <div className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50">
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -97,7 +123,7 @@ export default function Profile() {
       >
         <button
           onClick={() => navigate(backTo)}
-          className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-lg"
+          className="absolute top-4 right-4 text-lg text-gray-600"
         >
           ✕
         </button>
@@ -106,7 +132,6 @@ export default function Profile() {
           Profile
         </h1>
 
-        {/* Feedback */}
         {msg && (
           <div
             className={`flex items-center gap-2 p-3 rounded-lg text-sm ${
@@ -115,11 +140,7 @@ export default function Profile() {
                 : "bg-red-100 text-red-700"
             }`}
           >
-            {msg.type === "success" ? (
-              <CheckCircle className="w-4 h-4" />
-            ) : (
-              <XCircle className="w-4 h-4" />
-            )}
+            {msg.type === "success" ? <CheckCircle /> : <XCircle />}
             {msg.text}
           </div>
         )}
@@ -127,36 +148,40 @@ export default function Profile() {
         <div className="text-center space-y-4">
           <img
             src={getDicebearUrl(avatarSeed)}
-            alt="avatar"
-            className="w-28 h-28 mx-auto rounded-full border-4 border-blue-200 shadow-md"
+            className="w-28 h-28 rounded-full mx-auto border-4 border-blue-200 shadow-md"
           />
-          <div className="grid grid-cols-5 gap-2 justify-center">
+
+          <div className="grid grid-cols-5 gap-2">
             {avatarOptions.map((url, i) => (
               <button
                 key={i}
                 onClick={() => setAvatarSeed(`${avatarSeed}-${i}`)}
-                className={`rounded-full border-2 p-1 transition ${
+                className={`rounded-full border-2 p-1 ${
                   getDicebearUrl(avatarSeed) === url
                     ? "border-blue-600 scale-110"
                     : "border-transparent hover:border-gray-300"
                 }`}
               >
-                <img src={url} alt="avatar option" className="w-12 h-12 rounded-full" />
+                <img src={url} className="w-12 h-12 rounded-full" />
               </button>
             ))}
           </div>
+
           <button
-            onClick={() => setAvatarSeed(Math.random().toString(36).substring(7))}
-            className="flex items-center gap-2 text-sm text-gray-600 hover:text-blue-600 transition"
+            onClick={() =>
+              setAvatarSeed(Math.random().toString(36).substring(7))
+            }
+            className="text-sm text-gray-600 hover:text-blue-600 flex items-center gap-2"
           >
-            <RefreshCw className="w-4 h-4" /> Shuffle Avatars
+            <RefreshCw className="w-4 h-4" /> Shuffle
           </button>
         </div>
 
+        {/* Name */}
         <div>
-          <label className="block mb-1 text-sm font-medium">Name</label>
+          <label className="block mb-1 text-sm">Name</label>
           <input
-            className="w-full border px-3 py-2 rounded-lg focus:ring-2 focus:ring-blue-500"
+            className="w-full border px-3 py-2 rounded-lg"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
@@ -167,14 +192,51 @@ export default function Profile() {
         <button
           onClick={saveProfile}
           disabled={saving}
-          className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 rounded-lg shadow-lg hover:opacity-90 transition"
+          className="w-full py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg disabled:opacity-60 disabled:cursor-not-allowed"
         >
-          {saving ? <Loader2 className="w-5 h-5 animate-spin" /> : "Save profile"}
+          {saving ? <Loader2 className="animate-spin" /> : "Save profile"}
         </button>
 
-        <hr className="my-6" />
+        <hr />
 
-        <div className="space-y-4">
+        {/* Email */}
+        <div>
+          <h2 className="text-lg font-semibold">Change Email</h2>
+
+          {emailMsg && (
+            <div
+              className={`flex items-center gap-2 p-3 rounded-lg text-sm ${
+                emailMsg.type === "success"
+                  ? "bg-green-100 text-green-700"
+                  : "bg-red-100 text-red-700"
+              }`}
+            >
+              {emailMsg.type === "success" ? <CheckCircle /> : <XCircle />}
+              {emailMsg.text}
+            </div>
+          )}
+
+          <input
+            type="email"
+            className="w-full border px-3 py-2 rounded-lg mt-2"
+            placeholder="New email"
+            value={newEmail}
+            onChange={(e) => setNewEmail(e.target.value)}
+          />
+
+          <button
+            onClick={changeEmail}
+            disabled={emailSaving}
+            className="w-full mt-2 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg disabled:opacity-60 disabled:cursor-not-allowed"
+          >
+            {emailSaving ? <Loader2 className="animate-spin" /> : "Update email"}
+          </button>
+        </div>
+
+        <hr />
+
+        {/* Password */}
+        <div>
           <h2 className="text-lg font-semibold">Change Password</h2>
 
           {pwMsg && (
@@ -185,29 +247,26 @@ export default function Profile() {
                   : "bg-red-100 text-red-700"
               }`}
             >
-              {pwMsg.type === "success" ? (
-                <CheckCircle className="w-4 h-4" />
-              ) : (
-                <XCircle className="w-4 h-4" />
-              )}
+              {pwMsg.type === "success" ? <CheckCircle /> : <XCircle />}
               {pwMsg.text}
             </div>
           )}
 
-          <input
-            type="password"
-            placeholder="New password"
-            className="w-full border px-3 py-2 rounded-lg focus:ring-2 focus:ring-purple-500"
-            value={newPassword}
-            onChange={(e) => setNewPassword(e.target.value)}
-          />
+          <p className="text-xs text-gray-500 mt-2">
+            We’ll send a secure link to your email where you can choose a new
+            password.
+          </p>
 
           <button
-            onClick={changePassword}
+            onClick={sendPasswordReset}
             disabled={pwSaving}
-            className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white py-2 rounded-lg shadow-md hover:opacity-90 transition"
+            className="w-full mt-3 py-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg disabled:opacity-60 disabled:cursor-not-allowed"
           >
-            {pwSaving ? <Loader2 className="w-5 h-5 animate-spin" /> : "Update password"}
+            {pwSaving ? (
+              <Loader2 className="animate-spin inline-block w-4 h-4" />
+            ) : (
+              "Send reset email"
+            )}
           </button>
         </div>
       </motion.div>

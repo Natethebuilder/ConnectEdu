@@ -1,0 +1,306 @@
+{
+  "discipline": "economics-business",
+  "availableRegions": ["Global", "US", "UK", "Asia"],
+  "stages": [
+    {
+      "id": 1,
+      "title": "Define Your Economics & Business Vision",
+      "description": "Clarify your interests in economics, finance, management, or entrepreneurship, and identify target universities.",
+      "regions": {
+        "Global": {
+          "overview": "Top economics and business programs value strong analytical skills, quantitative ability, and clear career interests.",
+          "checklist": [
+            "Research 5-7 top programs (Harvard, Wharton, LSE, Cambridge, NUS)",
+            "Identify your interest (economics, finance, management, entrepreneurship)",
+            "Assess your math and analytical preparation",
+            "Create a 3-year roadmap connecting academics, experiences, and applications"
+          ],
+          "resources": [
+            {
+              "title": "Economics & Business Specializations",
+              "platform": "AcceptedX",
+              "type": "Article",
+              "link": "https://acceptedx.org/resources/economics-business-specializations"
+            }
+          ]
+        },
+        "US": {
+          "overview": "US programs emphasize AP/IB rigor, leadership, and quantitative skills.",
+          "checklist": [
+            "Complete AP Economics and AP Calculus",
+            "Research reach, target, and safety schools",
+            "Identify business competitions or programs",
+            "Plan Common App essay theme"
+          ]
+        },
+        "UK": {
+          "overview": "UK programs prioritize A-levels, TSA/ECAA, and strong personal statements.",
+          "checklist": [
+            "Review entry requirements for LSE, Cambridge, Oxford",
+            "Start TSA or ECAA preparation",
+            "Outline UCAS personal statement",
+            "Research UK program structures"
+          ]
+        },
+        "Asia": {
+          "overview": "Bridge national curricula with global standards.",
+          "checklist": [
+            "Review economics and math in national exams",
+            "Identify business competitions",
+            "Explore summer programs",
+            "Document interest in specific fields"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What do top economics programs value most?",
+          "opts": [
+            "Strong math, analytical thinking, and quantitative skills",
+            "Only memorization",
+            "Artistic creativity",
+            "Languages only"
+          ],
+          "correct": "Strong math, analytical thinking, and quantitative skills"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Build Business Skills & Experiences",
+      "description": "Develop leadership, analytical, and business skills through projects and experiences.",
+      "regions": {
+        "Global": {
+          "overview": "Demonstrate business acumen through real experiences, projects, or competitions.",
+          "checklist": [
+            "Participate in business competitions (DECA, FBLA, or similar)",
+            "Start a small business, club, or initiative",
+            "Complete an economics research project or analysis",
+            "Document your leadership and business experiences"
+          ],
+          "resources": [
+            {
+              "title": "Economics Research Project Ideas",
+              "platform": "AcceptedX",
+              "type": "Guide",
+              "link": "https://acceptedx.org/resources/economics-projects"
+            }
+          ],
+          "projectIdeas": [
+            "Analyze a local economic issue and propose solutions",
+            "Start a small business or social enterprise",
+            "Create a financial model or business plan",
+            "Participate in a stock market simulation"
+          ]
+        },
+        "US": {
+          "overview": "Link experiences to competitions and summer programs.",
+          "checklist": [
+            "Join DECA, FBLA, or business clubs",
+            "Apply to business summer programs",
+            "Create portfolio of business experiences",
+            "Document leadership roles"
+          ]
+        },
+        "UK": {
+          "overview": "Integrate experiences into EPQ.",
+          "checklist": [
+            "Draft EPQ proposal on economics/business topic",
+            "Link experiences to university modules",
+            "Include in UCAS statement",
+            "Prepare for interviews"
+          ]
+        },
+        "Asia": {
+          "overview": "Use competitions to build portfolios.",
+          "checklist": [
+            "Participate in business competitions",
+            "Work with mentor on business project",
+            "Document in English",
+            "Connect to global business challenges"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What's the best way to demonstrate business skills?",
+          "opts": [
+            "Real business experiences, competitions, and leadership",
+            "Only studying theory",
+            "Memorizing case studies",
+            "Avoiding practical experience"
+          ],
+          "correct": "Real business experiences, competitions, and leadership"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Strengthen Academic Foundation",
+      "description": "Excel in mathematics, economics, and analytical coursework.",
+      "regions": {
+        "Global": {
+          "overview": "Strong math and economics preparation is essential.",
+          "checklist": [
+            "Master calculus and statistics",
+            "Complete economics coursework",
+            "Study current economic events and trends",
+            "Maintain strong grades in math and social sciences"
+          ],
+          "resources": [
+            {
+              "title": "Economics Course",
+              "platform": "Khan Academy",
+              "type": "Course",
+              "link": "https://www.khanacademy.org/economics-finance-domain"
+            }
+          ]
+        },
+        "US": {
+          "overview": "Prioritize AP courses.",
+          "checklist": [
+            "Complete AP Microeconomics and Macroeconomics",
+            "Take AP Calculus and AP Statistics",
+            "Achieve strong SAT Math scores",
+            "Read economics publications"
+          ]
+        },
+        "UK": {
+          "overview": "Excel in A-levels.",
+          "checklist": [
+            "Achieve A* in A-level Mathematics",
+            "Complete A-level Economics",
+            "Prepare for TSA/ECAA",
+            "Read economics literature"
+          ]
+        },
+        "Asia": {
+          "overview": "Integrate with national exams.",
+          "checklist": [
+            "Complete advanced math and economics",
+            "Study business fundamentals",
+            "Maintain strong exam performance",
+            "Bridge to international standards"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What academic areas are most critical for economics?",
+          "opts": [
+            "Mathematics, statistics, and analytical thinking",
+            "Only memorization",
+            "Languages",
+            "History only"
+          ],
+          "correct": "Mathematics, statistics, and analytical thinking"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Craft Your Business Narrative",
+      "description": "Translate your experiences and achievements into compelling applications.",
+      "regions": {
+        "Global": {
+          "overview": "Connect your business passion and achievements.",
+          "checklist": [
+            "Write 250-word draft personal statement",
+            "Highlight business experiences and impact",
+            "Connect to solving economic problems",
+            "Get mentor feedback"
+          ]
+        },
+        "US": {
+          "overview": "Focus on Common App essays.",
+          "checklist": [
+            "Draft Common App essay",
+            "Collect recommendations",
+            "Optimize Activities section",
+            "Write business school supplements"
+          ]
+        },
+        "UK": {
+          "overview": "Perfect UCAS statement.",
+          "checklist": [
+            "Complete UCAS personal statement",
+            "Include economics reading and experiences",
+            "Prepare for interviews"
+          ]
+        },
+        "Asia": {
+          "overview": "Adapt for multiple systems.",
+          "checklist": [
+            "Prepare statements for UCAS and Common App",
+            "Gather documents",
+            "Draft career goals reflection"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What should your economics/business statement highlight?",
+          "opts": [
+            "Analytical passion, business experiences, and problem-solving",
+            "Only test scores",
+            "Unrelated hobbies",
+            "Generic goals"
+          ],
+          "correct": "Analytical passion, business experiences, and problem-solving"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Final Preparation & Interviews",
+      "description": "Polish applications and prepare for interviews.",
+      "regions": {
+        "Global": {
+          "overview": "Bring together all your work.",
+          "checklist": [
+            "Complete mock interviews",
+            "Submit applications",
+            "Prepare to discuss business experiences",
+            "Celebrate journey"
+          ]
+        },
+        "US": {
+          "overview": "Rehearse and finalize.",
+          "checklist": [
+            "Mock interview",
+            "Submit applications",
+            "Follow up recommenders"
+          ]
+        },
+        "UK": {
+          "overview": "Prepare for interviews.",
+          "checklist": [
+            "Review TSA/ECAA problems",
+            "Practice explaining economic concepts",
+            "Finalize UCAS"
+          ]
+        },
+        "Asia": {
+          "overview": "Coordinate and prepare.",
+          "checklist": [
+            "Confirm documents",
+            "Practice interviews in English",
+            "Submit applications"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What's key for economics/business interviews?",
+          "opts": [
+            "Clear explanation of experiences and analytical thinking",
+            "Memorizing answers",
+            "Avoiding technical details",
+            "Only grades"
+          ],
+          "correct": "Clear explanation of experiences and analytical thinking"
+        }
+      ]
+    }
+  ]
+}

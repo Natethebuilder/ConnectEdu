@@ -10,9 +10,18 @@ export default function App() {
   // Run once on app load
   useEffect(() => {
     initAuth();
-  }, []);
+  }, [initAuth]);
 
-  const hideNavbar = ["/login", "/auth"].includes(location.pathname);
+  const PUBLIC_ROUTES = [
+    "/login",
+    "/auth",
+    "/email-confirmed",
+    "/auth/reset",
+    "/auth/v1/callback",
+    "/auth/callback"
+];
+
+const hideNavbar = PUBLIC_ROUTES.includes(location.pathname);
 
   return (
     <div className="h-full flex flex-col">

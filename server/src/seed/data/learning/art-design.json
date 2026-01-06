@@ -1,0 +1,354 @@
+{
+  "discipline": "art-design",
+  "availableRegions": ["Global", "US", "UK", "Asia"],
+  "stages": [
+    {
+      "id": 1,
+      "title": "Define Your Art & Design Vision",
+      "description": "Clarify your interests in fine arts, graphic design, industrial design, or digital arts, and identify target universities.",
+      "regions": {
+        "Global": {
+          "overview": "Top art and design programs value strong portfolios, creative vision, and clear specialization interests.",
+          "checklist": [
+            "Research 5-7 top art/design programs (RISD, Central Saint Martins, Parsons, Art Center, NUS)",
+            "Identify your specialization (fine arts, graphic design, industrial design, digital arts, fashion)",
+            "Assess your portfolio and creative work",
+            "Create a 3-year roadmap connecting creative work, academics, and applications"
+          ],
+          "resources": [
+            {
+              "title": "Art & Design Specializations",
+              "platform": "AcceptedX",
+              "type": "Article",
+              "link": "https://acceptedx.org/resources/art-design-specializations"
+            },
+            {
+              "title": "Portfolio Development Guide",
+              "platform": "AcceptedX",
+              "type": "Guide",
+              "link": "https://acceptedx.org/resources/portfolio-development"
+            }
+          ]
+        },
+        "US": {
+          "overview": "US programs emphasize strong portfolios, creative process, and personal statements.",
+          "checklist": [
+            "Research reach, target, and safety schools",
+            "Note portfolio requirements and deadlines",
+            "Plan your Common App personal statement theme",
+            "Identify art/design summer programs"
+          ],
+          "resources": [
+            {
+              "title": "US Art School Admissions",
+              "platform": "AcceptedX",
+              "type": "Guide",
+              "link": "https://acceptedx.org/resources/us-art-admissions"
+            },
+            {
+              "title": "Portfolio Tips",
+              "platform": "RISD",
+              "type": "Official Resource",
+              "link": "https://www.risd.edu/admissions/undergraduate/portfolio-requirements/"
+            }
+          ]
+        },
+        "UK": {
+          "overview": "UK programs prioritize portfolios, A-levels, and strong personal statements.",
+          "checklist": [
+            "Review entry requirements for Central Saint Martins, UAL, etc.",
+            "Prepare portfolio for review",
+            "Outline UCAS personal statement draft",
+            "Research UK art/design program structures"
+          ],
+          "resources": [
+            {
+              "title": "UAL Portfolio Requirements",
+              "platform": "University of the Arts London",
+              "type": "Official Resource",
+              "link": "https://www.arts.ac.uk/study/undergraduate/apply/portfolio"
+            },
+            {
+              "title": "UCAS Art Personal Statement",
+              "platform": "UCAS",
+              "type": "Article",
+              "link": "https://www.ucas.com/personal-statement-examples/art-design"
+            }
+          ]
+        },
+        "Asia": {
+          "overview": "Bridge national curricula with global standards.",
+          "checklist": [
+            "Review art/design topics in national exams",
+            "Identify art competitions or exhibitions",
+            "Explore summer programs abroad",
+            "Document interest in specific art/design fields"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What do top art/design programs value most?",
+          "opts": [
+            "Strong portfolio + creative vision + artistic process",
+            "Only test scores",
+            "Sports achievements",
+            "Unrelated activities"
+          ],
+          "correct": "Strong portfolio + creative vision + artistic process"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Build Your Portfolio & Creative Skills",
+      "description": "Develop artistic skills and create a strong portfolio of creative work.",
+      "regions": {
+        "Global": {
+          "overview": "Demonstrate art/design ability through a diverse, high-quality portfolio.",
+          "checklist": [
+            "Create 10-20 portfolio pieces showing range and skill",
+            "Document your creative process (sketches, iterations)",
+            "Participate in art competitions, exhibitions, or shows",
+            "Build a digital portfolio website"
+          ],
+          "resources": [
+            {
+              "title": "Portfolio Development",
+              "platform": "Behance",
+              "type": "Portfolio Platform",
+              "link": "https://www.behance.net/"
+            },
+            {
+              "title": "Art Competitions",
+              "platform": "Scholastic Art Awards",
+              "type": "Competition",
+              "link": "https://www.artandwriting.org/"
+            }
+          ],
+          "projectIdeas": [
+            "Create a series of artworks exploring a theme",
+            "Design a brand identity or logo system",
+            "Build a physical or digital art installation",
+            "Develop a design solution to a real-world problem"
+          ]
+        },
+        "US": {
+          "overview": "Link portfolio to applications and programs.",
+          "checklist": [
+            "Submit portfolio to art competitions",
+            "Apply to art/design summer programs",
+            "Create professional portfolio website",
+            "Document creative process"
+          ]
+        },
+        "UK": {
+          "overview": "Integrate portfolio into UCAS.",
+          "checklist": [
+            "Prepare portfolio for UCAS submission",
+            "Include process documentation",
+            "Link to UCAS personal statement",
+            "Prepare for portfolio reviews"
+          ]
+        },
+        "Asia": {
+          "overview": "Use portfolio to build applications.",
+          "checklist": [
+            "Participate in art competitions",
+            "Work with art mentor",
+            "Document in English",
+            "Connect to global art/design challenges"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What's the best way to demonstrate art/design skills?",
+          "opts": [
+            "Strong portfolio showing creative process and range",
+            "Only studying theory",
+            "Memorizing art history",
+            "Avoiding creating work"
+          ],
+          "correct": "Strong portfolio showing creative process and range"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Strengthen Academic Foundation",
+      "description": "Excel in relevant coursework and develop understanding of art history and theory.",
+      "regions": {
+        "Global": {
+          "overview": "Strong academic preparation and art knowledge is important.",
+          "checklist": [
+            "Maintain strong grades",
+            "Study art history and theory",
+            "Read about contemporary art and design",
+            "Participate in art classes or workshops"
+          ],
+          "resources": [
+            {
+              "title": "Art History",
+              "platform": "Khan Academy",
+              "type": "Course",
+              "link": "https://www.khanacademy.org/humanities/art-history"
+            },
+            {
+              "title": "Design Thinking",
+              "platform": "Coursera",
+              "type": "Course",
+              "link": "https://www.coursera.org/courses?query=design%20thinking"
+            }
+          ]
+        },
+        "US": {
+          "overview": "Prioritize relevant coursework.",
+          "checklist": [
+            "Complete AP Art History if available",
+            "Take strong art/design coursework",
+            "Achieve strong SAT/ACT scores",
+            "Read art and design publications"
+          ]
+        },
+        "UK": {
+          "overview": "Excel in A-levels.",
+          "checklist": [
+            "Achieve strong A-level results",
+            "Complete A-level Art or Design",
+            "Study art history",
+            "Prepare for portfolio reviews"
+          ]
+        },
+        "Asia": {
+          "overview": "Integrate with national exams.",
+          "checklist": [
+            "Complete strong coursework",
+            "Study art/design fundamentals",
+            "Maintain strong exam performance",
+            "Bridge to international standards"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What academic areas are most relevant for art/design?",
+          "opts": [
+            "Art history, design theory, and strong general academics",
+            "Only memorization",
+            "Math only",
+            "Science only"
+          ],
+          "correct": "Art history, design theory, and strong general academics"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Craft Your Art/Design Narrative",
+      "description": "Translate your creative work and achievements into compelling applications.",
+      "regions": {
+        "Global": {
+          "overview": "Connect your art/design passion, portfolio, and achievements.",
+          "checklist": [
+            "Write 250-word draft personal statement",
+            "Highlight portfolio pieces and creative process",
+            "Connect to artistic vision and goals",
+            "Get feedback from art teachers or mentors"
+          ]
+        },
+        "US": {
+          "overview": "Focus on Common App essays.",
+          "checklist": [
+            "Draft Common App essay with art/design focus",
+            "Collect strong recommendation letters",
+            "Optimize Activities section",
+            "Write art/design school supplements"
+          ]
+        },
+        "UK": {
+          "overview": "Perfect UCAS statement.",
+          "checklist": [
+            "Complete UCAS personal statement",
+            "Include portfolio and creative process",
+            "Prepare for portfolio reviews",
+            "Practice explaining artistic vision"
+          ]
+        },
+        "Asia": {
+          "overview": "Adapt for multiple systems.",
+          "checklist": [
+            "Prepare statements for UCAS and Common App",
+            "Gather supporting documents",
+            "Draft reflection on art/design career goals",
+            "Document portfolio achievements"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What should your art/design statement highlight?",
+          "opts": [
+            "Creative vision, portfolio quality, and artistic process",
+            "Only test scores",
+            "Unrelated hobbies",
+            "Generic goals"
+          ],
+          "correct": "Creative vision, portfolio quality, and artistic process"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Final Preparation & Portfolio Reviews",
+      "description": "Polish portfolio and prepare for reviews and interviews.",
+      "regions": {
+        "Global": {
+          "overview": "Bring together all your work.",
+          "checklist": [
+            "Finalize portfolio presentation",
+            "Complete mock portfolio reviews",
+            "Submit applications",
+            "Celebrate creative journey"
+          ]
+        },
+        "US": {
+          "overview": "Rehearse and finalize.",
+          "checklist": [
+            "Portfolio review",
+            "Submit applications",
+            "Follow up recommenders"
+          ]
+        },
+        "UK": {
+          "overview": "Prepare for portfolio reviews.",
+          "checklist": [
+            "Practice portfolio presentation",
+            "Review portfolio requirements",
+            "Finalize UCAS"
+          ]
+        },
+        "Asia": {
+          "overview": "Coordinate and prepare.",
+          "checklist": [
+            "Confirm documents and portfolio",
+            "Practice portfolio presentation in English",
+            "Submit applications"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What's key for art/design portfolio reviews?",
+          "opts": [
+            "Clear explanation of creative process and artistic vision",
+            "Memorizing answers",
+            "Avoiding process details",
+            "Only showing finished work"
+          ],
+          "correct": "Clear explanation of creative process and artistic vision"
+        }
+      ]
+    }
+  ]
+}

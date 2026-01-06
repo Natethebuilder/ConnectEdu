@@ -14,26 +14,36 @@ import DisciplineChoice from "./pages/DisciplineChoice";
 import LearningHub from "./pages/learning/[discipline]";
 import MentorOnboarding from "./pages/MentorOnboarding";
 import MentorDashboard from "./pages/MentorDashboard";
+import MentorSettings from "./pages/MentorSettings";
+import EmailConfirmed from "./pages/EmailConfirmed";
+import PasswordReset from "./pages/PasswordReset";
+import MentorHub from "./pages/MentorHub";
+import ChatPage from "./pages/ChatPage";
+import Messages from "./pages/Messages";
 
-
-// ✅ new components
 import ScrollToTop from "./components/ScrollToTop";
-import Navbar from "./components/Navbar";
 
-
+// Initialize auth store right away so public routes (/auth, /login) see session
+import { useSupabaseAuth } from "./store/supabaseAuth";
+useSupabaseAuth.getState().initAuth();
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <BrowserRouter>
       <ScrollToTop />
       <Routes>
-        {/* Login page → no App / Navbar */}
+        {/* Public pages */}
         <Route path="/login" element={<Login />} />
+        <Route path="/auth" element={<Auth />} />
 
-        {/* Everything else wrapped in App (which already includes Navbar) */}
+        {/* Supabase magic routes */}
+        <Route path="/auth/v1/callback" element={<PasswordReset />} />
+        <Route path="/auth/reset" element={<PasswordReset />} />
+        <Route path="/email-confirmed" element={<EmailConfirmed />} />
+
+        {/* Authenticated section */}
         <Route path="/" element={<App />}>
           <Route index element={<Navigate to="/login" replace />} />
-          <Route path="auth" element={<Auth />} />
           <Route path="disciplines" element={<DisciplineSelect />} />
           <Route path="survey" element={<Survey />} />
           <Route path="globe/:discipline" element={<GlobeDiscipline />} />
@@ -43,7 +53,10 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
           <Route path="learning/:discipline" element={<LearningHub />} />
           <Route path="mentor-onboarding" element={<MentorOnboarding />} />
           <Route path="mentor-dashboard" element={<MentorDashboard />} />
-         
+          <Route path="mentor-settings" element={<MentorSettings />} />
+          <Route path="mentor-hub/:discipline" element={<MentorHub />} />
+          <Route path="chat/:otherId" element={<ChatPage />} />
+          <Route path="messages" element={<Messages />} />
 
         </Route>
       </Routes>

@@ -1,0 +1,348 @@
+{
+  "discipline": "architecture",
+  "availableRegions": ["Global", "US", "UK", "Asia"],
+  "stages": [
+    {
+      "id": 1,
+      "title": "Define Your Architecture Vision",
+      "description": "Clarify your interests in architectural design, urban planning, or sustainable architecture, and identify target universities.",
+      "regions": {
+        "Global": {
+          "overview": "Top architecture programs value strong portfolios, design skills, and clear specialization interests.",
+          "checklist": [
+            "Research 5-7 top architecture programs (MIT, UCL, Delft, ETH Zurich, NUS)",
+            "Identify your interest (design, urban planning, sustainable architecture, historic preservation)",
+            "Assess your math, physics, and art preparation",
+            "Create a 3-year roadmap connecting design work, academics, and applications"
+          ],
+          "resources": [
+            {
+              "title": "Architecture Specializations",
+              "platform": "AcceptedX",
+              "type": "Article",
+              "link": "https://acceptedx.org/resources/architecture-specializations"
+            },
+            {
+              "title": "Introduction to Architecture",
+              "platform": "Coursera",
+              "type": "Course",
+              "link": "https://www.coursera.org/courses?query=architecture"
+            }
+          ]
+        },
+        "US": {
+          "overview": "US programs emphasize strong portfolios, design process, and personal statements.",
+          "checklist": [
+            "Research reach, target, and safety schools",
+            "Note portfolio requirements and deadlines",
+            "Plan your Common App personal statement theme",
+            "Identify architecture summer programs"
+          ],
+          "resources": [
+            {
+              "title": "US Architecture Admissions",
+              "platform": "AcceptedX",
+              "type": "Guide",
+              "link": "https://acceptedx.org/resources/us-architecture-admissions"
+            },
+            {
+              "title": "Architecture Portfolio Tips",
+              "platform": "ArchDaily",
+              "type": "Article",
+              "link": "https://www.archdaily.com/"
+            }
+          ]
+        },
+        "UK": {
+          "overview": "UK programs prioritize portfolios, A-levels, and strong personal statements.",
+          "checklist": [
+            "Review entry requirements for UCL, Cambridge, etc.",
+            "Prepare portfolio for review",
+            "Outline UCAS personal statement draft",
+            "Research UK architecture program structures"
+          ],
+          "resources": [
+            {
+              "title": "UCAS Architecture Personal Statement",
+              "platform": "UCAS",
+              "type": "Article",
+              "link": "https://www.ucas.com/personal-statement-examples/architecture"
+            }
+          ]
+        },
+        "Asia": {
+          "overview": "Bridge national curricula with global standards.",
+          "checklist": [
+            "Review architecture topics in national exams",
+            "Identify architecture competitions or programs",
+            "Explore summer programs abroad",
+            "Document interest in specific architecture fields"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What do top architecture programs value most?",
+          "opts": [
+            "Strong portfolio + design skills + creative process",
+            "Only test scores",
+            "Sports achievements",
+            "Unrelated activities"
+          ],
+          "correct": "Strong portfolio + design skills + creative process"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Build Design Skills & Portfolio",
+      "description": "Develop architectural design skills and create a strong portfolio of design work.",
+      "regions": {
+        "Global": {
+          "overview": "Demonstrate architecture ability through a diverse, high-quality design portfolio.",
+          "checklist": [
+            "Create 8-15 portfolio pieces showing design range",
+            "Learn CAD software (AutoCAD, SketchUp, Revit)",
+            "Document design process (sketches, models, iterations)",
+            "Participate in architecture competitions or exhibitions"
+          ],
+          "resources": [
+            {
+              "title": "AutoCAD for Students",
+              "platform": "Autodesk",
+              "type": "Software",
+              "link": "https://www.autodesk.com/education/students"
+            },
+            {
+              "title": "SketchUp Free",
+              "platform": "SketchUp",
+              "type": "Software",
+              "link": "https://www.sketchup.com/products/sketchup-for-schools"
+            }
+          ],
+          "projectIdeas": [
+            "Design a small building or structure",
+            "Create architectural models or drawings",
+            "Design a sustainable housing solution",
+            "Participate in architecture competitions"
+          ]
+        },
+        "US": {
+          "overview": "Link portfolio to applications and programs.",
+          "checklist": [
+            "Submit portfolio to architecture competitions",
+            "Apply to architecture summer programs",
+            "Create professional portfolio website",
+            "Document design process"
+          ]
+        },
+        "UK": {
+          "overview": "Integrate portfolio into UCAS.",
+          "checklist": [
+            "Prepare portfolio for UCAS submission",
+            "Include process documentation",
+            "Link to UCAS personal statement",
+            "Prepare for portfolio reviews"
+          ]
+        },
+        "Asia": {
+          "overview": "Use portfolio to build applications.",
+          "checklist": [
+            "Participate in architecture competitions",
+            "Work with architecture mentor",
+            "Document in English",
+            "Connect to global architecture challenges"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What's the best way to demonstrate architecture skills?",
+          "opts": [
+            "Strong portfolio showing design process and range",
+            "Only studying theory",
+            "Memorizing building styles",
+            "Avoiding creating designs"
+          ],
+          "correct": "Strong portfolio showing design process and range"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Strengthen Academic Foundation",
+      "description": "Excel in mathematics, physics, and art coursework.",
+      "regions": {
+        "Global": {
+          "overview": "Strong math, physics, and art preparation is essential for architecture.",
+          "checklist": [
+            "Master geometry, trigonometry, and basic physics",
+            "Complete art and design coursework",
+            "Study architecture history and theory",
+            "Maintain strong grades in math, physics, and art"
+          ],
+          "resources": [
+            {
+              "title": "Architecture History",
+              "platform": "Khan Academy",
+              "type": "Course",
+              "link": "https://www.khanacademy.org/humanities/art-history"
+            },
+            {
+              "title": "Structural Engineering Basics",
+              "platform": "Coursera",
+              "type": "Course",
+              "link": "https://www.coursera.org/courses?query=structural%20engineering"
+            }
+          ]
+        },
+        "US": {
+          "overview": "Prioritize relevant coursework.",
+          "checklist": [
+            "Complete AP Calculus and AP Physics",
+            "Take AP Art History if available",
+            "Achieve strong SAT/ACT scores",
+            "Read architecture publications"
+          ]
+        },
+        "UK": {
+          "overview": "Excel in A-levels.",
+          "checklist": [
+            "Achieve A* in A-level Mathematics",
+            "Complete A-level Physics and Art",
+            "Study architecture history",
+            "Prepare for portfolio reviews"
+          ]
+        },
+        "Asia": {
+          "overview": "Integrate with national exams.",
+          "checklist": [
+            "Complete advanced math and physics",
+            "Study architecture fundamentals",
+            "Maintain strong exam performance",
+            "Bridge to international standards"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What academic areas are most critical for architecture?",
+          "opts": [
+            "Mathematics, physics, art, and design",
+            "Only memorization",
+            "Languages",
+            "History only"
+          ],
+          "correct": "Mathematics, physics, art, and design"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Craft Your Architecture Narrative",
+      "description": "Translate your design work and achievements into compelling applications.",
+      "regions": {
+        "Global": {
+          "overview": "Connect your architecture passion, portfolio, and achievements.",
+          "checklist": [
+            "Write 250-word draft personal statement",
+            "Highlight portfolio pieces and design process",
+            "Connect to architectural vision and goals",
+            "Get feedback from art/architecture teachers"
+          ]
+        },
+        "US": {
+          "overview": "Focus on Common App essays.",
+          "checklist": [
+            "Draft Common App essay with architecture focus",
+            "Collect strong recommendation letters",
+            "Optimize Activities section",
+            "Write architecture school supplements"
+          ]
+        },
+        "UK": {
+          "overview": "Perfect UCAS statement.",
+          "checklist": [
+            "Complete UCAS personal statement",
+            "Include portfolio and design process",
+            "Prepare for portfolio reviews",
+            "Practice explaining design vision"
+          ]
+        },
+        "Asia": {
+          "overview": "Adapt for multiple systems.",
+          "checklist": [
+            "Prepare statements for UCAS and Common App",
+            "Gather supporting documents",
+            "Draft reflection on architecture career goals",
+            "Document portfolio achievements"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What should your architecture statement highlight?",
+          "opts": [
+            "Design vision, portfolio quality, and creative process",
+            "Only test scores",
+            "Unrelated hobbies",
+            "Generic goals"
+          ],
+          "correct": "Design vision, portfolio quality, and creative process"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Final Preparation & Portfolio Reviews",
+      "description": "Polish portfolio and prepare for reviews and interviews.",
+      "regions": {
+        "Global": {
+          "overview": "Bring together all your work.",
+          "checklist": [
+            "Finalize portfolio presentation",
+            "Complete mock portfolio reviews",
+            "Submit applications",
+            "Celebrate creative journey"
+          ]
+        },
+        "US": {
+          "overview": "Rehearse and finalize.",
+          "checklist": [
+            "Portfolio review",
+            "Submit applications",
+            "Follow up recommenders"
+          ]
+        },
+        "UK": {
+          "overview": "Prepare for portfolio reviews.",
+          "checklist": [
+            "Practice portfolio presentation",
+            "Review portfolio requirements",
+            "Finalize UCAS"
+          ]
+        },
+        "Asia": {
+          "overview": "Coordinate and prepare.",
+          "checklist": [
+            "Confirm documents and portfolio",
+            "Practice portfolio presentation in English",
+            "Submit applications"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What's key for architecture portfolio reviews?",
+          "opts": [
+            "Clear explanation of design process and architectural vision",
+            "Memorizing answers",
+            "Avoiding process details",
+            "Only showing finished work"
+          ],
+          "correct": "Clear explanation of design process and architectural vision"
+        }
+      ]
+    }
+  ]
+}

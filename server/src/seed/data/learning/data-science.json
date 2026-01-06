@@ -1,0 +1,312 @@
+{
+  "discipline": "data-science",
+  "availableRegions": ["Global", "US", "UK", "Asia"],
+  "stages": [
+    {
+      "id": 1,
+      "title": "Define Your Data Science Vision",
+      "description": "Clarify your interests in analytics, machine learning, or statistics, and identify target universities.",
+      "regions": {
+        "Global": {
+          "overview": "Top data science programs value strong math/statistics, programming skills, and clear specialization interests.",
+          "checklist": [
+            "Research 5-7 top data science programs (MIT, Stanford, Carnegie Mellon, Cambridge, NUS)",
+            "Identify your specialization (ML, analytics, statistics, business intelligence)",
+            "Assess your programming and statistics preparation",
+            "Create a 3-year roadmap connecting skills, projects, and applications"
+          ],
+          "resources": [
+            {
+              "title": "Data Science Specializations Guide",
+              "platform": "AcceptedX",
+              "type": "Article",
+              "link": "https://acceptedx.org/resources/data-science-specializations"
+            }
+          ]
+        },
+        "US": {
+          "overview": "US programs emphasize AP/IB rigor, programming projects, and research.",
+          "checklist": [
+            "Complete AP Statistics and AP Computer Science",
+            "Build a portfolio of data analysis projects",
+            "Research reach, target, and safety schools",
+            "Identify summer programs or internships"
+          ]
+        },
+        "UK": {
+          "overview": "UK programs prioritize A-levels, STEP/MAT, and strong personal statements.",
+          "checklist": [
+            "Review entry requirements for top UK programs",
+            "Start STEP or MAT preparation",
+            "Outline UCAS personal statement",
+            "Research UK data science program structures"
+          ]
+        },
+        "Asia": {
+          "overview": "Bridge national curricula with global standards.",
+          "checklist": [
+            "Review statistics and programming in national exams",
+            "Identify data science competitions",
+            "Explore summer programs",
+            "Document interest in data science specializations"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What skills are most important for data science?",
+          "opts": [
+            "Statistics, programming, and analytical thinking",
+            "Only memorization",
+            "Artistic creativity",
+            "Languages"
+          ],
+          "correct": "Statistics, programming, and analytical thinking"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Build Data Science Skills & Projects",
+      "description": "Develop programming, statistics, and data analysis skills through projects.",
+      "regions": {
+        "Global": {
+          "overview": "Demonstrate data science ability through tangible projects with real datasets.",
+          "checklist": [
+            "Complete 3-5 data analysis projects using real datasets",
+            "Learn Python/R and data science libraries (pandas, numpy, scikit-learn)",
+            "Participate in Kaggle competitions or data challenges",
+            "Create a portfolio showcasing your analyses"
+          ],
+          "resources": [
+            {
+              "title": "Kaggle Learn",
+              "platform": "Kaggle",
+              "type": "Course",
+              "link": "https://www.kaggle.com/learn"
+            },
+            {
+              "title": "Python for Data Science",
+              "platform": "Coursera",
+              "type": "Course",
+              "link": "https://www.coursera.org/specializations/python"
+            }
+          ],
+          "projectIdeas": [
+            "Analyze a public dataset and create visualizations",
+            "Build a machine learning model to solve a problem",
+            "Create a data dashboard or interactive visualization",
+            "Participate in a Kaggle competition"
+          ]
+        },
+        "US": {
+          "overview": "Link projects to competitions and summer programs.",
+          "checklist": [
+            "Submit project to data science competition",
+            "Apply to data science summer programs",
+            "Create GitHub portfolio",
+            "Write technical documentation"
+          ]
+        },
+        "UK": {
+          "overview": "Integrate projects into EPQ.",
+          "checklist": [
+            "Draft EPQ proposal on data science topic",
+            "Link project to university modules",
+            "Include in UCAS statement",
+            "Prepare for interviews"
+          ]
+        },
+        "Asia": {
+          "overview": "Use competitions to build portfolios.",
+          "checklist": [
+            "Participate in data science competitions",
+            "Work with university mentor",
+            "Document in English",
+            "Connect to global challenges"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What's the best way to demonstrate data science skills?",
+          "opts": [
+            "Build data analysis projects with real datasets",
+            "Only study theory",
+            "Memorize formulas",
+            "Avoid programming"
+          ],
+          "correct": "Build data analysis projects with real datasets"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Strengthen Academic Foundation",
+      "description": "Excel in mathematics, statistics, and programming.",
+      "regions": {
+        "Global": {
+          "overview": "Strong math, statistics, and programming preparation is essential.",
+          "checklist": [
+            "Master statistics and probability",
+            "Complete advanced mathematics",
+            "Learn programming fundamentals",
+            "Maintain strong STEM grades"
+          ],
+          "resources": [
+            {
+              "title": "Statistics Course",
+              "platform": "Khan Academy",
+              "type": "Course",
+              "link": "https://www.khanacademy.org/math/statistics-probability"
+            }
+          ]
+        },
+        "US": {
+          "overview": "Prioritize AP courses.",
+          "checklist": [
+            "Complete AP Statistics and AP Computer Science",
+            "Take AP Calculus BC",
+            "Achieve strong SAT Math scores",
+            "Participate in math competitions"
+          ]
+        },
+        "UK": {
+          "overview": "Excel in A-levels.",
+          "checklist": [
+            "Achieve A* in A-level Mathematics",
+            "Complete Further Mathematics if available",
+            "Solve past STEP papers",
+            "Study statistics and probability"
+          ]
+        },
+        "Asia": {
+          "overview": "Integrate with national exams.",
+          "checklist": [
+            "Complete advanced math and statistics",
+            "Learn programming basics",
+            "Maintain strong exam performance",
+            "Bridge to international standards"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What academic areas are most critical for data science?",
+          "opts": [
+            "Mathematics, statistics, and programming",
+            "Only memorization",
+            "Languages",
+            "History"
+          ],
+          "correct": "Mathematics, statistics, and programming"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Craft Your Data Science Narrative",
+      "description": "Translate your skills and projects into compelling applications.",
+      "regions": {
+        "Global": {
+          "overview": "Connect your data science passion and achievements.",
+          "checklist": [
+            "Write 250-word draft personal statement",
+            "Highlight data analysis projects and impact",
+            "Connect to solving real-world problems",
+            "Get mentor feedback"
+          ]
+        },
+        "US": {
+          "overview": "Focus on Common App essays.",
+          "checklist": [
+            "Draft Common App essay",
+            "Collect recommendations",
+            "Optimize Activities section",
+            "Write supplements"
+          ]
+        },
+        "UK": {
+          "overview": "Perfect UCAS statement.",
+          "checklist": [
+            "Complete UCAS personal statement",
+            "Include technical reading and projects",
+            "Prepare for interviews"
+          ]
+        },
+        "Asia": {
+          "overview": "Adapt for multiple systems.",
+          "checklist": [
+            "Prepare statements for UCAS and Common App",
+            "Gather documents",
+            "Draft career goals reflection"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What should your data science statement highlight?",
+          "opts": [
+            "Analytical passion, data projects, and problem-solving",
+            "Only test scores",
+            "Unrelated hobbies",
+            "Generic goals"
+          ],
+          "correct": "Analytical passion, data projects, and problem-solving"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Final Preparation & Interviews",
+      "description": "Polish applications and prepare for interviews.",
+      "regions": {
+        "Global": {
+          "overview": "Bring together all your work.",
+          "checklist": [
+            "Complete mock interviews",
+            "Submit applications",
+            "Prepare to discuss projects",
+            "Celebrate journey"
+          ]
+        },
+        "US": {
+          "overview": "Rehearse and finalize.",
+          "checklist": [
+            "Mock interview",
+            "Submit applications",
+            "Follow up recommenders"
+          ]
+        },
+        "UK": {
+          "overview": "Prepare for interviews.",
+          "checklist": [
+            "Review STEP/MAT problems",
+            "Practice explaining concepts",
+            "Finalize UCAS"
+          ]
+        },
+        "Asia": {
+          "overview": "Coordinate and prepare.",
+          "checklist": [
+            "Confirm documents",
+            "Practice interviews in English",
+            "Submit applications"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What's key for data science interviews?",
+          "opts": [
+            "Clear explanation of projects and analytical approach",
+            "Memorizing answers",
+            "Avoiding technical details",
+            "Only grades"
+          ],
+          "correct": "Clear explanation of projects and analytical approach"
+        }
+      ]
+    }
+  ]
+}

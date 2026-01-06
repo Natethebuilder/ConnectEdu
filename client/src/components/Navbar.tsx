@@ -11,8 +11,8 @@ export default function Navbar() {
   const location = useLocation();
   const { discipline } = useParams();
   const navigate = useNavigate();
-
   const isGlobePage = location.pathname.startsWith("/globe");
+  const isMentorHub = location.pathname.startsWith("/mentor-hub");
 
   async function handleLogout() {
     await supabase.auth.signOut();
@@ -20,14 +20,15 @@ export default function Navbar() {
   }
 
   function handleProfileClick() {
-    if (!user) return navigate("/login");
+  if (!user) return navigate("/login");
 
-    if (user.role === "mentor") {
-      navigate("/mentor-onboarding", { replace: false });
-    } else {
-      navigate("/profile", { state: { from: location.pathname } });
-    }
+  if (user.role === "mentor") {
+    navigate("/mentor-settings", { replace: false });
+  } else {
+    navigate("/profile", { state: { from: location.pathname } });
   }
+}
+
 
 
   return (
@@ -47,7 +48,7 @@ export default function Navbar() {
         {/* Left: Logo */}
         <Link
           to="/"
-          className="flex items-center gap-2 text-xl sm:text-2xl font-extrabold transition-transform hover:scale-105"
+          className="flex items-center gap-2 text-xl sm:text-2xl font-extrabold transition-transform hover:scale-105 flex-shrink-0 z-10"
         >
           <GraduationCap
             className={`w-5 h-5 sm:w-6 sm:h-6 ${
@@ -65,50 +66,61 @@ export default function Navbar() {
           </span>
         </Link>
 
-        {/* Center discipline pill (unchanged) */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+        {/* Center discipline pill */}
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-0">
           <AnimatePresence>
-            {discipline && (
+            {discipline && !isMentorHub && (
               <motion.div
                 key={discipline}
                 initial={{ opacity: 0, y: -8 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -8 }}
                 transition={{ duration: 0.35 }}
+                className="pointer-events-auto"
               >
                 <div
-                  className={`px-5 py-1.5 rounded-full backdrop-blur-md border shadow flex items-center justify-center gap-4 max-w-[70vw] ${
+                  className={`px-4 py-1.5 rounded-full backdrop-blur-md border shadow flex items-center justify-center gap-2 sm:gap-3 max-w-[calc(100vw-280px)] sm:max-w-[60vw] ${
                     isGlobePage
                       ? "bg-black/50 border-white/20 shadow-[0_4px_20px_rgba(0,0,0,0.5)]"
                       : "bg-white/70 border-white/40 shadow-lg"
                   }`}
                 >
                   <span
-                    className={`text-sm font-semibold ${
+                    className={`text-xs sm:text-sm font-semibold flex items-center gap-2 min-w-0 ${
                       isGlobePage ? "text-white" : "text-gray-800"
                     }`}
                   >
-                    Global Top 10 in
-                    <span className="inline-block mx-2 text-gray-400 font-normal select-none">
-                      •
-                    </span>
+                    <span className="whitespace-nowrap">Global Top 10 in</span>
+                    <span className="text-gray-400 font-normal select-none">•</span>
                     <span
-                      className={`font-extrabold text-lg tracking-wide bg-gradient-to-r bg-clip-text text-transparent ${
+                      className={`font-extrabold text-sm sm:text-base tracking-wide bg-gradient-to-r bg-clip-text text-transparent truncate max-w-[200px] sm:max-w-[300px] ${
                         isGlobePage
                           ? "from-cyan-300 via-pink-400 to-fuchsia-600"
                           : "from-blue-600 via-purple-600 to-pink-600"
                       }`}
+                      title={titleCase(discipline)}
                     >
                       {titleCase(discipline)}
                     </span>
                   </span>
 
-                  <button
-                    onClick={() => navigate(`/learning/${discipline}`)}
-                    className="px-3 py-1 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-xs font-medium shadow hover:from-indigo-700 hover:to-purple-700 transition whitespace-nowrap"
-                  >
-                    Learning Hub
-                  </button>
+                  <div className="flex items-center gap-2 flex-shrink-0">
+                    <button
+                      onClick={() => navigate(`/learning/${discipline}`)}
+                      className="px-2.5 py-1 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-xs font-medium shadow hover:from-indigo-700 hover:to-purple-700 transition whitespace-nowrap"
+                    >
+                      Learning Hub
+                    </button>
+                    {/* Mentor Hub – only for students */}
+                    {user?.role === "student" && (
+                      <button
+                        onClick={() => navigate(`/mentor-hub/${discipline}`)}
+                        className="px-2.5 py-1 rounded-full bg-gradient-to-r from-pink-500 to-red-500 text-white text-xs font-medium shadow hover:from-pink-600 hover:to-red-600 transition whitespace-nowrap"
+                      >
+                        Mentor Hub
+                      </button>
+                    )}
+                  </div>
                 </div>
               </motion.div>
             )}
@@ -116,7 +128,19 @@ export default function Navbar() {
         </div>
 
         {/* Right: Profile + Logout */}
-        <nav className="flex items-center gap-3">
+        <nav className="flex items-center gap-3 flex-shrink-0">
+
+          <Link
+            to="/messages"
+            className={`px-3 py-1.5 rounded-full text-sm font-semibold transition
+              ${isGlobePage ? "text-white/90 hover:text-white" : "text-gray-700 hover:text-gray-900"}
+            `}
+          >
+            Messages
+          </Link>
+
+       
+
           {user ? (
             <>
               <button
@@ -127,7 +151,13 @@ export default function Navbar() {
                     : "bg-white/70 border-white/30"
                 }`}
               >
-                {user.avatarSeed ? (
+                {user.role === "mentor" && user.imageUrl ? (
+                  <img
+                    src={user.imageUrl}
+                    alt="avatar"
+                    className="w-7 h-7 rounded-full object-cover border border-white/30"
+                  />
+                ) : user.avatarSeed ? (
                   <img
                     src={getDicebearUrl(user.avatarSeed)}
                     alt="avatar"
@@ -138,6 +168,7 @@ export default function Navbar() {
                     {user.name?.[0] ?? "?"}
                   </div>
                 )}
+
                 <span
                   className={`text-sm font-semibold ${
                     isGlobePage ? "text-white/90" : "text-gray-700"

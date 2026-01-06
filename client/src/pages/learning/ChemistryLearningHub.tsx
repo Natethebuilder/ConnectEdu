@@ -26,35 +26,42 @@ function cx(...classes: Array<string | false | undefined>) {
 }
 const springy = { type: "spring", stiffness: 180, damping: 22 } as const;
 
-// 3D molecular background (teal + lime lab glow)
+// 3D molecular background (purple + blue lab reaction glow)
 function MolecularBG() {
   return (
     <div className="absolute inset-0 -z-10">
       <Canvas camera={{ position: [0, 0, 6] }} dpr={[1, 2]}>
-        <color attach="background" args={["#001f1d"]} />
+        <color attach="background" args={["#1a0b2e"]} />
         <ambientLight intensity={0.4} />
-        <pointLight position={[5, 5, 5]} color="#5eead4" intensity={0.8} />
+        <pointLight position={[5, 5, 5]} color="#a855f7" intensity={0.9} />
+        <pointLight position={[-5, -3, 3]} color="#3b82f6" intensity={0.7} />
         <Float speed={2} rotationIntensity={2} floatIntensity={1.5}>
           <mesh>
             <sphereGeometry args={[1.6, 64, 64]} />
-            <meshStandardMaterial color="#14b8a6" emissive="#0f766e" emissiveIntensity={0.35} transparent opacity={0.28} />
+            <meshStandardMaterial color="#9333ea" emissive="#7c3aed" emissiveIntensity={0.4} transparent opacity={0.32} />
           </mesh>
         </Float>
         <Float speed={2.4} rotationIntensity={2}>
           <mesh position={[2.2, -1.3, 0]}>
             <sphereGeometry args={[0.9, 32, 32]} />
-            <meshStandardMaterial color="#a7f3d0" emissive="#5eead4" emissiveIntensity={0.4} transparent opacity={0.22} />
+            <meshStandardMaterial color="#3b82f6" emissive="#2563eb" emissiveIntensity={0.45} transparent opacity={0.28} />
           </mesh>
         </Float>
         <Float speed={1.6} rotationIntensity={1.5}>
           <mesh position={[-2.4, 1.2, -0.6]}>
             <sphereGeometry args={[0.7, 32, 32]} />
-            <meshStandardMaterial color="#86efac" emissive="#84cc16" emissiveIntensity={0.35} transparent opacity={0.22} />
+            <meshStandardMaterial color="#8b5cf6" emissive="#6366f1" emissiveIntensity={0.4} transparent opacity={0.26} />
+          </mesh>
+        </Float>
+        <Float speed={1.8} rotationIntensity={1.8}>
+          <mesh position={[0, 2, -1]}>
+            <sphereGeometry args={[0.5, 24, 24]} />
+            <meshStandardMaterial color="#60a5fa" emissive="#3b82f6" emissiveIntensity={0.35} transparent opacity={0.24} />
           </mesh>
         </Float>
         <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={0.35} />
       </Canvas>
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_40%_at_50%_50%,rgba(20,184,166,.25),transparent),radial-gradient(50%_50%_at_80%_80%,rgba(132,204,22,.18),transparent)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_40%_at_50%_50%,rgba(147,51,234,.3),transparent),radial-gradient(50%_50%_at_80%_80%,rgba(59,130,246,.25),transparent),radial-gradient(40%_40%_at_20%_20%,rgba(139,92,246,.2),transparent)]" />
     </div>
   );
 }
@@ -69,12 +76,12 @@ function ReactionRateSim() {
   return (
     <div className="rounded-2xl bg-white/5 ring-1 ring-white/10 p-4">
       <div className="mb-2 flex items-center gap-2 text-sm text-white/80">
-        <Droplets className="h-4 w-4 text-cyan-300" /> Reaction Rate
+        <Droplets className="h-4 w-4 text-purple-300" /> Reaction Rate
       </div>
       <div className="text-xs text-white/60 mb-3">Temp: {temp}°C · [A]: {conc.toFixed(2)} M</div>
       <div className="relative h-24 rounded-xl bg-white/5 overflow-hidden">
         <motion.div
-          className="absolute inset-y-0 left-0 bg-gradient-to-r from-cyan-400 to-lime-400"
+          className="absolute inset-y-0 left-0 bg-gradient-to-r from-purple-400 to-blue-400"
           style={{ width: `${normalized * 100}%` }}
           transition={{ duration: 0.6 }}
         />
@@ -104,11 +111,11 @@ function MolecularVibrationSim() {
   return (
     <div className="rounded-2xl bg-white/5 ring-1 ring-white/10 p-4">
       <div className="mb-2 flex items-center gap-2 text-sm text-white/80">
-        <Sparkles className="h-4 w-4 text-lime-300" /> Molecular Vibration
+        <Sparkles className="h-4 w-4 text-blue-300" /> Molecular Vibration
       </div>
       <svg viewBox="0 0 100 60" className="w-full h-32">
-        <motion.circle cx="35" cy={y} r="6" fill="#5eead4" />
-        <motion.circle cx="65" cy={y} r="6" fill="#a3e635" />
+            <motion.circle cx="35" cy={y} r="6" fill="#a855f7" />
+            <motion.circle cx="65" cy={y} r="6" fill="#3b82f6" />
         <motion.line x1="35" x2="65" y1={y.get()} y2={y.get()} stroke="white" strokeWidth="2" />
       </svg>
       <label className="text-xs text-white/70 block mt-2">Amplitude
@@ -124,7 +131,7 @@ function ResourceCard({ r, bookmarked, onBookmark }: { r: Resource; bookmarked?:
   return (
     <motion.a href={r.link} target="_blank" rel="noreferrer" whileHover={{ y: -4 }}
       className="group relative block rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-xl">
-      <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-lime-500/10 opacity-0 transition-opacity group-hover:opacity-100" />
+      <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-purple-500/10 to-blue-500/10 opacity-0 transition-opacity group-hover:opacity-100" />
       <div className="relative z-10">
         <div className="mb-1 flex items-center gap-2 text-xs text-white/70">
           <span className="px-2 py-0.5 rounded-full bg-white/10">{r.platform}</span>
@@ -154,72 +161,130 @@ export default function ChemistryLearningHub() {
   const [region, setRegion] = useState<string>("Global");
   const [activeStage, setActiveStage] = useState<any | null>(null);
   const [loading, setLoading] = useState(true);
-  const [stageState, setStageState] = useState<Record<string, any>>({});
+  // store progress for ALL regions (not just the current one)
+  const [stageState, setStageState] = useState<Record<string, Record<string, any>>>({});
   const [bookmarks, setBookmarks] = useState<any[]>([]);
   const [quizAnswers, setQuizAnswers] = useState<Record<string, string>>({});
   const [quizScore, setQuizScore] = useState<number | null>(null);
 
-  useEffect(() => { supabase.auth.getUser().then(({ data }) => setUser(data.user)); }, []);
-
   useEffect(() => {
     let mounted = true;
-    async function load() {
-      setLoading(true);
-      try {
-        const res = await http.get(`/learning/${discipline}`);
-        if (!mounted) return;
-        setHub(res.data);
-        if (user?.id) {
-          const { data } = await supabase
-            .from("learning_progress")
-            .select("stage_state, region, bookmarks")
-            .eq("user_id", user.id)
-            .eq("discipline", discipline)
-            .maybeSingle();
-          if (data) {
-            setStageState(data.stage_state || {});
-            setRegion(data.region || "Global");
-            setBookmarks(data.bookmarks || []);
-          }
-        }
-      } finally { if (mounted) setLoading(false); }
+
+    async function init() {
+      // 1️⃣ Wait for the user
+      const { data: userData } = await supabase.auth.getUser();
+      const currentUser = userData?.user;
+      if (!currentUser || !mounted) return;
+      setUser(currentUser);
+
+      // 2️⃣ Load hub JSON
+      const res = await http.get(`/learning/${discipline}`);
+      if (!mounted) return;
+      setHub(res.data);
+
+      // 3️⃣ Load user progress
+      const { data: progress } = await supabase
+        .from("learning_progress")
+        .select("stage_state, region, bookmarks")
+        .eq("user_id", currentUser.id)
+        .eq("discipline", discipline)
+        .maybeSingle();
+
+      if (progress) {
+        setStageState(progress.stage_state || {});
+        setRegion(progress.region || "Global");
+        setBookmarks(progress.bookmarks || []);
+      } else {
+        setStageState({});
+      }
+
+      setLoading(false);
     }
-    load();
-    return () => { mounted = false; };
-  }, [discipline, user?.id]);
+
+    init();
+
+    return () => {
+      mounted = false;
+    };
+  }, [discipline]);
 
   const allRegions: string[] = useMemo(() => hub?.availableRegions || Object.keys(hub?.stages?.[0]?.regions || { Global: true }), [hub]);
 
   const overallProgress = useMemo(() => {
     if (!hub || !hub.stages) return 0;
-    let total = 0, done = 0;
+    const currentRegionState = stageState[region] || {};
+    let total = 0; let done = 0;
     for (const stage of hub.stages) {
       const regionData = stage.regions?.[region] || stage.regions?.Global;
       const list: string[] = regionData?.checklist || [];
       total += list.length;
-      const checked = Object.keys(stageState?.[stage.id]?.checklist || {}).filter((k) => stageState[stage.id]?.checklist?.[k]).length;
+      const checked = Object.keys(currentRegionState?.[stage.id]?.checklist || {}).filter(
+        (k) => currentRegionState?.[stage.id]?.checklist?.[k]
+      ).length;
       done += checked;
     }
     return total ? Math.round((done / total) * 100) : 0;
   }, [hub, stageState, region]);
 
-  function persist(nextState = stageState, nextRegion = region, nextBookmarks = bookmarks) {
+  async function persist(
+    updatedStageState: Record<string, Record<string, any>> = stageState,
+    currentRegion = region,
+    currentBookmarks = bookmarks
+  ) {
     if (!user?.id) return;
-    supabase.from("learning_progress").upsert({
-      user_id: user.id,
-      discipline,
-      stage_state: nextState,
-      region: nextRegion,
-      bookmarks: nextBookmarks,
-    }).select();
+
+    const { data: existing } = await supabase
+      .from("learning_progress")
+      .select("stage_state")
+      .eq("user_id", user.id)
+      .eq("discipline", discipline)
+      .maybeSingle();
+
+    const serverState = existing?.stage_state || {};
+
+    // merge: keep all regions from server, patch just the current one from local state
+    // This ensures we never lose data from other regions, even if updatedStageState is incomplete
+    const merged = {
+      ...serverState,
+      [currentRegion]: {
+        ...(serverState[currentRegion] || {}),
+        ...(updatedStageState[currentRegion] || {}),
+      },
+    };
+
+    await supabase
+      .from("learning_progress")
+      .upsert(
+        {
+          user_id: user.id,
+          discipline,
+          region: currentRegion,     // preferred region
+          stage_state: merged,       // the merged full map of all regions
+          bookmarks: currentBookmarks
+        },
+        { onConflict: "user_id,discipline" }
+      )
+      .select();
+
+    setStageState(merged);
   }
 
   function toggleTask(stageId: number, task: string) {
     setStageState((prev) => {
-      const stage = { ...(prev[stageId] || {}), checklist: { ...(prev[stageId]?.checklist || {}) } };
-      stage.checklist[task] = !stage.checklist[task];
-      const next = { ...prev, [stageId]: stage };
-      persist(next);
+      const regionState = { ...(prev[region] || {}) };
+      const currentStage = {
+        ...(regionState[stageId] || {}),
+        checklist: { ...(regionState[stageId]?.checklist || {}) },
+      };
+
+      // Toggle task
+      currentStage.checklist[task] = !currentStage.checklist[task];
+
+      const updatedRegionState = { ...regionState, [stageId]: currentStage };
+      const next = { ...prev, [region]: updatedRegionState };
+
+      // Save the updated all-region state
+      persist(next, region);
       return next;
     });
   }
@@ -267,10 +332,10 @@ export default function ChemistryLearningHub() {
       <header className="relative mx-auto max-w-6xl px-6 pt-14 text-center">
         <motion.div initial={{ opacity: 0, y: -12 }} animate={{ opacity: 1, y: 0 }} transition={springy}>
           <div className="flex items-center justify-center gap-3 rounded-full bg-white/5 px-6 py-3 ring-1 ring-white/10 backdrop-blur mx-auto w-fit mb-6">
-            <FlaskConical className="h-6 w-6 text-cyan-300" />
+            <FlaskConical className="h-6 w-6 text-purple-300" />
             <p className="font-semibold tracking-wide">Chemistry Learning Hub</p>
           </div>
-          <h1 className="text-balance bg-gradient-to-br from-white to-cyan-200 bg-clip-text text-4xl sm:text-6xl font-extrabold text-transparent">
+          <h1 className="text-balance bg-gradient-to-br from-white to-purple-200 bg-clip-text text-4xl sm:text-6xl font-extrabold text-transparent">
             The art of reactions, the science of life
           </h1>
           <p className="max-w-2xl mx-auto mt-3 text-white/80">
@@ -292,8 +357,8 @@ export default function ChemistryLearningHub() {
               />
               <defs>
                 <linearGradient id="chemgrad" x1="0" x2="1" y1="0" y2="0">
-                  <stop offset="0%" stopColor="#22d3ee" />
-                  <stop offset="100%" stopColor="#84cc16" />
+                  <stop offset="0%" stopColor="#a855f7" />
+                  <stop offset="100%" stopColor="#3b82f6" />
                 </linearGradient>
               </defs>
             </svg>
@@ -303,9 +368,19 @@ export default function ChemistryLearningHub() {
           {/* Region chips */}
           <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
             {allRegions.map((r) => (
-              <button key={r} onClick={() => { setRegion(r); persist(stageState, r, bookmarks); }}
-                className={cx("rounded-full border border-white/15 px-4 py-1.5 text-sm backdrop-blur transition",
-                  r === region ? "bg-white/15" : "bg-white/5 hover:bg-white/10")}>{r}</button>
+              <button
+                key={r}
+                onClick={() => {
+                  setRegion(r);
+                  persist(stageState, r); // stores preferred region; keeps all checklists
+                }}
+                className={cx(
+                  "rounded-full border border-white/15 px-4 py-1.5 text-sm backdrop-blur transition",
+                  r === region ? "bg-white/15" : "bg-white/5 hover:bg-white/10"
+                )}
+              >
+                {r}
+              </button>
             ))}
           </div>
         </motion.div>
@@ -317,11 +392,14 @@ export default function ChemistryLearningHub() {
           {hub.stages.map((stage: any, idx: number) => {
             const rData = stage.regions?.[region] || stage.regions?.Global;
             const list: string[] = rData?.checklist || [];
-            const checked = Object.keys(stageState?.[stage.id]?.checklist || {}).filter((k) => stageState[stage.id]?.checklist?.[k]).length;
+            const regionState = stageState?.[region] || {};
+            const checked = Object.keys(regionState?.[stage.id]?.checklist || {}).filter(
+              (k) => regionState?.[stage.id]?.checklist?.[k]
+            ).length;
             const pct = list.length ? Math.round((checked / list.length) * 100) : 0;
             return (
               <li key={stage.id} className="ml-6 pb-10">
-                <span className="absolute -left-[9px] mt-1 grid h-4 w-4 place-items-center rounded-full bg-cyan-400 ring-2 ring-cyan-300/50" />
+                <span className="absolute -left-[9px] mt-1 grid h-4 w-4 place-items-center rounded-full bg-purple-400 ring-2 ring-purple-300/50" />
                 <motion.div whileHover={{ y: -2 }} className="rounded-2xl bg-white/5 p-5 backdrop-blur ring-1 ring-white/10">
                   <div className="flex flex-wrap items-start justify-between gap-4">
                     <div>
@@ -332,7 +410,7 @@ export default function ChemistryLearningHub() {
                       <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-sm text-white/80">
                         <CheckCircle2 className="h-4 w-4 text-emerald-300" /> {pct}%
                       </div>
-                      <button onClick={() => setActiveStage(stage)} className="inline-flex items-center gap-1 rounded-full bg-cyan-500/20 px-3 py-1 text-cyan-200 ring-1 ring-cyan-300/30 hover:bg-cyan-500/30">
+                      <button onClick={() => setActiveStage(stage)} className="inline-flex items-center gap-1 rounded-full bg-purple-500/20 px-3 py-1 text-purple-200 ring-1 ring-purple-300/30 hover:bg-purple-500/30">
                         Open <ChevronRight className="h-4 w-4" />
                       </button>
                     </div>
@@ -359,39 +437,75 @@ export default function ChemistryLearningHub() {
       {/* Stage Modal */}
       <AnimatePresence>
         {activeStage && (
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-50 grid place-items-center bg-black/50 p-4 backdrop-blur-sm">
-            <motion.div initial={{ y: 30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: 30, opacity: 0 }} transition={springy}
-              className="relative w-full max-w-5xl overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-b from-white/10 to-white/5 shadow-2xl">
-              <button onClick={() => setActiveStage(null)} className="absolute right-3 top-3 rounded-full bg-white/10 p-2 hover:bg-white/20"><X className="h-5 w-5" /></button>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 grid place-items-center bg-black/70 p-4 backdrop-blur-sm"
+          >
+            <motion.div
+              initial={{ y: 30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: 30, opacity: 0 }}
+              transition={springy}
+              className="relative w-full max-w-5xl overflow-hidden rounded-3xl 
+                         border border-white/20 bg-white/10 backdrop-blur-2xl 
+                         shadow-[0_8px_32px_rgba(0,0,0,0.4)] text-white/90 leading-relaxed"
+            >
+              <button
+                onClick={() => setActiveStage(null)}
+                className="absolute right-3 top-3 rounded-full bg-white/15 p-2 hover:bg-white/25"
+              >
+                <X className="h-5 w-5" />
+              </button>
 
               <div className="grid gap-6 p-6 sm:grid-cols-5">
                 {/* Left: overview + checklist + resources + reflection */}
-                <div className="sm:col-span-3">
-                  <h3 className="text-2xl font-bold">{activeStage.title}</h3>
-                  <p className="mt-1 text-sm text-white/75">{activeStage.description}</p>
-
-                  <div className="mt-5 rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
-                    <p className="text-sm text-white/80">{(activeStage.regions?.[region] || activeStage.regions?.Global)?.overview}</p>
+                <div className="sm:col-span-3 space-y-6">
+                  <div>
+                    <h3 className="text-2xl font-bold text-white drop-shadow-[0_2px_3px_rgba(0,0,0,0.8)]">
+                      {activeStage.title}
+                    </h3>
+                    <p className="mt-1 text-sm text-white/90 drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]">
+                      {activeStage.description}
+                    </p>
                   </div>
 
-                  <div className="mt-6">
-                    <h4 className="mb-2 font-semibold text-cyan-200">Checklist</h4>
+                  <div className="rounded-2xl bg-black/35 p-4 ring-1 ring-white/10 backdrop-blur-md">
+                    <p className="text-sm text-white/90 leading-relaxed">
+                      {(activeStage.regions?.[region] || activeStage.regions?.Global)?.overview}
+                    </p>
+                  </div>
+
+                  <div className="rounded-2xl bg-black/30 p-4 ring-1 ring-white/10 backdrop-blur-md">
+                    <h4 className="mb-3 font-semibold text-purple-200">Checklist</h4>
                     <ul className="space-y-2">
                       {(activeStage.regions?.[region] || activeStage.regions?.Global)?.checklist?.map((task: string) => (
-                        <li key={task} className="flex items-start gap-3 rounded-xl bg-white/5 p-3 ring-1 ring-white/10">
-                          <button onClick={() => toggleTask(activeStage.id, task)}
-                            className={cx("mt-0.5 grid h-5 w-5 place-items-center rounded-full border",
-                              stageState?.[activeStage.id]?.checklist?.[task] ? "border-emerald-400 bg-emerald-400/20" : "border-white/30")}>
-                            {stageState?.[activeStage.id]?.checklist?.[task] && <CheckCircle2 className="h-3.5 w-3.5 text-emerald-300" />}
+                        <li
+                          key={task}
+                          className="flex items-start gap-3 rounded-xl bg-white/5 p-3 ring-1 ring-white/10 hover:bg-white/10 transition"
+                        >
+                          <button
+                            onClick={() => toggleTask(activeStage.id, task)}
+                            className={cx(
+                              "mt-0.5 grid h-5 w-5 place-items-center rounded-full border",
+                              stageState?.[region]?.[activeStage.id]?.checklist?.[task]
+                                ? "border-emerald-400 bg-emerald-400/20"
+                                : "border-white/30"
+                            )}
+                          >
+                            {stageState?.[region]?.[activeStage.id]?.checklist?.[task] && (
+                              <CheckCircle2 className="h-3.5 w-3.5 text-emerald-300" />
+                            )}
                           </button>
-                          <span className="text-sm text-white/85">{task}</span>
+                          <span className="text-sm text-white/90">{task}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <div className="mt-6">
-                    <h4 className="mb-2 font-semibold text-cyan-200">Curated resources</h4>
+                  <div className="rounded-2xl bg-black/30 p-4 ring-1 ring-white/10 backdrop-blur-md">
+                    <h4 className="mb-3 font-semibold text-purple-200">Curated resources</h4>
                     <div className="grid gap-3 sm:grid-cols-2">
                       {(activeStage.regions?.[region] || activeStage.regions?.Global)?.resources?.map((r: Resource) => (
                         <ResourceCard key={r.link} r={r} bookmarked={isBookmarked(r.link)} onBookmark={() => toggleBookmark(r)} />
@@ -399,16 +513,21 @@ export default function ChemistryLearningHub() {
                     </div>
                   </div>
 
-                  <div className="mt-6 rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
-                    <h4 className="mb-2 font-semibold text-cyan-200">Reflection</h4>
+                  <div className="rounded-2xl bg-black/30 p-4 ring-1 ring-white/10 backdrop-blur-md">
+                    <h4 className="mb-3 font-semibold text-purple-200">Reflection</h4>
                     <textarea
-                      className="min-h-[96px] w-full rounded-xl bg-white/5 p-3 text-sm outline-none ring-1 ring-inset ring-white/10 placeholder:text-white/50"
+                      className="min-h-[96px] w-full rounded-xl bg-white/5 p-3 text-sm outline-none ring-1 ring-inset ring-white/10 placeholder:text-white/50 text-white/90"
                       placeholder="What reactions, analyses, or insights did you explore?"
-                      defaultValue={stageState?.[activeStage.id]?.notes || ""}
+                      defaultValue={stageState?.[region]?.[activeStage.id]?.notes || ""}
                       onBlur={(e) => {
                         const val = e.currentTarget.value;
-                        const next = { ...stageState, [activeStage.id]: { ...(stageState[activeStage.id] || {}), notes: val } };
-                        setStageState(next); persist(next);
+                        setStageState((prev) => {
+                          const regionState = { ...(prev[region] || {}) };
+                          const nextStage = { ...(regionState[activeStage.id] || {}), notes: val };
+                          const next = { ...prev, [region]: { ...regionState, [activeStage.id]: nextStage } };
+                          persist(next, region);
+                          return next;
+                        });
                         if (user?.id) saveReflection(user.id, discipline, activeStage.id, val);
                       }}
                     />
@@ -418,7 +537,7 @@ export default function ChemistryLearningHub() {
                 {/* Right: sims + quiz + ideas */}
                 <div className="sm:col-span-2 flex flex-col gap-4">
                   <div className="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
-                    <div className="mb-2 flex items-center gap-2 text-sm text-white/80"><Sparkles className="h-4 w-4 text-cyan-300" /> Chem Playground</div>
+                    <div className="mb-2 flex items-center gap-2 text-sm text-white/80"><Sparkles className="h-4 w-4 text-purple-300" /> Chem Playground</div>
                     <div className="grid gap-3">
                       <ReactionRateSim />
                       <MolecularVibrationSim />
@@ -426,7 +545,7 @@ export default function ChemistryLearningHub() {
                   </div>
 
                   <div className="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
-                    <div className="mb-2 flex items-center gap-2 text-sm text-white/80"><GraduationCap className="h-4 w-4 text-cyan-300" /> Quick quiz</div>
+                    <div className="mb-2 flex items-center gap-2 text-sm text-white/80"><GraduationCap className="h-4 w-4 text-purple-300" /> Quick quiz</div>
                     <div className="space-y-3">
                       {(activeStage.quiz || [
                         { q: `In "${activeStage.title}" what matters most?`, opts: ["Experimental thinking", "Memorization", "Graphic design", "Speed typing"], correct: "Experimental thinking" },
@@ -438,7 +557,7 @@ export default function ChemistryLearningHub() {
                             {Q.opts.map((opt: string) => (
                               <button key={opt} onClick={() => setQuizAnswers((prev) => ({ ...prev, [i]: opt }))}
                                 className={cx("rounded-full border border-white/15 px-3 py-1 text-sm",
-                                  quizAnswers[i] === opt ? "bg-cyan-500/30" : "bg-white/5 hover:bg-white/10")}>{opt}</button>
+                                  quizAnswers[i] === opt ? "bg-purple-500/30" : "bg-white/5 hover:bg-white/10")}>{opt}</button>
                             ))}
                           </div>
                         </div>
@@ -451,7 +570,7 @@ export default function ChemistryLearningHub() {
 
                   {(activeStage.regions?.Global?.projectIdeas?.length > 0) && (
                     <div className="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
-                      <div className="mb-2 flex items-center gap-2 text-sm text-white/80"><Droplets className="h-4 w-4 text-lime-300" /> Experiment ideas</div>
+                      <div className="mb-2 flex items-center gap-2 text-sm text-white/80"><Droplets className="h-4 w-4 text-blue-300" /> Experiment ideas</div>
                       <div className="flex snap-x snap-mandatory overflow-x-auto gap-3 pb-2">
                         {activeStage.regions.Global.projectIdeas.map((idea: string, i: number) => (
                           <motion.div key={i} whileHover={{ y: -2 }} className="snap-start min-w-[280px] rounded-2xl bg-white/5 p-4 ring-1 ring-white/10 backdrop-blur">

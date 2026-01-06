@@ -12,6 +12,22 @@ import { Loader2 } from "lucide-react";
 const PhysicsLearningHub = lazy(() => import("./PhysicsLearningHub"));
 const GenericLearningHub = lazy(() => import("./GenericLearningHub")); // optional fallback, explained below
 const ChemistryLearningHub = lazy(() => import("./ChemistryLearningHub"));
+const BiologyLearningHub = lazy(() => import("./BiologyLearningHub"));
+const ComputerScienceLearningHub = lazy(() => import("./ComputerScienceLearningHub"));
+const MechanicalEngineeringLearningHub = lazy(() => import("./MechanicalEngineeringLearningHub"));
+const ElectricalEngineeringLearningHub = lazy(() => import("./ElectricalEngineeringLearningHub"));
+const CivilEngineeringLearningHub = lazy(() => import("./CivilEngineeringLearningHub"));
+const MathematicsLearningHub = lazy(() => import("./MathematicsLearningHub"));
+const DataScienceLearningHub = lazy(() => import("./DataScienceLearningHub"));
+const EconomicsBusinessLearningHub = lazy(() => import("./EconomicsBusinessLearningHub"));
+const PsychologyLearningHub = lazy(() => import("./PsychologyLearningHub"));
+const EducationLearningHub = lazy(() => import("./EducationLearningHub"));
+const ArtDesignLearningHub = lazy(() => import("./ArtDesignLearningHub"));
+const CommunicationsMediaLearningHub = lazy(() => import("./CommunicationsMediaLearningHub"));
+const EnvironmentalScienceLearningHub = lazy(() => import("./EnvironmentalScienceLearningHub"));
+const ArchitectureLearningHub = lazy(() => import("./ArchitectureLearningHub"));
+const MedicineHealthcareLearningHub = lazy(() => import("./MedicineHealthcareLearningHub"));
+const HistoryLiteratureLearningHub = lazy(() => import("./HistoryLiteratureLearningHub"));
 
 export default function LearningHubRouter() {
   const { discipline = "" } = useParams<{ discipline: string }>();
@@ -21,9 +37,23 @@ export default function LearningHubRouter() {
   const DisciplineComponents: Record<string, React.LazyExoticComponent<React.FC>> = {
     physics: PhysicsLearningHub,
     chemistry: ChemistryLearningHub,
+    biology: BiologyLearningHub,
+    "computer-science": ComputerScienceLearningHub,
+    "mechanical-engineering": MechanicalEngineeringLearningHub,
+    "electrical-engineering": ElectricalEngineeringLearningHub,
+    "civil-engineering": CivilEngineeringLearningHub,
+    mathematics: MathematicsLearningHub,
+    "data-science": DataScienceLearningHub,
+    "economics-business": EconomicsBusinessLearningHub,
+    psychology: PsychologyLearningHub,
+    education: EducationLearningHub,
+    "art-design": ArtDesignLearningHub,
+    "communications-media": CommunicationsMediaLearningHub,
+    "environmental-science": EnvironmentalScienceLearningHub,
+    architecture: ArchitectureLearningHub,
+    "medicine-healthcare": MedicineHealthcareLearningHub,
+    "history-literature": HistoryLiteratureLearningHub,
     // add more when ready:
-    // chemistry: ChemistryLearningHub,
-    // biology: BiologyLearningHub,
     // ...
   };
 

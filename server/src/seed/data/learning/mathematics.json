@@ -1,0 +1,378 @@
+{
+  "discipline": "mathematics",
+  "availableRegions": ["Global", "US", "UK", "Asia"],
+  "stages": [
+    {
+      "id": 1,
+      "title": "Define Your Mathematics Vision",
+      "description": "Clarify your interests in pure math, applied math, or statistics, and identify target universities.",
+      "regions": {
+        "Global": {
+          "overview": "Top mathematics programs value exceptional problem-solving ability, mathematical maturity, and clear specialization interests.",
+          "checklist": [
+            "Research 5-7 top math programs (MIT, Princeton, Cambridge, Oxford, ETH Zurich)",
+            "Identify your interest (pure math, applied math, statistics, mathematical physics)",
+            "Assess your competition math experience",
+            "Create a 3-year roadmap connecting math competitions, coursework, and applications"
+          ],
+          "resources": [
+            {
+              "title": "Mathematics Specializations Guide",
+              "platform": "AcceptedX",
+              "type": "Article",
+              "link": "https://acceptedx.org/resources/mathematics-specializations"
+            }
+          ]
+        },
+        "US": {
+          "overview": "US programs emphasize AP/IB rigor, math competitions, and research. Combine strong academics with competition participation.",
+          "checklist": [
+            "Complete AP Calculus BC and AP Statistics",
+            "Participate in AMC, AIME, or USAMO",
+            "Research reach, target, and safety schools for math",
+            "Identify summer programs (PROMYS, SUMaC, Ross)"
+          ],
+          "resources": [
+            {
+              "title": "US Mathematics Admissions",
+              "platform": "AcceptedX",
+              "type": "Guide",
+              "link": "https://acceptedx.org/resources/us-math-admissions"
+            },
+            {
+              "title": "Math Summer Programs",
+              "platform": "AcceptedX",
+              "type": "Directory",
+              "link": "https://acceptedx.org/resources/math-summer-programs"
+            }
+          ]
+        },
+        "UK": {
+          "overview": "UK programs prioritize A-levels, STEP, and strong personal statements. Focus on mathematical proof and problem-solving.",
+          "checklist": [
+            "Review entry requirements for Cambridge, Oxford, Imperial",
+            "Start STEP preparation (Year 12)",
+            "Outline UCAS personal statement connecting math passion to proof",
+            "Research UK math program structures"
+          ],
+          "resources": [
+            {
+              "title": "STEP Past Papers",
+              "platform": "Cambridge Assessment",
+              "type": "Practice Papers",
+              "link": "https://www.admissionstesting.org/for-test-takers/step/about-step/"
+            },
+            {
+              "title": "UCAS Mathematics Personal Statement",
+              "platform": "UCAS",
+              "type": "Article",
+              "link": "https://www.ucas.com/personal-statement-examples/mathematics"
+            }
+          ]
+        },
+        "Asia": {
+          "overview": "Bridge national curricula with global standards. Emphasize competition math and problem-solving.",
+          "checklist": [
+            "Review advanced math topics in national exams",
+            "Participate in IMO, regional Olympiads, or local competitions",
+            "Explore summer programs at top universities",
+            "Document interest in specific math fields"
+          ],
+          "resources": [
+            {
+              "title": "IMO Preparation",
+              "platform": "IMO",
+              "type": "Competition Resource",
+              "link": "https://www.imo-official.org/"
+            },
+            {
+              "title": "Art of Problem Solving",
+              "platform": "AoPS",
+              "type": "Resources",
+              "link": "https://artofproblemsolving.com/"
+            }
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "Which test is most important for UK mathematics admissions?",
+          "opts": ["STEP", "SAT", "JEE", "AP"],
+          "correct": "STEP"
+        },
+        {
+          "q": "What do top US math programs value most?",
+          "opts": [
+            "Strong academics + math competitions + problem-solving ability",
+            "Only test scores",
+            "Sports achievements",
+            "Unrelated activities"
+          ],
+          "correct": "Strong academics + math competitions + problem-solving ability"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Excel in Competition Mathematics",
+      "description": "Participate in math competitions and develop problem-solving skills.",
+      "regions": {
+        "Global": {
+          "overview": "Math competitions demonstrate problem-solving ability and mathematical maturity.",
+          "checklist": [
+            "Participate in at least 2 math competitions per year",
+            "Solve competition problems regularly (AoPS, past papers)",
+            "Join a math club or study group",
+            "Document competition achievements"
+          ],
+          "resources": [
+            {
+              "title": "Art of Problem Solving",
+              "platform": "AoPS",
+              "type": "Resources",
+              "link": "https://artofproblemsolving.com/"
+            },
+            {
+              "title": "Math Competition Problems",
+              "platform": "AoPS Wiki",
+              "type": "Problem Sets",
+              "link": "https://artofproblemsolving.com/wiki/index.php/Main_Page"
+            }
+          ],
+          "projectIdeas": [
+            "Research a mathematical topic independently",
+            "Write a proof or mathematical paper",
+            "Create a mathematical visualization",
+            "Solve an open problem or conjecture"
+          ]
+        },
+        "US": {
+          "overview": "Focus on AMC, AIME, USAMO progression.",
+          "checklist": [
+            "Take AMC 10/12 and aim for AIME qualification",
+            "Study for USAMO if qualified",
+            "Apply to math summer programs",
+            "Document competition results"
+          ],
+          "resources": [
+            {
+              "title": "AMC Preparation",
+              "platform": "AoPS",
+              "type": "Resources",
+              "link": "https://artofproblemsolving.com/school/amc"
+            }
+          ]
+        },
+        "UK": {
+          "overview": "Focus on STEP and UKMT competitions.",
+          "checklist": [
+            "Participate in UKMT competitions",
+            "Solve 10+ past STEP papers",
+            "Study proof techniques",
+            "Prepare for Oxbridge interviews"
+          ]
+        },
+        "Asia": {
+          "overview": "Participate in IMO and regional Olympiads.",
+          "checklist": [
+            "Qualify for national math Olympiad",
+            "Aim for IMO team selection",
+            "Solve IMO past problems",
+            "Document competition achievements"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What's the best way to demonstrate math ability?",
+          "opts": [
+            "Participate in competitions and solve challenging problems",
+            "Only memorize formulas",
+            "Avoid problem-solving",
+            "Focus only on grades"
+          ],
+          "correct": "Participate in competitions and solve challenging problems"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Strengthen Academic Foundation",
+      "description": "Excel in advanced mathematics coursework and proof-based learning.",
+      "regions": {
+        "Global": {
+          "overview": "Strong mathematical foundation is essential. Focus on proof and rigorous thinking.",
+          "checklist": [
+            "Master calculus, linear algebra, and discrete math",
+            "Study proof techniques and mathematical reasoning",
+            "Read advanced math texts or papers",
+            "Maintain exceptional grades in math"
+          ],
+          "resources": [
+            {
+              "title": "Khan Academy - Calculus",
+              "platform": "Khan Academy",
+              "type": "Course",
+              "link": "https://www.khanacademy.org/math/calculus-1"
+            },
+            {
+              "title": "Introduction to Proofs",
+              "platform": "Coursera",
+              "type": "Course",
+              "link": "https://www.coursera.org/courses?query=mathematical%20proofs"
+            }
+          ]
+        },
+        "US": {
+          "overview": "Prioritize AP courses and advanced math.",
+          "checklist": [
+            "Complete AP Calculus BC and AP Statistics",
+            "Take multivariable calculus if available",
+            "Study linear algebra independently",
+            "Participate in math competitions"
+          ]
+        },
+        "UK": {
+          "overview": "Excel in A-levels and Further Mathematics.",
+          "checklist": [
+            "Achieve A* in A-level Mathematics",
+            "Complete Further Mathematics A-level",
+            "Solve STEP problems regularly",
+            "Study proof-based mathematics"
+          ]
+        },
+        "Asia": {
+          "overview": "Integrate with national exams while building international readiness.",
+          "checklist": [
+            "Complete advanced math in national exams",
+            "Study competition math topics",
+            "Maintain strong exam performance",
+            "Bridge to international standards"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What academic areas are most critical for mathematics?",
+          "opts": [
+            "Proof techniques, problem-solving, and mathematical reasoning",
+            "Only memorization",
+            "Languages",
+            "History"
+          ],
+          "correct": "Proof techniques, problem-solving, and mathematical reasoning"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Craft Your Mathematics Narrative",
+      "description": "Translate your mathematical passion and achievements into compelling applications.",
+      "regions": {
+        "Global": {
+          "overview": "Connect your math passion, competitions, and achievements into a cohesive story.",
+          "checklist": [
+            "Write 250-word draft personal statement",
+            "Highlight competition achievements and problem-solving",
+            "Connect math to real-world applications or research",
+            "Get feedback from math teachers or mentors"
+          ]
+        },
+        "US": {
+          "overview": "Focus on Common App essays and activity descriptions.",
+          "checklist": [
+            "Draft Common App essay with math focus",
+            "Collect strong recommendation letters from math teachers",
+            "Optimize Activities section",
+            "Write math school supplements"
+          ]
+        },
+        "UK": {
+          "overview": "Perfect UCAS statement and prepare for interviews.",
+          "checklist": [
+            "Complete UCAS personal statement",
+            "Include mathematical reading and competitions",
+            "Prepare for Oxbridge math interviews",
+            "Practice explaining proofs clearly"
+          ]
+        },
+        "Asia": {
+          "overview": "Adapt narrative for multiple university systems.",
+          "checklist": [
+            "Prepare statements for UCAS and Common App",
+            "Gather supporting documents",
+            "Draft reflection on math career goals",
+            "Document competition achievements"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What should your math personal statement highlight?",
+          "opts": [
+            "Mathematical passion, problem-solving, and competition achievements",
+            "Only test scores",
+            "Unrelated hobbies",
+            "Generic goals"
+          ],
+          "correct": "Mathematical passion, problem-solving, and competition achievements"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Final Preparation & Interviews",
+      "description": "Polish applications and prepare for mathematical interviews.",
+      "regions": {
+        "Global": {
+          "overview": "Bring together all your work for confident applications.",
+          "checklist": [
+            "Complete mock math interviews",
+            "Submit all applications",
+            "Prepare to solve problems and explain proofs",
+            "Celebrate your mathematical journey"
+          ]
+        },
+        "US": {
+          "overview": "Rehearse and finalize applications.",
+          "checklist": [
+            "Conduct mock interview",
+            "Submit Common App and supplements",
+            "Follow up with recommenders",
+            "Prepare to discuss math research if applicable"
+          ]
+        },
+        "UK": {
+          "overview": "Prepare for Oxbridge interviews with problem-solving.",
+          "checklist": [
+            "Review STEP-style interview problems",
+            "Practice solving problems aloud",
+            "Simulate math interviews",
+            "Finalize UCAS submission"
+          ]
+        },
+        "Asia": {
+          "overview": "Coordinate and prepare for interviews.",
+          "checklist": [
+            "Confirm transcripts and competition records",
+            "Practice solving problems in English",
+            "Prepare to explain proofs",
+            "Submit final applications"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What's key for math interviews?",
+          "opts": [
+            "Clear problem-solving process and proof explanation",
+            "Memorizing answers",
+            "Avoiding technical details",
+            "Only discussing grades"
+          ],
+          "correct": "Clear problem-solving process and proof explanation"
+        }
+      ]
+    }
+  ]
+}

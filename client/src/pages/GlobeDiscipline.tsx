@@ -24,8 +24,9 @@ export default function GlobeDiscipline() {
   useEffect(() => {
     setLoading(true);
     setSelected(undefined);
+    // Backend expects 'course' parameter, not 'discipline'
     http
-      .get("/universities", { params: { discipline } }) // make sure backend uses this param
+      .get("/universities", { params: { course: discipline } })
       .then((res) => setUniversities(res.data || []))
       .finally(() => setLoading(false));
   }, [discipline]);

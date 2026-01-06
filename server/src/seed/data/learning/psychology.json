@@ -1,0 +1,370 @@
+{
+  "discipline": "psychology",
+  "availableRegions": ["Global", "US", "UK", "Asia"],
+  "stages": [
+    {
+      "id": 1,
+      "title": "Define Your Psychology Vision",
+      "description": "Clarify your interests in clinical, cognitive, social, or research psychology, and identify target universities.",
+      "regions": {
+        "Global": {
+          "overview": "Top psychology programs value strong science foundations, research experience, and genuine interest in understanding human behavior.",
+          "checklist": [
+            "Research 5-7 top psychology programs (Harvard, Oxford, Cambridge, Stanford, UCL)",
+            "Identify your interest (clinical, cognitive, social, developmental, neuroscience)",
+            "Assess your biology, math, and research preparation",
+            "Create a 3-year roadmap connecting academics, research, and applications"
+          ],
+          "resources": [
+            {
+              "title": "Psychology Specializations Guide",
+              "platform": "American Psychological Association",
+              "type": "Article",
+              "link": "https://www.apa.org/careers/guide/specialties"
+            },
+            {
+              "title": "What is Psychology?",
+              "platform": "Khan Academy",
+              "type": "Course",
+              "link": "https://www.khanacademy.org/test-prep/mcat/behavior"
+            }
+          ]
+        },
+        "US": {
+          "overview": "US programs emphasize AP/IB rigor, research experience, and strong personal statements.",
+          "checklist": [
+            "Research reach, target, and safety schools for psychology",
+            "Note AP Psychology and Biology requirements",
+            "Plan your Common App personal statement theme",
+            "Identify research opportunities or summer programs"
+          ],
+          "resources": [
+            {
+              "title": "US Psychology Admissions Guide",
+              "platform": "AcceptedX",
+              "type": "Guide",
+              "link": "https://acceptedx.org/resources/us-psychology-admissions"
+            },
+            {
+              "title": "AP Psychology Review",
+              "platform": "Khan Academy",
+              "type": "Course",
+              "link": "https://www.khanacademy.org/test-prep/ap-psychology"
+            }
+          ]
+        },
+        "UK": {
+          "overview": "UK programs prioritize A-levels, TSA, and strong personal statements.",
+          "checklist": [
+            "Review entry requirements for Oxford, Cambridge, UCL psychology",
+            "Start TSA preparation if required (Year 12)",
+            "Outline UCAS personal statement draft",
+            "Research UK psychology program structures"
+          ],
+          "resources": [
+            {
+              "title": "TSA Preparation",
+              "platform": "Cambridge Assessment",
+              "type": "Official Resource",
+              "link": "https://www.admissionstesting.org/for-test-takers/thinking-skills-assessment/"
+            },
+            {
+              "title": "UCAS Psychology Personal Statement",
+              "platform": "UCAS",
+              "type": "Article",
+              "link": "https://www.ucas.com/personal-statement-examples/psychology"
+            }
+          ]
+        },
+        "Asia": {
+          "overview": "Bridge national curricula to global standards while developing research mindset.",
+          "checklist": [
+            "Review psychology topics in IB HL or national exams",
+            "Identify psychology research opportunities",
+            "Explore summer programs or research abroad",
+            "Document interest in specific psychology fields"
+          ],
+          "resources": [
+            {
+              "title": "International Psychology Programs",
+              "platform": "AcceptedX Asia",
+              "type": "Directory",
+              "link": "https://acceptedx.org/resources/asia-psychology-programs"
+            }
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What do top psychology programs value most?",
+          "opts": [
+            "Strong academics + research experience + genuine interest in human behavior",
+            "Only test scores",
+            "Sports achievements",
+            "Unrelated activities"
+          ],
+          "correct": "Strong academics + research experience + genuine interest in human behavior"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Gain Research & Practical Experience",
+      "description": "Develop research skills and gain experience in psychology through studies, volunteering, or internships.",
+      "regions": {
+        "Global": {
+          "overview": "Demonstrate psychology interest through research participation, volunteering, or practical experience.",
+          "checklist": [
+            "Participate in psychology research (as participant or assistant)",
+            "Volunteer in mental health, education, or social services",
+            "Read psychology research papers and journals",
+            "Document your experiences and reflections"
+          ],
+          "resources": [
+            {
+              "title": "How to Get Psychology Research Experience",
+              "platform": "AcceptedX",
+              "type": "Guide",
+              "link": "https://acceptedx.org/resources/psychology-research"
+            },
+            {
+              "title": "Psychology Research Papers",
+              "platform": "PubMed",
+              "type": "Database",
+              "link": "https://pubmed.ncbi.nlm.nih.gov/"
+            }
+          ],
+          "projectIdeas": [
+            "Conduct a small psychology experiment or survey",
+            "Volunteer at a mental health organization",
+            "Create a psychology blog or podcast",
+            "Participate in psychology research studies"
+          ]
+        },
+        "US": {
+          "overview": "Link experiences to research programs and applications.",
+          "checklist": [
+            "Apply to psychology research programs or internships",
+            "Join psychology clubs or organizations",
+            "Document research experiences for applications",
+            "Write research reflections"
+          ],
+          "resources": [
+            {
+              "title": "Psychology Summer Programs",
+              "platform": "AcceptedX",
+              "type": "Directory",
+              "link": "https://acceptedx.org/resources/psychology-summer-programs"
+            }
+          ]
+        },
+        "UK": {
+          "overview": "Integrate experiences into EPQ or UCAS statement.",
+          "checklist": [
+            "Draft EPQ proposal on psychology topic",
+            "Link experiences to university research themes",
+            "Include in UCAS personal statement",
+            "Prepare to discuss research in interviews"
+          ]
+        },
+        "Asia": {
+          "overview": "Use experiences to build portfolios.",
+          "checklist": [
+            "Participate in local psychology research",
+            "Work with university mentor",
+            "Document in English",
+            "Connect to global psychology challenges"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What's the best way to demonstrate psychology interest?",
+          "opts": [
+            "Research participation, volunteering, and reading psychology literature",
+            "Only studying",
+            "Memorizing theories",
+            "Avoiding practical experience"
+          ],
+          "correct": "Research participation, volunteering, and reading psychology literature"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Strengthen Academic Foundation",
+      "description": "Excel in biology, mathematics, and psychology coursework.",
+      "regions": {
+        "Global": {
+          "overview": "Strong science and math preparation is essential for psychology.",
+          "checklist": [
+            "Master biology and statistics fundamentals",
+            "Complete psychology coursework if available",
+            "Read psychology textbooks and research",
+            "Maintain strong grades in sciences and math"
+          ],
+          "resources": [
+            {
+              "title": "Introduction to Psychology",
+              "platform": "Coursera",
+              "type": "Course",
+              "link": "https://www.coursera.org/learn/introduction-psychology"
+            },
+            {
+              "title": "Statistics for Psychology",
+              "platform": "Khan Academy",
+              "type": "Course",
+              "link": "https://www.khanacademy.org/math/statistics-probability"
+            }
+          ]
+        },
+        "US": {
+          "overview": "Prioritize AP courses.",
+          "checklist": [
+            "Complete AP Psychology and AP Biology",
+            "Take AP Statistics if available",
+            "Achieve strong SAT scores",
+            "Read psychology research papers"
+          ]
+        },
+        "UK": {
+          "overview": "Excel in A-levels.",
+          "checklist": [
+            "Achieve A* in A-level Psychology or Biology",
+            "Complete A-level Mathematics",
+            "Prepare for TSA if required",
+            "Read psychology literature"
+          ]
+        },
+        "Asia": {
+          "overview": "Integrate with national exams.",
+          "checklist": [
+            "Complete advanced biology and psychology",
+            "Study statistics fundamentals",
+            "Maintain strong exam performance",
+            "Bridge to international standards"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What academic areas are most critical for psychology?",
+          "opts": [
+            "Biology, statistics, and research methods",
+            "Only memorization",
+            "Languages",
+            "History only"
+          ],
+          "correct": "Biology, statistics, and research methods"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Craft Your Psychology Narrative",
+      "description": "Translate your experiences and achievements into compelling applications.",
+      "regions": {
+        "Global": {
+          "overview": "Connect your psychology passion, research, and achievements.",
+          "checklist": [
+            "Write 250-word draft personal statement",
+            "Highlight research experiences and volunteering",
+            "Connect to understanding human behavior",
+            "Get feedback from psychology teachers or mentors"
+          ]
+        },
+        "US": {
+          "overview": "Focus on Common App essays.",
+          "checklist": [
+            "Draft Common App essay with psychology focus",
+            "Collect strong recommendation letters",
+            "Optimize Activities section",
+            "Write psychology school supplements"
+          ]
+        },
+        "UK": {
+          "overview": "Perfect UCAS statement.",
+          "checklist": [
+            "Complete UCAS personal statement",
+            "Include psychology reading and research",
+            "Prepare for Oxbridge interviews",
+            "Practice explaining research clearly"
+          ]
+        },
+        "Asia": {
+          "overview": "Adapt for multiple systems.",
+          "checklist": [
+            "Prepare statements for UCAS and Common App",
+            "Gather supporting documents",
+            "Draft reflection on psychology career goals",
+            "Document research experiences"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What should your psychology personal statement highlight?",
+          "opts": [
+            "Genuine interest in human behavior, research experiences, and empathy",
+            "Only test scores",
+            "Unrelated hobbies",
+            "Generic career goals"
+          ],
+          "correct": "Genuine interest in human behavior, research experiences, and empathy"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Final Preparation & Interviews",
+      "description": "Polish applications and prepare for interviews.",
+      "regions": {
+        "Global": {
+          "overview": "Bring together all your work.",
+          "checklist": [
+            "Complete mock interviews",
+            "Submit applications",
+            "Prepare to discuss research and experiences",
+            "Celebrate journey"
+          ]
+        },
+        "US": {
+          "overview": "Rehearse and finalize.",
+          "checklist": [
+            "Mock interview",
+            "Submit applications",
+            "Follow up recommenders"
+          ]
+        },
+        "UK": {
+          "overview": "Prepare for interviews.",
+          "checklist": [
+            "Review TSA problems",
+            "Practice explaining research",
+            "Finalize UCAS"
+          ]
+        },
+        "Asia": {
+          "overview": "Coordinate and prepare.",
+          "checklist": [
+            "Confirm documents",
+            "Practice interviews in English",
+            "Submit applications"
+          ]
+        }
+      },
+      "quiz": [
+        {
+          "q": "What's key for psychology interviews?",
+          "opts": [
+            "Clear explanation of research and genuine interest in human behavior",
+            "Memorizing answers",
+            "Avoiding research details",
+            "Only grades"
+          ],
+          "correct": "Clear explanation of research and genuine interest in human behavior"
+        }
+      ]
+    }
+  ]
+}
