@@ -9,14 +9,14 @@ export default function PasswordReset() {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    // Read params from hash fragment (Supabase format)
+    // Check if session exists (set by AuthCallback) or try to read from hash
     const hash = new URLSearchParams(window.location.hash.substring(1));
     const type = hash.get("type");
     const access_token = hash.get("access_token");
     const refresh_token = hash.get("refresh_token");
 
+    // If hash tokens exist, set session (fallback for direct navigation)
     if (type === "recovery" && access_token && refresh_token) {
-      // Restore Supabase session so user can change password
       supabase.auth
         .setSession({
           access_token,
@@ -27,7 +27,16 @@ export default function PasswordReset() {
           setReady(true);
         });
     } else {
-      setError("Invalid or expired password reset link.");
+      // Session should already be set by AuthCallback, just check if user is authenticated
+      supabase.auth.getSession().then(({ data, error }) => {
+        if (error) {
+          setError("Invalid or expired password reset link.");
+        } else if (data.session) {
+          setReady(true);
+        } else {
+          setError("Invalid or expired password reset link.");
+        }
+      });
     }
   }, []);
 
